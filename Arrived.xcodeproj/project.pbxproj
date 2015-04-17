@@ -13,6 +13,7 @@
 		8908FF5D1AE01ECF00C990DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5C1AE01ECF00C990DC /* Images.xcassets */; };
 		8908FF601AE01ECF00C990DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */; };
 		8908FF6C1AE01ECF00C990DC /* ArrivedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */; };
+		94D622E61AE1BEDA00A5736C /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D622E51AE1BEDA00A5736C /* UserService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		8908FF651AE01ECF00C990DC /* ArrivedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrivedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908FF6A1AE01ECF00C990DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedTests.swift; sourceTree = "<group>"; };
+		94D622E31AE1BED800A5736C /* Arrived-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Arrived-Bridging-Header.h"; sourceTree = "<group>"; };
+		94D622E41AE1BEDA00A5736C /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		94D622E51AE1BEDA00A5736C /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +83,13 @@
 			children = (
 				8908FF551AE01ECF00C990DC /* AppDelegate.swift */,
 				8908FF571AE01ECF00C990DC /* ViewController.swift */,
+				94D622E41AE1BEDA00A5736C /* UserService.h */,
+				94D622E51AE1BEDA00A5736C /* UserService.m */,
 				8908FF591AE01ECF00C990DC /* Main.storyboard */,
 				8908FF5C1AE01ECF00C990DC /* Images.xcassets */,
 				8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */,
 				8908FF531AE01ECF00C990DC /* Supporting Files */,
+				94D622E31AE1BED800A5736C /* Arrived-Bridging-Header.h */,
 			);
 			path = Arrived;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8908FF581AE01ECF00C990DC /* ViewController.swift in Sources */,
+				94D622E61AE1BEDA00A5736C /* UserService.m in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +348,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arrived/Arrived-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arrived/Arrived-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +422,7 @@
 				8908FF711AE01ECF00C990DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8908FF721AE01ECF00C990DC /* Build configuration list for PBXNativeTarget "ArrivedTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +431,7 @@
 				8908FF741AE01ECF00C990DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
