@@ -90,6 +90,8 @@
 		8908FF521AE01ECF00C990DC /* Arrived */ = {
 			isa = PBXGroup;
 			children = (
+				94D622EA1AE2372700A5736C /* UserService.h */,
+				94D622EB1AE2372700A5736C /* UserService.m */,
 				8908FF551AE01ECF00C990DC /* AppDelegate.swift */,
 				8908FF591AE01ECF00C990DC /* Main.storyboard */,
 				8908FF5C1AE01ECF00C990DC /* Images.xcassets */,
