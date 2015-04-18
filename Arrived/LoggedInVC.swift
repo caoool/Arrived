@@ -10,15 +10,22 @@ import UIKit
 
 class LoggedInVC: UIViewController {
 
+    @IBOutlet weak var userInfo: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        userInfo.text = user.phoneNumberId
     }
     
     @IBAction func logout() {
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("phoneNumberId")
+        user.clear()
     }
     
+    @IBAction func updateUserInfo() {
+        performSegueWithIdentifier("UpdateUserInfo", sender: self)
+    }
 
 }

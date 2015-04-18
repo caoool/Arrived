@@ -7,9 +7,9 @@
 //
 
 #import "UserService.h"
-#define VERIFYUSER @"http://edu.dev/api/v1/postUser"
-#define REGISTERUSER @"http://edu.dev/api/v1/registerUser"
-#define UPDATEUSER @"http://edu.dev/api/v1/users"
+#define VERIFYUSER @"http://yetian.xyz/api/v1/postUser"
+#define REGISTERUSER @"http://yetian.xyz/api/v1/registerUser"
+#define UPDATEUSER @"http://yetian.xyz/api/v1/users"
 
 @implementation UserService
 
@@ -20,9 +20,9 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)getUserBy:(NSString *)phoneNumber{
+-(NSDictionary *)getUserBy:(NSString *)phoneNumberId{
     NSURLSession *getUserSession = [NSURLSession sharedSession];
-    NSString *phoneNumberWithKey = [NSString stringWithFormat:@"phoneNumber=%@", phoneNumber];
+    NSString *phoneNumberWithKey = [NSString stringWithFormat:@"phoneNumber=%@", phoneNumberId];
     NSString *url = @"http://edu.dev/api/v1/getUser?";
     url = [url stringByAppendingString:phoneNumberWithKey];
     NSURLSessionDataTask *dataTask = [getUserSession dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

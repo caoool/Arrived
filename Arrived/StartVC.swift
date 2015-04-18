@@ -20,12 +20,14 @@ class StartVC: UIViewController {
         
         // Check if user has logged in and has a phone number stored
         // Else lead the user to register (login) page
-        if let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn") as Bool?, userPhoneNumber = NSUserDefaults.standardUserDefaults().stringForKey("userPhoneNumber") {
+        if let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn") as Bool?, phoneNumberId = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId") {
             if isUserLoggedIn {
-                
+                user.getUserByPhoneNumberId(phoneNumberId)
                 self.performSegueWithIdentifier("LoggedIn", sender: self)
+                println("User logged In")
             }
         } else {
+            println("Go to New User Page")
             self.performSegueWithIdentifier("NewUser", sender: self)
         }
         

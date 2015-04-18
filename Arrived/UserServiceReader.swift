@@ -15,22 +15,18 @@ class UserServiceReader {
     private let service = UserService()
     
     
-    func getVerificationCode(phoneNumber: String) -> String {
+    func getVerificationCode(phoneNumber: String) -> (phoneNumberId: String?, verificationCode: String?, isNewUser: Bool?, message: String?) {
         
-        
-        let code = "000000"
-        
-        // make sure return 6 digits
-        if count(code) == 6 {
-            for char in phoneNumber {
-                if !("0"..."9" ~= char) {
-                    return "error"
-                }
+        if let dict = service.verify(phoneNumber) {
+            let isSuccess = dict["isSuccesss"] as! Bool
+            if isSuccess {
+                return (dict["phoneNumberId"] as? String, dict["verificationCode"] as? String, dict["isNewUser"] as? Bool, nil)
+            } else {
+                return (nil, nil, nil, dict["message"] as? String)
             }
-            return code
-        } else { return "error" }
-    }
-    
+            
+        } else { return (nil, nil, nil, "Can't connect") }
+    }    
     
     
 }
