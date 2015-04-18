@@ -89,6 +89,7 @@
 				8908FF5C1AE01ECF00C990DC /* Images.xcassets */,
 				8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */,
 				8908FF531AE01ECF00C990DC /* Supporting Files */,
+				94D622E31AE1BED800A5736C /* Arrived-Bridging-Header.h */,
 			);
 			path = Arrived;
 			sourceTree = "<group>";
@@ -368,9 +369,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arrived/Arrived-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -378,9 +382,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arrived/Arrived-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -437,6 +443,7 @@
 				8908FF711AE01ECF00C990DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8908FF721AE01ECF00C990DC /* Build configuration list for PBXNativeTarget "ArrivedTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +452,7 @@
 				8908FF741AE01ECF00C990DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
