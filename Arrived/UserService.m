@@ -20,9 +20,9 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)getUserBy:(NSString *)phoneNumber{
+-(NSDictionary *)getUserBy:(NSString *)phoneNumberId{
     NSURLSession *getUserSession = [NSURLSession sharedSession];
-    NSString *phoneNumberWithKey = [NSString stringWithFormat:@"phoneNumber=%@", phoneNumber];
+    NSString *phoneNumberWithKey = [NSString stringWithFormat:@"phoneNumberId=%@", phoneNumberId];
     NSString *url = @"http://edu.dev/api/v1/getUser?";
     url = [url stringByAppendingString:phoneNumberWithKey];
     NSURLSessionDataTask *dataTask = [getUserSession dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
