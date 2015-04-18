@@ -1,25 +1,273 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Pr-FZ-mX9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Start-->
+        <scene sceneID="p6w-xk-tqd">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Start" id="5EH-PY-wQP" customClass="StartVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="tVC-n3-PTt"/>
+                        <viewControllerLayoutGuide type="bottom" id="I5M-fq-Hx4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <view key="view" contentMode="scaleToFill" id="It0-YT-0Up">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Protected" id="xEA-el-VGW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="iUj-bJ-AVR" kind="presentation" identifier="NewUser" id="lhf-9x-oH1"/>
+                        <segue destination="6wK-Ly-S7L" kind="presentation" identifier="LoggedIn" id="x9P-IR-ser"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdK-5p-fn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.5" y="917.5"/>
+        </scene>
+        <!--New User-->
+        <scene sceneID="oLy-UL-bKe">
+            <objects>
+                <viewController title="New User" id="iUj-bJ-AVR" customClass="WelcomeVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UR4-U3-JHX"/>
+                        <viewControllerLayoutGuide type="bottom" id="lAe-rS-bnp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uTI-tA-zIH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Arrived" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rl9-bR-YOm">
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login with phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coX-Sd-Xws">
+                                <rect key="frame" x="95" y="141" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="gQW-TZ-uJK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gQW-TZ-uJK"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRB-yQ-hla">
+                                <rect key="frame" x="289" y="141" width="38" height="30"/>
+                                <state key="normal" title="SMS">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter SMS code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xgb-rX-g86">
+                                <rect key="frame" x="95" y="179" width="186" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27W-gA-6fl">
+                                <rect key="frame" x="289" y="179" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="iUj-bJ-AVR" eventType="touchUpInside" id="8Xp-b5-Xyb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QRB-yQ-hla" firstAttribute="leading" secondItem="coX-Sd-Xws" secondAttribute="trailing" constant="8" symbolic="YES" id="1dl-mz-mLg"/>
+                            <constraint firstItem="coX-Sd-Xws" firstAttribute="top" secondItem="rl9-bR-YOm" secondAttribute="bottom" constant="100" id="905-qc-trx"/>
+                            <constraint firstItem="27W-gA-6fl" firstAttribute="height" secondItem="QRB-yQ-hla" secondAttribute="height" id="9iW-Iw-MKE"/>
+                            <constraint firstItem="coX-Sd-Xws" firstAttribute="width" secondItem="Xgb-rX-g86" secondAttribute="width" id="CLh-i5-dBH"/>
+                            <constraint firstItem="rl9-bR-YOm" firstAttribute="leading" secondItem="uTI-tA-zIH" secondAttribute="leadingMargin" id="FFT-Uw-HzN"/>
+                            <constraint firstItem="QRB-yQ-hla" firstAttribute="centerY" secondItem="coX-Sd-Xws" secondAttribute="centerY" id="GYb-Bm-Wii"/>
+                            <constraint firstItem="27W-gA-6fl" firstAttribute="top" secondItem="QRB-yQ-hla" secondAttribute="bottom" constant="8" symbolic="YES" id="GnH-Jw-1Iy"/>
+                            <constraint firstItem="coX-Sd-Xws" firstAttribute="trailing" secondItem="Xgb-rX-g86" secondAttribute="trailing" id="b7i-iC-UAW"/>
+                            <constraint firstItem="Xgb-rX-g86" firstAttribute="top" secondItem="coX-Sd-Xws" secondAttribute="bottom" constant="8" symbolic="YES" id="bzv-Sp-rdh"/>
+                            <constraint firstItem="coX-Sd-Xws" firstAttribute="centerX" secondItem="rl9-bR-YOm" secondAttribute="centerX" id="g8G-df-85t"/>
+                            <constraint firstItem="rl9-bR-YOm" firstAttribute="trailing" secondItem="uTI-tA-zIH" secondAttribute="trailingMargin" id="mCr-7L-Pyf"/>
+                            <constraint firstItem="27W-gA-6fl" firstAttribute="width" secondItem="QRB-yQ-hla" secondAttribute="width" id="pMc-Gi-wf6"/>
+                            <constraint firstItem="27W-gA-6fl" firstAttribute="centerX" secondItem="QRB-yQ-hla" secondAttribute="centerX" id="pqR-li-A9l"/>
+                            <constraint firstItem="rl9-bR-YOm" firstAttribute="top" secondItem="UR4-U3-JHX" secondAttribute="bottom" id="shg-Vu-nl2"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="GIR-4f-tKc" kind="presentation" identifier="SignUp" id="rML-t1-yO0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acr-gw-iW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955.5" y="917.5"/>
+        </scene>
+        <!--User Agreement-->
+        <scene sceneID="rwr-G5-cRQ">
+            <objects>
+                <viewController title="User Agreement" id="GIR-4f-tKc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XzR-Xx-Q0n"/>
+                        <viewControllerLayoutGuide type="bottom" id="F5u-RA-VwS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wo2-3k-cUD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFp-HP-nYt">
+                                <rect key="frame" x="16" y="48" width="343" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">IMPORTANT, PLEASE READ CAREFULLY. THIS IS A LICENSE AGREEMENT This SOFTWARE PRODUCT is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. This SOFTWARE PRODUCT is licensed, not sold. End User License Agreement This End User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and !!YOUR COMPANY!! with regard to the copyrighted Software (herein referred to as "SOFTWARE PRODUCT" or "SOFTWARE") provided with this EULA. The SOFTWARE PRODUCT includes computer software, the associated media, any printed materials, and any "online" or electronic documentation. Use of any software and related documentation ("Software") provided to you by !!YOUR COMPANY!! in whatever form or media, will constitute your acceptance of these terms, unless separate terms are provided by the software supplier, in which case certain additional or different terms may apply. If you do not agree with the terms of this EULA, do not download, install, copy or use the Software. By installing, copying or otherwise using the SOFTWARE PRODUCT, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, !!YOUR COMPANY!! is unwilling to license the SOFTWARE PRODUCT to you. 1. Eligible Licensees. This Software is available for license solely to SOFTWARE owners, with no right of duplication or further distribution, licensing, or sub-licensing. IF YOU DO NOT OWN THE SOFTWARE, THEN DO NOT DOWNLOAD, INSTALL, COPY OR USE THE SOFTWARE. 2. License Grant. !!YOUR COMPANY!! grants to you a personal, non-transferable and non-exclusive right to use the copy of the Software provided with this EULA. You agree you will not copy the Software except as necessary to use it on a single computer. You agree that you may not copy the written materials accompanying the Software. Modifying, translating, renting, copying, transferring or assigning all or part of the Software, or any rights granted hereunder, to any other persons and removing any proprietary notices, labels or marks from the Software is strictly prohibited. Furthermore, you hereby agree not to create derivative works based on the Software. You may not transfer this Software. 3. Copyright. The Software is licensed, not sold. You acknowledge that no title to the intellectual property in the Software is transferred to you. You further acknowledge that title and full ownership rights to the Software will remain the exclusive property of !!YOUR COMPANY!! and/or its suppliers, and you will not acquire any rights to the Software, except as expressly set forth above. All copies of the Software will contain the same proprietary notices as contained in or on the Software. All title and copyrights in and to the SOFTWARE PRODUCT (including but not limited to any images, photographs, animations, video, audio, music, text and "applets," incorporated into the SOFTWARE PRODUCT), the accompanying printed materials, and any copies of the SOFTWARE PRODUCT, are owned by !!YOUR COMPANY!! or its suppliers. The SOFTWARE PRODUCT is protected by copyright laws and international treaty provisions. You may not copy the printed materials accompanying the SOFTWARE PRODUCT. 4. Reverse Engineering. You agree that you will not attempt, and if you are a corporation, you will use your best efforts to prevent your employees and contractors from attempting to reverse compile, modify, translate or disassemble the Software in whole or in part. Any failure to comply with the above or any other terms and conditions contained herein will result in the automatic termination of this license and the reversion of the rights granted hereunder to !!YOUR COMPANY!!. 5. Disclaimer of Warranty. The Software is provided "AS IS" without warranty of any kind. !!YOUR COMPANY!! and its suppliers disclaim and make no express or implied warranties and specifically disclaim the warranties of merchantability, fitness for a particular purpose and non-infringement of third-party rights. The entire risk as to the quality and performance of the Software is with you. Neither!!YOUR COMPANY!! nor its suppliers warrant that the functions contained in the Software will meet your requirements or that the operation of the Software will be uninterrupted or error-free. !!YOUR COMPANY!! IS NOT OBLIGATED TO PROVIDE ANY UPDATES TO THE SOFTWARE. 6. Limitation of Liability. !!YOUR COMPANY!!'s entire liability and your exclusive remedy under this EULA shall not exceed the price paid for the Software, if any. In no event shall !!YOUR COMPANY!! or its suppliers be liable to you for any consequential, special, incidental or indirect damages of any kind arising out of the use or inability to use the software, even if !!YOUR COMPANY!! or its supplier has been advised of the possibility of such damages, or any claim by a third party. 7. Rental. You may not loan, rent, or lease the SOFTWARE. 8. Upgrades. If the SOFTWARE is an upgrade from an earlier release or previously released version, you now may use that upgraded product only in accordance with this EULA. If the SOFTWARE PRODUCT is an upgrade of a software program which you licensed as a single product, the SOFTWARE PRODUCT may be used only as part of that single product package and may not be separated for use on more than one computer. 9. OEM Product Support. Product support for the SOFTWARE PRODUCT IS provided by !!YOUR COMPANY!!. For product support, please call !!YOUR COMPANY!!. Should you have any questions concerning this, please refer to the address provided in the documentation. 10. No Liability for Consequential Damages. In no event shall !!YOUR COMPANY!! or its suppliers be liable for any damages whatsoever (including, without limitation, incidental, direct, indirect special and consequential damages, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use or inability to use this "Your Company" product, even if !!YOUR COMPANY!! has been advised of the possibility of such damages. Because some states/countries do not allow the exclusion or limitation of liability for consequential or incidental damages, the above limitation may not apply to you. 11. Indemnification By You. If you distribute the Software in violation of this Agreement, you agree to indemnify, hold harmless and defend !!YOUR COMPANY!! and its suppliers from and against any claims or lawsuits, including attorney's fees that arise or result from the use or distribution of the Software in violation of this Agreement. !!YOUR COMPANY!! !!YOUR ADDRESS!! !!YOUR CITY, STATE &amp; AIP!! !!YOUR CONTACT INFO!!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-PY-q6a">
+                                <rect key="frame" x="16" y="629" width="343" height="30"/>
+                                <state key="normal" title="Agree and Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kgy-9I-gWN" kind="presentation" id="XbW-HC-Rg7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Agreement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkN-Gw-QE8">
+                                <rect key="frame" x="16" y="20" width="343" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WFp-HP-nYt" secondAttribute="trailing" id="2rI-k8-MUk"/>
+                            <constraint firstItem="fkN-Gw-QE8" firstAttribute="width" secondItem="WFp-HP-nYt" secondAttribute="width" id="ES3-tH-OAS"/>
+                            <constraint firstItem="7ah-PY-q6a" firstAttribute="leading" secondItem="wo2-3k-cUD" secondAttribute="leadingMargin" id="GBq-dQ-Ch2"/>
+                            <constraint firstItem="fkN-Gw-QE8" firstAttribute="top" secondItem="XzR-Xx-Q0n" secondAttribute="bottom" id="Hfr-xW-y7S"/>
+                            <constraint firstItem="fkN-Gw-QE8" firstAttribute="leading" secondItem="wo2-3k-cUD" secondAttribute="leadingMargin" id="Kxc-vO-eYl"/>
+                            <constraint firstItem="WFp-HP-nYt" firstAttribute="top" secondItem="XzR-Xx-Q0n" secondAttribute="bottom" id="Nsi-U0-P2A"/>
+                            <constraint firstItem="WFp-HP-nYt" firstAttribute="trailing" secondItem="wo2-3k-cUD" secondAttribute="trailingMargin" id="SF3-cv-q2I"/>
+                            <constraint firstItem="7ah-PY-q6a" firstAttribute="trailing" secondItem="wo2-3k-cUD" secondAttribute="trailingMargin" id="XnT-z0-P2q"/>
+                            <constraint firstItem="WFp-HP-nYt" firstAttribute="leading" secondItem="wo2-3k-cUD" secondAttribute="leadingMargin" id="ZUr-2b-FhY"/>
+                            <constraint firstItem="WFp-HP-nYt" firstAttribute="top" secondItem="XzR-Xx-Q0n" secondAttribute="bottom" id="ZYy-l8-QwL"/>
+                            <constraint firstItem="WFp-HP-nYt" firstAttribute="top" secondItem="XzR-Xx-Q0n" secondAttribute="bottom" constant="8" symbolic="YES" id="bUp-TV-Yuj"/>
+                            <constraint firstItem="WFp-HP-nYt" firstAttribute="top" secondItem="fkN-Gw-QE8" secondAttribute="bottom" constant="8" id="cPK-Bx-jpY"/>
+                            <constraint firstItem="7ah-PY-q6a" firstAttribute="top" secondItem="WFp-HP-nYt" secondAttribute="bottom" constant="8" symbolic="YES" id="cw7-zw-nl8"/>
+                            <constraint firstItem="7ah-PY-q6a" firstAttribute="leading" secondItem="WFp-HP-nYt" secondAttribute="trailing" constant="-568" id="gkc-qt-MN2"/>
+                            <constraint firstItem="WFp-HP-nYt" firstAttribute="leading" secondItem="wo2-3k-cUD" secondAttribute="leadingMargin" id="iKt-0i-FaG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WFp-HP-nYt" secondAttribute="trailing" id="iLi-gr-OhX"/>
+                            <constraint firstItem="F5u-RA-VwS" firstAttribute="top" secondItem="7ah-PY-q6a" secondAttribute="bottom" constant="8" id="jok-4L-cnz"/>
+                            <constraint firstItem="fkN-Gw-QE8" firstAttribute="leading" secondItem="wo2-3k-cUD" secondAttribute="leadingMargin" id="mJj-Vo-xUY"/>
+                            <constraint firstItem="fkN-Gw-QE8" firstAttribute="trailing" secondItem="wo2-3k-cUD" secondAttribute="trailingMargin" id="nf2-lk-vYC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ES3-tH-OAS"/>
+                                <exclude reference="Nsi-U0-P2A"/>
+                                <exclude reference="SF3-cv-q2I"/>
+                                <exclude reference="ZUr-2b-FhY"/>
+                                <exclude reference="ZYy-l8-QwL"/>
+                                <exclude reference="bUp-TV-Yuj"/>
+                                <exclude reference="iLi-gr-OhX"/>
+                                <exclude reference="gkc-qt-MN2"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CW3-h4-cxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="473.5" y="1797.5"/>
+        </scene>
+        <!--Adding Payment Info-->
+        <scene sceneID="npI-iL-3Bt">
+            <objects>
+                <viewController title="Adding Payment Info" id="kgy-9I-gWN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fJb-RD-3PM"/>
+                        <viewControllerLayoutGuide type="bottom" id="MDR-Vv-h7M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a1r-86-uRS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAm-vd-hpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.5" y="1797.5"/>
+        </scene>
+        <!--LoggedIn-->
+        <scene sceneID="6Ev-77-dkt">
+            <objects>
+                <viewController title="LoggedIn" id="6wK-Ly-S7L" customClass="LoggedInVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ciB-iu-z38"/>
+                        <viewControllerLayoutGuide type="bottom" id="t54-cn-Qpu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7c4-yd-pTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User is logged in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usc-bz-LRq">
+                                <rect key="frame" x="16" y="28" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-jp-eWy">
+                                <rect key="frame" x="163" y="57" width="49" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout" destination="6wK-Ly-S7L" eventType="touchUpInside" id="ogJ-to-QJh"/>
+                                    <segue destination="iUj-bJ-AVR" kind="presentation" id="KyA-ky-Y6o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="usc-bz-LRq" firstAttribute="top" secondItem="ciB-iu-z38" secondAttribute="bottom" constant="8" id="NSI-6G-ajw"/>
+                            <constraint firstItem="D2c-jp-eWy" firstAttribute="top" secondItem="usc-bz-LRq" secondAttribute="bottom" constant="8" id="Ooc-dx-56i"/>
+                            <constraint firstItem="usc-bz-LRq" firstAttribute="top" secondItem="ciB-iu-z38" secondAttribute="bottom" constant="8" id="l6E-Fz-PMI"/>
+                            <constraint firstItem="D2c-jp-eWy" firstAttribute="centerX" secondItem="usc-bz-LRq" secondAttribute="centerX" constant="-0.5" id="nAx-ah-qBD"/>
+                            <constraint firstItem="usc-bz-LRq" firstAttribute="trailing" secondItem="7c4-yd-pTJ" secondAttribute="trailingMargin" id="vp1-bw-bme"/>
+                            <constraint firstItem="usc-bz-LRq" firstAttribute="leading" secondItem="7c4-yd-pTJ" secondAttribute="leadingMargin" id="yGc-nf-gYl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P8i-7W-aeR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGQ-c8-OSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955.5" y="97.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N5n-J6-ez7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Pr-FZ-mX9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NXb-CE-W9U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5EH-PY-wQP" kind="relationship" relationship="rootViewController" id="Vi3-S3-kjQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfO-sC-qyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.5" y="917.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KyA-ky-Y6o"/>
+    </inferredMetricsTieBreakers>
 </document>
