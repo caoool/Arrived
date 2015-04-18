@@ -13,10 +13,11 @@
 		8908FF601AE01ECF00C990DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */; };
 		8908FF6C1AE01ECF00C990DC /* ArrivedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */; };
 		89998E5F1AE1E83F00E3BF2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E5E1AE1E83F00E3BF2E /* User.swift */; };
-		89998E621AE1E85100E3BF2E /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 89998E611AE1E85100E3BF2E /* UserService.m */; };
 		89998E661AE1E85B00E3BF2E /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */; };
 		89998E671AE1E85B00E3BF2E /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E641AE1E85B00E3BF2E /* StartVC.swift */; };
 		89998E681AE1E85B00E3BF2E /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */; };
+		89998E701AE277A600E3BF2E /* UserServiceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E6F1AE277A600E3BF2E /* UserServiceReader.swift */; };
+		89998E731AE2877000E3BF2E /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 89998E711AE2877000E3BF2E /* UserService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +41,13 @@
 		8908FF6A1AE01ECF00C990DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedTests.swift; sourceTree = "<group>"; };
 		89998E5E1AE1E83F00E3BF2E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Arrived/User.swift; sourceTree = "<group>"; };
-		89998E601AE1E85100E3BF2E /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = Arrived/UserService.h; sourceTree = "<group>"; };
-		89998E611AE1E85100E3BF2E /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = Arrived/UserService.m; sourceTree = "<group>"; };
 		89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedInVC.swift; path = Arrived/LoggedInVC.swift; sourceTree = "<group>"; };
 		89998E641AE1E85B00E3BF2E /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartVC.swift; path = Arrived/StartVC.swift; sourceTree = "<group>"; };
 		89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = Arrived/WelcomeVC.swift; sourceTree = "<group>"; };
 		89998E6E1AE1E9A700E3BF2E /* Arrived-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Arrived-Bridging-Header.h"; path = "Arrived/Arrived-Bridging-Header.h"; sourceTree = "<group>"; };
+		89998E6F1AE277A600E3BF2E /* UserServiceReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServiceReader.swift; path = Arrived/UserServiceReader.swift; sourceTree = "<group>"; };
+		89998E711AE2877000E3BF2E /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		89998E721AE2877000E3BF2E /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				89998E5E1AE1E83F00E3BF2E /* User.swift */,
-				89998E601AE1E85100E3BF2E /* UserService.h */,
-				89998E611AE1E85100E3BF2E /* UserService.m */,
+				89998E711AE2877000E3BF2E /* UserService.m */,
+				89998E721AE2877000E3BF2E /* UserService.h */,
+				89998E6F1AE277A600E3BF2E /* UserServiceReader.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -262,9 +265,10 @@
 			files = (
 				89998E671AE1E85B00E3BF2E /* StartVC.swift in Sources */,
 				89998E5F1AE1E83F00E3BF2E /* User.swift in Sources */,
+				89998E731AE2877000E3BF2E /* UserService.m in Sources */,
+				89998E701AE277A600E3BF2E /* UserServiceReader.swift in Sources */,
 				89998E661AE1E85B00E3BF2E /* LoggedInVC.swift in Sources */,
 				89998E681AE1E85B00E3BF2E /* WelcomeVC.swift in Sources */,
-				89998E621AE1E85100E3BF2E /* UserService.m in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
