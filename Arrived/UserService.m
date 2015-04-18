@@ -7,16 +7,23 @@
 //
 
 #import "UserService.h"
-#define VERIFYUSER @"http://edu.dev/api/v1/users"
+#define VERIFYUSER @"http://edu.dev/api/v1/postUser"
 #define REGISTERUSER @"http://edu.dev/api/v1/registerUser"
 #define UPDATEUSER @"http://edu.dev/api/v1/users"
 
 @implementation UserService
 
+/**
+ * Get User By Phone Number
+ *
+ * @parameter NSString *phoneNumber
+ * @return NSDictionary
+ */
+
 -(NSDictionary *)getUserBy:(NSString *)phoneNumber{
     NSURLSession *getUserSession = [NSURLSession sharedSession];
     NSString *phoneNumberWithKey = [NSString stringWithFormat:@"phoneNumber=%@", phoneNumber];
-    NSString *url = @"http://edu.dev/api/v1/users?";
+    NSString *url = @"http://edu.dev/api/v1/getUser?";
     url = [url stringByAppendingString:phoneNumberWithKey];
     NSURLSessionDataTask *dataTask = [getUserSession dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
@@ -33,6 +40,14 @@
     [dataTask resume];
     return _responseData;
 }
+
+/**
+ * Verification Process:
+ * obtain a phoneNumberId and verification code
+ *
+ * @parameter NSString *phoneNumber
+ * @return NSDictionary
+ */
 
 -(NSDictionary *)verify:(NSString *)phoneNumber{
     NSURLSession *verifySession = [NSURLSession sharedSession];
@@ -71,6 +86,13 @@
                                      
 }
 
+/**
+ * Perform Action On User Including update, register, auth
+ *
+ * @parameter NSString *url, NSString *method, NSDictionary *userInfo
+ * @return NSDictionary
+ */
+
 -(NSDictionary *)actionOnUser:(NSString *) url httpMethod: (NSString *) method with:(NSDictionary *)userInfo{
     NSURLSession *verifySession = [NSURLSession sharedSession];
     NSMutableURLRequest *postUserRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
@@ -103,12 +125,37 @@
     return _responseData;
 }
 
+/**
+ * Register a User with BankInfo, pinCode, fullName
+ *
+ * @parameter NSDictionary *userInfo
+ * @return NSDictionary
+ */
+
 -(NSDictionary *)registerWith:(NSDictionary *)userInfo{
-    return [self actionOnUser:REGISTERUSER httpMethod:@"POST" with:userInfo];
+    return [self actionOnUser:VERIFYUSER httpMethod:@"POST" with:userInfo];
 }
 
+/**
+ * Update a User with optional Infomatiion such as nickname
+ *
+ * @parameter NSDictionary *userInfo
+ * @return NSDictionary
+ */
+
 -(NSDictionary *)updateWith:(NSDictionary *)userInfo{
-    return [self actionOnUser:UPDATEUSER httpMethod:@"PATCH" with:userInfo];
+    return [self actionOnUser:VERIFYUSER httpMethod:@"PATCH" with:userInfo];
+}
+
+/**
+ * Auth a User with phoneNumberID and verificationCode
+ *
+ * @parameter NSDictionary *userInfo
+ * @return NSDictionary
+ */
+
+-(NSDictionary *)authWith:(NSDictionary *)userInfo{
+    return [self actionOnUser:VERIFYUSER httpMethod:@"POST" with:userInfo];
 }
 
 

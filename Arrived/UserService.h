@@ -20,6 +20,8 @@
 
 -(NSDictionary *)updateWith:(NSDictionary *)userInfo;
 
+-(NSDictionary *)authWith:(NSDictionary *)userInfo;
+
 
 
 
