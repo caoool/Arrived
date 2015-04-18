@@ -12,10 +12,11 @@
 		8908FF5D1AE01ECF00C990DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5C1AE01ECF00C990DC /* Images.xcassets */; };
 		8908FF601AE01ECF00C990DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */; };
 		8908FF6C1AE01ECF00C990DC /* ArrivedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */; };
-		8908FF771AE0341B00C990DC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF761AE0341B00C990DC /* File.swift */; };
-		8908FF7C1AE0377300C990DC /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF7B1AE0377300C990DC /* StartVC.swift */; };
-		8908FF7E1AE04BD800C990DC /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF7D1AE04BD800C990DC /* WelcomeVC.swift */; };
-		8908FF801AE04F7200C990DC /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF7F1AE04F7200C990DC /* LoggedInVC.swift */; };
+		89998E5F1AE1E83F00E3BF2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E5E1AE1E83F00E3BF2E /* User.swift */; };
+		89998E621AE1E85100E3BF2E /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 89998E611AE1E85100E3BF2E /* UserService.m */; };
+		89998E661AE1E85B00E3BF2E /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */; };
+		89998E671AE1E85B00E3BF2E /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E641AE1E85B00E3BF2E /* StartVC.swift */; };
+		89998E681AE1E85B00E3BF2E /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +39,13 @@
 		8908FF651AE01ECF00C990DC /* ArrivedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrivedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908FF6A1AE01ECF00C990DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedTests.swift; sourceTree = "<group>"; };
-		8908FF761AE0341B00C990DC /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Classes/File.swift; sourceTree = "<group>"; };
-		8908FF7B1AE0377300C990DC /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartVC.swift; path = Classes/VCs/StartVC.swift; sourceTree = "<group>"; };
-		8908FF7D1AE04BD800C990DC /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = Classes/VCs/WelcomeVC.swift; sourceTree = "<group>"; };
-		8908FF7F1AE04F7200C990DC /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedInVC.swift; path = Classes/VCs/LoggedInVC.swift; sourceTree = "<group>"; };
+		89998E5E1AE1E83F00E3BF2E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Arrived/User.swift; sourceTree = "<group>"; };
+		89998E601AE1E85100E3BF2E /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = Arrived/UserService.h; sourceTree = "<group>"; };
+		89998E611AE1E85100E3BF2E /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = Arrived/UserService.m; sourceTree = "<group>"; };
+		89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedInVC.swift; path = Arrived/LoggedInVC.swift; sourceTree = "<group>"; };
+		89998E641AE1E85B00E3BF2E /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartVC.swift; path = Arrived/StartVC.swift; sourceTree = "<group>"; };
+		89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = Arrived/WelcomeVC.swift; sourceTree = "<group>"; };
+		89998E6E1AE1E9A700E3BF2E /* Arrived-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Arrived-Bridging-Header.h"; path = "Arrived/Arrived-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,7 @@
 		8908FF471AE01ECF00C990DC = {
 			isa = PBXGroup;
 			children = (
-				8908FF751AE029A600C990DC /* Classes */,
+				89998E691AE1E87300E3BF2E /* Classes */,
 				8908FF521AE01ECF00C990DC /* Arrived */,
 				8908FF681AE01ECF00C990DC /* ArrivedTests */,
 				8908FF511AE01ECF00C990DC /* Products */,
@@ -89,7 +93,6 @@
 				8908FF5C1AE01ECF00C990DC /* Images.xcassets */,
 				8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */,
 				8908FF531AE01ECF00C990DC /* Supporting Files */,
-				94D622E31AE1BED800A5736C /* Arrived-Bridging-Header.h */,
 			);
 			path = Arrived;
 			sourceTree = "<group>";
@@ -119,23 +122,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8908FF751AE029A600C990DC /* Classes */ = {
+		89998E691AE1E87300E3BF2E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8908FF781AE035AD00C990DC /* VCs */,
-				8908FF761AE0341B00C990DC /* File.swift */,
+				89998E6C1AE1E8BB00E3BF2E /* Supports */,
+				89998E6B1AE1E88700E3BF2E /* Services */,
+				89998E6A1AE1E87A00E3BF2E /* VCs */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		8908FF781AE035AD00C990DC /* VCs */ = {
+		89998E6A1AE1E87A00E3BF2E /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				8908FF7B1AE0377300C990DC /* StartVC.swift */,
-				8908FF7D1AE04BD800C990DC /* WelcomeVC.swift */,
-				8908FF7F1AE04F7200C990DC /* LoggedInVC.swift */,
+				89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */,
+				89998E641AE1E85B00E3BF2E /* StartVC.swift */,
+				89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */,
 			);
 			name = VCs;
+			sourceTree = "<group>";
+		};
+		89998E6B1AE1E88700E3BF2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				89998E5E1AE1E83F00E3BF2E /* User.swift */,
+				89998E601AE1E85100E3BF2E /* UserService.h */,
+				89998E611AE1E85100E3BF2E /* UserService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		89998E6C1AE1E8BB00E3BF2E /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				89998E6E1AE1E9A700E3BF2E /* Arrived-Bridging-Header.h */,
+			);
+			name = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8908FF771AE0341B00C990DC /* File.swift in Sources */,
+				89998E671AE1E85B00E3BF2E /* StartVC.swift in Sources */,
+				89998E5F1AE1E83F00E3BF2E /* User.swift in Sources */,
+				89998E661AE1E85B00E3BF2E /* LoggedInVC.swift in Sources */,
+				89998E681AE1E85B00E3BF2E /* WelcomeVC.swift in Sources */,
+				89998E621AE1E85100E3BF2E /* UserService.m in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
-				8908FF7C1AE0377300C990DC /* StartVC.swift in Sources */,
-				8908FF801AE04F7200C990DC /* LoggedInVC.swift in Sources */,
-				8908FF7E1AE04BD800C990DC /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
