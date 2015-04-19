@@ -12,15 +12,15 @@
 		8908FF5D1AE01ECF00C990DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5C1AE01ECF00C990DC /* Images.xcassets */; };
 		8908FF601AE01ECF00C990DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */; };
 		8908FF6C1AE01ECF00C990DC /* ArrivedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */; };
-		890D4C691AE4405400BD05DF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C671AE4405400BD05DF /* UserService.swift */; };
-		890D4C6A1AE4405400BD05DF /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C681AE4405400BD05DF /* BaseService.swift */; };
-		892B472C1AE2BF2300143387 /* AddPaymentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B472B1AE2BF2300143387 /* AddPaymentInfoVC.swift */; };
-		892B472E1AE2C79D00143387 /* UpdateUserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B472D1AE2C79D00143387 /* UpdateUserInfoVC.swift */; };
-		89998E5F1AE1E83F00E3BF2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E5E1AE1E83F00E3BF2E /* User.swift */; };
-		89998E661AE1E85B00E3BF2E /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */; };
-		89998E671AE1E85B00E3BF2E /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E641AE1E85B00E3BF2E /* StartVC.swift */; };
-		89998E681AE1E85B00E3BF2E /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */; };
-		89998E701AE277A600E3BF2E /* UserServiceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89998E6F1AE277A600E3BF2E /* UserServiceReader.swift */; };
+		890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C711AE4433400BD05DF /* BaseService.swift */; };
+		890D4C7E1AE4433400BD05DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C721AE4433400BD05DF /* User.swift */; };
+		890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C731AE4433400BD05DF /* UserService.swift */; };
+		890D4C801AE4433400BD05DF /* UserServiceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C741AE4433400BD05DF /* UserServiceReader.swift */; };
+		890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */; };
+		890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C791AE4433400BD05DF /* LoggedInVC.swift */; };
+		890D4C831AE4433400BD05DF /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7A1AE4433400BD05DF /* StartVC.swift */; };
+		890D4C841AE4433400BD05DF /* UpdateUserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7B1AE4433400BD05DF /* UpdateUserInfoVC.swift */; };
+		890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,16 +43,16 @@
 		8908FF651AE01ECF00C990DC /* ArrivedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrivedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908FF6A1AE01ECF00C990DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedTests.swift; sourceTree = "<group>"; };
-		890D4C381AE438A000BD05DF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Arrived/MyPlayground.playground; sourceTree = "<group>"; };
-		890D4C671AE4405400BD05DF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		890D4C681AE4405400BD05DF /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
-		892B472B1AE2BF2300143387 /* AddPaymentInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPaymentInfoVC.swift; path = Arrived/AddPaymentInfoVC.swift; sourceTree = "<group>"; };
-		892B472D1AE2C79D00143387 /* UpdateUserInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateUserInfoVC.swift; path = Arrived/UpdateUserInfoVC.swift; sourceTree = "<group>"; };
-		89998E5E1AE1E83F00E3BF2E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Arrived/User.swift; sourceTree = "<group>"; };
-		89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedInVC.swift; path = Arrived/LoggedInVC.swift; sourceTree = "<group>"; };
-		89998E641AE1E85B00E3BF2E /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartVC.swift; path = Arrived/StartVC.swift; sourceTree = "<group>"; };
-		89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = Arrived/WelcomeVC.swift; sourceTree = "<group>"; };
-		89998E6F1AE277A600E3BF2E /* UserServiceReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServiceReader.swift; path = Arrived/UserServiceReader.swift; sourceTree = "<group>"; };
+		890D4C711AE4433400BD05DF /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		890D4C721AE4433400BD05DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		890D4C731AE4433400BD05DF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		890D4C741AE4433400BD05DF /* UserServiceReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceReader.swift; sourceTree = "<group>"; };
+		890D4C761AE4433400BD05DF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPaymentInfoVC.swift; sourceTree = "<group>"; };
+		890D4C791AE4433400BD05DF /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
+		890D4C7A1AE4433400BD05DF /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		890D4C7B1AE4433400BD05DF /* UpdateUserInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoVC.swift; sourceTree = "<group>"; };
+		890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 		8908FF471AE01ECF00C990DC = {
 			isa = PBXGroup;
 			children = (
-				89998E691AE1E87300E3BF2E /* Classes */,
+				890D4C6F1AE4433400BD05DF /* Classes */,
 				8908FF521AE01ECF00C990DC /* Arrived */,
 				8908FF681AE01ECF00C990DC /* ArrivedTests */,
 				8908FF511AE01ECF00C990DC /* Products */,
@@ -129,45 +129,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		89998E691AE1E87300E3BF2E /* Classes */ = {
+		890D4C6F1AE4433400BD05DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				89998E6C1AE1E8BB00E3BF2E /* Supports */,
-				89998E6B1AE1E88700E3BF2E /* Services */,
-				89998E6A1AE1E87A00E3BF2E /* VCs */,
+				890D4C751AE4433400BD05DF /* Supports */,
+				890D4C701AE4433400BD05DF /* Services */,
+				890D4C771AE4433400BD05DF /* VCs */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		89998E6A1AE1E87A00E3BF2E /* VCs */ = {
+		890D4C701AE4433400BD05DF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				89998E631AE1E85B00E3BF2E /* LoggedInVC.swift */,
-				89998E641AE1E85B00E3BF2E /* StartVC.swift */,
-				89998E651AE1E85B00E3BF2E /* WelcomeVC.swift */,
-				892B472B1AE2BF2300143387 /* AddPaymentInfoVC.swift */,
-				892B472D1AE2C79D00143387 /* UpdateUserInfoVC.swift */,
+				890D4C711AE4433400BD05DF /* BaseService.swift */,
+				890D4C721AE4433400BD05DF /* User.swift */,
+				890D4C731AE4433400BD05DF /* UserService.swift */,
+				890D4C741AE4433400BD05DF /* UserServiceReader.swift */,
 			);
-			name = VCs;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		89998E6B1AE1E88700E3BF2E /* Services */ = {
+		890D4C751AE4433400BD05DF /* Supports */ = {
 			isa = PBXGroup;
 			children = (
-				89998E5E1AE1E83F00E3BF2E /* User.swift */,
-				890D4C671AE4405400BD05DF /* UserService.swift */,
-				890D4C681AE4405400BD05DF /* BaseService.swift */,
-				89998E6F1AE277A600E3BF2E /* UserServiceReader.swift */,
+				890D4C761AE4433400BD05DF /* MyPlayground.playground */,
 			);
-			name = Services;
+			path = Supports;
 			sourceTree = "<group>";
 		};
-		89998E6C1AE1E8BB00E3BF2E /* Supports */ = {
+		890D4C771AE4433400BD05DF /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				890D4C381AE438A000BD05DF /* MyPlayground.playground */,
+				890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */,
+				890D4C791AE4433400BD05DF /* LoggedInVC.swift */,
+				890D4C7A1AE4433400BD05DF /* StartVC.swift */,
+				890D4C7B1AE4433400BD05DF /* UpdateUserInfoVC.swift */,
+				890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */,
 			);
-			name = Supports;
+			path = VCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,16 +270,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89998E671AE1E85B00E3BF2E /* StartVC.swift in Sources */,
-				89998E5F1AE1E83F00E3BF2E /* User.swift in Sources */,
-				890D4C691AE4405400BD05DF /* UserService.swift in Sources */,
-				89998E701AE277A600E3BF2E /* UserServiceReader.swift in Sources */,
-				89998E661AE1E85B00E3BF2E /* LoggedInVC.swift in Sources */,
-				892B472C1AE2BF2300143387 /* AddPaymentInfoVC.swift in Sources */,
-				89998E681AE1E85B00E3BF2E /* WelcomeVC.swift in Sources */,
-				892B472E1AE2C79D00143387 /* UpdateUserInfoVC.swift in Sources */,
-				890D4C6A1AE4405400BD05DF /* BaseService.swift in Sources */,
+				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
+				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
+				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
+				890D4C801AE4433400BD05DF /* UserServiceReader.swift in Sources */,
+				890D4C841AE4433400BD05DF /* UpdateUserInfoVC.swift in Sources */,
+				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
+				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
+				890D4C7E1AE4433400BD05DF /* User.swift in Sources */,
+				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
