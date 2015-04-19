@@ -12,17 +12,15 @@
 
 @property (nonatomic, strong) NSDictionary *responseData;
 
--(NSDictionary *)verify:(NSString *)phoneNumber;
+-(void)verify:(NSString *)phoneNumber completion:(void (^)(NSDictionary *))completion;
 
--(NSDictionary *)getUserBy:(NSString *)phoneNumberId;
+-(void)getUserBy:(NSString *)phoneNumberId completion:(void (^)(NSDictionary *))completion;
 
--(NSDictionary *)registerWith:(NSDictionary *)userInfo;
+-(void)registerWith:(NSDictionary *)userInfo completion:(void (^)(NSDictionary *))completion;
 
--(NSDictionary *)updateWith:(NSDictionary *)userInfo;
+-(void)updateWith:(NSDictionary *)userInfo completion:(void (^)(NSDictionary *))completion;
 
--(NSDictionary *)authWith:(NSDictionary *)userInfo;
-
-
+-(void)authWith:(NSDictionary *)userInfo completion:(void (^)(NSDictionary *))completion;
 
 
 @end
