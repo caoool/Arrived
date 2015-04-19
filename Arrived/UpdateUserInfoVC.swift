@@ -35,14 +35,14 @@ class UpdateUserInfoVC: UIViewController {
         dict.setValue(email.text, forKey: "email")
         dict.setValue(status.text, forKey: "status")
         
-        let result = user.updateUserInfo(dict)
-        if let isSuccess = result["isSuccess"] as? Bool {
-            if isSuccess {
-                self.performSegueWithIdentifier("BackToLoggedIn", sender: self)
-            } else {
-                println(result["message"])
-            }
-        }
+//        let result = user.updateUserInfo(dict)
+//        if let isSuccess = result["isSuccess"] as? Bool {
+//            if isSuccess {
+//                self.performSegueWithIdentifier("BackToLoggedIn", sender: self)
+//            } else {
+//                println(result["message"])
+//            }
+//        }
     }
     
 

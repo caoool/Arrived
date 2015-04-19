@@ -33,13 +33,13 @@ class AddPaymentInfoVC: UIViewController {
         dict.setValue(expDateLabel.text, forKey:"expirationDate")
         dict.setValue(pin2Label.text, forKey:"cvv")
         
-        let result = user.register(dict)
-        if let isSuccess = result["isSuccess"] as? Bool {
-            if isSuccess {
-                self.performSegueWithIdentifier("newUserCreated", sender: self)
-            } else {
-                println(result["message"])
-            }
-        }
+//        let result = user.register(dict)
+//        if let isSuccess = result["isSuccess"] as? Bool {
+//            if isSuccess {
+//                self.performSegueWithIdentifier("newUserCreated", sender: self)
+//            } else {
+//                println(result["message"])
+//            }
+//        }
     }
 }

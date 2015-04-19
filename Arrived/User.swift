@@ -49,43 +49,43 @@ class User {
         
     }
     
-    func verify(phoneNumber: String) -> (code: String?, isNew: Bool?) {
-        let result = serviceReader.getVerificationCode(phoneNumber)
-        if result.message == nil {
-            phoneNumberId = result.phoneNumberId!
-            return (result.verificationCode!, result.isNewUser!)
-        } else {
-            return (result.message!, nil)
-        }
-    }
-    
-    func getUserByPhoneNumberId(phoneNumberId: String) {
-        if let dict = service.getUserBy(phoneNumberId) {
-            let isSuccess = dict["isSuccess"] as! Bool
-            if isSuccess {
-                nickname = dict["nickname"] as? String
-                portrait = dict["portrait"] as? UIImage
-                sex      = dict["sex"] as? Int
-                birth    = dict["birth"] as? String
-                city     = dict["city"] as? String
-                address  = dict["address"] as? String
-                email    = dict["email"] as? String
-                status   = dict["status"] as? String
-            } else {
-                println(dict["message"])
-            }
-        } else {
-            println("Can't access server")
-        }
-        
-    }
-    
-    func register(dict: NSDictionary) -> NSDictionary {
-        return service.registerWith(dict as [NSObject : AnyObject])
-    }
-    
-    func updateUserInfo(dict: NSDictionary) -> NSDictionary {
-        return service.updateWith(dict as [NSObject : AnyObject])
-    }
+//    func verify(phoneNumber: String) -> (code: String?, isNew: Bool?) {
+//        let result = serviceReader.getVerificationCode(phoneNumber)
+//        if result.message == nil {
+//            phoneNumberId = result.phoneNumberId!
+//            return (result.verificationCode!, result.isNewUser!)
+//        } else {
+//            return (result.message!, nil)
+//        }
+//    }
+//
+//    func getUserByPhoneNumberId(phoneNumberId: String) {
+//        if let dict = service.getUserBy(phoneNumberId) {
+//            let isSuccess = dict["isSuccess"] as! Bool
+//            if isSuccess {
+//                nickname = dict["nickname"] as? String
+//                portrait = dict["portrait"] as? UIImage
+//                sex      = dict["sex"] as? Int
+//                birth    = dict["birth"] as? String
+//                city     = dict["city"] as? String
+//                address  = dict["address"] as? String
+//                email    = dict["email"] as? String
+//                status   = dict["status"] as? String
+//            } else {
+//                println(dict["message"])
+//            }
+//        } else {
+//            println("Can't access server")
+//        }
+//        
+//    }
+//    
+//    func register(dict: NSDictionary) -> NSDictionary {
+//        return service.registerWith(dict as [NSObject : AnyObject])
+//    }
+//    
+//    func updateUserInfo(dict: NSDictionary) -> NSDictionary {
+//        return service.updateWith(dict as [NSObject : AnyObject])
+//    }
     
 }

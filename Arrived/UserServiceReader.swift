@@ -14,19 +14,19 @@ class UserServiceReader {
     
     private let service = UserService()
     
+//    
+//    func getVerificationCode(phoneNumber: String) -> (phoneNumberId: String?, verificationCode: String?, isNewUser: Bool?, message: String?) {
     
-    func getVerificationCode(phoneNumber: String) -> (phoneNumberId: String?, verificationCode: String?, isNewUser: Bool?, message: String?) {
-        
-        if let dict = service.verify(phoneNumber) {
-            let isSuccess = dict["isSuccesss"] as! Bool
-            if isSuccess {
-                return (dict["phoneNumberId"] as? String, dict["verificationCode"] as? String, dict["isNewUser"] as? Bool, nil)
-            } else {
-                return (nil, nil, nil, dict["message"] as? String)
-            }
-            
-        } else { return (nil, nil, nil, "Can't connect") }
-    }    
+//        if let dict = service.verify(phoneNumber) {
+//            let isSuccess = dict["isSuccesss"] as! Bool
+//            if isSuccess {
+//                return (dict["phoneNumberId"] as? String, dict["verificationCode"] as? String, dict["isNewUser"] as? Bool, nil)
+//            } else {
+//                return (nil, nil, nil, dict["message"] as? String)
+//            }
+//            
+//        } else { return (nil, nil, nil, "Can't connect") }
+//    }    
     
     
 }

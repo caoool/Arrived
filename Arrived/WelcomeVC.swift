@@ -13,6 +13,7 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var sms: UITextField!
     
+    private var phoneNumberId: String?
     private var verificationCode: String?
     private var isNewUser: Bool?
     
@@ -24,8 +25,13 @@ class WelcomeVC: UIViewController {
     
     @IBAction func smsButtonPressed() {
         let service = UserService()
-        let result = service.verify(phone.text)
-        print(result)
+        service.verify(phone.text) {
+            (result) -> Void in
+            println("abddd")
+        }
+        
+            
+            
 //        if let isSuccess: Bool = result["isSuccess"] as? Bool {
 //            if isSuccess {
 //                println("Successful")
