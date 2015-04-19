@@ -7,9 +7,9 @@
 //
 
 #import "UserService.h"
-#define VERIFYUSER @"http://edu.dev/api/v1/postUser"
-#define REGISTERUSER @"http://edu.dev/api/v1/registerUser"
-#define UPDATEUSER @"http://edu.dev/api/v1/users"
+#define VERIFYUSER @"http://yetian.xyz/api/v1/users/verify"
+#define REGISTERUSER @"http://yetian.xyz/api/v1/users/register"
+#define UPDATEUSER @"http://yetian.xyz/api/v1/users/update"
 
 @implementation UserService
 
@@ -20,10 +20,10 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)getUserBy:(NSString *)phoneNumberId{
+-(void)getUserBy:(NSString *)phoneNumberId completion:(void (^)(NSDictionary *))completion{
     NSURLSession *getUserSession = [NSURLSession sharedSession];
     NSString *phoneNumberWithKey = [NSString stringWithFormat:@"phoneNumberId=%@", phoneNumberId];
-    NSString *url = @"http://edu.dev/api/v1/getUser?";
+    NSString *url = @"http://yetian.xyz/api/v1/users/get?";
     url = [url stringByAppendingString:phoneNumberWithKey];
     NSURLSessionDataTask *dataTask = [getUserSession dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
@@ -31,14 +31,15 @@
         if (!error && httpResp.statusCode == 200) {
             NSError *jsonError;
             _responseData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-            NSLog(@"%@", _responseData);
+            completion(_responseData);
+            NSLog(@"1%@", _responseData);
         } else {
             NSLog(@"%@", error);
         }
     }];
     
     [dataTask resume];
-    return _responseData;
+    
 }
 
 /**
@@ -49,7 +50,7 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)verify:(NSString *)phoneNumber{
+-(void)verify:(NSString *)phoneNumber completion:(void (^)(NSDictionary *))completion{
     NSURLSession *verifySession = [NSURLSession sharedSession];
     NSMutableURLRequest *postUserRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:VERIFYUSER]];
     postUserRequest.HTTPMethod = @"POST";
@@ -73,7 +74,8 @@
         if (!error && httpResp.statusCode == 200) {
             NSError *jsonError;
             _responseData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-            NSLog(@"%@", _responseData);
+            completion(_responseData);
+            NSLog(@"2%@", _responseData);
             
         } else {
             NSLog(@"%@", error);
@@ -81,9 +83,7 @@
     }];
     
     [postUserTask resume];
-
-    return _responseData;
-                                     
+    
 }
 
 /**
@@ -93,7 +93,7 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)actionOnUser:(NSString *) url httpMethod: (NSString *) method with:(NSDictionary *)userInfo{
+-(void)actionOnUser:(NSString *) url httpMethod: (NSString *) method with:(NSDictionary *)userInfo completion:(void (^)(NSDictionary *))completion{
     NSURLSession *verifySession = [NSURLSession sharedSession];
     NSMutableURLRequest *postUserRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
     postUserRequest.HTTPMethod = method;
@@ -113,7 +113,8 @@
         if (!error && httpResp.statusCode == 200) {
             NSError *jsonError;
             _responseData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-            NSLog(@"%@", _responseData);
+            completion(_responseData);
+            NSLog(@"3%@", _responseData);
             
         } else {
             NSLog(@"%@", error);
@@ -121,8 +122,6 @@
     }];
     
     [postUserTask resume];
-    
-    return _responseData;
 }
 
 /**
@@ -132,8 +131,10 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)registerWith:(NSDictionary *)userInfo{
-    return [self actionOnUser:VERIFYUSER httpMethod:@"POST" with:userInfo];
+-(void)registerWith:(NSDictionary *)userInfo completion:(void (^)(NSDictionary *))completion{
+    [self actionOnUser:REGISTERUSER httpMethod:@"POST" with:userInfo completion:^(NSDictionary *response){
+        completion(response);
+    }];
 }
 
 /**
@@ -143,8 +144,10 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)updateWith:(NSDictionary *)userInfo{
-    return [self actionOnUser:VERIFYUSER httpMethod:@"PATCH" with:userInfo];
+-(void)updateWith:(NSDictionary *)userInfo completion:(void (^)(NSDictionary *))completion{
+    [self actionOnUser:UPDATEUSER httpMethod:@"PATCH" with:userInfo completion:^(NSDictionary *response){
+        completion(response);
+    }];
 }
 
 /**
@@ -154,8 +157,11 @@
  * @return NSDictionary
  */
 
--(NSDictionary *)authWith:(NSDictionary *)userInfo{
-    return [self actionOnUser:VERIFYUSER httpMethod:@"POST" with:userInfo];
+-(void)authWith:(NSDictionary *)userInfo completion:(void (^)(NSDictionary *))completion{
+    [self actionOnUser:VERIFYUSER httpMethod:@"POST" with:userInfo completion:^(NSDictionary *response){
+        completion(response);
+    }];
+
 }
 
 
