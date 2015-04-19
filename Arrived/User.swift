@@ -27,7 +27,7 @@ class User {
     private var status: String?
     
     private let serviceReader = UserServiceReader()
-    private let service = UserService()
+//    private let service = UserService()
     
     func clear() {
         phoneNumberId = nil

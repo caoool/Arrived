@@ -12,7 +12,7 @@ import Foundation
 
 class UserServiceReader {
     
-    private let service = UserService()
+//    private let service = UserService()
     
 //    
 //    func getVerificationCode(phoneNumber: String) -> (phoneNumberId: String?, verificationCode: String?, isNewUser: Bool?, message: String?) {

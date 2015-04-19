@@ -24,11 +24,11 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func smsButtonPressed() {
-        let service = UserService()
-        service.verify(phone.text) {
-            (result) -> Void in
-            println("abddd")
-        }
+////        let service = UserService()
+//        service.verify(phone.text) {
+//            (result) -> Void in
+//            println("abddd")
+//        }
         
             
             
