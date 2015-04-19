@@ -7,7 +7,7 @@
 //
 
 #import "UserService.h"
-#define VERIFYUSER @"http://yetian.xyz/api/v1/postUser"
+#define VERIFYUSER @"http://yetian.xyz/api/v1/users/verify"
 #define REGISTERUSER @"http://yetian.xyz/api/v1/registerUser"
 #define UPDATEUSER @"http://yetian.xyz/api/v1/users"
 
@@ -59,7 +59,6 @@
     [postUserRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField: @"Content-type"];
     [postUserRequest setValue:postLength forHTTPHeaderField: @"Content-Length"];
     [postUserRequest setValue:@"application/json" forHTTPHeaderField: @"Accept"];
-
     
     NSURLSessionUploadTask *postUserTask = [verifySession
                                              uploadTaskWithRequest:postUserRequest
@@ -74,14 +73,13 @@
             NSError *jsonError;
             _responseData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
             NSLog(@"%@", _responseData);
-            
         } else {
             NSLog(@"%@", error);
         }
     }];
     
+    
     [postUserTask resume];
-
     return _responseData;
                                      
 }
