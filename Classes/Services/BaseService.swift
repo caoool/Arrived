@@ -14,7 +14,7 @@ class BaseService{
     func sendHttpRequest(request: NSMutableURLRequest, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
             let task = NSURLSession.sharedSession().dataTaskWithRequest(
                 request,
-                {
+                completionHandler: {
                     data, response, error in
                     if (error != nil) {
                         callback(nil, error.localizedDescription)
@@ -30,7 +30,7 @@ class BaseService{
     
     func getRequest(url: String, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
-        sendHttpRequest(request, callback)
+        sendHttpRequest(request, callback: callback)
     }
     
     func postRequest(url: String, jsonObj: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
@@ -42,7 +42,7 @@ class BaseService{
         var jsonError : NSError?
         let data : NSData?  = NSJSONSerialization.dataWithJSONObject(jsonObj, options: nil, error: &jsonError)
         request.HTTPBody = data
-        sendHttpRequest(request, callback)
+        sendHttpRequest(request, callback: callback)
     }
     
     func patchRequest(url: String, jsonObj: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
@@ -54,7 +54,7 @@ class BaseService{
         var jsonError : NSError?
         let data : NSData?  = NSJSONSerialization.dataWithJSONObject(jsonObj, options: nil, error: &jsonError)
         request.HTTPBody = data
-        sendHttpRequest(request, callback)
+        sendHttpRequest(request, callback: callback)
     }
 
     
@@ -65,7 +65,7 @@ class BaseService{
         var jsonObj = NSJSONSerialization.JSONObjectWithData(
             data,
             options: NSJSONReadingOptions(0),
-            error: &error) as Dictionary<String, AnyObject>
+            error: &error) as! Dictionary<String, AnyObject>
         if (error != nil) {
             return Dictionary<String, AnyObject>()
         } else {
@@ -78,7 +78,7 @@ class BaseService{
         if NSJSONSerialization.isValidJSONObject(value) {
             if let data = NSJSONSerialization.dataWithJSONObject(value, options: options, error: nil) {
                 if let string = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                    return string
+                    return string as String
                 }
             }
         }

@@ -14,29 +14,29 @@ class UserService : BaseService {
     func verify(phoneNumber : String, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var url = "http://yetian.xyz/api/v1/users/verify"
         let data = ["phoneNumber": phoneNumber]
-        postRequest(url, jsonObj: data, callback)
+        postRequest(url, jsonObj: data, callback: callback)
         
     }
     
     func authenticate(phoneNumber : String, verificationCode: String, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var url = "http://yetian.xyz/api/v1/users/auth"
         let data = ["phoneNumber": phoneNumber, "verificationCode": verificationCode]
-        postRequest(url, jsonObj: data, callback)
+        postRequest(url, jsonObj: data, callback: callback)
     }
     
     func getUser(phoneNumber : String, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var url = "http://yetian.xyz/api/v1/users/get?" + "phoneNumber=" + phoneNumber
-        getRequest(url, callback)
+        getRequest(url, callback: callback)
     }
     
     func register(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var url = "http://yetian.xyz/api/v1/users/register"
-        postRequest(url, jsonObj: data, callback)
+        postRequest(url, jsonObj: data, callback: callback)
     }
     
     func update(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var url = "http://yetian.xyz/api/v1/users/update"
-        patchRequest(url, jsonObj: data, callback)
+        patchRequest(url, jsonObj: data, callback: callback)
     }
     
 }
