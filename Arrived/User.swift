@@ -45,6 +45,10 @@ class User {
 
     }
     
+    func fillInfoFromDictionary(dict: NSDictionary) {
+        
+    }
+    
     func verify(phoneNumber: String) -> (code: String?, isNew: Bool?) {
         let result = serviceReader.getVerificationCode(phoneNumber)
         if result.message == nil {

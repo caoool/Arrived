@@ -66,7 +66,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="verify" destination="iUj-bJ-AVR" eventType="touchUpInside" id="jb8-cG-vbi"/>
+                                    <action selector="smsButtonPressed" destination="iUj-bJ-AVR" eventType="touchUpInside" id="oRM-HT-GYL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter SMS code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xgb-rX-g86">
@@ -80,7 +80,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="login" destination="iUj-bJ-AVR" eventType="touchUpInside" id="8Xp-b5-Xyb"/>
+                                    <action selector="loginButtonPressed" destination="iUj-bJ-AVR" eventType="touchUpInside" id="ERu-fO-lKo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -475,7 +475,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KyA-ky-Y6o"/>
-        <segue reference="7Md-OL-YBH"/>
+        <segue reference="lhf-9x-oH1"/>
+        <segue reference="x9P-IR-ser"/>
     </inferredMetricsTieBreakers>
 </document>
