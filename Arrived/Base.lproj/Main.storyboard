@@ -320,7 +320,7 @@
                                     <action selector="updateUserInfo" destination="6wK-Ly-S7L" eventType="touchUpInside" id="LJN-nZ-qbb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-Zp-UKI">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-Zp-UKI">
                                 <rect key="frame" x="16" y="95" width="343" height="323"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6cj-Zp-UKI" secondAttribute="height" multiplier="1:1" id="Cr2-wi-L3V"/>

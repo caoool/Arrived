@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoggedInVC: UIViewController {
+class LoggedInVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var portrait: UIImageView!
     @IBOutlet weak var nicknameField: UITextField!
@@ -27,6 +27,8 @@ class LoggedInVC: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         loadUserInfo()
+        var tgr = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
+        portrait.addGestureRecognizer(tgr)
     }
     
     @IBAction func logout() {
@@ -35,8 +37,24 @@ class LoggedInVC: UIViewController {
         user.clear()
     }
     
+    func imageTapped(img: AnyObject)
+    {
+        var image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = .PhotoLibrary
+        image.allowsEditing = true
+        
+        self.presentViewController(image, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        println("Picture selected")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        portrait.image = image
+    }
+    
     @IBAction func updateUserInfo() {
-        var dict = [String:String]()
+        var dict = [String:AnyObject]()
         dict["phoneNumberId"] = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!
         dict["nickname"] = nicknameField.text
         dict["sex"] = sexField.text
@@ -45,6 +63,7 @@ class LoggedInVC: UIViewController {
         dict["address"] = addressField.text
         dict["email"] = emailField.text
         dict["status"] = statusField.text
+        dict["portrain"] = portrait.image
         
         let service = UserService()
         service.update(dict){
