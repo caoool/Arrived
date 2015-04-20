@@ -14,68 +14,68 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var sms: UITextField!
     
     private var phoneNumberId: String?
+    private var isSuccess: String?
     private var verificationCode: String?
-    private var isNewUser: Bool?
+    private var isNewUser: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func smsButtonPressed() {
+        
         let service = UserService()
         service.verify(phone.text) {
-            (result) -> Void in
-            println("abddd")
+            (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
+            println(result!)
+            
+            if error != nil {
+                println(error)
+                let alertController = UIAlertController(title: "Connection Error",
+                    message: "Please check the internet and try again",
+                    preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss",
+                    style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            
+            if let data = result!["data"] as? Dictionary<String, AnyObject> {
+                if let isSuccess = data["isSuccess"] as? String {
+                    if isSuccess == "true" {
+                        
+                        self.phoneNumberId = data["phoneNumberId"] as? String
+                        self.isSuccess = data["isSuccess"] as? String
+                        self.verificationCode = data["verificationCode"] as? String
+                        self.isNewUser = data["isNewUser"] as? String
+                    } else {
+                        print(result!["code"])
+                        println(result!["message"])
+                    }
+                } else { println("Can't read isSuccess in data") }
+            } else { println("Can't read data in result") }
+            
         }
-        
-            
-            
-//        if let isSuccess: Bool = result["isSuccess"] as? Bool {
-//            if isSuccess {
-//                println("Successful")
-//                isNewUser = result!["isNewUser"] as? Bool
-//                println(isNewUser)
-//            } else {
-//                println(result!["message"])
-//            }
-//        }
     }
 
     @IBAction func loginButtonPressed() {
+        if isSuccess != "true" { return }
+        
+        if sms.text != verificationCode! {
+            let alertController = UIAlertController(title: "SMS Code Error",
+                message: "Please make sure to enter the correct sms code",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss",
+                style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else if isNewUser == "true" {
+            NSUserDefaults.standardUserDefaults().setValue(phoneNumberId, forKey: "phoneNumberId")
+            performSegueWithIdentifier("WelcomeSignUp", sender: self)
+        } else {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+            NSUserDefaults.standardUserDefaults().setValue(phoneNumberId, forKey: "phoneNumberId")
+            performSegueWithIdentifier("WelcomeLogin", sender: self)
+        }
     }
-
-    
-    
-//    @IBAction func verify() {
-//        let service = UserService()
-//        let result = service.verify(phone.text)
-//            if let isSuccess = result["isSuccess"] as? Bool {
-//                println("123")
-//            }
-//        }
-//        
-////        let result = user.verify(phone.text)
-////        verificationCode = result.code
-////        isNewUser = result.isNew
-////        println(result.code!)
-//    }
-//
-//
-//    @IBAction func logidn() {
-//        if verificationCode == sms.text {
-//            if isNewUser != nil {
-//                if isNewUser! {
-//                    self.performSegueWithIdentifier("SignUp", sender: self)
-//                }
-//            }
-//        } else {
-//                let alertController = UIAlertController(title: "Wrong sms code", message:
-//                    "Please check and enter again", preferredStyle: UIAlertControllerStyle.Alert)
-//                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-//                self.presentViewController(alertController, animated: true, completion: nil)
-//        }
-//    }
 
 }
