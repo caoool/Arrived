@@ -28,15 +28,11 @@ class AddPaymentInfoVC: UIViewController {
     }
 
     @IBAction func register(sender: UIButton) {
-        if pinLabel.text != pin2Label.text || count(pin2Label.text) != 6 || pin2Label.text ~= "^([0-9]+)?(\\.([0-9]{1,2})?)?$" {
-            let alertController = UIAlertController(title: "Pin error",
-                message: "Please enter the same 6 digit pin code",
-                preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss",
-                style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-        }
         
+        if pinLabel.text != pin2Label.text || count(pin2Label.text) != 6 || pin2Label.text ~= "^([0-9]+)?(\\.([0-9]{1,2})?)?$" {
+            displayAlert("Pin error", "Please enter the same 6 digit pin code")
+            return
+        }
         
         var dict = [String:String]()
         dict["phoneNumberId"] = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!
@@ -50,32 +46,14 @@ class AddPaymentInfoVC: UIViewController {
         service.register(dict){
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
-            if error != nil {
-                println(error)
-                let alertController = UIAlertController(title: "Connection Error",
-                    message: "Please check the internet and try again",
-                    preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss",
-                    style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+            if checkErrorCodeInDictionary(result!) {
+                println("Successful created new user")
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
+                }
             }
-            
-            if let data = result!["data"] as? Dictionary<String, AnyObject> {
-                if let isSuccess = data["isSuccess"] as? String {
-                    if isSuccess == "true" {
-                        println("Successful created new user")
-                        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
-                        dispatch_async(dispatch_get_main_queue(), {
-                            self.performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
-                        })
-                    } else {
-                        print(result!["code"])
-                        println(result!["message"])
-                    }
-                } else { println("Can't read isSuccess in data") }
-            } else { println("Can't read data in result") }
 
         }
-        
     }
 }

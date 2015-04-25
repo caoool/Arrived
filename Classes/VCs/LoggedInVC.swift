@@ -34,7 +34,6 @@ class LoggedInVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBAction func logout() {
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
         NSUserDefaults.standardUserDefaults().removeObjectForKey("phoneNumberId")
-        user.clear()
     }
     
     func imageTapped(img: AnyObject)
@@ -54,6 +53,7 @@ class LoggedInVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     @IBAction func updateUserInfo() {
+        
         var dict = [String:AnyObject]()
         dict["phoneNumberId"] = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!
         dict["nickname"] = nicknameField.text
@@ -70,70 +70,47 @@ class LoggedInVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             if error != nil {
-                println(error)
-                let alertController = UIAlertController(title: "Connection Error",
-                    message: "Please check the internet and try again",
-                    preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss",
-                    style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+                displayAlert("Connection Error", error!)
+            } else if checkErrorCodeInDictionary(result!) {
+                displayAlert("Success", "User information updated")
             }
             
-            if let data = result!["data"] as? Dictionary<String, AnyObject> {
-                if let isSuccess = data["isSuccess"] as? String {
-                    if isSuccess == "true" {
-                        println("Successful updated user information")
-                    } else {
-                        print(result!["code"])
-                        println(result!["message"])
-                    }
-                } else { println("Can't read isSuccess in data") }
-            } else { println("Can't read data in result") }
-            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.loadUserInfo()
+            }
         }
-        
-        loadUserInfo()
     }
     
     func loadUserInfo() {
+        
         let service = UserService()
-        service.getUser(NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!){
+        
+        service.getUser(NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!) {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
+            
             println(result!)
             
-            if error != nil {
-                println(error)
-                let alertController = UIAlertController(title: "Connection Error",
-                    message: "Please check the internet and try again",
-                    preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss",
-                    style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
-            }
-            
-            if let data = result!["data"] as? Dictionary<String, AnyObject> {
-                //                if let isSuccess = data["isSuccess"] as? String {
-                if true {
-                    //                    if isSuccess == "true" {
-                    if true {
+            if error != nil
+            {
+                displayAlert("Connection Error", error!)
+            } else if checkErrorCodeInDictionary(result!)
+            {
+                if let data = result!["data"] as? Dictionary<String, AnyObject>
+                {
+                    dispatch_async(dispatch_get_main_queue()) {
                         ImageLoader.sharedLoader.imageForUrl("http://upload.wikimedia.org/wikipedia/en/4/43/Apple_Swift_Logo.png", completionHandler:{(image: UIImage?, url: String) in
                             self.portrait.image = image!
                         })
-                        dispatch_async(dispatch_get_main_queue(), {
-                            self.nicknameField.text = data["nickname"] as? String
-                            self.sexField.text = data["sex"] as? String
-                            self.birthField.text = data["birth"] as? String
-                            self.cityField.text = data["city"] as? String
-                            self.addressField.text = data["address"] as? String
-                            self.emailField.text = data["email"] as? String
-                            self.statusField.text = data["status"] as? String
-                        })
-                    } else {
-                        print(result!["code"])
-                        println(result!["message"])
+                        self.nicknameField.text = data["nickname"] as? String
+                        self.sexField.text = data["sex"] as? String
+                        self.birthField.text = data["birth"] as? String
+                        self.cityField.text = data["city"] as? String
+                        self.addressField.text = data["address"] as? String
+                        self.emailField.text = data["email"] as? String
+                        self.statusField.text = data["status"] as? String
                     }
-                } else { println("Can't read isSuccess in data") }
-            } else { println("Can't read data in result") }
+                }
+            }
         }
 
     }

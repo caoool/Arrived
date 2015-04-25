@@ -17,7 +17,9 @@ class StartVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
 
-        if let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn") as Bool?, phoneNumberId = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId") {
+        if let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn") as Bool?,
+            phoneNumberId = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")
+        {
             if isUserLoggedIn {
                 println("User is logged in")
                 performSegueWithIdentifier("LoggedIn", sender: self)
@@ -25,7 +27,8 @@ class StartVC: UIViewController {
                 println("Register new user")
                 performSegueWithIdentifier("NewUser", sender: self)
             }
-        } else {
+        } else
+        {
             println("Register new user")
             performSegueWithIdentifier("NewUser", sender: self)
         }

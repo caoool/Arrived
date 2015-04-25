@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="473.5" y="917.5"/>
         </scene>
-        <!--New User-->
+        <!--Welcome-->
         <scene sceneID="oLy-UL-bKe">
             <objects>
-                <viewController title="New User" id="iUj-bJ-AVR" customClass="WelcomeVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome" id="iUj-bJ-AVR" customClass="WelcomeVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UR4-U3-JHX"/>
                         <viewControllerLayoutGuide type="bottom" id="lAe-rS-bnp"/>
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login with phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coX-Sd-Xws">
-                                <rect key="frame" x="95" y="141" width="186" height="30"/>
+                                <rect key="frame" x="94" y="319" width="186" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="gQW-TZ-uJK"/>
                                 </constraints>
@@ -62,7 +62,7 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRB-yQ-hla">
-                                <rect key="frame" x="289" y="141" width="38" height="30"/>
+                                <rect key="frame" x="288" y="319" width="38" height="30"/>
                                 <state key="normal" title="SMS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -71,12 +71,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter SMS code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xgb-rX-g86">
-                                <rect key="frame" x="95" y="179" width="186" height="30"/>
+                                <rect key="frame" x="94" y="357" width="186" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27W-gA-6fl">
-                                <rect key="frame" x="289" y="179" width="38" height="30"/>
+                                <rect key="frame" x="288" y="357" width="38" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -96,17 +96,26 @@
                             <constraint firstItem="27W-gA-6fl" firstAttribute="top" secondItem="QRB-yQ-hla" secondAttribute="bottom" constant="8" symbolic="YES" id="GnH-Jw-1Iy"/>
                             <constraint firstItem="coX-Sd-Xws" firstAttribute="trailing" secondItem="Xgb-rX-g86" secondAttribute="trailing" id="b7i-iC-UAW"/>
                             <constraint firstItem="Xgb-rX-g86" firstAttribute="top" secondItem="coX-Sd-Xws" secondAttribute="bottom" constant="8" symbolic="YES" id="bzv-Sp-rdh"/>
+                            <constraint firstAttribute="centerY" secondItem="coX-Sd-Xws" secondAttribute="centerY" constant="-0.5" id="fJb-de-HlP"/>
                             <constraint firstItem="coX-Sd-Xws" firstAttribute="centerX" secondItem="rl9-bR-YOm" secondAttribute="centerX" id="g8G-df-85t"/>
                             <constraint firstItem="rl9-bR-YOm" firstAttribute="trailing" secondItem="uTI-tA-zIH" secondAttribute="trailingMargin" id="mCr-7L-Pyf"/>
+                            <constraint firstAttribute="centerX" secondItem="coX-Sd-Xws" secondAttribute="centerX" constant="0.5" id="ofQ-0h-vHf"/>
                             <constraint firstItem="27W-gA-6fl" firstAttribute="width" secondItem="QRB-yQ-hla" secondAttribute="width" id="pMc-Gi-wf6"/>
                             <constraint firstItem="27W-gA-6fl" firstAttribute="centerX" secondItem="QRB-yQ-hla" secondAttribute="centerX" id="pqR-li-A9l"/>
                             <constraint firstItem="rl9-bR-YOm" firstAttribute="top" secondItem="UR4-U3-JHX" secondAttribute="bottom" id="shg-Vu-nl2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="905-qc-trx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="LoginButton" destination="27W-gA-6fl" id="x1E-qC-mHy"/>
                         <outlet property="phone" destination="coX-Sd-Xws" id="sbu-P1-Udl"/>
                         <outlet property="sms" destination="Xgb-rX-g86" id="idb-9g-s72"/>
+                        <outlet property="smsButton" destination="QRB-yQ-hla" id="Hvc-iE-ZB7"/>
                         <segue destination="GIR-4f-tKc" kind="presentation" identifier="WelcomeSignUp" id="rML-t1-yO0"/>
                         <segue destination="6wK-Ly-S7L" kind="presentation" identifier="WelcomLogin" id="lj1-xD-YKK"/>
                     </connections>
@@ -554,6 +563,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KyA-ky-Y6o"/>
-        <segue reference="x9P-IR-ser"/>
+        <segue reference="lj1-xD-YKK"/>
     </inferredMetricsTieBreakers>
 </document>

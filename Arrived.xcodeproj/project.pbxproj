@@ -12,10 +12,10 @@
 		8908FF5D1AE01ECF00C990DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5C1AE01ECF00C990DC /* Images.xcassets */; };
 		8908FF601AE01ECF00C990DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */; };
 		8908FF6C1AE01ECF00C990DC /* ArrivedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */; };
+		890A1C441AEAD02F00E6E6D9 /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890A1C431AEAD02F00E6E6D9 /* ServiceHandler.swift */; };
+		890A1C461AEAD60F00E6E6D9 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890A1C451AEAD60F00E6E6D9 /* HelperMethods.swift */; };
 		890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C711AE4433400BD05DF /* BaseService.swift */; };
-		890D4C7E1AE4433400BD05DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C721AE4433400BD05DF /* User.swift */; };
 		890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C731AE4433400BD05DF /* UserService.swift */; };
-		890D4C801AE4433400BD05DF /* UserServiceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C741AE4433400BD05DF /* UserServiceReader.swift */; };
 		890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */; };
 		890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C791AE4433400BD05DF /* LoggedInVC.swift */; };
 		890D4C831AE4433400BD05DF /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7A1AE4433400BD05DF /* StartVC.swift */; };
@@ -44,10 +44,10 @@
 		8908FF651AE01ECF00C990DC /* ArrivedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrivedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908FF6A1AE01ECF00C990DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedTests.swift; sourceTree = "<group>"; };
+		890A1C431AEAD02F00E6E6D9 /* ServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
+		890A1C451AEAD60F00E6E6D9 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperMethods.swift; path = ../Services/HelperMethods.swift; sourceTree = "<group>"; };
 		890D4C711AE4433400BD05DF /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
-		890D4C721AE4433400BD05DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		890D4C731AE4433400BD05DF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		890D4C741AE4433400BD05DF /* UserServiceReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceReader.swift; sourceTree = "<group>"; };
 		890D4C761AE4433400BD05DF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPaymentInfoVC.swift; sourceTree = "<group>"; };
 		890D4C791AE4433400BD05DF /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
@@ -144,10 +144,9 @@
 		890D4C701AE4433400BD05DF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				890D4C721AE4433400BD05DF /* User.swift */,
+				890A1C431AEAD02F00E6E6D9 /* ServiceHandler.swift */,
 				890D4C731AE4433400BD05DF /* UserService.swift */,
 				890D4C711AE4433400BD05DF /* BaseService.swift */,
-				890D4C741AE4433400BD05DF /* UserServiceReader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -157,6 +156,7 @@
 			children = (
 				890D4C761AE4433400BD05DF /* MyPlayground.playground */,
 				89D7C6B71AE4796500FFD592 /* ImageLoader.swift */,
+				890A1C451AEAD60F00E6E6D9 /* HelperMethods.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -273,16 +273,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890A1C441AEAD02F00E6E6D9 /* ServiceHandler.swift in Sources */,
 				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
-				890D4C801AE4433400BD05DF /* UserServiceReader.swift in Sources */,
+				890A1C461AEAD60F00E6E6D9 /* HelperMethods.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
-				890D4C7E1AE4433400BD05DF /* User.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
