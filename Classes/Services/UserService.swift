@@ -11,41 +11,32 @@ import Foundation
 class UserService : BaseService {
     
     
-    var url = "yetian.xyz"
+    func verify(phoneNumber : String, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = "http://yetian.xyz/api/v1/users/verify"
+        let data = ["phoneNumber": phoneNumber]
+        postRequest(url, jsonObj: data, callback: callback)
+        
+    }
     
-    func verify(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/getCode"
+    func authenticate(phoneNumber : String, verificationCode: String, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = "http://yetian.xyz/api/v1/users/auth"
+        let data = ["phoneNumber": phoneNumber, "verificationCode": verificationCode]
         postRequest(url, jsonObj: data, callback: callback)
     }
     
-    func authenticate(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/auth"
-        postRequest(url, jsonObj: data, callback: callback)
-    }
-    
-    func getUserInfo(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/get?" + dictToString(data)
+    func getUser(phoneNumber : String, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = "http://yetian.xyz/api/v1/users/get?" + "phoneNumber=" + phoneNumber
         getRequest(url, callback: callback)
     }
     
-    func addBankCard(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/register"
+    func register(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = "http://yetian.xyz/api/v1/users/register"
         postRequest(url, jsonObj: data, callback: callback)
     }
     
-    func updateUserInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/update"
+    func update(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = "http://yetian.xyz/api/v1/users/update"
         patchRequest(url, jsonObj: data, callback: callback)
-    }
-    
-    func addLocation(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/addLocation"
-        postRequest(url, jsonObj: data, callback: callback)
-    }
-    
-    func getUserBankInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/get?" + dictToString(data)
-        getRequest(url, callback: callback)
     }
     
 }
