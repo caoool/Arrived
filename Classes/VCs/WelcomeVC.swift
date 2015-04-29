@@ -43,7 +43,7 @@ class WelcomeVC: UIViewController {
         
         let service = UserService()
         
-        service.verify(phone.text) {
+        service.verify(["phoneNumber":phone.text]) {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             // print result for testing purpose

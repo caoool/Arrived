@@ -42,18 +42,18 @@ class AddPaymentInfoVC: UIViewController {
         dict["cvv"] = cvvLabel.text
         dict["pinCode"] = pin2Label.text
         
-        let service = UserService()
-        service.register(dict){
-            (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
-            
-            if checkErrorCodeInDictionary(result!) {
-                println("Successful created new user")
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
-                }
-            }
-
-        }
+//        let service = UserService()
+//        service.register(dict){
+//            (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
+//            
+//            if checkErrorCodeInDictionary(result!) {
+//                println("Successful created new user")
+//                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+//                dispatch_async(dispatch_get_main_queue()) {
+//                    self.performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
+//                }
+//            }
+//
+//        }
     }
 }

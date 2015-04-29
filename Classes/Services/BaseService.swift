@@ -12,24 +12,30 @@ import Foundation
 class BaseService{
     
     func sendHttpRequest(request: NSMutableURLRequest, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(
-                request,
-                completionHandler: {
-                    data, response, error in
-                    if (error != nil) {
-                        callback(nil, error.localizedDescription)
-                    } else {
-                        var jsonError : NSError?
-                        var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonError) as? Dictionary<String, AnyObject>
-                        callback(json, nil)
-                    }
-            })
-            
-            task.resume()
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(
+            request,
+            completionHandler: {
+                data, response, error in
+                if (error != nil) {
+                    callback(nil, error.localizedDescription)
+                } else {
+                    var jsonError : NSError?
+                    var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonError) as? Dictionary<String, AnyObject>
+                    callback(json, nil)
+                }
+        })
+        
+        task.resume()
     }
     
     func getRequest(url: String, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        sendHttpRequest(request, callback: callback)
+    }
+    
+    func deleteRequest(url: String, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
+        var request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        request.HTTPMethod = "DELETE"
         sendHttpRequest(request, callback: callback)
     }
     
@@ -56,7 +62,6 @@ class BaseService{
         request.HTTPBody = data
         sendHttpRequest(request, callback: callback)
     }
-
     
     func jsonParseToDict(jsonString:String) -> Dictionary<String, AnyObject> {
         var error: NSError?
@@ -85,6 +90,12 @@ class BaseService{
         return ""
     }
     
-
+    func dictToString(data: Dictionary<String, AnyObject>) -> String{
+        var params : String = ""
+        for(key, value) in data{
+            params = params + "\(key)=\(value)&"
+        }
+        return params
+    }
     
 }
