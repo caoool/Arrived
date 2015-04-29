@@ -47,7 +47,7 @@ class WelcomeVC: UIViewController {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             // print result for testing purpose
-            println(result!)
+            println(result)
             
             // prompt alert if connection error
             if error != nil
