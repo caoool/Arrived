@@ -11,7 +11,7 @@ import Foundation
 class UserService : BaseService {
     
     
-    var url = "yetian.xyz"
+    var url = "arrived.dev"
     
     func verify(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var url = "http://\(self.url)/api/v1/users/getCode"
