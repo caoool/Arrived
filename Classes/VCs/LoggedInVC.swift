@@ -66,7 +66,7 @@ class LoggedInVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         dict["portrain"] = portrait.image
         
         let service = UserService()
-        service.updateUserInfo(dict){
+        service.update(dict){
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             if error != nil {
@@ -85,7 +85,7 @@ class LoggedInVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         let service = UserService()
         
-        service.getUserInfo(["uid": NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!]) {
+        service.getUser(NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!) {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             println(result!)

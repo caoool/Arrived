@@ -23,7 +23,6 @@
 		890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */; };
 		89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7C6B51AE44D0A00FFD592 /* ViewController.swift */; };
 		89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7C6B71AE4796500FFD592 /* ImageLoader.swift */; };
-		94E02A491AF1541E004405E0 /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E02A481AF1541E004405E0 /* TestUserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		89D7C6B51AE44D0A00FFD592 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89D7C6B71AE4796500FFD592 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		94E02A481AF1541E004405E0 /* TestUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +150,6 @@
 				890A1C431AEAD02F00E6E6D9 /* ServiceHandler.swift */,
 				890D4C731AE4433400BD05DF /* UserService.swift */,
 				890D4C711AE4433400BD05DF /* BaseService.swift */,
-				94E02A481AF1541E004405E0 /* TestUserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -304,7 +301,6 @@
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
-				94E02A491AF1541E004405E0 /* TestUserService.swift in Sources */,
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
