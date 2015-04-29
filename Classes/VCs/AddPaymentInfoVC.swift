@@ -43,7 +43,7 @@ class AddPaymentInfoVC: UIViewController {
         dict["pinCode"] = pin2Label.text
         
         let service = UserService()
-        service.addBankCard(dict){
+        service.register(dict){
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             if checkErrorCodeInDictionary(result!) {

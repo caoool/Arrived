@@ -33,12 +33,6 @@ class BaseService{
         sendHttpRequest(request, callback: callback)
     }
     
-    func deleteRequest(url: String, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
-        var request = NSMutableURLRequest(URL: NSURL(string: url)!)
-        request.HTTPMethod = "DELETE"
-        sendHttpRequest(request, callback: callback)
-    }
-    
     func postRequest(url: String, jsonObj: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
         request.HTTPMethod = "POST"
@@ -63,6 +57,7 @@ class BaseService{
         sendHttpRequest(request, callback: callback)
     }
 
+    
     func jsonParseToDict(jsonString:String) -> Dictionary<String, AnyObject> {
         var error: NSError?
         var data: NSData = jsonString.dataUsingEncoding(
@@ -90,12 +85,6 @@ class BaseService{
         return ""
     }
     
-    func dictToString(data: Dictionary<String, AnyObject>) -> String{
-        var params : String = ""
-        for(key, value) in data{
-            params = params + "\(key)=\(value)&"
-        }
-        return params
-    }
+
     
 }
