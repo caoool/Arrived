@@ -42,7 +42,7 @@ class WelcomeVC: UIViewController {
     @IBAction func smsButtonPressed() {
         
         let service = UserService()
-        
+
         service.verify(["phoneNumber": phone.text]) {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
@@ -81,7 +81,7 @@ class WelcomeVC: UIViewController {
         }
         
         let service = UserService()
-        
+       
         service.authenticate(["phoneNumber": phone.text, "verificationCode": sms.text]) {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
