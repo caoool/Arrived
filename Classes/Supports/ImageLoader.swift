@@ -32,7 +32,8 @@ class ImageLoader {
                 return
             }
             
-            var downloadTask: NSURLSessionDataTask = NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: urlString)!, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            var downloadTask: NSURLSessionDataTask = NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: urlString)!,
+                completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
                 if (error != nil) {
                     completionHandler(image: nil, url: urlString)
                     return

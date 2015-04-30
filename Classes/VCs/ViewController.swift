@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         let data = ["test": "test", "view": 1]
         let image = UIImage.init(named:"apple_raw.png")
         let imageData:NSData = UIImageJPEGRepresentation(image, 100)
-        let pic = ["thumbnail": imageData, "uid": "1", "verificationCode": "123456"] as Dictionary<String, AnyObject>
+        let temp : NSMutableArray = service.labelData(imageData, contentType: nil, fileExtension: "jpg")
+        let pic = ["thumbnail": temp, "uid": "1", "verificationCode": "123456"] as Dictionary<String, AnyObject>
         
         //        service.verify("13429239110") {
         //           (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
