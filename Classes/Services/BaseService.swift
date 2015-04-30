@@ -39,7 +39,7 @@ class BaseService{
                     return
                 }
                 var jsonError : NSError?
-                var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonError) as? Dictionary<String, AnyObject>
+                var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(1), error: &jsonError) as? Dictionary<String, AnyObject>
                 if(jsonError != nil){
                     callback(nil, jsonError?.localizedDescription)
                     return
@@ -48,6 +48,7 @@ class BaseService{
         })
         task.resume()
     }
+    
     
     //upload file
     func multiPartUpload(request: NSMutableURLRequest, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
@@ -126,26 +127,37 @@ class BaseService{
         request.addValue(contentType, forHTTPHeaderField:"Content-Type")
         request.HTTPBody = buildBody(jsonObj)
         sendHttpRequest(request, callback: callback)
-        
     }
     
     //form http body for upload
     func buildBody(parameters: [String: AnyObject]) -> NSData {
-        var body: NSMutableData = NSMutableData()
+        var postBody:NSMutableData = NSMutableData()
+        var postData:String = String()
+        
+        
         for (key, value) in parameters {
-            if (value is NSData) {
-                body.appendData("\r\n--\(self.boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-                body.appendData("Content-Disposition: form-data; name=\"\(key)\"; filename=\"filename.jpg\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-                body.appendData(value as! NSData)
-            } else {
-                body.appendData("\r\n--\(self.boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-                body.appendData("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)".dataUsingEncoding(NSUTF8StringEncoding)!)
-                
+            if !(value is NSData) {
+                if let value = value as? String {
+                    postData = String()
+                    postData += "\r\n--\(boundary)\r\n"
+                    postData += "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n"
+                    postData += "\(value)"
+                    postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
+                }
+            }else {
+                postData = String()
+                postData += "\r\n--\(boundary)\r\n"
+                postData += "Content-Disposition: form-data; name=\"\(key)\"; filename=\"\(Int64(NSDate().timeIntervalSince1970*1000)).jpg\"\r\n"
+                postData += "Content-Type: image/jpeg\r\n\r\n"
+                postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
+                postBody.appendData(value as! NSData)
+                postData = String()
+                postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
             }
         }
-        body.appendData("\r\n--\(self.boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        body.appendData("".dataUsingEncoding(NSUTF8StringEncoding)!)
-        return body
+        postData += "\r\n--\(boundary)--\r\n"
+        postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
+        return postBody
     }
     
     //json parse to dictionary

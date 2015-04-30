@@ -21,7 +21,7 @@ class TestUserService : BaseService {
     
     func authenticate(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var faker = [
-            "uid": 1,
+            "uid": "1",
             "verificationCode": "123456",
             "isNewUser": "1"
         ]
@@ -31,15 +31,15 @@ class TestUserService : BaseService {
     
     func getUserInfo(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var faker = [
-            "uid": 1,
+            "uid": "1",
             "nickname": "ha",
             "portrait": "pic.jpg",
             "sex": "1",
             "birth": "May 05, 1992",
             "email": "lalal@qq.com",
             "status": "work",
-            "likes": 123,
-            "dislikes": 321
+            "likes": "123",
+            "dislikes": "321"
         ]
         callback(addData(faker), nil)
        
@@ -65,7 +65,7 @@ class TestUserService : BaseService {
     
     func getUserBankInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var faker = [
-            "bankCardId": 1,
+            "bankCardId": "1",
             "fullName": "frank",
             "bankCardNumber": "12345666666",
             "expirationDate": "04/12",

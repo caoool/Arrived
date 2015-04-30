@@ -10,7 +10,6 @@ import Foundation
 
 class UserService : BaseService {
     
-    
     var url = "arrived.dev"
     
     func verify(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
@@ -46,6 +45,11 @@ class UserService : BaseService {
     func getUserBankInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var url = "http://\(self.url)/api/v1/users/get?" + dictToString(data)
         getRequest(url, callback: callback)
+    }
+    
+    func uploadPhoto(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = "http://arrived.dev/api/v1/users/upload"
+        multiPartRequest(url, jsonObj: data, callback: callback)
     }
     
 }
