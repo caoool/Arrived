@@ -10,6 +10,7 @@ import UIKit
 
 class WelcomeVC: UIViewController {
 
+    @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var sms: UITextField!
     
@@ -23,9 +24,21 @@ class WelcomeVC: UIViewController {
     private var timeBeforeNextSMS: Int = 60
     private var timer: NSTimer?
     
+    private let service = TestUserService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        logoLabel.layer.cornerRadius = 35
+        smsButton.layer.cornerRadius = 10
+        
+        var imageView = UIImageView()
+        var image = UIImage(named: "Phone Icon.png")
+        imageView.image = image
+        phone.layer.cornerRadius = 2
+        sms.layer.cornerRadius = 2
+        phone.leftViewMode = UITextFieldViewMode.Always
+        phone.leftView = imageView
         sms.hidden = true
         LoginButton.hidden = true
         
@@ -41,9 +54,7 @@ class WelcomeVC: UIViewController {
     
     @IBAction func smsButtonPressed() {
         
-        let service = UserService()
-        
-        service.verify(phone.text) {
+        service.verify(["phoneNumber":phone.text]) {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             // print result for testing purpose
@@ -52,29 +63,19 @@ class WelcomeVC: UIViewController {
             // prompt alert if connection error
             if error != nil
             {
-                displayAlert("Connection Error", error!)
+                displayAlert("Verify - Connection Error", error!)
                 return
             }
             
             // check code from result, if code = 20000, no error, vise versa
             if checkErrorCodeInDictionary(result!) {
-                if let data = result!["data"] as? Dictionary<String, AnyObject> {
-                    self.phoneNumberId = data["phoneNumberId"] as? String
-                    self.verificationCode = data["verificationCode"] as? String
-                    self.isNewUser = data["isNewUser"] as? String
-                    
-                    // disable button and reactive after time
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.smsButton.enabled = false
-                        self.smsButton.setTitle("60", forState: .Disabled)
-                        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("count"), userInfo: nil, repeats: true)
-                        self.sms.hidden = false
-                        self.LoginButton.hidden = false
-                    }
-                    
-                    println("Phone Number ID = \(self.phoneNumberId!)")
-                    println("Verification Code = \(self.verificationCode!)")
-                    println("Is new user = \(self.isNewUser!)")
+                // disable button and reactive after time
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.smsButton.enabled = false
+                    self.smsButton.setTitle("60", forState: .Disabled)
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("count"), userInfo: nil, repeats: true)
+                    self.sms.hidden = false
+                    self.LoginButton.hidden = false
                 }
             }
         }
@@ -83,22 +84,55 @@ class WelcomeVC: UIViewController {
 
     @IBAction func loginButtonPressed() {
         
-        if sms.text == nil || verificationCode == nil || sms.text! != verificationCode!
-        {
+        if sms.text == nil {
             // display alert if sms code doesn't match
             displayAlert("SMS Code Error", "Please make sure to enter the correct sms code")
+        } else {
             
-        } else if isNewUser == "true"
-        {
-            NSUserDefaults.standardUserDefaults().setValue(phoneNumberId, forKey: "phoneNumberId")
-            performSegueWithIdentifier("WelcomeSignUp", sender: self)
-            
-        } else
-        {
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
-            NSUserDefaults.standardUserDefaults().setValue(phoneNumberId, forKey: "phoneNumberId")
-            performSegueWithIdentifier("WelcomeLogin", sender: self)
+            var dict = Dictionary<String, AnyObject>()
+            dict["phoneNumber"] = phone.text
+            dict["verificationCode"] = sms.text
+            service.authenticate(dict) {
+                (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
+                
+                // print result for testing purpose
+                println(result!)
+                
+                // prompt alert if connection error
+                if error != nil
+                {
+                    displayAlert("Verify - Connection Error", error!)
+                    return
+                }
+                
+                // check code from result, if code = 20000, no error, vise versa
+                if checkErrorCodeInDictionary(result!) {
+                    let uid = result!["data"]!["uid"] as? String
+                    let isNewUser = result!["data"]!["isNewUser"] as? String
+                    let verificationCode = result!["data"]!["verificationCode"] as? String
+                    
+                    println("uid = \(uid)")
+                    println("isNewUser = \(isNewUser)")
+                    println("verificationCode = \(verificationCode)")
+                    
+                    NSUserDefaults.standardUserDefaults().setValue(uid, forKey: "uid")
+                    NSUserDefaults.standardUserDefaults().setValue(verificationCode, forKey: "verificationCode")
+                    NSUserDefaults.standardUserDefaults().setValue(self.phone.text, forKey: "phoneNumber")
+                    
+                    if isNewUser! == "1" {
+                        println("Auth - New User")
+                        self.performSegueWithIdentifier("WelcomeSignUp", sender: self)
+                    } else {
+                        println("Auth - Existing User")
+                        self.performSegueWithIdentifier("WelcomeLogin", sender: self)
+                    }
+                }
+                
+                
+            }
         }
     }
+    
+    
 
 }

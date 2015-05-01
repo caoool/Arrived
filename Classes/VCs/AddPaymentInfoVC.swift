@@ -24,36 +24,60 @@ class AddPaymentInfoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addIconToUITextFieldLeftView(nameLabel, "user-104")
+        addIconToUITextFieldLeftView(cardLabel, "credit_card-100")
+        addIconToUITextFieldLeftView(expDateLabel, "today-100")
+        addIconToUITextFieldLeftView(pinLabel, "key-100")
+        addIconToUITextFieldLeftView(pin2Label, "key-100")
+        
 
     }
-
-    @IBAction func register(sender: UIButton) {
+    
+    @IBAction func datePicker(sender: UITextField) {
+        var datePickerView  : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func handleDatePicker(sender: UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/yy"
+        expDateLabel.text = dateFormatter.stringFromDate(sender.date)
+    }
+    
+    @IBAction func register() {
         
+        // check if pin is correctly entered
         if pinLabel.text != pin2Label.text || count(pin2Label.text) != 6 || pin2Label.text ~= "^([0-9]+)?(\\.([0-9]{1,2})?)?$" {
             displayAlert("Pin error", "Please enter the same 6 digit pin code")
             return
         }
         
         var dict = [String:String]()
-        dict["phoneNumberId"] = NSUserDefaults.standardUserDefaults().stringForKey("phoneNumberId")!
+        dict["uid"] = NSUserDefaults.standardUserDefaults().stringForKey("uid")
+        dict["verificationCode"] = NSUserDefaults.standardUserDefaults().stringForKey("verificationCode")
         dict["fullName"] = nameLabel.text
         dict["bankCardNumber"] = cardLabel.text
         dict["expirationDate"] = expDateLabel.text
         dict["cvv"] = cvvLabel.text
         dict["pinCode"] = pin2Label.text
         
-        let service = UserService()
-        service.register(dict){
+        let service = TestUserService()
+        service.addBankCard(dict) {
             (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
             
             if checkErrorCodeInDictionary(result!) {
-                println("Successful created new user")
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
-                }
+                self.performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
             }
-
+            
         }
+
     }
+
+    @IBAction func setUpLater() {
+        performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
+    }
+    
 }

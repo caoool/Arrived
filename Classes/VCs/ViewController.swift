@@ -13,28 +13,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let test : Dictionary<String, AnyObject> = ["test": "test"]
-        
-        let service = UserService()
-        service.verify("13429239110") {
-           (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
-            println(data)
-        }
-        
-        service.authenticate("13429239110", verificationCode: "1234"){
-            (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
-            println(data)
-        }
-        
-        service.getUser("13429239110"){
-            (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
-            println(data)
-        }
-        
-        service.register(test){
-            (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
-            println(data)
-        }
+//        let test : Dictionary<String, AnyObject> = ["test": "test"]
+//        
+//        let service = UserService()
+//        service.verify("13429239110") {
+//           (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
+//            println(data)
+//        }
+//        
+//        service.authenticate("13429239110", verificationCode: "1234"){
+//            (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
+//            println(data)
+//        }
+//        
+//        service.getUser("13429239110"){
+//            (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
+//            println(data)
+//        }
+//        
+//        service.register(test){
+//            (data: Dictionary<String, AnyObject>?, error: String?) -> Void in
+//            println(data)
+//        }
         
         
         // Do any additional setup after loading the view, typically from a nib.

@@ -35,8 +35,8 @@ func displayAlert(title: String, message: String) {
 
 // check error code, if code = 20000, no error and return true
 func checkErrorCodeInDictionary(dict: Dictionary<String, AnyObject>?) -> Bool {
-    if let code = dict!["code"] as? Int {
-        if code == 20000 {
+    if let code = dict!["code"] as? String {
+        if code == "20000" {
             println("Code = 20000, no error")
             return true
         } else {
@@ -47,4 +47,13 @@ func checkErrorCodeInDictionary(dict: Dictionary<String, AnyObject>?) -> Bool {
         println("Can not get code from dictionary")
         return false
     }
+}
+
+
+// add a leftview which is an icon to a uitextview
+func addIconToUITextFieldLeftView(textField: UITextField, imageName: String) {
+    var imageView = UIImageView(image: UIImage(named: imageName))
+    textField.leftViewMode = .Always
+    imageView.frame = CGRect(x: 0, y: 0, width: textField.frame.height*0.8, height: textField.frame.height*0.8)
+    textField.leftView = imageView
 }
