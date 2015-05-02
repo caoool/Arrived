@@ -63,6 +63,22 @@ class TestUserService : BaseService {
  
     }
     
+    func updateUserLocationInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var faker = ["nil": "nil"]
+        callback(addData(faker), nil)
+        
+    }
+    
+    func getUserLocationInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var faker = [
+            "locationId": "2",
+            "latitude": "130.12",
+            "longitude": "100.13",
+            "address": "king st 12304",
+        ];
+        callback(addData(faker), nil)
+    }
+
     func getUserBankInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var faker = [
             "bankCardId": "1",
