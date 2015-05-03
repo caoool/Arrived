@@ -33,13 +33,13 @@ class BaseService{
                     return
                 }
                 var httpError : NSError!
-                var isValid = self.validateResponse(response, data: data, error: &httpError)
+                var isValid = self.validateResponse(response, error: &httpError)
                 if (isValid == false) {
                     callback(nil, httpError.localizedDescription)
                     return
                 }
                 var jsonError : NSError?
-                var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonError) as? Dictionary<String, AnyObject>
+                var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(1), error: &jsonError) as? Dictionary<String, AnyObject>
                 if(jsonError != nil){
                     callback(nil, jsonError?.localizedDescription)
                     return
@@ -51,7 +51,6 @@ class BaseService{
     
     //upload file
     func multiPartUpload(request: NSMutableURLRequest, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
-        
         let task = NSURLSession.sharedSession().uploadTaskWithRequest(
             request,
             fromData: request.HTTPBody,
@@ -62,14 +61,40 @@ class BaseService{
                     return
                 }
                 var httpError : NSError!
-                var isValid = self.validateResponse(response, data: data, error: &httpError)
+                var isValid = self.validateResponse(response, error: &httpError)
                 if (isValid == false) {
                     callback(nil, httpError.localizedDescription)
                     return
                 }
                 var jsonError : NSError?
                 var json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(1), error: &jsonError) as? Dictionary<String, AnyObject>
+                if(jsonError != nil){
+                    callback(nil, jsonError?.localizedDescription)
+                    return
+                }
                 callback(json, nil)
+        })
+        task.resume()
+    }
+    
+    //download file
+    func multiPartDownload(url: NSURL, callback: (NSData?, String?) -> Void) {
+        let task = NSURLSession.sharedSession().downloadTaskWithURL(
+            url,
+            completionHandler: {
+                location, response, error in
+                if (error != nil) {
+                    callback(nil, error.localizedDescription)
+                    return
+                }
+                var httpError : NSError!
+                var isValid = self.validateResponse(response, error: &httpError)
+                if (isValid == false) {
+                    callback(nil, httpError.localizedDescription)
+                    return
+                }
+                var data = NSData(contentsOfURL: url)
+                callback(data, nil)
         })
         task.resume()
     }
@@ -78,6 +103,7 @@ class BaseService{
     
     func getRequest(url: String, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
         var request = NSMutableURLRequest(URL: NSURL(string: url)!, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
+        request.HTTPMethod = "GET"
         sendHttpRequest(request, callback: callback)
     }
     
@@ -119,77 +145,75 @@ class BaseService{
     
     //upload
     
-    func multiPartRequest(url: String, jsonObj: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
+    func uploadRequest(url: String, jsonObj: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void) {
         var request = NSMutableURLRequest(URL: NSURL(string: url)!, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
         request.HTTPMethod = "POST"
         var contentType = "multipart/form-data; boundary=\(boundary)"
         request.addValue(contentType, forHTTPHeaderField:"Content-Type")
         request.HTTPBody = buildBody(jsonObj)
         sendHttpRequest(request, callback: callback)
-        
     }
     
-    //form http body for upload
+    /**
+    *  Function to upload image & data using POST request
+    *
+    *  @param parameters: [String: AnyObject]
+    *
+    *  @return NSData
+    */
     func buildBody(parameters: [String: AnyObject]) -> NSData {
-        var body: NSMutableData = NSMutableData()
+        var postBody:NSMutableData = NSMutableData()
+        var postData:String = String()
+        
+        
         for (key, value) in parameters {
-            if (value is NSData) {
-                body.appendData("\r\n--\(self.boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-                body.appendData("Content-Disposition: form-data; name=\"\(key)\"; filename=\"filename.jpg\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-                body.appendData(value as! NSData)
-            } else {
-                body.appendData("\r\n--\(self.boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-                body.appendData("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)".dataUsingEncoding(NSUTF8StringEncoding)!)
-                
-            }
-        }
-        body.appendData("\r\n--\(self.boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        body.appendData("".dataUsingEncoding(NSUTF8StringEncoding)!)
-        return body
-    }
-    
-    //json parse to dictionary
-    
-    func jsonParseToDict(jsonString:String) -> Dictionary<String, AnyObject> {
-        var error: NSError?
-        var data: NSData = jsonString.dataUsingEncoding(
-            NSUTF8StringEncoding)!
-        var jsonObj = NSJSONSerialization.JSONObjectWithData(
-            data,
-            options: NSJSONReadingOptions(0),
-            error: &error) as! Dictionary<String, AnyObject>
-        if (error != nil) {
-            return Dictionary<String, AnyObject>()
-        } else {
-            return jsonObj
-        }
-    }
-    
-    //json to string
-    
-    func jsonToString(value: AnyObject, prettyPrinted: Bool = false) -> String {
-        var options = prettyPrinted ? NSJSONWritingOptions.PrettyPrinted : nil
-        if NSJSONSerialization.isValidJSONObject(value) {
-            if let data = NSJSONSerialization.dataWithJSONObject(value, options: options, error: nil) {
-                if let string = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                    return string as String
+            if !(value is NSMutableArray) {
+                if let value = value as? String {
+                    postData = String()
+                    postData += "\r\n--\(boundary)\r\n"
+                    postData += "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n"
+                    postData += "\(value)"
+                    postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
                 }
+            }else {
+                let data = value as! NSMutableArray
+                postData = String()
+                postData += "\r\n--\(boundary)\r\n"
+                postData += "Content-Disposition: form-data; name=\"\(key)\"; filename=\"\(Int64(NSDate().timeIntervalSince1970*1000)).\(data.objectAtIndex(1))\"\r\n"
+                postData += "Content-Type: \(data.objectAtIndex(1))\r\n\r\n"
+                postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
+                postBody.appendData(value.objectAtIndex(2) as! NSData)
+                postData = String()
+                postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
             }
         }
-        return ""
+        postData += "\r\n--\(boundary)--\r\n"
+        postBody.appendData(postData.dataUsingEncoding(NSUTF8StringEncoding)!)
+        return postBody
     }
     
-    //turn dictionary to url string params
-    
-    func dictToString(data: Dictionary<String, AnyObject>) -> String{
-        var params : String = ""
-        for(key, value) in data{
-            params = params + "\(key)=\(value)&"
+    /**
+    *  Function to build GET/POST request data E.g., a dictionary of ["a":"b","c":"d"] will return "a=b&c=d"
+    *
+    *  @param data:Dictionary<String, AnyObject>
+    *
+    *  @return of type String
+    */
+    func build(data: Dictionary<String, AnyObject>) -> String? {
+        var dataList: [String] = [String]()
+        for (key, value : AnyObject) in data {
+            dataList.append("\(key)=\(value)")
         }
-        return params
+        return join("&", dataList).stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
     }
     
-    //store the http cookie into local cookie storage
+    /**
+    *  Function to store cookie info in the http request
+    *
+    *  @param response: NSURLResponse
+    *
+    *  @return of type TBD
+    */
     
     func cookieManager(response: NSURLResponse!){
         let httpResp = response as! NSHTTPURLResponse
@@ -198,9 +222,17 @@ class BaseService{
         NSHTTPCookieStorage.sharedHTTPCookieStorage().setCookies(cookies, forURL: httpResp.URL, mainDocumentURL: nil)
     }
     
-    //check the http status code
+    /**
+    *  Function to check if the request returned a http code between 200 and 300
+    *
+    *  @param response: NSURLResponse!,
+    *  @param data: NSData!,
+    *  @param inout error: NSError!
+    *
+    *  @return of type Boolean
+    */
     
-    func validateResponse(response: NSURLResponse!, data: NSData!, inout error: NSError!) -> Bool {
+    func validateResponse(response: NSURLResponse!, inout error: NSError!) -> Bool {
         let httpResponse = response as! NSHTTPURLResponse
         var isValid = true
         if (httpResponse.statusCode < 200 && httpResponse.statusCode >= 300) {
@@ -211,6 +243,26 @@ class BaseService{
         return isValid
     }
     
+    /**
+    *  Function makes image or audio data into a NSMutableArray with its contentType, fileExtension defined
+    *
+    *  @param data: NSData,
+    *  @param contentType: String?,
+    *  @param fileExtension: String
+    *
+    *  @return of type NSMutableArray
+    */
     
+    func labelData(data: NSData, contentType: String?, fileExtension: String) -> NSMutableArray {
+        var fileInfo:NSMutableArray = NSMutableArray()
+        var type = contentType
+        if(type == nil){
+            type = "application/octet-stream"
+        }
+        fileInfo.insertObject(type!, atIndex: 0)
+        fileInfo.insertObject(fileExtension, atIndex: 1)
+        fileInfo.insertObject(data, atIndex: 2)
+        return fileInfo
+    }
     
 }

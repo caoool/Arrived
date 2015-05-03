@@ -19,6 +19,13 @@
 		890D4C831AE4433400BD05DF /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7A1AE4433400BD05DF /* StartVC.swift */; };
 		890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */; };
 		890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */; };
+		8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */; };
+		8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */; };
+		8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */; };
+		8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */; };
+		8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */; };
+		8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4D41AF5B0AD00F3046A /* LocationManager.swift */; };
+		898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898455A11AF6EABD0071A31B /* OrdersVC.swift */; };
 		899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */; };
 		899DA8CC1AF419C000F0C476 /* thumbs_down-104.png in Resources */ = {isa = PBXBuildFile; fileRef = 899DA8CA1AF419C000F0C476 /* thumbs_down-104.png */; };
 		899DA8CD1AF419C000F0C476 /* thunbs_up-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 899DA8CB1AF419C000F0C476 /* thunbs_up-96.png */; };
@@ -70,6 +77,13 @@
 		890D4C7A1AE4433400BD05DF /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBankCardsTVC.swift; sourceTree = "<group>"; };
+		8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVC.swift; sourceTree = "<group>"; };
+		8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVCell.swift; sourceTree = "<group>"; };
+		8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBankCardsTVCell.swift; sourceTree = "<group>"; };
+		8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationVC.swift; sourceTree = "<group>"; };
+		8981A4D41AF5B0AD00F3046A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		898455A11AF6EABD0071A31B /* OrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
 		899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		899DA8CA1AF419C000F0C476 /* thumbs_down-104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumbs_down-104.png"; path = "Assets/UI/Icons/thumbs_down-104.png"; sourceTree = "<group>"; };
 		899DA8CB1AF419C000F0C476 /* thunbs_up-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thunbs_up-96.png"; path = "Assets/UI/Icons/thunbs_up-96.png"; sourceTree = "<group>"; };
@@ -196,6 +210,7 @@
 				890D4C761AE4433400BD05DF /* MyPlayground.playground */,
 				89D7C6B71AE4796500FFD592 /* ImageLoader.swift */,
 				890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */,
+				8981A4D41AF5B0AD00F3046A /* LocationManager.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -210,6 +225,12 @@
 				89D7C6B51AE44D0A00FFD592 /* ViewController.swift */,
 				89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */,
 				899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */,
+				8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */,
+				8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */,
+				8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */,
+				8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */,
+				8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */,
+				898455A11AF6EABD0071A31B /* OrdersVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -300,6 +321,7 @@
 				TargetAttributes = {
 					8908FF4F1AE01ECF00C990DC = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 5R3X245WBY;
 					};
 					8908FF641AE01ECF00C990DC = {
 						CreatedOnToolsVersion = 6.3;
@@ -371,13 +393,20 @@
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
+				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
+				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
 				89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */,
 				899DA8D91AF4222C00F0C476 /* User.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
+				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
+				8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */,
 				89C413511AF16ACF000C2C95 /* TestUserService.swift in Sources */,
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
+				8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */,
+				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
+				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
 			);
@@ -499,9 +528,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -513,9 +545,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};

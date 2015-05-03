@@ -23,6 +23,9 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var bankcard: UILabel!
     
+    var locations = [[String:AnyObject]]?()
+    var bankCards = [[String:AnyObject]]?()
+    
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -45,10 +48,11 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         addIconToUITextFieldLeftView(likes, "thunbs_up-96")
         addIconToUITextFieldLeftView(dislikes, "thumbs_down-104")
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            self.getUserInfo()
-            self.getUserBankInfo()
-        }
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+//            self.getUserInfo()
+//            self.getUserLocationInfo()
+//            self.getUserBankInfo()
+//        }
         
         
     }
@@ -56,6 +60,11 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            self.getUserInfo()
+//            self.getUserLocationInfo()
+//            self.getUserBankInfo()
+        }
     }
     
     func getUserInfo() {
@@ -90,26 +99,26 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         }
     }
     
-//    func getUserLocationInfo() {
-//        var dict = [String:String]()
-//        dict["uid"] = NSUserDefaults.standardUserDefaults().stringForKey("uid")
-//        dict["verificationCode"] = NSUserDefaults.standardUserDefaults().stringForKey("verificationCode")
-//        
-//        let service = TestUserService()
-//        service.getUserLocationInfo(dict) {
-//            (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
-//            
-//            println(result!)
-//            
-//            if error != nil {
-//                displayAlert("Get User Info - Connection Error", error!)
-//            } else if checkErrorCodeInDictionary(result!) {
-//                self.address.text = result!["data"]!["address"] as? String
-//                
-//            }
-//            
-//        }
-//    }
+    func getUserLocationInfo() {
+        var dict = [String:String]()
+        dict["uid"] = NSUserDefaults.standardUserDefaults().stringForKey("uid")
+        dict["verificationCode"] = NSUserDefaults.standardUserDefaults().stringForKey("verificationCode")
+        
+        let service = TestUserService()
+        service.getUserLocationInfo(dict) {
+            (result: Dictionary<String, AnyObject>?, error: String?) -> Void in
+            
+            println(result!)
+            
+            if error != nil {
+                displayAlert("Get User Info - Connection Error", error!)
+            } else if checkErrorCodeInDictionary(result!) {
+                self.locations = result!["data"] as? [[String:AnyObject]]
+                self.address.text = self.locations![0]["address"] as? String
+            }
+            
+        }
+    }
     
     func getUserBankInfo() {
         var dict = [String:String]()
@@ -125,8 +134,8 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             if error != nil {
                 displayAlert("Get User Info - Connection Error", error!)
             } else if checkErrorCodeInDictionary(result!) {
-                self.bankcard.text = result!["data"]!["bankCardNumber"] as? String
-                
+                self.bankCards = result!["data"] as? [[String:AnyObject]]
+                self.bankcard.text = self.bankCards![0]["bankCardNumber"] as? String
             }
             
         }
@@ -196,6 +205,18 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         performSegueWithIdentifier("Logout ", sender: self)
     }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if (segue.identifier == "ProfileEditLocations") {
+//            var svc = segue.destinationViewController as! UserLocationsTVC
+//            svc.toPass = locations!
+//        }
+//        
+//        if (segue.identifier == "ProfileEditBankCards") {
+//            var svc = segue.destinationViewController as! UserBankCardsTVC
+//            svc.toPass = bankCards!
+//        }
+//    }
     
 
 }

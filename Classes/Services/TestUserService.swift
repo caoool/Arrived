@@ -15,6 +15,11 @@ class TestUserService : BaseService {
         return test
     }
     
+    func addDataArray(data : [Dictionary<String,  AnyObject>]) -> Dictionary<String, AnyObject> {
+        var test : Dictionary<String, AnyObject> = ["data": data, "code": "20000", "message": "success"]
+        return test
+    }
+    
     func verify(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         callback(addData(["verificationCode": "123456"]), nil)
     }
@@ -63,16 +68,61 @@ class TestUserService : BaseService {
         
     }
     
+    func updateUserLocationInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var faker = ["nil": "nil"]
+        callback(addData(faker), nil)
+        
+    }
+    
+    func getUserLocationInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var faker = [
+            "locationId": "2",
+            "latitude": "130.12",
+            "longitude": "100.13",
+            "address": "king st 12304",
+            ] as Dictionary<String, AnyObject>;
+        var faker2 = [
+            "locationId": "1",
+            "latitude": "-130.12",
+            "longitude": "100.13",
+            "address": "bee st 12304",
+            ] as Dictionary<String, AnyObject>;
+        var faker3 = [
+            "locationId": "3",
+            "latitude": "-130.12",
+            "longitude": "10.13",
+            "address": "random st 12304",
+            ] as Dictionary<String, AnyObject>;
+        var array : [Dictionary<String, AnyObject>] = [faker, faker2, faker3];
+        callback(addDataArray(array), nil)
+    }
+    
     func getUserBankInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
         var faker = [
-            "bankCardId": 1,
+            "bankCardId": "1",
             "fullName": "frank",
             "bankCardNumber": "12345666666",
             "expirationDate": "04/12",
             "cvv": "122"
         ]
-        callback(addData(faker), nil)
+        var faker2 = [
+            "bankCardId": "2",
+            "fullName": "bull",
+            "bankCardNumber": "1244645666666",
+            "expirationDate": "04/16",
+            "cvv": "562"
+        ]
+        var faker3 = [
+            "bankCardId": "1",
+            "fullName": "rain",
+            "bankCardNumber": "12345666666987",
+            "expirationDate": "07/19",
+            "cvv": "234"
+        ]
+        var array : [Dictionary<String, AnyObject>] = [faker, faker2, faker3];
+        callback(addDataArray(array), nil);
         
     }
     
 }
+

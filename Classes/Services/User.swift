@@ -12,6 +12,13 @@ import Foundation
 
 class User {
     
+    struct location {
+        private var locationId: String
+        private var latitude: String
+        private var longitude: String
+        private var address: String
+    }
+    
     struct bankCard {
         private var bankCardId: String
         private var fullName: String
@@ -20,7 +27,8 @@ class User {
         private var cvv: String
     }
     
-    private var bankCards = [bankCard]()
+    private var locations = [location]?()
+    private var bankCards = [bankCard]?()
     
 
 }

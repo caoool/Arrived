@@ -10,11 +10,10 @@ import Foundation
 
 class UserService : BaseService {
     
-    
-    var url = "arrived.dev"
+    var url = "yetian.xyz"
     
     func verify(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/verify"
+        var url = "http://\(self.url)/api/v1/users/getCode"
         postRequest(url, jsonObj: data, callback: callback)
     }
     
@@ -24,7 +23,7 @@ class UserService : BaseService {
     }
     
     func getUserInfo(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/get?" + dictToString(data)
+        var url = "http://\(self.url)/api/v1/users/get?" + build(data)!
         getRequest(url, callback: callback)
     }
     
@@ -44,8 +43,14 @@ class UserService : BaseService {
     }
     
     func getUserBankInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/get?" + dictToString(data)
+        var url = "http://\(self.url)/api/v1/users/get?" + build(data)!
         getRequest(url, callback: callback)
     }
     
+    func uploadPhoto(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = "http://arrived.dev/api/v1/users/upload"
+        uploadRequest(url, jsonObj: data, callback: callback)
+    }
+    
 }
+
