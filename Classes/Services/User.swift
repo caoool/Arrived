@@ -29,6 +29,7 @@ class User {
     
     private var locations = [location]?()
     private var bankCards = [bankCard]?()
+    var id = 0
     
 
 }
