@@ -83,9 +83,9 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             } else if checkErrorCodeInDictionary(result!) {
 //                self.portrait.image = result!["data"]["portrait"] as! UIImage
                 // display random pic for testing purpose
-                ImageLoader.sharedLoader.imageForUrl("http://upload.wikimedia.org/wikipedia/en/4/43/Apple_Swift_Logo.png", completionHandler:{(image: UIImage?, url: String) in
-                    self.portrait.image = image!
-                })
+//                ImageLoader.sharedLoader.imageForUrl("http://upload.wikimedia.org/wikipedia/en/4/43/Apple_Swift_Logo.png", completionHandler:{(image: UIImage?, url: String) in
+//                    self.portrait.image = image!
+//                })
                 self.nickname.text = result!["data"]!["nickname"] as? String
                 self.sex.text = (result!["data"]!["nickname"] as? String == "0") ? "male" : "female"
                 self.birth.text = result!["data"]!["birth"] as? String

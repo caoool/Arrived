@@ -47,6 +47,9 @@
 		89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */; };
 		89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7C6B51AE44D0A00FFD592 /* ViewController.swift */; };
 		89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7C6B71AE4796500FFD592 /* ImageLoader.swift */; };
+		89EEF5001B00720B006881FD /* TestReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEF4FF1B00720B006881FD /* TestReviewService.swift */; };
+		89EEF5021B007233006881FD /* TestRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEF5011B007233006881FD /* TestRequestService.swift */; };
+		89EEF5061B008B05006881FD /* OrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEF5051B008B05006881FD /* OrderDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,9 @@
 		89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		89D7C6B51AE44D0A00FFD592 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89D7C6B71AE4796500FFD592 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		89EEF4FF1B00720B006881FD /* TestReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestReviewService.swift; sourceTree = "<group>"; };
+		89EEF5011B007233006881FD /* TestRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRequestService.swift; sourceTree = "<group>"; };
+		89EEF5051B008B05006881FD /* OrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,8 @@
 				890D4C711AE4433400BD05DF /* BaseService.swift */,
 				89C413501AF16ACF000C2C95 /* TestUserService.swift */,
 				899DA8D81AF4222C00F0C476 /* User.swift */,
+				89EEF4FF1B00720B006881FD /* TestReviewService.swift */,
+				89EEF5011B007233006881FD /* TestRequestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */,
 				8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */,
 				898455A11AF6EABD0071A31B /* OrdersVC.swift */,
+				89EEF5051B008B05006881FD /* OrderDetailVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -322,6 +331,11 @@
 					8908FF4F1AE01ECF00C990DC = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 5R3X245WBY;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					8908FF641AE01ECF00C990DC = {
 						CreatedOnToolsVersion = 6.3;
@@ -391,12 +405,14 @@
 				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
 				899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */,
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
+				89EEF5061B008B05006881FD /* OrderDetailVC.swift in Sources */,
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
 				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
 				89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */,
+				89EEF5001B00720B006881FD /* TestReviewService.swift in Sources */,
 				899DA8D91AF4222C00F0C476 /* User.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
@@ -407,6 +423,7 @@
 				8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
 				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
+				89EEF5021B007233006881FD /* TestRequestService.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
 			);
