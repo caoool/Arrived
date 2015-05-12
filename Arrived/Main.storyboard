@@ -373,7 +373,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Orders" id="dAF-Os-D8y">
                         <barButtonItem key="leftBarButtonItem" title="Tags" id="eJv-tz-0yQ"/>
-                        <barButtonItem key="rightBarButtonItem" title="List" id="71n-6A-2WP"/>
+                        <barButtonItem key="rightBarButtonItem" title="List" id="71n-6A-2WP">
+                            <connections>
+                                <segue destination="B7Y-Sh-uYY" kind="show" identifier="OrdersToOrdersList" id="zPR-9p-YDz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="theMap" destination="mRG-fg-jkv" id="84U-Xx-JYe"/>
@@ -383,6 +387,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAf-kJ-0iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2975.5" y="1315.5"/>
+        </scene>
+        <!--Orders List-->
+        <scene sceneID="QxK-HM-iPQ">
+            <objects>
+                <tableViewController title="Orders List" id="B7Y-Sh-uYY" customClass="OrdersListTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="37o-ai-VGD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrdersListCell" rowHeight="116" id="l0L-l0-0ZM" customClass="OrdersListTVCell" customModule="Arrived" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l0L-l0-0ZM" id="vAK-0y-msW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0JU-0L-uDS">
+                                            <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-VQ-qzE">
+                                            <rect key="frame" x="116" y="8" width="251" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lB-tl-yQ0">
+                                            <rect key="frame" x="116" y="37" width="251" height="71"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="body" destination="9lB-tl-yQ0" id="nGC-gp-O7q"/>
+                                    <outlet property="portrait" destination="0JU-0L-uDS" id="Zqf-ar-kwS"/>
+                                    <outlet property="title" destination="FLQ-VQ-qzE" id="ltu-7B-Tfh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B7Y-Sh-uYY" id="NVR-46-eoi"/>
+                            <outlet property="delegate" destination="B7Y-Sh-uYY" id="bCa-wX-AJn"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="vci-wi-OfM" kind="show" identifier="OrdersListToOrderDetail" id="1wV-fl-Pjw"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqw-t9-x77" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3436.5" y="1315.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="mxd-IC-Ggj">
@@ -653,12 +708,38 @@
                     <view key="view" contentMode="scaleToFill" id="sjr-Qs-f71">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whatever content will appear here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajl-7H-20E">
+                                <rect key="frame" x="16" y="72" width="343" height="250"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Is-y4-O9y">
+                                <rect key="frame" x="269" y="504" width="52" height="30"/>
+                                <state key="normal" title="Interest">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="interest:" destination="vci-wi-OfM" eventType="touchUpInside" id="5UO-kl-3Pw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4Q-YO-gY9">
+                                <rect key="frame" x="69" y="514" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="price" destination="A4Q-YO-gY9" id="dET-ok-bDo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyu-el-vRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3412.5" y="2386.5"/>
+            <point key="canvasLocation" x="3198.5" y="2216.5"/>
         </scene>
         <!--Locations-->
         <scene sceneID="X44-aY-0VR">
@@ -880,7 +961,8 @@
         <image name="Screen.png" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cfT-yr-c8E"/>
         <segue reference="eP7-GY-SMW"/>
+        <segue reference="cfT-yr-c8E"/>
+        <segue reference="1wV-fl-Pjw"/>
     </inferredMetricsTieBreakers>
 </document>

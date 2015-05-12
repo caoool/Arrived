@@ -19,6 +19,8 @@
 		890D4C831AE4433400BD05DF /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7A1AE4433400BD05DF /* StartVC.swift */; };
 		890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */; };
 		890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */; };
+		890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C61B0175200066E835 /* OrdersListTVC.swift */; };
+		890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C81B0175370066E835 /* OrdersListTVCell.swift */; };
 		8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */; };
 		8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */; };
 		8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */; };
@@ -80,6 +82,8 @@
 		890D4C7A1AE4433400BD05DF /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		890F54C61B0175200066E835 /* OrdersListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVC.swift; sourceTree = "<group>"; };
+		890F54C81B0175370066E835 /* OrdersListTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVCell.swift; sourceTree = "<group>"; };
 		8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBankCardsTVC.swift; sourceTree = "<group>"; };
 		8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVC.swift; sourceTree = "<group>"; };
 		8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVCell.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */,
 				898455A11AF6EABD0071A31B /* OrdersVC.swift */,
 				89EEF5051B008B05006881FD /* OrderDetailVC.swift */,
+				890F54C61B0175200066E835 /* OrdersListTVC.swift */,
+				890F54C81B0175370066E835 /* OrdersListTVCell.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
 				89EEF5061B008B05006881FD /* OrderDetailVC.swift in Sources */,
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
+				890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
 				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
@@ -419,6 +426,7 @@
 				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
 				8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */,
 				89C413511AF16ACF000C2C95 /* TestUserService.swift in Sources */,
+				890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */,
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
 				8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,

@@ -152,11 +152,22 @@ class OrdersVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
         if segue.identifier == "OrdersToOrderDetail" {
             var svc = segue.destinationViewController as! OrderDetailVC;
-            
             svc.toPass = currentJob
+        } else if segue.identifier == "OrdersToOrdersList" {
+            var svc = segue.destinationViewController as! OrdersListTVC;
+            svc.toPass = jobs
         }
+        
     }
+    
+    
+    
+    
+    
+    
     
 }
