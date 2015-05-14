@@ -198,12 +198,13 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="2Vx-rg-tsh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="your phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-kd-jBl" customClass="SHSPhoneTextField">
-                                <rect key="frame" x="16" y="238" width="343" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="your phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-kd-jBl" customClass="SHSPhoneTextField">
+                                <rect key="frame" x="51" y="223" width="273" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Pb5-SX-A8A"/>
+                                    <constraint firstAttribute="height" constant="50" id="Pb5-SX-A8A"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
+                                <color key="textColor" red="0.049225789184693995" green="0.2617600638740345" blue="0.11609801439165532" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -253,7 +254,7 @@
                             <constraint firstItem="AAZ-4T-tjw" firstAttribute="height" secondItem="egc-ob-0UT" secondAttribute="height" id="eVs-e7-w2e"/>
                             <constraint firstItem="znw-W7-PqX" firstAttribute="height" secondItem="H8A-PW-bI6" secondAttribute="height" id="ezc-Gc-0bH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="roh-tY-dyP" secondAttribute="trailing" constant="14" id="fHt-ha-5in"/>
-                            <constraint firstItem="Qjz-kd-jBl" firstAttribute="trailing" secondItem="uTI-tA-zIH" secondAttribute="trailingMargin" id="gcg-9p-Qev"/>
+                            <constraint firstItem="Qjz-kd-jBl" firstAttribute="trailing" secondItem="uTI-tA-zIH" secondAttribute="trailingMargin" constant="-35" id="gcg-9p-Qev"/>
                             <constraint firstItem="H8A-PW-bI6" firstAttribute="top" secondItem="Qjz-kd-jBl" secondAttribute="bottom" constant="8" id="iPO-nO-Xi9"/>
                             <constraint firstItem="XKr-iC-YTY" firstAttribute="baseline" secondItem="H8A-PW-bI6" secondAttribute="baseline" id="idO-uZ-DrF"/>
                             <constraint firstItem="VSm-4A-N83" firstAttribute="height" secondItem="hLY-CV-tq2" secondAttribute="height" id="jRR-yF-9op"/>
@@ -268,7 +269,7 @@
                             <constraint firstItem="Q8t-mO-W2b" firstAttribute="leading" secondItem="uTI-tA-zIH" secondAttribute="leadingMargin" constant="13" id="v02-ET-b6A"/>
                             <constraint firstItem="wz4-rF-Syy" firstAttribute="leading" secondItem="uTI-tA-zIH" secondAttribute="leadingMargin" constant="13" id="w1q-si-Voc"/>
                             <constraint firstItem="Q8t-mO-W2b" firstAttribute="width" secondItem="H8A-PW-bI6" secondAttribute="width" id="wMV-aG-5O5"/>
-                            <constraint firstItem="Qjz-kd-jBl" firstAttribute="leading" secondItem="uTI-tA-zIH" secondAttribute="leadingMargin" id="xFn-Gv-zFp"/>
+                            <constraint firstItem="Qjz-kd-jBl" firstAttribute="leading" secondItem="uTI-tA-zIH" secondAttribute="leadingMargin" constant="35" id="xFn-Gv-zFp"/>
                             <constraint firstItem="Tgf-sp-AGJ" firstAttribute="leading" secondItem="uTI-tA-zIH" secondAttribute="leadingMargin" constant="-16" id="xdK-f4-IAP"/>
                             <constraint firstItem="lAe-rS-bnp" firstAttribute="top" secondItem="Tgf-sp-AGJ" secondAttribute="bottom" id="yAP-hC-uCB"/>
                             <constraint firstItem="znw-W7-PqX" firstAttribute="width" secondItem="egc-ob-0UT" secondAttribute="width" id="yAU-Ms-8ye"/>
@@ -286,7 +287,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="next" destination="Tgf-sp-AGJ" id="I4L-PI-VHe"/>
                         <outlet property="phoneNumberField" destination="Qjz-kd-jBl" id="FtW-d8-IsT"/>
+                        <outlet property="plus" destination="Dlm-J6-qUw" id="GCu-fP-58E"/>
                         <segue destination="GIR-4f-tKc" kind="presentation" identifier="WelcomeSignUp" id="rML-t1-yO0"/>
                         <segue destination="Q41-JF-OXm" kind="presentation" identifier="WelcomeLogin" id="edc-f6-2OI"/>
                     </connections>

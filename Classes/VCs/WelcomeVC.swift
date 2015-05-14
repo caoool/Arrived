@@ -13,6 +13,8 @@ import SHSPhoneComponent
 class WelcomeVC: UIViewController {
     
     @IBOutlet weak var phoneNumberField: SHSPhoneTextField!
+    @IBOutlet weak var plus: UIButton!
+    @IBOutlet weak var next: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,9 @@ class WelcomeVC: UIViewController {
     func formatPhoneNumberWithFlag() {
         phoneNumberField.becomeFirstResponder()
         
-        phoneNumberField.formatter.setDefaultOutputPattern("(###)###-####", imagePath: nil)
+        phoneNumberField.formatter.setDefaultOutputPattern("(###) ### - ####", imagePath: nil)
         phoneNumberField.formatter.prefix = "+1 "
-        phoneNumberField.formatter.addOutputPattern("(###) ###-###", forRegExp:"^[0-9]\\d*$", imagePath:"SHSPhoneImage.bundle/flag_us")
+        phoneNumberField.formatter.addOutputPattern("(###) ### - ###", forRegExp:"^[0-9]\\d*$", imagePath:"SHSPhoneImage.bundle/flag_us")
     }
     
     // FIXME: - Automatic pull country code from carrier
@@ -53,7 +55,7 @@ class WelcomeVC: UIViewController {
         let carrier = network_Info.subscriberCellularProvider
         println(carrier.mobileCountryCode)
     }
-    
+
     
     // MARK: - Funtionalities
     
@@ -78,8 +80,31 @@ class WelcomeVC: UIViewController {
     }
 
     @IBAction func buttonTapped(sender: UIButton) {
-        println(phoneNumberField.formatter.digitOnlyString(phoneNumberField.text))
+        
+        if count(phoneNumberField.phoneNumber()) != 11 {
+            GoogleWearAlert.showAlert(title: "Phone Num", image: nil, type: .Error, duration: 1.2, inViewController: self, atPostion: .Center, canBeDismissedByUser: true)
+            return
+        }
+        
+        switchPlusSign()
+
     }
+    
+    // MARK: - UI Work
+    func switchPlusSign() {
+        plus.transform = CGAffineTransformMakeScale(0.1, 0.1)
+        plus.setTitle("↻", forState: UIControlState.Normal)
+        plus.setTitleColor(next.backgroundColor, forState: UIControlState.Normal)
+        UIView.animateWithDuration(2.0,
+            delay: 0,
+            usingSpringWithDamping: 0.2,
+            initialSpringVelocity: 6.0,
+            options: UIViewAnimationOptions.AllowUserInteraction,
+            animations: {
+                self.plus.transform = CGAffineTransformIdentity
+            }, completion: nil)
+    }
+    
     
 //    @IBOutlet weak var logoLabel: UILabel!
 //    @IBOutlet weak var phone: UITextField!

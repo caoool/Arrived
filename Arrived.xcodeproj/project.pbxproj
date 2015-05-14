@@ -27,6 +27,13 @@
 		890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CD1B01F4120066E835 /* AudioRecorder.swift */; };
 		890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54D21B01F41D0066E835 /* MakeOrderVC.swift */; };
 		8958224B1B04F0A4000DA21E /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */; };
+		895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958226B1B05061C000DA21E /* GoogleWearAlert.swift */; };
+		895822731B05061C000DA21E /* GoogleWearAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958226C1B05061C000DA21E /* GoogleWearAlertView.swift */; };
+		895822741B05061C000DA21E /* errorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8958226E1B05061C000DA21E /* errorIcon@2x.png */; };
+		895822751B05061C000DA21E /* messageIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8958226F1B05061C000DA21E /* messageIcon@2x.png */; };
+		895822761B05061C000DA21E /* successIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 895822701B05061C000DA21E /* successIcon@2x.png */; };
+		895822771B05061C000DA21E /* warningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 895822711B05061C000DA21E /* warningIcon@2x.png */; };
+		8958227B1B050AD7000DA21E /* JSSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958227A1B050AD7000DA21E /* JSSAlertView.swift */; };
 		8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */; };
 		8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */; };
 		8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */; };
@@ -97,6 +104,13 @@
 		890F54D21B01F41D0066E835 /* MakeOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeOrderVC.swift; sourceTree = "<group>"; };
 		895822131B04E3AB000DA21E /* Arrived-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Arrived-Bridging-Header.h"; sourceTree = "<group>"; };
 		8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SHSPhoneImage.bundle; path = Assets/SHSPhoneImage.bundle; sourceTree = "<group>"; };
+		8958226B1B05061C000DA21E /* GoogleWearAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleWearAlert.swift; sourceTree = "<group>"; };
+		8958226C1B05061C000DA21E /* GoogleWearAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleWearAlertView.swift; sourceTree = "<group>"; };
+		8958226E1B05061C000DA21E /* errorIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "errorIcon@2x.png"; sourceTree = "<group>"; };
+		8958226F1B05061C000DA21E /* messageIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageIcon@2x.png"; sourceTree = "<group>"; };
+		895822701B05061C000DA21E /* successIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "successIcon@2x.png"; sourceTree = "<group>"; };
+		895822711B05061C000DA21E /* warningIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningIcon@2x.png"; sourceTree = "<group>"; };
+		8958227A1B050AD7000DA21E /* JSSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSSAlertView.swift; path = Frameworks/JSSAlertView.swift; sourceTree = "<group>"; };
 		8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBankCardsTVC.swift; sourceTree = "<group>"; };
 		8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVC.swift; sourceTree = "<group>"; };
 		8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVCell.swift; sourceTree = "<group>"; };
@@ -154,6 +168,7 @@
 				890E3FB01AEC581C00F22912 /* Assets */,
 				890D4C6F1AE4433400BD05DF /* Classes */,
 				8908FF521AE01ECF00C990DC /* Arrived */,
+				8958224C1B0504CD000DA21E /* Frameworks */,
 				8908FF681AE01ECF00C990DC /* ArrivedTests */,
 				8908FF511AE01ECF00C990DC /* Products */,
 			);
@@ -289,6 +304,37 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		8958224C1B0504CD000DA21E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8958227A1B050AD7000DA21E /* JSSAlertView.swift */,
+				8958226A1B05061C000DA21E /* GoogleWearAlertView */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8958226A1B05061C000DA21E /* GoogleWearAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8958226B1B05061C000DA21E /* GoogleWearAlert.swift */,
+				8958226C1B05061C000DA21E /* GoogleWearAlertView.swift */,
+				8958226D1B05061C000DA21E /* Resources */,
+			);
+			name = GoogleWearAlertView;
+			path = Frameworks/GoogleWearAlertView;
+			sourceTree = "<group>";
+		};
+		8958226D1B05061C000DA21E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8958226E1B05061C000DA21E /* errorIcon@2x.png */,
+				8958226F1B05061C000DA21E /* messageIcon@2x.png */,
+				895822701B05061C000DA21E /* successIcon@2x.png */,
+				895822711B05061C000DA21E /* warningIcon@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		89C413601AF31F83000C2C95 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,10 +443,14 @@
 				899DA8D31AF41AC700F0C476 /* birthday-104.png in Resources */,
 				89C4135B1AF1CD91000C2C95 /* Phone Icon.png in Resources */,
 				89C4136A1AF40402000C2C95 /* Main.storyboard in Resources */,
+				895822741B05061C000DA21E /* errorIcon@2x.png in Resources */,
 				89C413661AF32029000C2C95 /* user-104.png in Resources */,
 				899DA8CD1AF419C000F0C476 /* thunbs_up-96.png in Resources */,
+				895822761B05061C000DA21E /* successIcon@2x.png in Resources */,
 				89C413571AF1C523000C2C95 /* Screen.png in Resources */,
 				89C413681AF3252F000C2C95 /* key-100.png in Resources */,
+				895822771B05061C000DA21E /* warningIcon@2x.png in Resources */,
+				895822751B05061C000DA21E /* messageIcon@2x.png in Resources */,
 				899DA8D61AF41AC700F0C476 /* mental_status-96.png in Resources */,
 				899DA8D41AF41AC700F0C476 /* collaborator-104.png in Resources */,
 				8908FF601AE01ECF00C990DC /* LaunchScreen.xib in Resources */,
@@ -439,6 +489,7 @@
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
 				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
+				895822731B05061C000DA21E /* GoogleWearAlertView.swift in Sources */,
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
 				89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */,
 				89EEF5001B00720B006881FD /* TestReviewService.swift in Sources */,
@@ -450,9 +501,11 @@
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
 				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
 				8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */,
+				895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */,
 				89C413511AF16ACF000C2C95 /* TestUserService.swift in Sources */,
 				890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */,
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
+				8958227B1B050AD7000DA21E /* JSSAlertView.swift in Sources */,
 				8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
 				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
