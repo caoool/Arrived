@@ -57,3 +57,14 @@ func addIconToUITextFieldLeftView(textField: UITextField, imageName: String) {
     imageView.frame = CGRect(x: 0, y: 0, width: textField.frame.height*0.8, height: textField.frame.height*0.8)
     textField.leftView = imageView
 }
+
+/**
+    Validate phone number
+*/
+func phoneNumberValidation(value: String) -> Bool {
+    var charcter  = NSCharacterSet(charactersInString: "0123456789").invertedSet
+    var filtered:NSString!
+    var inputString:NSArray = value.componentsSeparatedByCharactersInSet(charcter)
+    filtered = inputString.componentsJoinedByString("")
+    return  value == filtered
+}

@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Arrived.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "895821D71B04DE47000DA21E"
+               BuildableName = "SHSPhoneComponentTests.xctest"
+               BlueprintName = "SHSPhoneComponentTests"
+               ReferencedContainer = "container:Arrived.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "8908FF641AE01ECF00C990DC"
                BuildableName = "ArrivedTests.xctest"
                BlueprintName = "ArrivedTests"
+               ReferencedContainer = "container:Arrived.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "895821D71B04DE47000DA21E"
+               BuildableName = "SHSPhoneComponentTests.xctest"
+               BlueprintName = "SHSPhoneComponentTests"
                ReferencedContainer = "container:Arrived.xcodeproj">
             </BuildableReference>
          </TestableReference>

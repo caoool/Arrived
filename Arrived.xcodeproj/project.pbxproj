@@ -21,6 +21,12 @@
 		890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */; };
 		890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C61B0175200066E835 /* OrdersListTVC.swift */; };
 		890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C81B0175370066E835 /* OrdersListTVCell.swift */; };
+		890F54CE1B01F4120066E835 /* AudioContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CA1B01F4120066E835 /* AudioContext.swift */; };
+		890F54CF1B01F4120066E835 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CB1B01F4120066E835 /* AudioManager.swift */; };
+		890F54D01B01F4120066E835 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CC1B01F4120066E835 /* AudioPlayer.swift */; };
+		890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CD1B01F4120066E835 /* AudioRecorder.swift */; };
+		890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54D21B01F41D0066E835 /* MakeOrderVC.swift */; };
+		8958224B1B04F0A4000DA21E /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */; };
 		8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */; };
 		8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */; };
 		8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */; };
@@ -84,6 +90,13 @@
 		890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		890F54C61B0175200066E835 /* OrdersListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVC.swift; sourceTree = "<group>"; };
 		890F54C81B0175370066E835 /* OrdersListTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVCell.swift; sourceTree = "<group>"; };
+		890F54CA1B01F4120066E835 /* AudioContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioContext.swift; sourceTree = "<group>"; };
+		890F54CB1B01F4120066E835 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		890F54CC1B01F4120066E835 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		890F54CD1B01F4120066E835 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		890F54D21B01F41D0066E835 /* MakeOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeOrderVC.swift; sourceTree = "<group>"; };
+		895822131B04E3AB000DA21E /* Arrived-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Arrived-Bridging-Header.h"; sourceTree = "<group>"; };
+		8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SHSPhoneImage.bundle; path = Assets/SHSPhoneImage.bundle; sourceTree = "<group>"; };
 		8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBankCardsTVC.swift; sourceTree = "<group>"; };
 		8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVC.swift; sourceTree = "<group>"; };
 		8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVCell.swift; sourceTree = "<group>"; };
@@ -205,6 +218,10 @@
 		890D4C701AE4433400BD05DF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				890F54CA1B01F4120066E835 /* AudioContext.swift */,
+				890F54CB1B01F4120066E835 /* AudioManager.swift */,
+				890F54CC1B01F4120066E835 /* AudioPlayer.swift */,
+				890F54CD1B01F4120066E835 /* AudioRecorder.swift */,
 				890A1C431AEAD02F00E6E6D9 /* ServiceHandler.swift */,
 				890D4C731AE4433400BD05DF /* UserService.swift */,
 				890D4C711AE4433400BD05DF /* BaseService.swift */,
@@ -223,6 +240,7 @@
 				89D7C6B71AE4796500FFD592 /* ImageLoader.swift */,
 				890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */,
 				8981A4D41AF5B0AD00F3046A /* LocationManager.swift */,
+				895822131B04E3AB000DA21E /* Arrived-Bridging-Header.h */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -230,6 +248,7 @@
 		890D4C771AE4433400BD05DF /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				890F54D21B01F41D0066E835 /* MakeOrderVC.swift */,
 				890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */,
 				890D4C791AE4433400BD05DF /* LoggedInVC.swift */,
 				890D4C7A1AE4433400BD05DF /* StartVC.swift */,
@@ -253,6 +272,7 @@
 		890E3FB01AEC581C00F22912 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */,
 				890E3FB11AEC582600F22912 /* UI */,
 			);
 			name = Assets;
@@ -373,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8958224B1B04F0A4000DA21E /* SHSPhoneImage.bundle in Resources */,
 				899DA8D31AF41AC700F0C476 /* birthday-104.png in Resources */,
 				89C4135B1AF1CD91000C2C95 /* Phone Icon.png in Resources */,
 				89C4136A1AF40402000C2C95 /* Main.storyboard in Resources */,
@@ -409,22 +430,23 @@
 			files = (
 				890A1C441AEAD02F00E6E6D9 /* ServiceHandler.swift in Sources */,
 				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
-				94E02A5F1AFDC43D004405E0 /* AudioRecorder.swift in Sources */,
 				899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */,
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
+				890F54CE1B01F4120066E835 /* AudioContext.swift in Sources */,
 				89EEF5061B008B05006881FD /* OrderDetailVC.swift in Sources */,
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
 				890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
-				94E02A611AFDC474004405E0 /* MakeOrderVC.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
 				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
-				94DB2F311AFFAD4E00038F8B /* AudioContext.swift in Sources */,
 				89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */,
 				89EEF5001B00720B006881FD /* TestReviewService.swift in Sources */,
+				890F54CF1B01F4120066E835 /* AudioManager.swift in Sources */,
 				899DA8D91AF4222C00F0C476 /* User.swift in Sources */,
+				890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
+				890F54D01B01F4120066E835 /* AudioPlayer.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
 				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
 				8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */,
@@ -437,6 +459,7 @@
 				89EEF5021B007233006881FD /* TestRequestService.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
+				890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +533,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -547,6 +572,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
