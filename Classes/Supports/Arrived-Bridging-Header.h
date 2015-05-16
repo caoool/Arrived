@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 LoopCow. All rights reserved.
 //
 
-#ifndef Arrived_Arrived_Bridging_Header_h
-#define Arrived_Arrived_Bridging_Header_h
+#ifndef Arrived_Bridging_Header_h
+#define Arrived_Bridging_Header_h
 
 #import "SHSPhoneLibrary.h"
 

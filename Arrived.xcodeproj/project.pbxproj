@@ -18,6 +18,11 @@
 		890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C791AE4433400BD05DF /* LoggedInVC.swift */; };
 		890D4C831AE4433400BD05DF /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7A1AE4433400BD05DF /* StartVC.swift */; };
 		890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */; };
+		890D72B11B0739E5006360E7 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72A71B0739E5006360E7 /* SHSFlagAccessoryView.m */; };
+		890D72B21B0739E5006360E7 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72AA1B0739E5006360E7 /* SHSPhoneLogic.m */; };
+		890D72B31B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72AC1B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m */; };
+		890D72B41B0739E5006360E7 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72AE1B0739E5006360E7 /* SHSPhoneNumberFormatter.m */; };
+		890D72B51B0739E5006360E7 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72B01B0739E5006360E7 /* SHSPhoneTextField.m */; };
 		890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */; };
 		890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C61B0175200066E835 /* OrdersListTVC.swift */; };
 		890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C81B0175370066E835 /* OrdersListTVCell.swift */; };
@@ -94,6 +99,17 @@
 		890D4C791AE4433400BD05DF /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 		890D4C7A1AE4433400BD05DF /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		890D72A61B0739E5006360E7 /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
+		890D72A71B0739E5006360E7 /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
+		890D72A81B0739E5006360E7 /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLibrary.h; sourceTree = "<group>"; };
+		890D72A91B0739E5006360E7 /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogic.h; sourceTree = "<group>"; };
+		890D72AA1B0739E5006360E7 /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogic.m; sourceTree = "<group>"; };
+		890D72AB1B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHSPhoneNumberFormatter+UserConfig.h"; sourceTree = "<group>"; };
+		890D72AC1B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHSPhoneNumberFormatter+UserConfig.m"; sourceTree = "<group>"; };
+		890D72AD1B0739E5006360E7 /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		890D72AE1B0739E5006360E7 /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
+		890D72AF1B0739E5006360E7 /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
+		890D72B01B0739E5006360E7 /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
 		890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		890F54C61B0175200066E835 /* OrdersListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVC.swift; sourceTree = "<group>"; };
 		890F54C81B0175370066E835 /* OrdersListTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVCell.swift; sourceTree = "<group>"; };
@@ -284,6 +300,25 @@
 			path = VCs;
 			sourceTree = "<group>";
 		};
+		890D72A51B0739E5006360E7 /* SHSPhoneComponent */ = {
+			isa = PBXGroup;
+			children = (
+				890D72A61B0739E5006360E7 /* SHSFlagAccessoryView.h */,
+				890D72A71B0739E5006360E7 /* SHSFlagAccessoryView.m */,
+				890D72A81B0739E5006360E7 /* SHSPhoneLibrary.h */,
+				890D72A91B0739E5006360E7 /* SHSPhoneLogic.h */,
+				890D72AA1B0739E5006360E7 /* SHSPhoneLogic.m */,
+				890D72AB1B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.h */,
+				890D72AC1B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m */,
+				890D72AD1B0739E5006360E7 /* SHSPhoneNumberFormatter.h */,
+				890D72AE1B0739E5006360E7 /* SHSPhoneNumberFormatter.m */,
+				890D72AF1B0739E5006360E7 /* SHSPhoneTextField.h */,
+				890D72B01B0739E5006360E7 /* SHSPhoneTextField.m */,
+			);
+			name = SHSPhoneComponent;
+			path = Frameworks/SHSPhoneComponent;
+			sourceTree = "<group>";
+		};
 		890E3FB01AEC581C00F22912 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +342,7 @@
 		8958224C1B0504CD000DA21E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				890D72A51B0739E5006360E7 /* SHSPhoneComponent */,
 				8958227A1B050AD7000DA21E /* JSSAlertView.swift */,
 				8958226A1B05061C000DA21E /* GoogleWearAlertView */,
 			);
@@ -490,6 +526,7 @@
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
 				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
 				895822731B05061C000DA21E /* GoogleWearAlertView.swift in Sources */,
+				890D72B11B0739E5006360E7 /* SHSFlagAccessoryView.m in Sources */,
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
 				89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */,
 				89EEF5001B00720B006881FD /* TestReviewService.swift in Sources */,
@@ -507,12 +544,16 @@
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
 				8958227B1B050AD7000DA21E /* JSSAlertView.swift in Sources */,
 				8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */,
+				890D72B31B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
+				890D72B21B0739E5006360E7 /* SHSPhoneLogic.m in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
 				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
 				89EEF5021B007233006881FD /* TestRequestService.swift in Sources */,
+				890D72B41B0739E5006360E7 /* SHSPhoneNumberFormatter.m in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
 				890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */,
+				890D72B51B0739E5006360E7 /* SHSPhoneTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,20 +679,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/Lu/Dev/Frameworks/SHSPhoneComponent-master/SHSPhoneComponents/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Supports/Arrived-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -663,20 +698,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/Lu/Dev/Frameworks/SHSPhoneComponent-master/SHSPhoneComponents/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Arrived/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Supports/Arrived-Bridging-Header.h";
 			};
 			name = Release;
 		};
