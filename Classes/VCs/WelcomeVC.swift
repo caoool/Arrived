@@ -163,6 +163,8 @@ class WelcomeVC: UIViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("counter"), userInfo: nil, repeats: true)
     }
     
+    
+    // TODO: - Authenticate with the server, wait indicator and alert
     func authenticateAndGotoNextScreen() {
         println(verificationCode)
     }
