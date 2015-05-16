@@ -11,16 +11,16 @@ import UIKit
 
 extension UIColor {
     class func successGreen() -> UIColor {
-        return UIColor(red: 69.0/255.0, green: 181.0/255.0, blue: 38.0/255.0, alpha: 1)
+        return UIColor(red: 35.0/255.0, green: 183.0/255.0, blue: 80.0/255.0, alpha: 1)
     }
     class func errorRed() -> UIColor {
-        return UIColor(red: 255.0/255.0, green: 82.0/255.0, blue: 82.0/255.0, alpha: 1)
+        return UIColor(red: 247.0/255.0, green: 74.0/255.0, blue: 47.0/255.0, alpha: 1)
     }
     class func warningYellow() -> UIColor {
-        return UIColor(red: 255.0/255.0, green: 205.0/255.0, blue: 64.0/255.0, alpha: 1)
+        return UIColor(red: 247.0/255.0, green: 148.0/255.0, blue: 47.0/255.0, alpha: 1)
     }
     class func messageBlue() -> UIColor {
-        return UIColor(red: 2.0/255.0, green: 169.0/255.0, blue: 244.0/255.0, alpha: 1)
+        return UIColor(red: 34.0/255.0, green: 148.0/255.0, blue: 154.0/255.0, alpha: 1)
     }
 }
 
