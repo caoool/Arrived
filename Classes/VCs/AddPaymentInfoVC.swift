@@ -10,8 +10,114 @@
 
 import UIKit
 
-class AddPaymentInfoVC: UIViewController {
+class AddPaymentInfoVC: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var bankCardNumberField: UITextField!
+    @IBOutlet weak var cardHolderNameField: UITextField!
+    @IBOutlet weak var expDateField: UITextField!
+    @IBOutlet weak var cvvField: UITextField!
+    
+    private var textFields = [UITextField]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupUI()
+    }
+    
+    // MARK: - UI Work
+    
+    func setupUI() {
+        
+        self.addDoneButtonOnKeyboard()
+        bankCardNumberField.becomeFirstResponder()
+        
+        textFields = [bankCardNumberField, cardHolderNameField, expDateField, cvvField]
+        for item in textFields {
+            
+            // adding a single bottom border to the button
+            var border = CALayer()
+            var width = CGFloat(0.5)
+            border.borderColor = UIColor.darkGrayColor().CGColor
+            border.frame = CGRect(x: 0, y: item.frame.size.height - width, width: item.frame.size.width, height: item.frame.size.height)
+            border.borderWidth = width
+            
+            item.layer.addSublayer(border)
+            item.layer.masksToBounds = true
+            
+            // setup keyboard
+            item.delegate = self
+        }
+    }
+    
+    // MARK: - Keyboard customization
+    func addDoneButtonOnKeyboard()
+    {
+        var doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+        doneToolbar.barStyle = UIBarStyle.Default
+        
+        var flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        var done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneButtonAction"))
+        var prev: UIBarButtonItem = UIBarButtonItem(title: "Prev", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("prevButtonAction"))
+        var next: UIBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("nextButtonAction"))
+        
+        var items = NSMutableArray()
+        items.addObject(prev)
+        items.addObject(next)
+        items.addObject(flexSpace)
+        items.addObject(done)
+        
+        doneToolbar.items = items as [AnyObject]
+        doneToolbar.sizeToFit()
+        
+        bankCardNumberField.inputAccessoryView = doneToolbar
+        cardHolderNameField.inputAccessoryView = doneToolbar
+        expDateField.inputAccessoryView = doneToolbar
+        cvvField.inputAccessoryView = doneToolbar
+        
+    }
+    
+    func prevButtonAction()
+    {
+        if bankCardNumberField.isFirstResponder() {  }
+        if cardHolderNameField.isFirstResponder() { bankCardNumberField.becomeFirstResponder() }
+        if expDateField.isFirstResponder() { cardHolderNameField.becomeFirstResponder() }
+        if cvvField.isFirstResponder() { expDateField.becomeFirstResponder() }
+    }
+    
+    func nextButtonAction()
+    {
+        if bankCardNumberField.isFirstResponder() { cardHolderNameField.becomeFirstResponder() }
+        if cardHolderNameField.isFirstResponder() { expDateField.becomeFirstResponder() }
+        if expDateField.isFirstResponder() { cvvField.becomeFirstResponder() }
+        if cvvField.isFirstResponder() { }
+    }
+    
+    func doneButtonAction()
+    {
+        if bankCardNumberField.isFirstResponder() { bankCardNumberField.resignFirstResponder() }
+        if cardHolderNameField.isFirstResponder() { cardHolderNameField.resignFirstResponder() }
+        if expDateField.isFirstResponder() { expDateField.resignFirstResponder() }
+        if cvvField.isFirstResponder() { cvvField.resignFirstResponder() }
+    }
+    
+    // MARK: - Functionalities
+    
+    // MARK: - Delegates
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField === bankCardNumberField {
+            cardHolderNameField.becomeFirstResponder()
+        } else if textField === cardHolderNameField {
+            expDateField.becomeFirstResponder()
+        } else if textField === expDateField {
+            cvvField.becomeFirstResponder()
+        } else if textField === cvvField {
+            cvvField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    /*
     @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var cardLabel: UITextField!
     @IBOutlet weak var expDateLabel: UITextField!
@@ -79,5 +185,5 @@ class AddPaymentInfoVC: UIViewController {
     @IBAction func setUpLater() {
         performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
     }
-    
+    */
 }

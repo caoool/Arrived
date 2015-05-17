@@ -23,6 +23,7 @@
 		890D72B31B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72AC1B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m */; };
 		890D72B41B0739E5006360E7 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72AE1B0739E5006360E7 /* SHSPhoneNumberFormatter.m */; };
 		890D72B51B0739E5006360E7 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D72B01B0739E5006360E7 /* SHSPhoneTextField.m */; };
+		890D72B71B0741C5006360E7 /* UserAgreementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D72B61B0741C5006360E7 /* UserAgreementVC.swift */; };
 		890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */; };
 		890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C61B0175200066E835 /* OrdersListTVC.swift */; };
 		890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54C81B0175370066E835 /* OrdersListTVCell.swift */; };
@@ -110,6 +111,7 @@
 		890D72AE1B0739E5006360E7 /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
 		890D72AF1B0739E5006360E7 /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
 		890D72B01B0739E5006360E7 /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
+		890D72B61B0741C5006360E7 /* UserAgreementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgreementVC.swift; sourceTree = "<group>"; };
 		890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		890F54C61B0175200066E835 /* OrdersListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVC.swift; sourceTree = "<group>"; };
 		890F54C81B0175370066E835 /* OrdersListTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTVCell.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				890D4C791AE4433400BD05DF /* LoggedInVC.swift */,
 				890D4C7A1AE4433400BD05DF /* StartVC.swift */,
 				890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */,
+				890D72B61B0741C5006360E7 /* UserAgreementVC.swift */,
 				89D7C6B51AE44D0A00FFD592 /* ViewController.swift */,
 				89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */,
 				899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */,
@@ -536,6 +539,7 @@
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				890F54D01B01F4120066E835 /* AudioPlayer.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
+				890D72B71B0741C5006360E7 /* UserAgreementVC.swift in Sources */,
 				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
 				8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */,
 				895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */,

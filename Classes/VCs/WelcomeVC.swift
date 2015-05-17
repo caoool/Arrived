@@ -69,7 +69,7 @@ class WelcomeVC: UIViewController {
         var border = CALayer()
         var width = CGFloat(0.5)
         border.borderColor = UIColor.darkGrayColor().CGColor
-        border.frame = CGRect(x: phoneNumberField.frame.size.width * 0.075, y: phoneNumberField.frame.size.height - width, width: phoneNumberField.frame.size.width * 0.85, height: phoneNumberField.frame.size.height)
+        border.frame = CGRect(x: 0, y: phoneNumberField.frame.size.height - width, width: phoneNumberField.frame.size.width, height: phoneNumberField.frame.size.height)
         border.borderWidth = width
         
         phoneNumberField.layer.addSublayer(border)
@@ -167,6 +167,7 @@ class WelcomeVC: UIViewController {
     // TODO: - Authenticate with the server, wait indicator and alert
     func authenticateAndGotoNextScreen() {
         println(verificationCode)
+        performSegueWithIdentifier("WelcomeSignUp", sender: self)
     }
     
     // MARK: - UI Work
