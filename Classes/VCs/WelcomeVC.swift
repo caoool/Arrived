@@ -18,6 +18,8 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var next: UIButton!
     @IBOutlet weak var bottomSpaceConstraint: NSLayoutConstraint!
 
+    // passwords are 6 textfields with single char
+    // fill * each for each digit of a 6 digit verification code
     @IBOutlet weak var passwordField1: UITextField!
     @IBOutlet weak var passwordField2: UITextField!
     @IBOutlet weak var passwordField3: UITextField!
@@ -25,8 +27,10 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var passwordField5: UITextField!
     @IBOutlet weak var passwordField6: UITextField!
     
+    // for convenience, for in loop
     private var passwordFields = [UITextField]()
     
+    // hidden at first, appear when resend sms is needed and not 60 secs yet
     @IBOutlet weak var resendLabel: UILabel!
     
     private var timeBeforeNextSMS: Int = 60
@@ -39,7 +43,12 @@ class WelcomeVC: UIViewController {
             return passwordField1.text + passwordField2.text + passwordField3.text + passwordField4.text + passwordField5.text + passwordField6.text
         }
     }
+    
+    // state: phonenumber state, password state
     private var isEnteringVerificationCode: Bool = false
+    
+    // like a pointer pointing current passwordField
+    // used for go to next, prev
     private var pinPosition: Int = 1
     
     override func viewDidLoad() {
@@ -52,6 +61,7 @@ class WelcomeVC: UIViewController {
     
     // MARK: - Initializations
     
+    // fill fields into the convenience array
     func setupVariable() {
         
         passwordFields.append(passwordField1)
@@ -75,18 +85,23 @@ class WelcomeVC: UIViewController {
         phoneNumberField.layer.addSublayer(border)
         phoneNumberField.layer.masksToBounds = true
         
+        // passwords are 6 fields, each hold one char, orriginally hidden
+        // appear when user complete phone number input
         for item in passwordFields {
             item.hidden = true
         }
         
+        // resendLabel is orriginally hidden, appear when user want another sms, and 60 secs not passed
         resendLabel.hidden = true
     }
     
     // format phone number and add flag
     // TODO: Need add support for more country code
     func formatPhoneNumberWithFlag() {
+        // make focus, doesn't really matter here since we are not using system keyboard
         phoneNumberField.becomeFirstResponder()
         
+        // need to extends supports for multiple countries
         phoneNumberField.formatter.setDefaultOutputPattern("(###) ### - ####", imagePath: nil)
         phoneNumberField.formatter.prefix = "+1 "
         phoneNumberField.formatter.addOutputPattern("(###) ### - ###", forRegExp:"^[0-9]\\d*$", imagePath:"SHSPhoneImage.bundle/flag_us")
@@ -103,9 +118,9 @@ class WelcomeVC: UIViewController {
     // MARK: - Funtionalities
     @IBAction func numberTapped(sender: UIButton) {
         
-        if !isEnteringVerificationCode
+        if !isEnteringVerificationCode      // if user haven't done inputing phone number
         {
-            formatPhoneNumberWithFlag()
+            formatPhoneNumberWithFlag()     // SHSPhoneComponent function, to format
             
             if let digit = sender.titleLabel?.text {
                 switch digit {
@@ -121,23 +136,24 @@ class WelcomeVC: UIViewController {
                     return
                 }
             }
-        } else
+        } else      // user is inputing password
         {
             if let digit = sender.titleLabel?.text {
                 switch digit {
                 case "1","2","3","4","5","6","7","8","9","0":
                     if pinPosition < 6 { passwordFields[pinPosition++ - 1].text = digit }
-                    else if pinPosition == 6 {
+                    else if pinPosition == 6 {      // if all 6 digit typed, then automatically auth user
                         passwordFields[pinPosition++ - 1].text = digit
                         authenticateAndGotoNextScreen()
                     }
                 case "←":
                     if pinPosition > 1 { passwordFields[--pinPosition - 1].text = "" }
                 case "↻":
+                    // user cancelled auth, back to phone number input state
                     switchPlusSignBack()
                     fadeAndSwitchLabelBack()
                     moveDownPhoneHideVerification()
-                    changeButtonToWait()
+                    changeButtonToWait()        // will set a counter for 60 secs before can resend
                     isEnteringVerificationCode = false
                 default:
                     return
@@ -150,17 +166,24 @@ class WelcomeVC: UIViewController {
 
     @IBAction func buttonTapped(sender: UIButton) {
         
+        // check length of phone number, SHSPhoneComponent already does check
+        // FIXME: - Need to be fixed to support multiple countries
         if count(phoneNumberField.phoneNumber()) != 11 {
+            // display an alert, 3rd parties frameworks
             GoogleWearAlert.showAlert(title: "Phone Num", image: nil, type: .Error, duration: 1.2, inViewController: self, atPostion: .Center, canBeDismissedByUser: true)
             return
         }
         
-        isEnteringVerificationCode = true
-        switchPlusSign()
-        fadeAndSwitchLabel()
-        moveUpPhoneShowVerification()
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("counter"), userInfo: nil, repeats: true)
+        // setup for changing state to password input
+        if !isEnteringVerificationCode {
+            switchPlusSign()
+            fadeAndSwitchLabel()
+            moveUpPhoneShowVerification()
+            isEnteringVerificationCode = true
+            
+            // start the counter, background, user will not see until go back and try resend
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("counter"), userInfo: nil, repeats: true)
+        }
     }
     
     
