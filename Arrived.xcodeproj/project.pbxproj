@@ -32,6 +32,15 @@
 		890F54D01B01F4120066E835 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CC1B01F4120066E835 /* AudioPlayer.swift */; };
 		890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CD1B01F4120066E835 /* AudioRecorder.swift */; };
 		890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54D21B01F41D0066E835 /* MakeOrderVC.swift */; };
+		89471C471B09F6C600EFE101 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C3D1B09F6C600EFE101 /* HoshiTextField.swift */; };
+		89471C481B09F6C600EFE101 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89471C3E1B09F6C600EFE101 /* Info.plist */; };
+		89471C491B09F6C600EFE101 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C3F1B09F6C600EFE101 /* IsaoTextField.swift */; };
+		89471C4A1B09F6C600EFE101 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C401B09F6C600EFE101 /* JiroTextField.swift */; };
+		89471C4B1B09F6C600EFE101 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C411B09F6C600EFE101 /* KaedeTextField.swift */; };
+		89471C4C1B09F6C600EFE101 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C421B09F6C600EFE101 /* MadokaTextField.swift */; };
+		89471C4D1B09F6C600EFE101 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C431B09F6C600EFE101 /* MinoruTextField.swift */; };
+		89471C4E1B09F6C600EFE101 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C451B09F6C600EFE101 /* TextFieldsEffects.swift */; };
+		89471C4F1B09F6C600EFE101 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C461B09F6C600EFE101 /* YokoTextField.swift */; };
 		8958224B1B04F0A4000DA21E /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */; };
 		895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958226B1B05061C000DA21E /* GoogleWearAlert.swift */; };
 		895822731B05061C000DA21E /* GoogleWearAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958226C1B05061C000DA21E /* GoogleWearAlertView.swift */; };
@@ -120,6 +129,16 @@
 		890F54CC1B01F4120066E835 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		890F54CD1B01F4120066E835 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		890F54D21B01F41D0066E835 /* MakeOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeOrderVC.swift; sourceTree = "<group>"; };
+		89471C3D1B09F6C600EFE101 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		89471C3E1B09F6C600EFE101 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89471C3F1B09F6C600EFE101 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		89471C401B09F6C600EFE101 /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		89471C411B09F6C600EFE101 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		89471C421B09F6C600EFE101 /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		89471C431B09F6C600EFE101 /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		89471C441B09F6C600EFE101 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		89471C451B09F6C600EFE101 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
+		89471C461B09F6C600EFE101 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
 		895822131B04E3AB000DA21E /* Arrived-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Arrived-Bridging-Header.h"; sourceTree = "<group>"; };
 		8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SHSPhoneImage.bundle; path = Assets/SHSPhoneImage.bundle; sourceTree = "<group>"; };
 		8958226B1B05061C000DA21E /* GoogleWearAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleWearAlert.swift; sourceTree = "<group>"; };
@@ -342,9 +361,28 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		89471C3C1B09F6C600EFE101 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				89471C3D1B09F6C600EFE101 /* HoshiTextField.swift */,
+				89471C3E1B09F6C600EFE101 /* Info.plist */,
+				89471C3F1B09F6C600EFE101 /* IsaoTextField.swift */,
+				89471C401B09F6C600EFE101 /* JiroTextField.swift */,
+				89471C411B09F6C600EFE101 /* KaedeTextField.swift */,
+				89471C421B09F6C600EFE101 /* MadokaTextField.swift */,
+				89471C431B09F6C600EFE101 /* MinoruTextField.swift */,
+				89471C441B09F6C600EFE101 /* TextFieldEffects.h */,
+				89471C451B09F6C600EFE101 /* TextFieldsEffects.swift */,
+				89471C461B09F6C600EFE101 /* YokoTextField.swift */,
+			);
+			name = TextFieldEffects;
+			path = Frameworks/TextFieldEffects;
+			sourceTree = "<group>";
+		};
 		8958224C1B0504CD000DA21E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89471C3C1B09F6C600EFE101 /* TextFieldEffects */,
 				890D72A51B0739E5006360E7 /* SHSPhoneComponent */,
 				8958227A1B050AD7000DA21E /* JSSAlertView.swift */,
 				8958226A1B05061C000DA21E /* GoogleWearAlertView */,
@@ -488,6 +526,7 @@
 				895822761B05061C000DA21E /* successIcon@2x.png in Resources */,
 				89C413571AF1C523000C2C95 /* Screen.png in Resources */,
 				89C413681AF3252F000C2C95 /* key-100.png in Resources */,
+				89471C481B09F6C600EFE101 /* Info.plist in Resources */,
 				895822771B05061C000DA21E /* warningIcon@2x.png in Resources */,
 				895822751B05061C000DA21E /* messageIcon@2x.png in Resources */,
 				899DA8D61AF41AC700F0C476 /* mental_status-96.png in Resources */,
@@ -523,10 +562,14 @@
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
 				890F54CE1B01F4120066E835 /* AudioContext.swift in Sources */,
 				89EEF5061B008B05006881FD /* OrderDetailVC.swift in Sources */,
+				89471C4D1B09F6C600EFE101 /* MinoruTextField.swift in Sources */,
+				89471C4C1B09F6C600EFE101 /* MadokaTextField.swift in Sources */,
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
 				890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
+				89471C471B09F6C600EFE101 /* HoshiTextField.swift in Sources */,
+				89471C4F1B09F6C600EFE101 /* YokoTextField.swift in Sources */,
 				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
 				895822731B05061C000DA21E /* GoogleWearAlertView.swift in Sources */,
 				890D72B11B0739E5006360E7 /* SHSFlagAccessoryView.m in Sources */,
@@ -538,6 +581,8 @@
 				890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				890F54D01B01F4120066E835 /* AudioPlayer.swift in Sources */,
+				89471C4A1B09F6C600EFE101 /* JiroTextField.swift in Sources */,
+				89471C491B09F6C600EFE101 /* IsaoTextField.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,
 				890D72B71B0741C5006360E7 /* UserAgreementVC.swift in Sources */,
 				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
@@ -552,7 +597,9 @@
 				890D72B21B0739E5006360E7 /* SHSPhoneLogic.m in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
 				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
+				89471C4B1B09F6C600EFE101 /* KaedeTextField.swift in Sources */,
 				89EEF5021B007233006881FD /* TestRequestService.swift in Sources */,
+				89471C4E1B09F6C600EFE101 /* TextFieldsEffects.swift in Sources */,
 				890D72B41B0739E5006360E7 /* SHSPhoneNumberFormatter.m in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,

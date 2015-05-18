@@ -9,13 +9,21 @@
 //
 
 import UIKit
+import SHSPhoneComponent
 
 class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // just a label, I try to track color
     @IBOutlet weak var label: UILabel!
     
-    @IBOutlet weak var bankCardNumberField: UITextField!
+    @IBOutlet weak var visaImage: UIImageView!
+    @IBOutlet weak var americanExpressImage: UIImageView!
+    @IBOutlet weak var masterCardImage: UIImageView!
+    @IBOutlet weak var discoverImage: UIImageView!
+    @IBOutlet weak var jcbImage: UIImageView!
+    
+    @IBOutlet weak var bankCardNumberField: SHSPhoneTextField!
+//    @IBOutlet weak var bankCardNumberField: UITextField!
     @IBOutlet weak var cardHolderNameField: UITextField!
     @IBOutlet weak var expDateField: UITextField!
     @IBOutlet weak var cvvField: UITextField!
@@ -32,6 +40,9 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
         ["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030"]
     ]
     
+    // store the type of card
+    private var cardType: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,8 +58,10 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
         
         // focus on it, so when enter screen, keyboard pops up and editing
         bankCardNumberField.becomeFirstResponder()
+        bankCardNumberField.formatter.setDefaultOutputPattern("####################")
         
         textFields = [bankCardNumberField, cardHolderNameField, expDateField, cvvField]
+
         for item in textFields {
             
             // adding a single bottom border to the button
@@ -73,7 +86,7 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     func addDoneButtonOnKeyboard()
     {
         var doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
-        doneToolbar.barStyle = UIBarStyle.Black
+        doneToolbar.barStyle = UIBarStyle.Default
         
         var flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         var fixedSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
@@ -154,6 +167,64 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     
     // TODO: - Format input text in above fields
     
+    /**
+        Detect credit card type and dim or highlight card icons
+    */
+    @IBAction func checkCardType(sender: SHSPhoneTextField) {
+        let type = detectCreditCardType(sender.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))
+        cardType = type
+        switch type {
+        case "Visa":
+            visaImage.alpha = 1
+            masterCardImage.alpha = 0.3
+            americanExpressImage.alpha = 0.3
+            discoverImage.alpha = 0.3
+            jcbImage.alpha = 0.3
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
+        case "MasterCard":
+            visaImage.alpha = 0.3
+            masterCardImage.alpha = 1
+            americanExpressImage.alpha = 0.3
+            discoverImage.alpha = 0.3
+            jcbImage.alpha = 0.3
+        case "American Express":
+            visaImage.alpha = 0.3
+            masterCardImage.alpha = 0.3
+            americanExpressImage.alpha = 1
+            discoverImage.alpha = 0.3
+            jcbImage.alpha = 0.3
+        case "Discover":
+            visaImage.alpha = 0.3
+            masterCardImage.alpha = 0.3
+            americanExpressImage.alpha = 0.3
+            discoverImage.alpha = 1
+            jcbImage.alpha = 0.3
+        case "JCB":
+            visaImage.alpha = 0.3
+            masterCardImage.alpha = 0.3
+            americanExpressImage.alpha = 0.3
+            discoverImage.alpha = 0.3
+            jcbImage.alpha = 1
+        case "Invalid":
+            visaImage.alpha = 1
+            masterCardImage.alpha = 1
+            americanExpressImage.alpha = 1
+            discoverImage.alpha = 1
+            jcbImage.alpha = 1
+            sender.formatter.setDefaultOutputPattern("####################")
+        default:
+            return
+        }
+    }
+    
+    /**
+        CVV should not exceed 3 digit, or 4 later version
+    */
+    @IBAction func trimCVV(sender: UITextField) {
+        if count(sender.text) > 3 {
+            sender.text = dropLast(sender.text)
+        }
+    }
     
     // MARK: - Delegates
     

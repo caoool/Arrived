@@ -56,7 +56,6 @@ class WelcomeVC: UIViewController {
         
         setupVariable()
         setupUILook()
-        
     }
     
     // MARK: - Initializations

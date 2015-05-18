@@ -68,3 +68,47 @@ func phoneNumberValidation(value: String) -> Bool {
     filtered = inputString.componentsJoinedByString("")
     return  value == filtered
 }
+
+/** 
+    Detect credit card type
+*/
+class Regex {
+    let internalExpression: NSRegularExpression
+    let pattern: String
+    
+    init(_ pattern: String) {
+        self.pattern = pattern
+        var error: NSError?
+        self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+    }
+    
+    func test(input: String) -> Bool {
+        let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, count(input)))
+        return matches.count > 0
+    }
+}
+
+func detectCreditCardType(num: String) -> String {
+    
+    if Regex("^4[0-9]{12}(?:[0-9]{3})?$").test(num) {
+        return "Visa"
+    } else if Regex("^5[1-5][0-9]{14}$").test(num) {
+        return "MasterCard"
+    } else if Regex("^3[47][0-9]{13}$").test(num) {
+        return "American Express"
+    } else if Regex("^6(?:011|5[0-9]{2})[0-9]{12}$").test(num) {
+        return "Discover"
+    } else if Regex("^(?:2131|1800|35[0-9]{3})[0-9]{11}").test(num) {
+        return "JCB"
+    } else {
+        return "Invalid"
+    }
+}
+
+
+
+
+
+
+
+

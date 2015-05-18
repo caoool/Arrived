@@ -2,7 +2,4 @@
 
 import UIKit
 
-var str = "Hello"
-
-var num = count(str)
 
