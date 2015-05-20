@@ -10,10 +10,12 @@ import UIKit
 
 class MainScreenVC: UITabBarController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        customizeColorOfBarItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +23,19 @@ class MainScreenVC: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+        Customize color of bar item
+    */
+    func customizeColorOfBarItems() {
+        for item in self.tabBar.items as! [UITabBarItem] {
+            if let image = item.image {
+                item.image = image.imageWithColor(UIColor.whiteColor()).imageWithRenderingMode(.AlwaysOriginal)
+            }
+            if let image = item.selectedImage {
+                item.selectedImage = image.imageWithColor(UIColor.whiteColor()).imageWithRenderingMode(.AlwaysOriginal)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GIR-4f-tKc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q41-JF-OXm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="I5M-fq-Hx4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="It0-YT-0Up">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdK-5p-fn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341.5" y="917.5"/>
+            <point key="canvasLocation" x="101" y="1827"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="oLy-UL-bKe">
@@ -38,17 +38,17 @@
                         <viewControllerLayoutGuide type="bottom" id="lAe-rS-bnp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uTI-tA-zIH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your phone number to receive a verification code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yk-IB-aZk">
-                                <rect key="frame" x="16" y="63" width="343" height="47"/>
+                                <rect key="frame" x="16" y="49" width="568" height="47"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="19"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.51372549020000002" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgf-sp-AGJ">
-                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="535" width="600" height="65"/>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.71764705882352942" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="6yT-cE-igs"/>
@@ -62,8 +62,8 @@
                                     <action selector="buttonTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="Qo9-TX-41j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKr-iC-YTY">
-                                <rect key="frame" x="246" y="288" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKr-iC-YTY">
+                                <rect key="frame" x="358" y="221" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="3">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,8 +73,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="AZX-Gw-uA1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-PW-bI6">
-                                <rect key="frame" x="138" y="288" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-PW-bI6">
+                                <rect key="frame" x="250" y="221" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,8 +84,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="FWc-YD-fdz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-mO-W2b">
-                                <rect key="frame" x="30" y="288" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-mO-W2b">
+                                <rect key="frame" x="142" y="221" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="1">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,8 +95,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="zdq-8I-dvK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB3-bD-Xy1">
-                                <rect key="frame" x="246" y="361" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB3-bD-Xy1">
+                                <rect key="frame" x="358" y="294" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,8 +106,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="Jms-Kj-DXY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znw-W7-PqX">
-                                <rect key="frame" x="138" y="361" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znw-W7-PqX">
+                                <rect key="frame" x="250" y="294" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,8 +117,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="WqK-oN-NDW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wz4-rF-Syy">
-                                <rect key="frame" x="30" y="361" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wz4-rF-Syy">
+                                <rect key="frame" x="142" y="294" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="4">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,8 +128,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="wk6-P9-r9z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roh-tY-dyP">
-                                <rect key="frame" x="246" y="434" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roh-tY-dyP">
+                                <rect key="frame" x="358" y="367" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="9">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,8 +139,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="ZRg-ia-eAP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egc-ob-0UT">
-                                <rect key="frame" x="138" y="434" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egc-ob-0UT">
+                                <rect key="frame" x="250" y="367" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="8">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,8 +150,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="2K2-xh-ihk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAZ-4T-tjw">
-                                <rect key="frame" x="30" y="434" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAZ-4T-tjw">
+                                <rect key="frame" x="142" y="367" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="7">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,8 +161,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="2vV-rO-v8c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLY-CV-tq2">
-                                <rect key="frame" x="246" y="507" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLY-CV-tq2">
+                                <rect key="frame" x="358" y="440" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="←">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,8 +172,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="qJq-JP-Cow"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSm-4A-N83">
-                                <rect key="frame" x="138" y="507" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSm-4A-N83">
+                                <rect key="frame" x="250" y="440" width="100" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="05M-J8-41D"/>
                                     <constraint firstAttribute="height" constant="65" id="KQ0-aT-hAW"/>
@@ -187,8 +187,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="RUR-v2-aQm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlm-J6-qUw">
-                                <rect key="frame" x="30" y="507" width="100" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlm-J6-qUw">
+                                <rect key="frame" x="142" y="440" width="100" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -198,8 +198,8 @@
                                     <action selector="numberTapped:" destination="iUj-bJ-AVR" eventType="touchUpInside" id="2Vx-rg-tsh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="your phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-kd-jBl" customClass="SHSPhoneTextField">
-                                <rect key="frame" x="30" y="223" width="316" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="your phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-kd-jBl" customClass="SHSPhoneTextField">
+                                <rect key="frame" x="142" y="156" width="316" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Pb5-SX-A8A"/>
                                 </constraints>
@@ -207,8 +207,8 @@
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iff-Sq-VCi">
-                                <rect key="frame" x="192" y="250" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iff-Sq-VCi">
+                                <rect key="frame" x="304" y="183" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DnF-wL-lwm"/>
                                     <constraint firstAttribute="width" constant="30" id="IhB-sG-5dv"/>
@@ -216,8 +216,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgO-gG-qmz">
-                                <rect key="frame" x="154" y="250" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgO-gG-qmz">
+                                <rect key="frame" x="266" y="183" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Q2q-UB-1Ad"/>
                                     <constraint firstAttribute="width" constant="30" id="V02-rq-Cdg"/>
@@ -225,8 +225,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSa-J3-26g">
-                                <rect key="frame" x="230" y="250" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSa-J3-26g">
+                                <rect key="frame" x="342" y="183" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="wTg-zo-czw"/>
                                     <constraint firstAttribute="height" constant="30" id="xqw-WO-lpF"/>
@@ -234,8 +234,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgx-Pr-D7v">
-                                <rect key="frame" x="268" y="250" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgx-Pr-D7v">
+                                <rect key="frame" x="380" y="183" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="ckq-6S-H6v"/>
                                     <constraint firstAttribute="height" constant="30" id="pYY-WD-aE6"/>
@@ -243,8 +243,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEB-VW-qhR">
-                                <rect key="frame" x="116" y="250" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEB-VW-qhR">
+                                <rect key="frame" x="228" y="183" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="86Y-v3-obZ"/>
                                     <constraint firstAttribute="height" constant="30" id="fTn-r7-Aph"/>
@@ -252,8 +252,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXe-wf-RPe">
-                                <rect key="frame" x="78" y="250" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXe-wf-RPe">
+                                <rect key="frame" x="190" y="183" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="EHh-3w-5ZU"/>
                                     <constraint firstAttribute="height" constant="30" id="g8a-tA-61K"/>
@@ -262,7 +262,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend sms in x seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-Mq-KTl">
-                                <rect key="frame" x="16" y="623" width="343" height="24"/>
+                                <rect key="frame" x="16" y="556" width="568" height="24"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -297,7 +297,7 @@
                             <constraint firstItem="znw-W7-PqX" firstAttribute="leading" secondItem="wz4-rF-Syy" secondAttribute="trailing" constant="8" id="HV1-ll-GvH"/>
                             <constraint firstItem="wKP-Mq-KTl" firstAttribute="centerX" secondItem="Tgf-sp-AGJ" secondAttribute="centerX" id="HwY-7V-cl8"/>
                             <constraint firstItem="egc-ob-0UT" firstAttribute="height" secondItem="VSm-4A-N83" secondAttribute="height" id="Icw-st-nWD"/>
-                            <constraint firstItem="Qjz-kd-jBl" firstAttribute="top" secondItem="7Yk-IB-aZk" secondAttribute="bottom" constant="113" id="Ity-bN-oO2"/>
+                            <constraint firstItem="Qjz-kd-jBl" firstAttribute="top" secondItem="7Yk-IB-aZk" secondAttribute="bottom" constant="50" id="Ity-bN-oO2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XKr-iC-YTY" secondAttribute="trailing" constant="14" id="J9K-Ec-iVK"/>
                             <constraint firstItem="hgx-Pr-D7v" firstAttribute="baseline" secondItem="sgO-gG-qmz" secondAttribute="baseline" id="JEn-Pp-sR6"/>
                             <constraint firstItem="wKP-Mq-KTl" firstAttribute="centerY" secondItem="Tgf-sp-AGJ" secondAttribute="centerY" id="KHI-UL-BFn"/>
@@ -309,6 +309,7 @@
                             <constraint firstItem="roh-tY-dyP" firstAttribute="leading" secondItem="egc-ob-0UT" secondAttribute="trailing" constant="8" id="NY8-3H-0mu"/>
                             <constraint firstItem="znw-W7-PqX" firstAttribute="centerX" secondItem="H8A-PW-bI6" secondAttribute="centerX" id="NeA-2s-nbT"/>
                             <constraint firstItem="znw-W7-PqX" firstAttribute="baseline" secondItem="wz4-rF-Syy" secondAttribute="baseline" id="O5O-Ap-LeW"/>
+                            <constraint firstItem="H8A-PW-bI6" firstAttribute="top" secondItem="7Yk-IB-aZk" secondAttribute="bottom" constant="125" id="PRR-Pl-Ygi"/>
                             <constraint firstItem="mSa-J3-26g" firstAttribute="leading" secondItem="iff-Sq-VCi" secondAttribute="trailing" constant="8" id="Q0n-T5-1W3"/>
                             <constraint firstItem="egc-ob-0UT" firstAttribute="width" secondItem="VSm-4A-N83" secondAttribute="width" id="QpH-le-4u5"/>
                             <constraint firstItem="Qjz-kd-jBl" firstAttribute="leading" secondItem="Q8t-mO-W2b" secondAttribute="trailing" constant="-100" id="S0Y-jy-HbT"/>
@@ -374,25 +375,27 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Ity-bN-oO2"/>
                                 <exclude reference="mk0-I4-dBY"/>
                                 <exclude reference="n0H-qe-QU4"/>
                                 <exclude reference="FdP-Zl-ccM"/>
                                 <exclude reference="v02-ET-b6A"/>
+                                <exclude reference="w1q-si-Voc"/>
                                 <exclude reference="Mcf-1c-XTK"/>
                                 <exclude reference="iPO-nO-Xi9"/>
-                                <exclude reference="w1q-si-Voc"/>
+                                <exclude reference="SdB-UN-cNp"/>
                                 <exclude reference="CLJ-iI-Qfr"/>
                                 <exclude reference="J9K-Ec-iVK"/>
-                                <exclude reference="SdB-UN-cNp"/>
-                                <exclude reference="D6d-NJ-pNj"/>
-                                <exclude reference="fHt-ha-5in"/>
                                 <exclude reference="4uV-Ec-tSB"/>
+                                <exclude reference="D6d-NJ-pNj"/>
                                 <exclude reference="pRc-BE-bue"/>
-                                <exclude reference="5YY-Mf-pCH"/>
-                                <exclude reference="TDl-SG-wY6"/>
+                                <exclude reference="pmn-A0-z8D"/>
+                                <exclude reference="fHt-ha-5in"/>
                                 <exclude reference="V65-Z8-O5i"/>
                                 <exclude reference="Yt7-am-i8z"/>
                                 <exclude reference="xdK-f4-IAP"/>
+                                <exclude reference="5YY-Mf-pCH"/>
+                                <exclude reference="TDl-SG-wY6"/>
                             </mask>
                         </variation>
                     </view>
@@ -415,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acr-gw-iW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955.5" y="917.5"/>
+            <point key="canvasLocation" x="935" y="1827"/>
         </scene>
         <!--User Agreement-->
         <scene sceneID="rwr-G5-cRQ">
@@ -426,11 +429,11 @@
                         <viewControllerLayoutGuide type="bottom" id="F5u-RA-VwS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wo2-3k-cUD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-PY-q6a">
-                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="535" width="600" height="65"/>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.71764705880000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="xAq-lT-Cvg"/>
@@ -445,7 +448,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Agreement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkN-Gw-QE8">
-                                <rect key="frame" x="16" y="20" width="343" height="24"/>
+                                <rect key="frame" x="16" y="20" width="568" height="24"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="19"/>
                                 <color key="textColor" red="0.10980392156862745" green="0.51372549019607838" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -462,11 +465,15 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-3q-C14">
-                                <rect key="frame" x="16" y="52" width="343" height="542"/>
+                                <rect key="frame" x="16" y="52" width="568" height="475"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-HE-cRB">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1754"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-HE-cRB">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="1754"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1754" id="R2z-ls-tJa"/>
+                                            <constraint firstAttribute="width" constant="343" id="RVG-3Y-jZl"/>
+                                        </constraints>
                                         <mutableString key="text">Gameplay
 League of Legends is a multiplayer online battle arena where players control a "champion"[10] within short PvP or bot battles. As of April 1, 2015, there are 124 different champions from which to choose, all of which are classified by type (assassin, tank, support, etc.), which indicates the champion's gameplay style.[11]
 
@@ -483,8 +490,38 @@ Similar to masteries, runes affect gameplay in minor ways. Runes are categorized
 Moderation is conducted through a democratic system known as the Tribunal. In this system, player-submitted reports are reviewed by other players on a case-by-case basis. The reviewing players then submit their opinions on the legality of the behavior demonstrated. A consensus renders the decision official. It is notable that players are unable to be permanently banned through this system since "all permanent bans are distributed manually." Reviewers receive a Justice Rating based on their accuracy to encourage thorough analysis of cases.[15] As of May 2014, the Tribunal is unavailable in favor of an automated system that hands out restrictions and short-term bans. Riot Games has stated that the Tribunal is being upgraded.[16]</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="R2z-ls-tJa"/>
+                                                <exclude reference="RVG-3Y-jZl"/>
+                                            </mask>
+                                        </variation>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" constant="225" id="5Fg-Iu-yZ6"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="DLl-8Z-G1N"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="JrZ-mJ-33V"/>
+                                    <constraint firstAttribute="bottom" secondItem="USM-HE-cRB" secondAttribute="bottom" constant="-1279" id="K2i-bh-1zI"/>
+                                    <constraint firstAttribute="width" secondItem="USM-HE-cRB" secondAttribute="width" id="Sc4-hn-SSB"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="YFb-FE-WPG"/>
+                                    <constraint firstAttribute="centerX" secondItem="USM-HE-cRB" secondAttribute="centerX" constant="112" id="hPs-NP-XlF"/>
+                                    <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" constant="225" id="rb2-6Y-7Ym"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="xVG-m2-FmS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Fg-Iu-yZ6"/>
+                                        <exclude reference="DLl-8Z-G1N"/>
+                                        <exclude reference="JrZ-mJ-33V"/>
+                                        <exclude reference="K2i-bh-1zI"/>
+                                        <exclude reference="Sc4-hn-SSB"/>
+                                        <exclude reference="YFb-FE-WPG"/>
+                                        <exclude reference="hPs-NP-XlF"/>
+                                        <exclude reference="rb2-6Y-7Ym"/>
+                                        <exclude reference="xVG-m2-FmS"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -515,7 +552,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="next" destination="7ah-PY-q6a" id="hu1-pO-RKW"/>
                         <outlet property="scroller" destination="LYt-3q-C14" id="hDg-wX-rX1"/>
@@ -524,7 +560,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CW3-h4-cxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189.5" y="2137.5"/>
+            <point key="canvasLocation" x="935" y="2969"/>
         </scene>
         <!--Adding Payment Info-->
         <scene sceneID="npI-iL-3Bt">
@@ -535,17 +571,17 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="MDR-Vv-h7M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a1r-86-uRS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing Infomation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsN-UV-6X7">
-                                <rect key="frame" x="16" y="20" width="343" height="24"/>
+                                <rect key="frame" x="16" y="20" width="568" height="24"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="19"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.51372549020000002" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="bank card number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ne-6i-hKx" customClass="SHSPhoneTextField">
-                                <rect key="frame" x="16" y="223" width="343" height="35"/>
+                                <rect key="frame" x="16" y="189" width="568" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="tLB-tG-yHH"/>
                                 </constraints>
@@ -568,7 +604,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="full name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pId-XI-HTa">
-                                <rect key="frame" x="16" y="266" width="343" height="35"/>
+                                <rect key="frame" x="16" y="232" width="568" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="y9C-4a-GCj"/>
                                 </constraints>
@@ -591,7 +627,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="exp date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqj-n4-8aX">
-                                <rect key="frame" x="16" y="309" width="138" height="35"/>
+                                <rect key="frame" x="16" y="275" width="251" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="JW1-48-dwI"/>
                                 </constraints>
@@ -603,7 +639,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4c-gf-h0m">
-                                <rect key="frame" x="220" y="309" width="139" height="35"/>
+                                <rect key="frame" x="333" y="275" width="251" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="fCz-YR-1WZ"/>
                                 </constraints>
@@ -615,55 +651,55 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRK-cS-ANr">
-                                <rect key="frame" x="162" y="309" width="50" height="50"/>
+                                <rect key="frame" x="275" y="275" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="H74-5L-ahD"/>
                                     <constraint firstAttribute="width" constant="50" id="ZRf-Ku-ZGA"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please add a bank card to start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEO-ah-i5l">
-                                <rect key="frame" x="16" y="119" width="343" height="22"/>
+                                <rect key="frame" x="16" y="85" width="568" height="22"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
                                 <color key="textColor" red="0.04922578918" green="0.26176006390000001" blue="0.1160980144" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_master_card" translatesAutoresizingMaskIntoConstraints="NO" id="ky5-oj-J3p">
-                                <rect key="frame" x="162" y="156" width="50" height="32"/>
+                                <rect key="frame" x="275" y="122" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="XW2-gM-fmH"/>
                                     <constraint firstAttribute="width" constant="50" id="c7b-3B-gt4"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_american_express" translatesAutoresizingMaskIntoConstraints="NO" id="MbM-A7-pgg">
-                                <rect key="frame" x="220" y="156" width="50" height="32"/>
+                                <rect key="frame" x="333" y="122" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="QJ1-j6-Klb"/>
                                     <constraint firstAttribute="width" constant="50" id="TDM-fw-ceA"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_visa" translatesAutoresizingMaskIntoConstraints="NO" id="SHx-nI-19z">
-                                <rect key="frame" x="278" y="156" width="50" height="32"/>
+                                <rect key="frame" x="391" y="122" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Ksq-gN-oxt"/>
                                     <constraint firstAttribute="height" constant="32" id="Ra6-6t-bz4"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_discover" translatesAutoresizingMaskIntoConstraints="NO" id="GZU-Dh-buj">
-                                <rect key="frame" x="46" y="156" width="50" height="32"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_credit_card" translatesAutoresizingMaskIntoConstraints="NO" id="GZU-Dh-buj">
+                                <rect key="frame" x="159" y="122" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="NPC-52-FWT"/>
                                     <constraint firstAttribute="width" constant="50" id="pgT-P4-DOh"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_credit_card" translatesAutoresizingMaskIntoConstraints="NO" id="DG5-Hi-ebw">
-                                <rect key="frame" x="104" y="156" width="50" height="32"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_discover" translatesAutoresizingMaskIntoConstraints="NO" id="DG5-Hi-ebw">
+                                <rect key="frame" x="217" y="122" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="bnF-3e-h1c"/>
                                     <constraint firstAttribute="height" constant="32" id="i4B-ql-0Wz"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGt-YV-338">
-                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="535" width="600" height="65"/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.67843137254901964" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="GG0-uG-eC2"/>
@@ -675,7 +711,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTI-za-bCe">
-                                <rect key="frame" x="16" y="560" width="343" height="34"/>
+                                <rect key="frame" x="16" y="493" width="568" height="34"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
                                 <state key="normal" title="Setup Later  ⇢">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -727,7 +763,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <constraint firstAttribute="centerX" secondItem="KRK-cS-ANr" secondAttribute="centerX" constant="0.5" id="zvM-xc-zy3"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="americanExpressImage" destination="MbM-A7-pgg" id="RR7-M1-2kg"/>
                         <outlet property="bankCardNumberField" destination="7Ne-6i-hKx" id="Zak-nl-cMA"/>
@@ -746,7 +781,34 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAm-vd-hpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785.5" y="2137.5"/>
+            <point key="canvasLocation" x="1721" y="2969"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="60S-Ka-5d5">
+            <objects>
+                <tableViewController id="MIe-xK-1pZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="J4e-E8-96g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8Ze-H9-LNC">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ze-H9-LNC" id="O8X-Jx-oCf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MIe-xK-1pZ" id="WVC-ny-Ha5"/>
+                            <outlet property="delegate" destination="MIe-xK-1pZ" id="Aim-Am-Dr7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="r28-lR-H0w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLg-jS-VzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3344" y="1827"/>
         </scene>
         <!--Orders-->
         <scene sceneID="gPC-Wd-czd">
@@ -757,7 +819,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="Lq8-Dd-pkA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KzD-jW-AtV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mRG-fg-jkv">
@@ -781,14 +843,14 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAf-kJ-0iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2975.5" y="1315.5"/>
+            <point key="canvasLocation" x="4127" y="1827"/>
         </scene>
         <!--Orders List-->
         <scene sceneID="QxK-HM-iPQ">
             <objects>
                 <tableViewController title="Orders List" id="B7Y-Sh-uYY" customClass="OrdersListTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="37o-ai-VGD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -832,7 +894,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqw-t9-x77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3436.5" y="1315.5"/>
+            <point key="canvasLocation" x="4884" y="1827"/>
         </scene>
         <!--Profile-->
         <scene sceneID="mxd-IC-Ggj">
@@ -843,7 +905,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="guo-Mm-cbK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hO1-Xs-Qvs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X0Q-5e-ZUx">
@@ -855,50 +917,50 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nickname" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SNI-xQ-Zkm">
-                                <rect key="frame" x="16" y="172" width="343" height="19"/>
+                                <rect key="frame" x="16" y="172" width="568" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sex" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zz4-0J-3Ed">
-                                <rect key="frame" x="16" y="199" width="343" height="19"/>
+                                <rect key="frame" x="16" y="199" width="568" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="birthday" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Imv-Cz-l2b">
-                                <rect key="frame" x="16" y="226" width="343" height="19"/>
+                                <rect key="frame" x="16" y="226" width="568" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2o6-4B-idq">
-                                <rect key="frame" x="16" y="253" width="343" height="19"/>
+                                <rect key="frame" x="16" y="253" width="568" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="status" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qDz-5e-HV5">
-                                <rect key="frame" x="16" y="280" width="343" height="19"/>
+                                <rect key="frame" x="16" y="280" width="568" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qyX-NT-TQL">
-                                <rect key="frame" x="16" y="307" width="159" height="17"/>
+                                <rect key="frame" x="16" y="307" width="272" height="17"/>
                                 <color key="backgroundColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eql-wE-0Ro">
-                                <rect key="frame" x="200" y="307" width="159" height="17"/>
+                                <rect key="frame" x="313" y="307" width="271" height="17"/>
                                 <color key="backgroundColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCg-1J-v6c">
-                                <rect key="frame" x="16" y="332" width="305" height="30"/>
+                                <rect key="frame" x="16" y="332" width="530" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d71-9b-19A">
-                                <rect key="frame" x="329" y="332" width="30" height="30"/>
+                                <rect key="frame" x="554" y="332" width="30" height="30"/>
                                 <state key="normal" title="&gt;&gt;">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -907,13 +969,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="bankcard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SW-1y-SvS">
-                                <rect key="frame" x="16" y="370" width="305" height="30"/>
+                                <rect key="frame" x="16" y="370" width="530" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfU-xp-jxD">
-                                <rect key="frame" x="329" y="370" width="30" height="30"/>
+                                <rect key="frame" x="554" y="370" width="30" height="30"/>
                                 <state key="normal" title="&gt;&gt;">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -922,7 +984,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86V-Yi-ZRo">
-                                <rect key="frame" x="0.0" y="556" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Edit" id="86g-Yw-vcj">
                                         <connections>
@@ -1010,14 +1072,14 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gO-S2-JeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3199" y="461"/>
+            <point key="canvasLocation" x="3315" y="956"/>
         </scene>
         <!--BankCards-->
         <scene sceneID="cdu-GP-DPh">
             <objects>
                 <tableViewController title="BankCards" id="Uud-qF-xxb" customClass="UserBankCardsTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="22" sectionFooterHeight="22" id="FGc-Gb-rFP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1026,25 +1088,25 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4NG-qZ-O8b" id="nYu-nS-bFb">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="bankCardNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LI-IH-C4H">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bankCardNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LI-IH-C4H">
                                             <rect key="frame" x="8" y="8" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="expirationDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-sM-I9t">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expirationDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-sM-I9t">
                                             <rect key="frame" x="8" y="37" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
                                             <rect key="frame" x="8" y="66" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
                                             <rect key="frame" x="8" y="95" width="584" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1090,7 +1152,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYe-vx-3B7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3957" y="703"/>
+            <point key="canvasLocation" x="4072" y="966"/>
         </scene>
         <!--Order Detail-->
         <scene sceneID="u98-Ew-Os8">
@@ -1101,7 +1163,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="Dwc-of-7Vw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sjr-Qs-f71">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whatever content will appear here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajl-7H-20E">
@@ -1134,14 +1196,14 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyu-el-vRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3198.5" y="2216.5"/>
+            <point key="canvasLocation" x="3702" y="2969"/>
         </scene>
         <!--Locations-->
         <scene sceneID="X44-aY-0VR">
             <objects>
                 <tableViewController title="Locations" id="Th5-B6-wjF" customClass="UserLocationsTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="22" sectionFooterHeight="22" id="taK-vn-2hg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1150,13 +1212,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oqe-Pt-gx5" id="dBk-2x-59C">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE8-gd-567">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE8-gd-567">
                                             <rect key="frame" x="8" y="11" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-Gm-NPv">
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-Gm-NPv">
                                             <rect key="frame" x="8" y="40" width="584" height="201"/>
                                         </mapView>
                                     </subviews>
@@ -1207,7 +1269,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEE-Qb-CX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3957.5" y="-1.5"/>
+            <point key="canvasLocation" x="4072" y="158"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="t26-fm-BfU">
@@ -1218,19 +1280,19 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="z1W-Ub-RQI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4GA-wk-6Tl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Manually type in address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQq-0U-R0C">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-XH-GiH">
-                                <rect key="frame" x="16" y="110" width="343" height="511"/>
+                                <rect key="frame" x="16" y="110" width="568" height="444"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-eW-eyz">
-                                <rect key="frame" x="16" y="629" width="343" height="30"/>
+                                <rect key="frame" x="16" y="562" width="568" height="30"/>
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1273,7 +1335,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqs-8a-wBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4667" y="-2"/>
+            <point key="canvasLocation" x="4829" y="158"/>
         </scene>
         <!--Main Screen-->
         <scene sceneID="UTS-DH-rVA">
@@ -1283,23 +1345,28 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rSQ-V1-dwX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.14117647059999999" green="0.67843137249999996" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="30L-iT-h7x" kind="relationship" relationship="viewControllers" id="5x2-ja-gQM"/>
                         <segue destination="Cgt-yl-7VT" kind="relationship" relationship="viewControllers" id="77W-PG-vIe"/>
+                        <segue destination="16e-0y-Ucs" kind="relationship" relationship="viewControllers" id="wmc-Ro-31Y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yw-4P-NkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="1299"/>
+            <point key="canvasLocation" x="1721" y="1827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N5n-J6-ez7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Pr-FZ-mX9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NXb-CE-W9U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1311,13 +1378,18 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfO-sC-qyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-253.5" y="1315.5"/>
+            <point key="canvasLocation" x="-624" y="1827"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="z1r-AJ-9r6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="30L-iT-h7x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="zwU-e2-xfM"/>
+                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="30L-iT-h7x" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="zwU-e2-xfM" customClass="CustomizedTabBarItem" customModule="Arrived" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="finalImage" value="profile"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="finalSelectedImage" value="profile_black"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JZq-ZG-hmq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1330,13 +1402,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsV-vA-kio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388.5" y="460.5"/>
+            <point key="canvasLocation" x="2532" y="-110"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Jobs-->
         <scene sceneID="ZBf-Ug-38j">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cgt-yl-7VT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" systemItem="more" id="FMM-5D-DQt"/>
+                    <tabBarItem key="tabBarItem" title="Jobs" image="icon_pin" id="FMM-5D-DQt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tbv-d0-qc2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1349,7 +1421,31 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IqD-Y2-hcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2404" y="1392"/>
+            <point key="canvasLocation" x="2532" y="883"/>
+        </scene>
+        <!--My Jobs-->
+        <scene sceneID="3eD-iH-SGX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="16e-0y-Ucs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Jobs" image="meeting" id="ZCI-8v-PEQ" customClass="CustomizedTabBarItem" customModule="Arrived" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="finalImage" value="meeting"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="finalSelectedImage" value="meeting_black"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="04I-m3-214">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MIe-xK-1pZ" kind="relationship" relationship="rootViewController" id="nRV-qb-Nit"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z58-n4-s9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="1827"/>
         </scene>
     </scenes>
     <resources>
@@ -1358,10 +1454,15 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="ic_card_master_card" width="25" height="16"/>
         <image name="ic_card_visa" width="25" height="16"/>
         <image name="ic_credit_card" width="25" height="16"/>
+        <image name="icon_pin" width="30" height="30"/>
+        <image name="meeting" width="25" height="25"/>
+        <image name="meeting_black" width="26" height="26"/>
+        <image name="profile" width="25" height="25"/>
+        <image name="profile_black" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z22-2j-XGJ"/>
-        <segue reference="CkZ-c3-wOb"/>
+        <segue reference="eP7-GY-SMW"/>
+        <segue reference="edc-f6-2OI"/>
         <segue reference="1wV-fl-Pjw"/>
     </inferredMetricsTieBreakers>
 </document>

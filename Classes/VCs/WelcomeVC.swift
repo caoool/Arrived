@@ -223,7 +223,7 @@ class WelcomeVC: UIViewController {
     
     func fadeAndSwitchLabel() {
         // Fade out to set the text
-        UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.6, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.textLabel.alpha = 0.0
             }, completion: {
                 (finished: Bool) -> Void in
@@ -232,7 +232,7 @@ class WelcomeVC: UIViewController {
                 self.textLabel.text = "Please enter your verification code"
                 
                 // Fade in
-                UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                UIView.animateWithDuration(0.6, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                     self.textLabel.alpha = 1.0
                     }, completion: nil)
         })
@@ -249,7 +249,7 @@ class WelcomeVC: UIViewController {
                 self.textLabel.text = "Please enter your phone number to receive a verification code"
                 
                 // Fade in
-                UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                UIView.animateWithDuration(0.6, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                     self.textLabel.alpha = 1.0
                     }, completion: nil)
         })

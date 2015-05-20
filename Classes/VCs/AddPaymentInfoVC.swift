@@ -187,24 +187,28 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
             americanExpressImage.alpha = 0.3
             discoverImage.alpha = 0.3
             jcbImage.alpha = 0.3
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
         case "American Express":
             visaImage.alpha = 0.3
             masterCardImage.alpha = 0.3
             americanExpressImage.alpha = 1
             discoverImage.alpha = 0.3
             jcbImage.alpha = 0.3
+            sender.formatter.setDefaultOutputPattern("#### ###### #####")
         case "Discover":
             visaImage.alpha = 0.3
             masterCardImage.alpha = 0.3
             americanExpressImage.alpha = 0.3
             discoverImage.alpha = 1
             jcbImage.alpha = 0.3
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
         case "JCB":
             visaImage.alpha = 0.3
             masterCardImage.alpha = 0.3
             americanExpressImage.alpha = 0.3
             discoverImage.alpha = 0.3
             jcbImage.alpha = 1
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
         case "Invalid":
             visaImage.alpha = 1
             masterCardImage.alpha = 1
@@ -218,12 +222,20 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     }
     
     /**
-        CVV should not exceed 3 digit, or 4 later version
+        CVV should not exceed 3 digit, or 4 depending on card type
     */
     @IBAction func trimCVV(sender: UITextField) {
-        if count(sender.text) > 3 {
-            sender.text = dropLast(sender.text)
+        switch cardType! {
+        case "American Express":
+            if count(sender.text) > 4 {
+                sender.text = dropLast(sender.text)
+            }
+        default:
+            if count(sender.text) > 3 {
+                sender.text = dropLast(sender.text)
+            }
         }
+        
     }
     
     // MARK: - Delegates

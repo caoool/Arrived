@@ -41,6 +41,14 @@
 		89471C4D1B09F6C600EFE101 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C431B09F6C600EFE101 /* MinoruTextField.swift */; };
 		89471C4E1B09F6C600EFE101 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C451B09F6C600EFE101 /* TextFieldsEffects.swift */; };
 		89471C4F1B09F6C600EFE101 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C461B09F6C600EFE101 /* YokoTextField.swift */; };
+		89471C5E1B0C0C1700EFE101 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C531B0C0C1700EFE101 /* RAMBounceAnimation.swift */; };
+		89471C5F1B0C0C1700EFE101 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C551B0C0C1700EFE101 /* RAMFrameItemAnimation.swift */; };
+		89471C601B0C0C1700EFE101 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C571B0C0C1700EFE101 /* RAMFumeAnimation.swift */; };
+		89471C611B0C0C1700EFE101 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C591B0C0C1700EFE101 /* RAMRotationAnimation.swift */; };
+		89471C621B0C0C1700EFE101 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C5B1B0C0C1700EFE101 /* RAMTransitionItemAnimation.swift */; };
+		89471C631B0C0C1700EFE101 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C5C1B0C0C1700EFE101 /* RAMAnimatedTabBarController.swift */; };
+		89471C641B0C0C1700EFE101 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C5D1B0C0C1700EFE101 /* RAMItemAnimationProtocol.swift */; };
+		89471C691B0C4D6400EFE101 /* CustomizedTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C681B0C4D6400EFE101 /* CustomizedTabBarItem.swift */; };
 		8958224B1B04F0A4000DA21E /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */; };
 		895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958226B1B05061C000DA21E /* GoogleWearAlert.swift */; };
 		895822731B05061C000DA21E /* GoogleWearAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958226C1B05061C000DA21E /* GoogleWearAlertView.swift */; };
@@ -139,6 +147,14 @@
 		89471C441B09F6C600EFE101 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
 		89471C451B09F6C600EFE101 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
 		89471C461B09F6C600EFE101 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		89471C531B0C0C1700EFE101 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		89471C551B0C0C1700EFE101 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		89471C571B0C0C1700EFE101 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		89471C591B0C0C1700EFE101 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		89471C5B1B0C0C1700EFE101 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
+		89471C5C1B0C0C1700EFE101 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		89471C5D1B0C0C1700EFE101 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		89471C681B0C4D6400EFE101 /* CustomizedTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomizedTabBarItem.swift; path = Customizations/CustomizedTabBarItem.swift; sourceTree = "<group>"; };
 		895822131B04E3AB000DA21E /* Arrived-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Arrived-Bridging-Header.h"; sourceTree = "<group>"; };
 		8958224A1B04F0A4000DA21E /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SHSPhoneImage.bundle; path = Assets/SHSPhoneImage.bundle; sourceTree = "<group>"; };
 		8958226B1B05061C000DA21E /* GoogleWearAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleWearAlert.swift; sourceTree = "<group>"; };
@@ -225,8 +241,8 @@
 			children = (
 				89C413691AF40402000C2C95 /* Main.storyboard */,
 				8908FF551AE01ECF00C990DC /* AppDelegate.swift */,
-				8908FF5C1AE01ECF00C990DC /* Images.xcassets */,
 				8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */,
+				8908FF5C1AE01ECF00C990DC /* Images.xcassets */,
 				8908FF531AE01ECF00C990DC /* Supporting Files */,
 			);
 			path = Arrived;
@@ -260,6 +276,7 @@
 		890D4C6F1AE4433400BD05DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				89471C671B0C4D3200EFE101 /* Customizations */,
 				890D4C751AE4433400BD05DF /* Supports */,
 				890D4C701AE4433400BD05DF /* Services */,
 				890D4C771AE4433400BD05DF /* VCs */,
@@ -379,9 +396,81 @@
 			path = Frameworks/TextFieldEffects;
 			sourceTree = "<group>";
 		};
+		89471C501B0C0C1700EFE101 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				89471C511B0C0C1700EFE101 /* Animations */,
+				89471C5C1B0C0C1700EFE101 /* RAMAnimatedTabBarController.swift */,
+				89471C5D1B0C0C1700EFE101 /* RAMItemAnimationProtocol.swift */,
+			);
+			name = RAMAnimatedTabBarController;
+			path = Frameworks/RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		89471C511B0C0C1700EFE101 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				89471C521B0C0C1700EFE101 /* BounceAnimation */,
+				89471C541B0C0C1700EFE101 /* FrameAnimation */,
+				89471C561B0C0C1700EFE101 /* FumeAnimation */,
+				89471C581B0C0C1700EFE101 /* RotationAnimation */,
+				89471C5A1B0C0C1700EFE101 /* TransitionAniamtions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		89471C521B0C0C1700EFE101 /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				89471C531B0C0C1700EFE101 /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		89471C541B0C0C1700EFE101 /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				89471C551B0C0C1700EFE101 /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		89471C561B0C0C1700EFE101 /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				89471C571B0C0C1700EFE101 /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		89471C581B0C0C1700EFE101 /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				89471C591B0C0C1700EFE101 /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		89471C5A1B0C0C1700EFE101 /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				89471C5B1B0C0C1700EFE101 /* RAMTransitionItemAnimation.swift */,
+			);
+			path = TransitionAniamtions;
+			sourceTree = "<group>";
+		};
+		89471C671B0C4D3200EFE101 /* Customizations */ = {
+			isa = PBXGroup;
+			children = (
+				89471C681B0C4D6400EFE101 /* CustomizedTabBarItem.swift */,
+			);
+			name = Customizations;
+			sourceTree = "<group>";
+		};
 		8958224C1B0504CD000DA21E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89471C501B0C0C1700EFE101 /* RAMAnimatedTabBarController */,
 				89471C3C1B09F6C600EFE101 /* TextFieldEffects */,
 				890D72A51B0739E5006360E7 /* SHSPhoneComponent */,
 				8958227A1B050AD7000DA21E /* JSSAlertView.swift */,
@@ -566,6 +655,7 @@
 				89471C4C1B09F6C600EFE101 /* MadokaTextField.swift in Sources */,
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
 				890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */,
+				89471C601B0C0C1700EFE101 /* RAMFumeAnimation.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
 				89471C471B09F6C600EFE101 /* HoshiTextField.swift in Sources */,
@@ -590,18 +680,25 @@
 				895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */,
 				89C413511AF16ACF000C2C95 /* TestUserService.swift in Sources */,
 				890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */,
+				89471C5F1B0C0C1700EFE101 /* RAMFrameItemAnimation.swift in Sources */,
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,
 				8958227B1B050AD7000DA21E /* JSSAlertView.swift in Sources */,
 				8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */,
+				89471C5E1B0C0C1700EFE101 /* RAMBounceAnimation.swift in Sources */,
 				890D72B31B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
 				890D72B21B0739E5006360E7 /* SHSPhoneLogic.m in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
 				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
 				89471C4B1B09F6C600EFE101 /* KaedeTextField.swift in Sources */,
+				89471C691B0C4D6400EFE101 /* CustomizedTabBarItem.swift in Sources */,
 				89EEF5021B007233006881FD /* TestRequestService.swift in Sources */,
+				89471C631B0C0C1700EFE101 /* RAMAnimatedTabBarController.swift in Sources */,
+				89471C621B0C0C1700EFE101 /* RAMTransitionItemAnimation.swift in Sources */,
 				89471C4E1B09F6C600EFE101 /* TextFieldsEffects.swift in Sources */,
 				890D72B41B0739E5006360E7 /* SHSPhoneNumberFormatter.m in Sources */,
+				89471C641B0C0C1700EFE101 /* RAMItemAnimationProtocol.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
+				89471C611B0C0C1700EFE101 /* RAMRotationAnimation.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
 				890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */,
 				890D72B51B0739E5006360E7 /* SHSPhoneTextField.m in Sources */,
