@@ -57,6 +57,8 @@
 		895822761B05061C000DA21E /* successIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 895822701B05061C000DA21E /* successIcon@2x.png */; };
 		895822771B05061C000DA21E /* warningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 895822711B05061C000DA21E /* warningIcon@2x.png */; };
 		8958227B1B050AD7000DA21E /* JSSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958227A1B050AD7000DA21E /* JSSAlertView.swift */; };
+		8975DAC11B0E187A009D4991 /* SiriWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8975DAC01B0E187A009D4991 /* SiriWaveformView.swift */; };
+		8975DAC31B0E2043009D4991 /* WaveformVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8975DAC21B0E2043009D4991 /* WaveformVC.swift */; };
 		8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */; };
 		8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */; };
 		8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */; };
@@ -164,6 +166,8 @@
 		895822701B05061C000DA21E /* successIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "successIcon@2x.png"; sourceTree = "<group>"; };
 		895822711B05061C000DA21E /* warningIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningIcon@2x.png"; sourceTree = "<group>"; };
 		8958227A1B050AD7000DA21E /* JSSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSSAlertView.swift; path = Frameworks/JSSAlertView.swift; sourceTree = "<group>"; };
+		8975DAC01B0E187A009D4991 /* SiriWaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SiriWaveformView.swift; path = Frameworks/SiriWaveformView.swift; sourceTree = "<group>"; };
+		8975DAC21B0E2043009D4991 /* WaveformVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformVC.swift; sourceTree = "<group>"; };
 		8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBankCardsTVC.swift; sourceTree = "<group>"; };
 		8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVC.swift; sourceTree = "<group>"; };
 		8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVCell.swift; sourceTree = "<group>"; };
@@ -335,6 +339,7 @@
 				89EEF5051B008B05006881FD /* OrderDetailVC.swift */,
 				890F54C61B0175200066E835 /* OrdersListTVC.swift */,
 				890F54C81B0175370066E835 /* OrdersListTVCell.swift */,
+				8975DAC21B0E2043009D4991 /* WaveformVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				890D72A51B0739E5006360E7 /* SHSPhoneComponent */,
 				8958227A1B050AD7000DA21E /* JSSAlertView.swift */,
 				8958226A1B05061C000DA21E /* GoogleWearAlertView */,
+				8975DAC01B0E187A009D4991 /* SiriWaveformView.swift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -649,6 +655,7 @@
 				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
 				899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */,
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
+				8975DAC31B0E2043009D4991 /* WaveformVC.swift in Sources */,
 				890F54CE1B01F4120066E835 /* AudioContext.swift in Sources */,
 				89EEF5061B008B05006881FD /* OrderDetailVC.swift in Sources */,
 				89471C4D1B09F6C600EFE101 /* MinoruTextField.swift in Sources */,
@@ -671,6 +678,7 @@
 				890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				890F54D01B01F4120066E835 /* AudioPlayer.swift in Sources */,
+				8975DAC11B0E187A009D4991 /* SiriWaveformView.swift in Sources */,
 				89471C4A1B09F6C600EFE101 /* JiroTextField.swift in Sources */,
 				89471C491B09F6C600EFE101 /* IsaoTextField.swift in Sources */,
 				890D4C821AE4433400BD05DF /* LoggedInVC.swift in Sources */,

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q41-JF-OXm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q41-JF-OXm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -464,17 +464,18 @@
                                     <segue destination="iUj-bJ-AVR" kind="presentation" id="Z22-2j-XGJ"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-3q-C14">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-3q-C14">
                                 <rect key="frame" x="16" y="52" width="568" height="475"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-HE-cRB">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-HE-cRB">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="1754"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1754" id="R2z-ls-tJa"/>
                                             <constraint firstAttribute="width" constant="343" id="RVG-3Y-jZl"/>
+                                            <constraint firstAttribute="height" constant="1754" id="pgC-gx-ybO"/>
                                         </constraints>
-                                        <mutableString key="text">Gameplay
+                                        <string key="text">Gameplay
 League of Legends is a multiplayer online battle arena where players control a "champion"[10] within short PvP or bot battles. As of April 1, 2015, there are 124 different champions from which to choose, all of which are classified by type (assassin, tank, support, etc.), which indicates the champion's gameplay style.[11]
 
 Players gain levels from killing the opposing team's champions, controlled by other players or bots, and minions that regularly spawn and attack the other team's turrets, minions, and champions. In the classic game mode, the map is typically divided into three "lanes", which are paths that spawned minions take; the "jungle", an area between lanes where neutral monsters spawn; and "bases", where players spawn and can purchase items. The three lanes are composed of the bottom, mid, and top lanes, which different champions tend to battle on based on their respective types. The jungle is sometimes considered a lane, where some champions tend to roam in order to collect buffs and assist in the other lanes freely. The player earns a small amount of gold every second passively but can earn more by getting the last hit on minions, destroying enemy towers (referred to as turrets) that guard the lanes, killing neutral monsters located in the jungle, and killing enemy champions. With this gold, users can buy a variety of items to strengthen their champion for the remaining duration of the game. On the classic Summoners Rift, Twisted Treeline, and Howling Abyss maps, the game is ended by destroying the enemy team's last structure on the map, called the "Nexus", from which minions spawn. Other maps have variations of rules and objectives, such as Dominion on the Crystal Scar map, where each team's Nexus loses health if the opposing team controls at least three of the five towers located around the map.[12]
@@ -487,13 +488,14 @@ The player is identified as a "summoner" and acts as the persistent element in t
 Champions Quinn and Jinx (bottom) face off against Taric (top) in the bottom lane of Summoner's Rift
 Similar to masteries, runes affect gameplay in minor ways. Runes are categorized into Marks (offensive), Seals (defensive), Glyphs (magic), and Quintessences (utility). They must be unlocked in the store. To benefit from runes, summoners can arrange them in their Runebooks, which has a limited number of slots for each rune type. However, more rune pages can be purchased from either Influence Points or Riot Points.[citation needed]
 
-Moderation is conducted through a democratic system known as the Tribunal. In this system, player-submitted reports are reviewed by other players on a case-by-case basis. The reviewing players then submit their opinions on the legality of the behavior demonstrated. A consensus renders the decision official. It is notable that players are unable to be permanently banned through this system since "all permanent bans are distributed manually." Reviewers receive a Justice Rating based on their accuracy to encourage thorough analysis of cases.[15] As of May 2014, the Tribunal is unavailable in favor of an automated system that hands out restrictions and short-term bans. Riot Games has stated that the Tribunal is being upgraded.[16]</mutableString>
+Moderation is conducted through a democratic system known as the Tribunal. In this system, player-submitted reports are reviewed by other players on a case-by-case basis. The reviewing players then submit their opinions on the legality of the behavior demonstrated. A consensus renders the decision official. It is notable that players are unable to be permanently banned through this system since "all permanent bans are distributed manually." Reviewers receive a Justice Rating based on their accuracy to encourage thorough analysis of cases.[15] As of May 2014, the Tribunal is unavailable in favor of an automated system that hands out restrictions and short-term bans. Riot Games has stated that the Tribunal is being upgraded.[16]</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="R2z-ls-tJa"/>
                                                 <exclude reference="RVG-3Y-jZl"/>
+                                                <exclude reference="pgC-gx-ybO"/>
                                             </mask>
                                         </variation>
                                     </textView>
@@ -504,10 +506,15 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="JrZ-mJ-33V"/>
                                     <constraint firstAttribute="bottom" secondItem="USM-HE-cRB" secondAttribute="bottom" constant="-1279" id="K2i-bh-1zI"/>
                                     <constraint firstAttribute="width" secondItem="USM-HE-cRB" secondAttribute="width" id="Sc4-hn-SSB"/>
+                                    <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" id="V1T-x5-Twj"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="YFb-FE-WPG"/>
                                     <constraint firstAttribute="centerX" secondItem="USM-HE-cRB" secondAttribute="centerX" constant="112" id="hPs-NP-XlF"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="kji-Ao-33Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="USM-HE-cRB" secondAttribute="bottom" constant="-1279" id="mXA-LL-rrf"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="noQ-hj-9cB"/>
                                     <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" constant="225" id="rb2-6Y-7Ym"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="xVG-m2-FmS"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="centerX" secondItem="LYt-3q-C14" secondAttribute="centerX" id="zJ3-96-9ie"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -518,6 +525,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                         <exclude reference="Sc4-hn-SSB"/>
                                         <exclude reference="YFb-FE-WPG"/>
                                         <exclude reference="hPs-NP-XlF"/>
+                                        <exclude reference="mXA-LL-rrf"/>
                                         <exclude reference="rb2-6Y-7Ym"/>
                                         <exclude reference="xVG-m2-FmS"/>
                                     </mask>
@@ -843,7 +851,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAf-kJ-0iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4127" y="1827"/>
+            <point key="canvasLocation" x="3344" y="883"/>
         </scene>
         <!--Orders List-->
         <scene sceneID="QxK-HM-iPQ">
@@ -894,7 +902,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqw-t9-x77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4884" y="1827"/>
+            <point key="canvasLocation" x="4284" y="415"/>
         </scene>
         <!--Profile-->
         <scene sceneID="mxd-IC-Ggj">
@@ -1072,7 +1080,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gO-S2-JeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3315" y="956"/>
+            <point key="canvasLocation" x="3344" y="-110"/>
         </scene>
         <!--BankCards-->
         <scene sceneID="cdu-GP-DPh">
@@ -1100,13 +1108,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
                                             <rect key="frame" x="8" y="66" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
                                             <rect key="frame" x="8" y="95" width="584" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1152,7 +1160,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYe-vx-3B7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4072" y="966"/>
+            <point key="canvasLocation" x="4236" y="-622"/>
         </scene>
         <!--Order Detail-->
         <scene sceneID="u98-Ew-Os8">
@@ -1196,7 +1204,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyu-el-vRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3702" y="2969"/>
+            <point key="canvasLocation" x="4284" y="1149"/>
         </scene>
         <!--Locations-->
         <scene sceneID="X44-aY-0VR">
@@ -1269,7 +1277,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEE-Qb-CX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4072" y="158"/>
+            <point key="canvasLocation" x="4236" y="-1390"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="t26-fm-BfU">
@@ -1335,7 +1343,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqs-8a-wBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4829" y="158"/>
+            <point key="canvasLocation" x="5071" y="-1390"/>
         </scene>
         <!--Main Screen-->
         <scene sceneID="UTS-DH-rVA">
@@ -1347,11 +1355,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.14117647059999999" green="0.67843137249999996" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="30L-iT-h7x" kind="relationship" relationship="viewControllers" id="5x2-ja-gQM"/>
                         <segue destination="Cgt-yl-7VT" kind="relationship" relationship="viewControllers" id="77W-PG-vIe"/>
@@ -1404,11 +1407,38 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="2532" y="-110"/>
         </scene>
-        <!--Jobs-->
+        <!--Waveform-->
+        <scene sceneID="eq5-0I-M53">
+            <objects>
+                <viewController title="Waveform" id="lCS-tK-wvV" customClass="WaveformVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uhA-tF-IxD"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdQ-AN-iN5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rab-dU-9Ve">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="va6-0C-0iV" customClass="SiriWaveformView" customModule="Arrived" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="waveformView" destination="va6-0C-0iV" id="E8i-oc-FxV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqu-9s-hyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="792"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="ZBf-Ug-38j">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cgt-yl-7VT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Jobs" image="icon_pin" id="FMM-5D-DQt"/>
+                    <tabBarItem key="tabBarItem" title="" id="FMM-5D-DQt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tbv-d0-qc2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1423,11 +1453,11 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="2532" y="883"/>
         </scene>
-        <!--My Jobs-->
+        <!--My jobs-->
         <scene sceneID="3eD-iH-SGX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="16e-0y-Ucs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Jobs" image="meeting" id="ZCI-8v-PEQ" customClass="CustomizedTabBarItem" customModule="Arrived" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="My jobs" image="meeting" id="ZCI-8v-PEQ" customClass="CustomizedTabBarItem" customModule="Arrived" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="finalImage" value="meeting"/>
                             <userDefinedRuntimeAttribute type="image" keyPath="finalSelectedImage" value="meeting_black"/>
@@ -1454,15 +1484,14 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="ic_card_master_card" width="25" height="16"/>
         <image name="ic_card_visa" width="25" height="16"/>
         <image name="ic_credit_card" width="25" height="16"/>
-        <image name="icon_pin" width="30" height="30"/>
         <image name="meeting" width="25" height="25"/>
         <image name="meeting_black" width="26" height="26"/>
         <image name="profile" width="25" height="25"/>
         <image name="profile_black" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eP7-GY-SMW"/>
         <segue reference="edc-f6-2OI"/>
-        <segue reference="1wV-fl-Pjw"/>
+        <segue reference="eP7-GY-SMW"/>
+        <segue reference="OIk-6K-j7x"/>
     </inferredMetricsTieBreakers>
 </document>
