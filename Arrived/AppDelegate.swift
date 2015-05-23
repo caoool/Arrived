@@ -21,6 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Selected)
         
+        // set status bar style
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        // set navigation bar style
+//        UINavigationBar.appearance().translucent = true
+        UINavigationBar.appearance().tintColor = UIColorFromHex(0x43b154, alpha: 1)
+        UINavigationBar.appearance().barTintColor = UIColorFromHex(0x43b154, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "American Typewriter", size: 22)!, NSForegroundColorAttributeName : UIColor.whiteColor()]
+
+        
         return true
     }
 

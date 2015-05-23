@@ -187,7 +187,7 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
     
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!) {
         centerButtonSelected = false
-        buttonShouldRotate = true
+        if !buttonShouldRotate { buttonShouldRotate = true }
     }
     
     /** 

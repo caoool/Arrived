@@ -10,5 +10,6 @@
 #define Arrived_Bridging_Header_h
 
 #import "SHSPhoneLibrary.h"
+#import "UICountingLabel.h"
 
 #endif
