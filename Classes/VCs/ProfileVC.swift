@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    
     @IBOutlet weak var bg: UIImageView!
     @IBOutlet weak var portrait: UIImageView!
     
@@ -33,7 +33,7 @@ class ProfileVC: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-//        initScene()
+        initScene()
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,16 +48,42 @@ class ProfileVC: UIViewController {
         
         // draw border of circle image
         portrait.image = UIImage(named: "my portrait")
-        portrait.layer.borderWidth = 5
-        portrait.layer.masksToBounds = true
-        portrait.layer.borderColor = UIColorFromHex(0xFFFFFF, alpha: 1).CGColor
-        portrait.layer.cornerRadius = portrait.frame.height/2
-        portrait.clipsToBounds = true
+        roundedWithWhiteBorder(portrait, width: 5)
+        roundedWithWhiteBorder(readyButton, width: 3)
+        drawLineFromPoint(portrait.center, toPoint: readyButton.center, ofColor: UIColor.whiteColor(), inView: view)
+        
         view.bringSubviewToFront(portrait)
+        view.bringSubviewToFront(readyButton)
     }
     
     func initScene() {
+        self.navigationController?.navigationBar.frame.origin.y -= 100
+    }
+    
+    // MARK: - UI Works
+    
+    func roundedWithWhiteBorder(myView: UIView, width: CGFloat) {
+        myView.layer.borderWidth = width
+        myView.layer.masksToBounds = true
+        myView.layer.borderColor = UIColorFromHex(0xFFFFFF, alpha: 1).CGColor
+        myView.layer.cornerRadius = myView.frame.height/2
+        myView.clipsToBounds = true
+    }
+    
+    func drawLineFromPoint(start : CGPoint, toPoint end:CGPoint, ofColor lineColor: UIColor, inView view:UIView) {
         
+        //design the path
+        var path = UIBezierPath()
+        path.moveToPoint(start)
+        path.addLineToPoint(end)
+        
+        //design path in layer
+        var shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.CGPath
+        shapeLayer.strokeColor = lineColor.CGColor
+        shapeLayer.lineWidth = 2
+        
+        view.layer.addSublayer(shapeLayer)
     }
     
     @IBAction func changeStatus(sender: UIButton) {

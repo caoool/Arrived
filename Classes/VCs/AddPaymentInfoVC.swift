@@ -9,7 +9,6 @@
 //
 
 import UIKit
-import SHSPhoneComponent
 
 class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
