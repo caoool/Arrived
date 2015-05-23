@@ -10,10 +10,13 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
+    
     @IBOutlet weak var bg: UIImageView!
     @IBOutlet weak var portrait: UIImageView!
     
     @IBOutlet weak var readyButton: UIButton!
+    
+    private var blurView: UIView = UIView()
     
     private var readyForJobs: Bool = true {
         didSet {
@@ -24,6 +27,8 @@ class ProfileVC: UIViewController {
             }
         }
     }
+    
+    private var isInitiated: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,26 +43,30 @@ class ProfileVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         
-        // set bg image and blur
-        bg.image = UIImage(named: "my portrait")
-        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
-        var blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = bg.bounds
+        if !isInitiated {
+            isInitiated = true
+            // set bg image and blur
+            bg.image = UIImage(named: "my portrait")
+            var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+            var blurView = UIVisualEffectView(effect: blurEffect)
+            blurView.frame = bg.bounds
+            bg.addSubview(blurView)
+            
+            // draw border of circle image
+            portrait.image = UIImage(named: "my portrait")
+            roundedWithWhiteBorder(portrait, width: 5)
+            roundedWithWhiteBorder(readyButton, width: 3)
+            drawLineFromPoint(portrait.center, toPoint: readyButton.center, ofColor: UIColor.whiteColor(), inView: view)
+            
+            view.bringSubviewToFront(portrait)
+            view.bringSubviewToFront(readyButton)
+        }
         
-        bg.addSubview(blurView)
-        
-        // draw border of circle image
-        portrait.image = UIImage(named: "my portrait")
-        roundedWithWhiteBorder(portrait, width: 5)
-        roundedWithWhiteBorder(readyButton, width: 3)
-        drawLineFromPoint(portrait.center, toPoint: readyButton.center, ofColor: UIColor.whiteColor(), inView: view)
-        
-        view.bringSubviewToFront(portrait)
-        view.bringSubviewToFront(readyButton)
     }
     
     func initScene() {
-        self.navigationController?.navigationBar.frame.origin.y -= 100
+        
+        
     }
     
     // MARK: - UI Works

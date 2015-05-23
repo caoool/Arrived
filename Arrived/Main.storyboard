@@ -929,12 +929,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-bq-Vn5" userLabel="portrait">
-                                <rect key="frame" x="200" y="79" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="yD0-bq-Vn5" secondAttribute="height" multiplier="1:1" id="Pg0-Zv-LaK"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-28-rpl">
                                 <rect key="frame" x="256" y="297" width="88" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
@@ -1010,6 +1004,12 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my portrait" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-bq-Vn5" userLabel="portrait">
+                                <rect key="frame" x="200" y="79" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yD0-bq-Vn5" secondAttribute="height" multiplier="1:1" id="Pg0-Zv-LaK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1510,6 +1510,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="meeting" width="25" height="25"/>
         <image name="meeting_black" width="26" height="26"/>
         <image name="menu icon" width="20" height="20"/>
+        <image name="my portrait" width="1280" height="1024"/>
         <image name="profile" width="25" height="25"/>
         <image name="profile_black" width="24" height="24"/>
         <image name="status ok" width="56" height="56"/>
