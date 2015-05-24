@@ -46,12 +46,13 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initScene()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        initScene()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -160,5 +161,6 @@ class ProfileVC: UIViewController {
         }
     }
     
+    // MARK: - Navaigation
     
 }

@@ -917,109 +917,110 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="187-pj-QFR">
-                                <rect key="frame" x="100" y="250" width="100" height="100"/>
-                                <state key="normal" image="set address icon">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="187-pj-QFR">
+                                <rect key="frame" x="100" y="205" width="100" height="100"/>
+                                <state key="normal" image="set addesses icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-OZ-hca">
-                                <rect key="frame" x="90" y="358" width="120.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-OZ-hca">
+                                <rect key="frame" x="108" y="313" width="84.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-Hy-7CK">
-                                <rect key="frame" x="400" y="250" width="100" height="100"/>
-                                <state key="normal" image="set address icon">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-Hy-7CK">
+                                <rect key="frame" x="400" y="205" width="100" height="100"/>
+                                <state key="normal" image="set cards icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="asdfsadf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-we-Bas">
-                                <rect key="frame" x="414" y="358" width="72.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bank Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-we-Bas">
+                                <rect key="frame" x="403" y="313" width="94.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-C9-B3H">
+                            <button opaque="NO" alpha="0.59999999999999964" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-C9-B3H">
                                 <rect key="frame" x="16" y="558" width="568" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.21568627450980393" green="0.22745098039215686" blue="0.29019607843137257" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="unwindToMainViewController:" destination="ugQ-wB-WwK" eventType="touchUpInside" id="Amt-br-v8S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
-                                <rect key="frame" x="400" y="50" width="100" height="100"/>
-                                <state key="normal" image="set address icon">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
+                                <rect key="frame" x="400" y="50.5" width="100" height="100"/>
+                                <state key="normal" image="set pin icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-cb-L2p">
-                                <rect key="frame" x="371" y="158" width="159" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-cb-L2p">
+                                <rect key="frame" x="437.5" y="158.5" width="27" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-qX-lJm">
-                                <rect key="frame" x="100" y="50" width="100" height="100"/>
-                                <state key="normal" image="set address icon">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-qX-lJm">
+                                <rect key="frame" x="100" y="50.5" width="100" height="100"/>
+                                <state key="normal" image="set phone icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-iD-Wq0">
-                                <rect key="frame" x="90" y="158" width="120.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-iD-Wq0">
+                                <rect key="frame" x="125" y="158.5" width="51" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-Pf-us9">
-                                <rect key="frame" x="400" y="450" width="100" height="100"/>
-                                <state key="normal" image="set address icon">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-Pf-us9">
+                                <rect key="frame" x="400" y="350" width="100" height="100"/>
+                                <state key="normal" image="support icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-b3-MI2">
-                                <rect key="frame" x="392.5" y="558" width="115" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Support" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-b3-MI2">
+                                <rect key="frame" x="416.5" y="458" width="66.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-N6-t5E">
-                                <rect key="frame" x="100" y="450" width="100" height="100"/>
-                                <state key="normal" image="set address icon">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-N6-t5E">
+                                <rect key="frame" x="100" y="350" width="100" height="100"/>
+                                <state key="normal" image="logout icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-yA-a6q">
-                                <rect key="frame" x="92" y="558" width="115" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-yA-a6q">
+                                <rect key="frame" x="122" y="458" width="56" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.23529411764705882" blue="0.30588235294117649" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.23529411764705882" blue="0.30588235294117649" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Kkd-Hy-7CK" firstAttribute="centerX" secondItem="Fwn-we-Bas" secondAttribute="centerX" id="6M8-bJ-nBf"/>
                             <constraint firstItem="bEy-iD-Wq0" firstAttribute="top" secondItem="hC0-qX-lJm" secondAttribute="bottom" constant="8" id="6ep-r8-e8t"/>
                             <constraint firstItem="dhn-C9-B3H" firstAttribute="trailing" secondItem="rhr-GV-yWN" secondAttribute="trailingMargin" id="8n4-df-XgE"/>
-                            <constraint firstAttribute="centerY" secondItem="Kkd-Hy-7CK" secondAttribute="centerY" id="FaM-Pl-8a1"/>
+                            <constraint firstAttribute="centerY" secondItem="Kkd-Hy-7CK" secondAttribute="centerY" constant="45" id="FaM-Pl-8a1"/>
                             <constraint firstItem="LXk-N6-t5E" firstAttribute="centerX" secondItem="xgB-yA-a6q" secondAttribute="centerX" id="GDE-T6-NfQ"/>
-                            <constraint firstAttribute="centerY" secondItem="187-pj-QFR" secondAttribute="centerY" id="GRJ-Zj-EL0"/>
+                            <constraint firstAttribute="centerY" secondItem="187-pj-QFR" secondAttribute="centerY" constant="45" id="GRJ-Zj-EL0"/>
                             <constraint firstAttribute="centerX" secondItem="187-pj-QFR" secondAttribute="centerX" multiplier="2:1" id="Hzt-Jm-X6h"/>
                             <constraint firstItem="kJI-Pf-us9" firstAttribute="centerX" secondItem="Jnz-b3-MI2" secondAttribute="centerX" id="Idu-TQ-SCm"/>
-                            <constraint firstAttribute="centerY" secondItem="LXk-N6-t5E" secondAttribute="centerY" multiplier="3:5" id="IkJ-UJ-hFp"/>
+                            <constraint firstAttribute="centerY" secondItem="LXk-N6-t5E" secondAttribute="centerY" multiplier="7:11" constant="45" id="IkJ-UJ-hFp"/>
                             <constraint firstItem="V8h-OZ-hca" firstAttribute="top" secondItem="187-pj-QFR" secondAttribute="bottom" constant="8" id="KMV-9f-LqM"/>
                             <constraint firstItem="xgB-yA-a6q" firstAttribute="top" secondItem="LXk-N6-t5E" secondAttribute="bottom" constant="8" id="NPO-Wf-IJx"/>
                             <constraint firstAttribute="centerX" secondItem="LXk-N6-t5E" secondAttribute="centerX" multiplier="2:1" id="Oj3-bM-cvz"/>
                             <constraint firstItem="187-pj-QFR" firstAttribute="centerX" secondItem="V8h-OZ-hca" secondAttribute="centerX" id="PEJ-WK-qKR"/>
-                            <constraint firstAttribute="centerY" secondItem="kJI-Pf-us9" secondAttribute="centerY" multiplier="3:5" id="R2F-hm-A15"/>
+                            <constraint firstAttribute="centerY" secondItem="kJI-Pf-us9" secondAttribute="centerY" multiplier="7:11" constant="45" id="R2F-hm-A15"/>
                             <constraint firstAttribute="centerX" secondItem="6rT-Ap-DAE" secondAttribute="centerX" multiplier="2:3" id="T7y-kF-6qq"/>
                             <constraint firstItem="187-pj-QFR" firstAttribute="top" secondItem="Fwn-we-Bas" secondAttribute="bottom" constant="35" id="Vhh-RA-jZA"/>
-                            <constraint firstAttribute="centerY" secondItem="hC0-qX-lJm" secondAttribute="centerY" multiplier="3:1" id="Xdh-z0-WUZ"/>
+                            <constraint firstAttribute="centerY" secondItem="hC0-qX-lJm" secondAttribute="centerY" multiplier="7:3" constant="65" id="Xdh-z0-WUZ"/>
                             <constraint firstItem="lFd-cb-L2p" firstAttribute="top" secondItem="6rT-Ap-DAE" secondAttribute="bottom" constant="8" id="YcE-XU-ScX"/>
                             <constraint firstItem="187-pj-QFR" firstAttribute="leading" secondItem="rhr-GV-yWN" secondAttribute="leadingMargin" id="Ywr-z8-rem"/>
                             <constraint firstItem="Jnz-b3-MI2" firstAttribute="top" secondItem="kJI-Pf-us9" secondAttribute="bottom" constant="8" id="fRm-Im-Z3W"/>
@@ -1034,7 +1035,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <constraint firstItem="Kkd-Hy-7CK" firstAttribute="top" secondItem="lFd-cb-L2p" secondAttribute="bottom" constant="35" id="uxF-Dg-oBL"/>
                             <constraint firstItem="dhn-C9-B3H" firstAttribute="leading" secondItem="rhr-GV-yWN" secondAttribute="leadingMargin" id="vAu-GF-GVQ"/>
                             <constraint firstAttribute="centerX" secondItem="Kkd-Hy-7CK" secondAttribute="centerX" multiplier="2:3" id="vgz-rB-rgD"/>
-                            <constraint firstAttribute="centerY" secondItem="6rT-Ap-DAE" secondAttribute="centerY" multiplier="3:1" id="xRY-bW-Jlg"/>
+                            <constraint firstAttribute="centerY" secondItem="6rT-Ap-DAE" secondAttribute="centerY" multiplier="7:3" constant="65" id="xRY-bW-Jlg"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1046,6 +1047,21 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="addressIcon" destination="187-pj-QFR" id="d7S-gb-rOW"/>
+                        <outlet property="addressLabel" destination="V8h-OZ-hca" id="D50-jz-Acd"/>
+                        <outlet property="cancelButton" destination="dhn-C9-B3H" id="wee-OS-28h"/>
+                        <outlet property="cardIcon" destination="Kkd-Hy-7CK" id="Bxh-st-NJ6"/>
+                        <outlet property="cardLabel" destination="Fwn-we-Bas" id="PCB-io-snL"/>
+                        <outlet property="logoutIcon" destination="LXk-N6-t5E" id="FaM-Wt-mAY"/>
+                        <outlet property="logoutLabel" destination="xgB-yA-a6q" id="C2P-MR-yL7"/>
+                        <outlet property="phoneIcon" destination="hC0-qX-lJm" id="TsU-Yz-zRS"/>
+                        <outlet property="phoneLabel" destination="bEy-iD-Wq0" id="agp-Ix-6yx"/>
+                        <outlet property="pinIcon" destination="6rT-Ap-DAE" id="SVN-tc-nJz"/>
+                        <outlet property="pinLabel" destination="lFd-cb-L2p" id="ZWE-3L-gOc"/>
+                        <outlet property="supportIcon" destination="kJI-Pf-us9" id="85N-H8-B53"/>
+                        <outlet property="supportLabel" destination="Jnz-b3-MI2" id="nji-3W-1Vn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNf-7b-oop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1659,14 +1675,19 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="ic_card_visa" width="25" height="16"/>
         <image name="ic_credit_card" width="25" height="16"/>
         <image name="likes icon" width="85" height="85"/>
+        <image name="logout icon" width="85" height="85"/>
         <image name="meeting" width="25" height="25"/>
         <image name="meeting_black" width="26" height="26"/>
         <image name="menu icon" width="20" height="20"/>
         <image name="my portrait" width="1280" height="1024"/>
         <image name="profile" width="25" height="25"/>
         <image name="profile_black" width="24" height="24"/>
-        <image name="set address icon" width="100" height="100"/>
+        <image name="set addesses icon" width="85" height="85"/>
+        <image name="set cards icon" width="85" height="85"/>
+        <image name="set phone icon" width="85" height="85"/>
+        <image name="set pin icon" width="85" height="85"/>
         <image name="status ok" width="56" height="56"/>
+        <image name="support icon" width="85" height="85"/>
         <image name="tasks icon" width="85" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>

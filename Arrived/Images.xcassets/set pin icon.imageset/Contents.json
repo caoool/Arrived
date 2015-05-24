@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "set address icon.png"
+      "filename" : "set pin icon.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "set address icon@2x.png"
+      "filename" : "set pin icon@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "set address icon@3x.png"
+      "filename" : "set pin icon@3x.png"
     }
   ],
   "info" : {
