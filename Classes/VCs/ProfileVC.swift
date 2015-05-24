@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ProfileVC: UIViewController {
     
@@ -16,14 +17,26 @@ class ProfileVC: UIViewController {
     
     @IBOutlet weak var readyButton: UIButton!
     
+    @IBOutlet weak var likesIcon: UIImageView!
+    @IBOutlet weak var tasksIcon: UIImageView!
+    @IBOutlet weak var balanceIcon: UIImageView!
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var line: UILabel!
+    @IBOutlet weak var balance: UICountingLabel!
+    @IBOutlet weak var tasks: UICountingLabel!
+    @IBOutlet weak var likes: UICountingLabel!
+    
     private var blurView: UIView = UIView()
     
     private var readyForJobs: Bool = true {
         didSet {
             if readyForJobs {
                 readyButton.setImage(UIImage(named: "status ok"), forState: .Normal)
+                bounceView(readyButton)
             } else {
                 readyButton.setImage(UIImage(named: "status no"), forState: .Normal)
+                bounceView(readyButton)
             }
         }
     }
@@ -60,16 +73,60 @@ class ProfileVC: UIViewController {
             
             view.bringSubviewToFront(portrait)
             view.bringSubviewToFront(readyButton)
+            
         }
         
     }
     
     func initScene() {
-        
-        
+        countingNumbers()
+        changeIconColors()
     }
     
     // MARK: - UI Works
+    
+    func countingNumbers() {
+        balance.format = "%d"
+        likes.format = "%d"
+        tasks.format = "%d"
+        
+        let rand1: NSTimeInterval = NSTimeInterval(randRange(10, upper: 25)) / 10
+        let rand2: NSTimeInterval = NSTimeInterval(randRange(10, upper: 25)) / 10
+        let rand3: NSTimeInterval = NSTimeInterval(randRange(10, upper: 25)) / 10
+        balance.countFromZeroTo(3500, withDuration: rand1)
+        likes.countFromZeroTo(39, withDuration: rand2)
+        tasks.countFromZeroTo(99, withDuration: rand3)
+        
+        var timer1 = NSTimer.scheduledTimerWithTimeInterval(rand1, target: self, selector: Selector("balanceBounce"), userInfo: nil, repeats: false)
+        var timer2 = NSTimer.scheduledTimerWithTimeInterval(rand2, target: self, selector: Selector("likesBounce"), userInfo: nil, repeats: false)
+        var timer3 = NSTimer.scheduledTimerWithTimeInterval(rand3, target: self, selector: Selector("tasksBounce"), userInfo: nil, repeats: false)
+    }
+    
+    func balanceBounce() {
+        bounceView(balanceIcon)
+        balanceIcon.tintColor = UIColorFromHex(0x5B65FD, alpha: 0.5)
+    }
+    func likesBounce() {
+        bounceView(likesIcon)
+        likesIcon.tintColor = UIColorFromHex(0xFFA9AA, alpha: 0.5)
+    }
+    func tasksBounce() {
+        bounceView(tasksIcon)
+        tasksIcon.tintColor = UIColorFromHex(0xE6C4FF, alpha: 0.5)
+    }
+    
+    func randRange (lower: Int , upper: Int) -> Int {
+        return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+    }
+    
+    func changeIconColors() {
+        balanceIcon.image = balanceIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        balanceIcon.tintColor = UIColorFromHex(0x9EA6AF, alpha: 0.3)
+        likesIcon.image = likesIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        likesIcon.tintColor = UIColorFromHex(0x9EA6AF, alpha: 0.3)
+        tasksIcon.image = tasksIcon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        tasksIcon.tintColor = UIColorFromHex(0x9EA6AF, alpha: 0.3)
+    }
     
     func roundedWithWhiteBorder(myView: UIView, width: CGFloat) {
         myView.layer.borderWidth = width

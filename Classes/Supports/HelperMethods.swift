@@ -146,6 +146,18 @@ extension UIImage {
 }
 
 
+func bounceView(myView: UIView) {
+    myView.transform = CGAffineTransformMakeScale(0.1, 0.1)
+    UIView.animateWithDuration(2.0,
+        delay: 0,
+        usingSpringWithDamping: 0.2,
+        initialSpringVelocity: 6.0,
+        options: UIViewAnimationOptions.AllowUserInteraction,
+        animations: {
+            myView.transform = CGAffineTransformIdentity
+        }, completion: nil)
+}
+
 
 
 

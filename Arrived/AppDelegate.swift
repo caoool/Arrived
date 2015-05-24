@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // set navigation bar style
 //        UINavigationBar.appearance().translucent = true
-        UINavigationBar.appearance().tintColor = UIColorFromHex(0x43b154, alpha: 1)
-        UINavigationBar.appearance().barTintColor = UIColorFromHex(0x43b154, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColorFromHex(0x43cea2, alpha: 1)
+        UINavigationBar.appearance().barTintColor = UIColorFromHex(0x43cea2, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "American Typewriter", size: 22)!, NSForegroundColorAttributeName : UIColor.whiteColor()]
 
         

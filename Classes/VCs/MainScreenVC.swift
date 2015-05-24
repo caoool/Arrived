@@ -147,9 +147,12 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
         if heightDifference < 0 {
             button.center = self.tabBar.center
         } else {
-            var center = self.tabBar.center
-            center.y -= heightDifference/2.0
-            button.center = center;
+//            var center = self.tabBar.center
+//            center.y -= heightDifference/2
+//            button.center = center;
+            
+            var center = CGPointMake(self.tabBar.center.x, self.tabBar.center.y-self.tabBar.frame.size.height/2)
+            button.center = center
         }
         
         button.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchDown)

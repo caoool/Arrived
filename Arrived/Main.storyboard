@@ -905,6 +905,152 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="4284" y="415"/>
         </scene>
+        <!--User Menu-->
+        <scene sceneID="80v-mF-nDh">
+            <objects>
+                <viewController title="User Menu" id="ugQ-wB-WwK" customClass="UserMenuVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IFs-NP-BFY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jdm-jc-iYo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rhr-GV-yWN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="187-pj-QFR">
+                                <rect key="frame" x="100" y="250" width="100" height="100"/>
+                                <state key="normal" image="set address icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-OZ-hca">
+                                <rect key="frame" x="90" y="358" width="120.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-Hy-7CK">
+                                <rect key="frame" x="400" y="250" width="100" height="100"/>
+                                <state key="normal" image="set address icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="asdfsadf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-we-Bas">
+                                <rect key="frame" x="414" y="358" width="72.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-C9-B3H">
+                                <rect key="frame" x="16" y="558" width="568" height="34"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="unwindToMainViewController:" destination="ugQ-wB-WwK" eventType="touchUpInside" id="Amt-br-v8S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
+                                <rect key="frame" x="400" y="50" width="100" height="100"/>
+                                <state key="normal" image="set address icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-cb-L2p">
+                                <rect key="frame" x="371" y="158" width="159" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-qX-lJm">
+                                <rect key="frame" x="100" y="50" width="100" height="100"/>
+                                <state key="normal" image="set address icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-iD-Wq0">
+                                <rect key="frame" x="90" y="158" width="120.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-Pf-us9">
+                                <rect key="frame" x="400" y="450" width="100" height="100"/>
+                                <state key="normal" image="set address icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-b3-MI2">
+                                <rect key="frame" x="392.5" y="558" width="115" height="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-N6-t5E">
+                                <rect key="frame" x="100" y="450" width="100" height="100"/>
+                                <state key="normal" image="set address icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-yA-a6q">
+                                <rect key="frame" x="92" y="558" width="115" height="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.23529411764705882" blue="0.30588235294117649" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kkd-Hy-7CK" firstAttribute="centerX" secondItem="Fwn-we-Bas" secondAttribute="centerX" id="6M8-bJ-nBf"/>
+                            <constraint firstItem="bEy-iD-Wq0" firstAttribute="top" secondItem="hC0-qX-lJm" secondAttribute="bottom" constant="8" id="6ep-r8-e8t"/>
+                            <constraint firstItem="dhn-C9-B3H" firstAttribute="trailing" secondItem="rhr-GV-yWN" secondAttribute="trailingMargin" id="8n4-df-XgE"/>
+                            <constraint firstAttribute="centerY" secondItem="Kkd-Hy-7CK" secondAttribute="centerY" id="FaM-Pl-8a1"/>
+                            <constraint firstItem="LXk-N6-t5E" firstAttribute="centerX" secondItem="xgB-yA-a6q" secondAttribute="centerX" id="GDE-T6-NfQ"/>
+                            <constraint firstAttribute="centerY" secondItem="187-pj-QFR" secondAttribute="centerY" id="GRJ-Zj-EL0"/>
+                            <constraint firstAttribute="centerX" secondItem="187-pj-QFR" secondAttribute="centerX" multiplier="2:1" id="Hzt-Jm-X6h"/>
+                            <constraint firstItem="kJI-Pf-us9" firstAttribute="centerX" secondItem="Jnz-b3-MI2" secondAttribute="centerX" id="Idu-TQ-SCm"/>
+                            <constraint firstAttribute="centerY" secondItem="LXk-N6-t5E" secondAttribute="centerY" multiplier="3:5" id="IkJ-UJ-hFp"/>
+                            <constraint firstItem="V8h-OZ-hca" firstAttribute="top" secondItem="187-pj-QFR" secondAttribute="bottom" constant="8" id="KMV-9f-LqM"/>
+                            <constraint firstItem="xgB-yA-a6q" firstAttribute="top" secondItem="LXk-N6-t5E" secondAttribute="bottom" constant="8" id="NPO-Wf-IJx"/>
+                            <constraint firstAttribute="centerX" secondItem="LXk-N6-t5E" secondAttribute="centerX" multiplier="2:1" id="Oj3-bM-cvz"/>
+                            <constraint firstItem="187-pj-QFR" firstAttribute="centerX" secondItem="V8h-OZ-hca" secondAttribute="centerX" id="PEJ-WK-qKR"/>
+                            <constraint firstAttribute="centerY" secondItem="kJI-Pf-us9" secondAttribute="centerY" multiplier="3:5" id="R2F-hm-A15"/>
+                            <constraint firstAttribute="centerX" secondItem="6rT-Ap-DAE" secondAttribute="centerX" multiplier="2:3" id="T7y-kF-6qq"/>
+                            <constraint firstItem="187-pj-QFR" firstAttribute="top" secondItem="Fwn-we-Bas" secondAttribute="bottom" constant="35" id="Vhh-RA-jZA"/>
+                            <constraint firstAttribute="centerY" secondItem="hC0-qX-lJm" secondAttribute="centerY" multiplier="3:1" id="Xdh-z0-WUZ"/>
+                            <constraint firstItem="lFd-cb-L2p" firstAttribute="top" secondItem="6rT-Ap-DAE" secondAttribute="bottom" constant="8" id="YcE-XU-ScX"/>
+                            <constraint firstItem="187-pj-QFR" firstAttribute="leading" secondItem="rhr-GV-yWN" secondAttribute="leadingMargin" id="Ywr-z8-rem"/>
+                            <constraint firstItem="Jnz-b3-MI2" firstAttribute="top" secondItem="kJI-Pf-us9" secondAttribute="bottom" constant="8" id="fRm-Im-Z3W"/>
+                            <constraint firstAttribute="centerX" secondItem="kJI-Pf-us9" secondAttribute="centerX" multiplier="2:3" id="fxn-WO-zZ7"/>
+                            <constraint firstItem="Fwn-we-Bas" firstAttribute="top" secondItem="Kkd-Hy-7CK" secondAttribute="bottom" constant="8" id="ix1-iT-Naw"/>
+                            <constraint firstItem="hC0-qX-lJm" firstAttribute="centerX" secondItem="bEy-iD-Wq0" secondAttribute="centerX" id="jxH-Xk-NgJ"/>
+                            <constraint firstItem="187-pj-QFR" firstAttribute="top" secondItem="IFs-NP-BFY" secondAttribute="bottom" constant="8" id="pis-I0-E9x"/>
+                            <constraint firstAttribute="centerX" secondItem="Kkd-Hy-7CK" secondAttribute="centerX" id="qId-cr-yg6"/>
+                            <constraint firstItem="6rT-Ap-DAE" firstAttribute="centerX" secondItem="lFd-cb-L2p" secondAttribute="centerX" id="qvn-Hs-4l9"/>
+                            <constraint firstAttribute="centerX" secondItem="hC0-qX-lJm" secondAttribute="centerX" multiplier="2:1" id="s0a-qf-vYs"/>
+                            <constraint firstItem="Jdm-jc-iYo" firstAttribute="top" secondItem="dhn-C9-B3H" secondAttribute="bottom" constant="8" id="uNl-NR-L69"/>
+                            <constraint firstItem="Kkd-Hy-7CK" firstAttribute="top" secondItem="lFd-cb-L2p" secondAttribute="bottom" constant="35" id="uxF-Dg-oBL"/>
+                            <constraint firstItem="dhn-C9-B3H" firstAttribute="leading" secondItem="rhr-GV-yWN" secondAttribute="leadingMargin" id="vAu-GF-GVQ"/>
+                            <constraint firstAttribute="centerX" secondItem="Kkd-Hy-7CK" secondAttribute="centerX" multiplier="2:3" id="vgz-rB-rgD"/>
+                            <constraint firstAttribute="centerY" secondItem="6rT-Ap-DAE" secondAttribute="centerY" multiplier="3:1" id="xRY-bW-Jlg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Vhh-RA-jZA"/>
+                                <exclude reference="Ywr-z8-rem"/>
+                                <exclude reference="pis-I0-E9x"/>
+                                <exclude reference="qId-cr-yg6"/>
+                                <exclude reference="uxF-Dg-oBL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNf-7b-oop" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3344" y="-959"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="mxd-IC-Ggj">
             <objects>
@@ -930,19 +1076,19 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-28-rpl">
-                                <rect key="frame" x="256" y="297" width="88" height="20"/>
+                                <rect key="frame" x="256" y="348" width="88" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taylor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE6-9f-JIa">
-                                <rect key="frame" x="256" y="320" width="87" height="17.5"/>
+                                <rect key="frame" x="256" y="371" width="87" height="17.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="15"/>
                                 <color key="textColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zk-aF-uFU">
-                                <rect key="frame" x="498" y="151" width="56" height="56"/>
+                                <rect key="frame" x="498" y="186" width="56" height="56"/>
                                 <state key="normal" image="status ok">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -950,64 +1096,65 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="changeStatus:" destination="zRY-j3-8Ei" eventType="touchUpInside" id="kfV-ED-lzY"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes icon" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-vH-rzw">
-                                <rect key="frame" x="262" y="367.5" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6Ll-vH-rzw" secondAttribute="height" multiplier="1:1" id="uIl-bb-jXY"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balance icon" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-5t-PV1">
-                                <rect key="frame" x="474" y="367.5" width="75" height="75"/>
+                                <rect key="frame" x="482.5" y="351" width="66.5" height="67"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tasks icon" translatesAutoresizingMaskIntoConstraints="NO" id="7ZI-qF-sWo">
-                                <rect key="frame" x="51" y="367.5" width="75" height="75"/>
+                                <rect key="frame" x="51" y="351" width="66.5" height="67"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfU-dO-9a3" customClass="UICountingLabel">
-                                <rect key="frame" x="489" y="450.5" width="43.5" height="20"/>
+                                <rect key="frame" x="494" y="426" width="43.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-nq-Tbt">
-                                <rect key="frame" x="479" y="478.5" width="62.5" height="19.5"/>
+                                <rect key="frame" x="484" y="454" width="62.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8H-L3-oTb">
-                                <rect key="frame" x="280.5" y="478.5" width="37.5" height="19.5"/>
+                                <rect key="frame" x="280" y="454" width="37.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTQ-FY-skW">
-                                <rect key="frame" x="67.5" y="478.5" width="43" height="19.5"/>
+                                <rect key="frame" x="63.5" y="454" width="43" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITr-a4-c3s" customClass="UICountingLabel">
-                                <rect key="frame" x="78" y="450.5" width="22" height="20"/>
+                                <rect key="frame" x="73.5" y="426" width="22" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIk-d3-sGX">
-                                <rect key="frame" x="0.0" y="499" width="240" height="128"/>
-                                <connections>
-                                    <segue destination="zEh-QX-0fw" kind="embed" id="9Rf-on-FK9"/>
-                                </connections>
-                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3n-5d-Vpp" customClass="UICountingLabel">
-                                <rect key="frame" x="289" y="450.5" width="22" height="20"/>
+                                <rect key="frame" x="289" y="426" width="22" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my portrait" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-bq-Vn5" userLabel="portrait">
-                                <rect key="frame" x="200" y="79" width="200" height="200"/>
+                                <rect key="frame" x="184" y="99" width="231" height="231.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yD0-bq-Vn5" secondAttribute="height" multiplier="1:1" id="Pg0-Zv-LaK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a beautiful day, people need to buy my album" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3L-ah-rEZ">
+                                <rect key="frame" x="0.0" y="418.5" width="600" height="17"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="15"/>
+                                <color key="textColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes icon" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-vH-rzw">
+                                <rect key="frame" x="266.5" y="351" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Ll-vH-rzw" secondAttribute="height" multiplier="1:1" id="uIl-bb-jXY"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -1016,13 +1163,16 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <constraint firstItem="NfU-dO-9a3" firstAttribute="centerX" secondItem="tsX-nq-Tbt" secondAttribute="centerX" id="0y2-23-h4y"/>
                             <constraint firstItem="7ZI-qF-sWo" firstAttribute="height" secondItem="6Ll-vH-rzw" secondAttribute="height" id="1KS-aZ-qJd"/>
                             <constraint firstItem="NfU-dO-9a3" firstAttribute="centerX" secondItem="xNw-5t-PV1" secondAttribute="centerX" id="2AJ-yn-KVk"/>
+                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="leading" secondItem="hO1-Xs-Qvs" secondAttribute="leadingMargin" id="4kM-ZY-HMn"/>
                             <constraint firstAttribute="centerX" secondItem="6Ll-vH-rzw" secondAttribute="centerX" id="5xG-PI-9Pj"/>
+                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="trailing" secondItem="hO1-Xs-Qvs" secondAttribute="trailingMargin" id="6Xj-sG-abM"/>
                             <constraint firstItem="7ZI-qF-sWo" firstAttribute="centerY" secondItem="6Ll-vH-rzw" secondAttribute="centerY" id="7e2-5R-cHa"/>
                             <constraint firstItem="6Ll-vH-rzw" firstAttribute="centerX" secondItem="j3n-5d-Vpp" secondAttribute="centerX" id="Apz-Be-fa5"/>
                             <constraint firstItem="7ZI-qF-sWo" firstAttribute="width" secondItem="6Ll-vH-rzw" secondAttribute="width" id="CaD-wL-WFF"/>
                             <constraint firstItem="6Ll-vH-rzw" firstAttribute="centerY" secondItem="xNw-5t-PV1" secondAttribute="centerY" id="D0x-kH-LYK"/>
                             <constraint firstItem="5zk-aF-uFU" firstAttribute="centerY" secondItem="yD0-bq-Vn5" secondAttribute="centerY" id="ECL-sr-RSX"/>
                             <constraint firstAttribute="width" secondItem="HlB-jk-B4F" secondAttribute="width" id="F46-uI-saK"/>
+                            <constraint firstItem="6Ll-vH-rzw" firstAttribute="top" secondItem="A3L-ah-rEZ" secondAttribute="bottom" constant="50" id="FNQ-3d-fUS"/>
                             <constraint firstItem="7ZI-qF-sWo" firstAttribute="centerX" secondItem="ITr-a4-c3s" secondAttribute="centerX" constant="-0.25" id="Fx3-Mr-wRp"/>
                             <constraint firstItem="V8H-L3-oTb" firstAttribute="top" secondItem="j3n-5d-Vpp" secondAttribute="bottom" constant="8" id="IbQ-Sc-WHn"/>
                             <constraint firstAttribute="centerX" secondItem="yD0-bq-Vn5" secondAttribute="centerX" id="JmQ-BZ-idz"/>
@@ -1033,21 +1183,26 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <constraint firstItem="aPh-28-rpl" firstAttribute="top" secondItem="yD0-bq-Vn5" secondAttribute="bottom" constant="18" id="PZe-q9-4T1"/>
                             <constraint firstItem="6Ll-vH-rzw" firstAttribute="height" secondItem="xNw-5t-PV1" secondAttribute="height" id="VHF-AE-xLM"/>
                             <constraint firstItem="tsX-nq-Tbt" firstAttribute="top" secondItem="NfU-dO-9a3" secondAttribute="bottom" constant="8" id="VZ7-Fh-KDJ"/>
-                            <constraint firstItem="yD0-bq-Vn5" firstAttribute="top" secondItem="CpS-JG-BNe" secondAttribute="bottom" constant="15" id="ZEg-lX-VoU"/>
-                            <constraint firstAttribute="width" secondItem="yD0-bq-Vn5" secondAttribute="width" multiplier="3" id="ZVF-6h-7A9"/>
+                            <constraint firstItem="yD0-bq-Vn5" firstAttribute="top" secondItem="CpS-JG-BNe" secondAttribute="bottom" constant="35" id="ZEg-lX-VoU"/>
+                            <constraint firstAttribute="width" secondItem="yD0-bq-Vn5" secondAttribute="width" multiplier="2.6" id="ZVF-6h-7A9"/>
+                            <constraint firstAttribute="centerY" secondItem="6Ll-vH-rzw" secondAttribute="centerY" multiplier="0.78" id="a5S-mT-VZd"/>
                             <constraint firstAttribute="centerY" secondItem="HlB-jk-B4F" secondAttribute="centerY" id="aNA-Rw-67M"/>
+                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="top" secondItem="dE6-9f-JIa" secondAttribute="bottom" constant="30" id="cht-B0-Wve"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5zk-aF-uFU" secondAttribute="trailing" constant="30" id="d9q-B3-gAc"/>
                             <constraint firstItem="6Ll-vH-rzw" firstAttribute="top" secondItem="dE6-9f-JIa" secondAttribute="bottom" constant="30" id="eMy-rr-aFl"/>
                             <constraint firstAttribute="centerY" secondItem="6Ll-vH-rzw" secondAttribute="centerY" multiplier="0.85" id="fbu-PX-mo8"/>
                             <constraint firstAttribute="centerY" secondItem="yD0-bq-Vn5" secondAttribute="centerY" multiplier="2" id="fgV-5T-30L"/>
-                            <constraint firstItem="6Ll-vH-rzw" firstAttribute="width" secondItem="hO1-Xs-Qvs" secondAttribute="width" multiplier="1/8" id="lKJ-hi-jys"/>
+                            <constraint firstItem="6Ll-vH-rzw" firstAttribute="width" secondItem="hO1-Xs-Qvs" secondAttribute="width" multiplier="1/9" id="lKJ-hi-jys"/>
                             <constraint firstItem="ITr-a4-c3s" firstAttribute="top" secondItem="7ZI-qF-sWo" secondAttribute="bottom" constant="8" id="lON-NE-a24"/>
+                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="width" secondItem="hO1-Xs-Qvs" secondAttribute="width" id="liM-AI-KDJ"/>
                             <constraint firstItem="aPh-28-rpl" firstAttribute="leading" secondItem="dE6-9f-JIa" secondAttribute="leading" id="mMX-Fu-fks"/>
                             <constraint firstItem="NfU-dO-9a3" firstAttribute="top" secondItem="xNw-5t-PV1" secondAttribute="bottom" constant="8" id="nIq-RX-uHM"/>
                             <constraint firstAttribute="centerX" secondItem="aPh-28-rpl" secondAttribute="centerX" id="nwk-JU-SUl"/>
                             <constraint firstAttribute="centerX" secondItem="dE6-9f-JIa" secondAttribute="centerX" id="nx1-2I-cw0"/>
                             <constraint firstItem="6Ll-vH-rzw" firstAttribute="width" secondItem="xNw-5t-PV1" secondAttribute="width" id="pCF-cw-TO8"/>
                             <constraint firstAttribute="centerX" secondItem="HlB-jk-B4F" secondAttribute="centerX" id="pCd-4D-ZnA"/>
+                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="centerX" secondItem="dE6-9f-JIa" secondAttribute="centerX" id="q4a-7H-kVi"/>
+                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="top" secondItem="6Ll-vH-rzw" secondAttribute="bottom" constant="-33.5" id="qeT-LO-Lqa"/>
                             <constraint firstItem="j3n-5d-Vpp" firstAttribute="top" secondItem="6Ll-vH-rzw" secondAttribute="bottom" constant="8" id="rRS-AD-zEe"/>
                             <constraint firstAttribute="width" secondItem="HlB-jk-B4F" secondAttribute="width" id="s9M-Ch-eFC"/>
                             <constraint firstAttribute="height" secondItem="yD0-bq-Vn5" secondAttribute="height" multiplier="5" id="tLq-YR-iKf"/>
@@ -1063,7 +1218,12 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <exclude reference="s9M-Ch-eFC"/>
                                 <exclude reference="fgV-5T-30L"/>
                                 <exclude reference="tLq-YR-iKf"/>
+                                <exclude reference="4kM-ZY-HMn"/>
+                                <exclude reference="6Xj-sG-abM"/>
+                                <exclude reference="qeT-LO-Lqa"/>
                                 <exclude reference="uIn-FU-mcB"/>
+                                <exclude reference="FNQ-3d-fUS"/>
+                                <exclude reference="eMy-rr-aFl"/>
                                 <exclude reference="fbu-PX-mo8"/>
                                 <exclude reference="MfF-aU-48p"/>
                             </mask>
@@ -1072,17 +1232,28 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                     <navigationItem key="navigationItem" title="PROFILE" id="Ees-Q6-ER9">
                         <barButtonItem key="leftBarButtonItem" image="menu icon" id="utw-X2-2sl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="ugQ-wB-WwK" kind="presentation" modalPresentationStyle="overFullScreen" id="Tnf-Lp-0ym"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="balance" destination="NfU-dO-9a3" id="s4G-yS-ABI"/>
+                        <outlet property="balanceIcon" destination="xNw-5t-PV1" id="1xP-fc-Pqa"/>
                         <outlet property="bg" destination="HlB-jk-B4F" id="XoJ-kM-rgs"/>
+                        <outlet property="likes" destination="j3n-5d-Vpp" id="xyM-NU-zD1"/>
+                        <outlet property="likesIcon" destination="6Ll-vH-rzw" id="XyZ-61-nku"/>
+                        <outlet property="line" destination="A3L-ah-rEZ" id="9qM-VA-Xfi"/>
+                        <outlet property="name" destination="dE6-9f-JIa" id="Rue-UZ-5vu"/>
                         <outlet property="portrait" destination="yD0-bq-Vn5" id="pCD-ic-omV"/>
                         <outlet property="readyButton" destination="5zk-aF-uFU" id="x5L-gp-YHr"/>
+                        <outlet property="tasks" destination="ITr-a4-c3s" id="i6C-Dx-v2J"/>
+                        <outlet property="tasksIcon" destination="7ZI-qF-sWo" id="QOa-WF-Vt6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gO-S2-JeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3344" y="-96"/>
+            <point key="canvasLocation" x="3344" y="-110"/>
         </scene>
         <!--BankCards-->
         <scene sceneID="cdu-GP-DPh">
@@ -1355,7 +1526,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rSQ-V1-dwX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.14117647059999999" green="0.67843137249999996" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.22352941176470589" green="0.77254901960784317" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="30L-iT-h7x" kind="relationship" relationship="viewControllers" id="5x2-ja-gQM"/>
@@ -1479,25 +1650,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="2532" y="1827"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2Az-kS-a9g">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zEh-QX-0fw" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fNK-sr-Te6"/>
-                        <viewControllerLayoutGuide type="bottom" id="qrA-El-G8U"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OoI-nj-eBC">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nuB-cD-X8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3882" y="-96"/>
-        </scene>
     </scenes>
     <resources>
         <image name="balance icon" width="85" height="85"/>
@@ -1513,6 +1665,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="my portrait" width="1280" height="1024"/>
         <image name="profile" width="25" height="25"/>
         <image name="profile_black" width="24" height="24"/>
+        <image name="set address icon" width="100" height="100"/>
         <image name="status ok" width="56" height="56"/>
         <image name="tasks icon" width="85" height="85"/>
     </resources>
