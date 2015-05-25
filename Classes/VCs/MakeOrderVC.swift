@@ -25,7 +25,7 @@ class MakeOrderVC: UIViewController {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
         name = dateFormatter.stringFromDate(now)
-        self.audioRecorder.startRecording(name)
+        self.audioRecorder.startRecording()
     }
     @IBAction func stopRecording(sender: AnyObject) {
         self.audioRecorder.stopRecordng()

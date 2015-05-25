@@ -21,7 +21,7 @@ class AudioPlayer : NSObject, AVAudioPlayerDelegate{
     
     func playAudio(path : NSURL){
         
-        println("file URL \(path)")
+        //println("file URL \(path)")
         //if it's ready playing an audio
         if (audioPlayer != nil) {
             if (audioPlayer!.playing){

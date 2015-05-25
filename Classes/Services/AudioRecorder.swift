@@ -20,6 +20,15 @@ class AudioRecorder: NSObject, AVAudioRecorderDelegate{
         audioContext.active()
     }
     
+    func initRecorder(name : NSString){
+        var error: NSError?
+        let audioRecordingURL = AudioManager().audioDir().URLByAppendingPathComponent("\(name).m4a")
+        audioRecorder = AVAudioRecorder(URL: audioRecordingURL,
+            settings: audioRecordingSettings(),
+            error: &error)
+        audioRecorder?.meteringEnabled = true
+    }
+    
     func audioRecordingPath() -> NSURL{
         let fileManager = NSFileManager()
         let documentsFolderUrl = fileManager.URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask,
@@ -52,14 +61,7 @@ class AudioRecorder: NSObject, AVAudioRecorderDelegate{
         }
     }
     
-    func startRecording(name: NSString){
-        var error: NSError?
-        
-        let audioRecordingURL = AudioManager().audioDir().URLByAppendingPathComponent("\(name).m4a")
-        
-        audioRecorder = AVAudioRecorder(URL: audioRecordingURL,
-            settings: audioRecordingSettings(),
-            error: &error)
+    func startRecording(){
         audioContext.switchRecord()
         audioContext.disableProximityMonitor()
         if let recorder = audioRecorder{

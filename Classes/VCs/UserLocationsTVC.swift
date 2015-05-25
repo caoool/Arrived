@@ -23,7 +23,6 @@ class UserLocationsTVC: UITableViewController, MKMapViewDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
 
         
-        
     }
     
     override func viewWillAppear(animated: Bool) {

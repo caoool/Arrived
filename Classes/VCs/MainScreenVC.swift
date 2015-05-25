@@ -10,12 +10,7 @@ import UIKit
 import AVFoundation
 import Foundation
 
-class RecordedAudio: NSObject {
-    var title: String?
-    var filePathURL: String?
-}
-
-class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
+class MainScreenVC: UITabBarController, UITabBarDelegate{
     
     private var buttonImage: UIImage? = UIImage(named: "center button")
     private var buttonHightLightImage: UIImage?
@@ -35,11 +30,12 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
     }
     
     // audio related
+    
     private var hasRecording = false
-    private var soundPlayer : AVAudioPlayer?
-    private var soundRecorder : AVAudioRecorder?
-    private var session : AVAudioSession?
-    private var soundPath : String?
+    var audioRecorder : AudioRecorder = AudioRecorder()
+    var audioPlayer : AudioPlayer = AudioPlayer()
+    var audioManager : AudioManager = AudioManager()
+    var name : NSString = "Recording"
     
     private var waveformView = SiriWaveformView()
     private var recordingView = UIView()
@@ -58,38 +54,17 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initAudioRecorder()
+        let now = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
+        name = dateFormatter.stringFromDate(now)
+        audioRecorder.initRecorder(name)
         initWaveformView()
         initRecordingView()
-        
+    
         customizeColorOfBarItems()
         addCenterRaisedButton()
         addButtonLongPressGuesture()
-    }
-    
-    func initAudioRecorder() {
-        soundPath = "\(NSTemporaryDirectory())test.wav"
-        
-        let url = NSURL(fileURLWithPath: soundPath!)
-        
-        session = AVAudioSession.sharedInstance()
-        session?.setActive(true, error: nil)
-        
-        var error : NSError?
-        
-        session?.setCategory(AVAudioSessionCategoryPlayAndRecord, error: &error)
-        
-        soundRecorder = AVAudioRecorder(URL: url, settings: nil, error: &error)
-        soundRecorder?.meteringEnabled = true
-        
-        if(error != nil)
-        {
-            println("Error initializing the recorder: \(error)")
-        }
-        
-        soundRecorder?.delegate = self
-        soundRecorder?.prepareToRecord()
     }
     
     func initWaveformView() {
@@ -175,8 +150,8 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
         Update waveform when recording
     */
     func updateWaveform() {
-        soundRecorder?.updateMeters()
-        var normalizedValue = pow(10, soundRecorder!.averagePowerForChannel(0) / 20)
+        self.audioRecorder.audioRecorder?.updateMeters()
+        var normalizedValue = pow(10, self.audioRecorder.audioRecorder!.averagePowerForChannel(0) / 20)
         waveformView.updateWithLevel(CGFloat(normalizedValue))
     }
     
@@ -220,46 +195,24 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
     }
     
     func recordAudio() {
-        session?.requestRecordPermission(){
-            granted in
-            if(granted == true)
-            {
-                self.soundRecorder?.record()
-                
-                // add waveform view
-                self.view.addSubview(self.recordingView)
-                self.view.bringSubviewToFront(self.button)
-            }
-            else
-            {
-                println("Unable to record")
-            }
-        }
+        self.view.addSubview(self.recordingView)
+        self.view.bringSubviewToFront(self.button)
+        self.audioRecorder.startRecording()
+        
     }
     
     func stopRecording() {
-        soundRecorder?.stop()
-        
+        //soundRecorder?.stop()
+        self.audioRecorder.stopRecordng()
         // remove waveform view
         recordingView.removeFromSuperview()
         hasRecording = true
     }
     
     func playAudio() {
-        let url = NSURL(fileURLWithPath: soundPath!)
-        var error : NSError?
         
-        soundPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
-        
-        if(error == nil)
-        {
-            soundPlayer?.delegate = self
-            soundPlayer?.play()
-        }
-        else
-        {
-            println("Error initializing player \(error)")
-        }
+        let path = audioManager.audioURLWithName(name)
+        self.audioPlayer.playAudio(path)
         hasRecording = false
     }
     

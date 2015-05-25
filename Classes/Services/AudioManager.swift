@@ -22,7 +22,7 @@ class AudioManager: NSObject {
             fileManager.createDirectoryAtURL(userFolderUrl, withIntermediateDirectories: true, attributes: nil, error: nil)
             println("audio folder created")
         }
-        println("audio folder is \(userFolderUrl)")
+        //println("audio folder is \(userFolderUrl)")
         return userFolderUrl
     }
     
@@ -54,7 +54,7 @@ class AudioManager: NSObject {
         return true
     }
     
-    func removeAduioWithName(name: NSString) -> Bool{
+    func removeAudioWithName(name: NSString) -> Bool{
         let path = self.audioURLWithName(name)
         if self.exists(path.absoluteString!) {
             let error : NSErrorPointer = nil

@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class User {
     
     struct location {
@@ -27,9 +25,44 @@ class User {
         private var cvv: String
     }
     
+    var uid : Int? = nil
+    var sid : String? = nil
+    var regTime : Int? = nil
+    var deviceId : String? = nil
+    var token : String? = nil
+    var sessionValidTime : Int = 3
+    
     private var locations = [location]?()
     private var bankCards = [bankCard]?()
-    var id = 0
+    
+    func saveLoginInfo() -> Bool{
+        var login : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        if (uid == nil || sid == nil || regTime == nil || deviceId == nil || token == nil){
+            return false
+        } else {
+            login.setInteger(uid!, forKey: "uid")
+            login.setObject(sid, forKey: "sid")
+            login.setInteger(regTime!, forKey: "regTime")
+            login.setObject(deviceId, forKey: "deviceId")
+            login.setObject(token, forKey: "token")
+        }
+        return true
+    }
+    
+    func verifySession() -> Bool{
+        var login = NSUserDefaults.standardUserDefaults()
+        let regTime : Int = login.integerForKey("regTime")
+        let currentTime = NSDate()
+        let curTime = Int(currentTime.timeIntervalSince1970)
+        sessionValidTime = sessionValidTime * 24 * 60 * 60
+        let temp = regTime + sessionValidTime
+        if (temp > curTime){
+            return true
+        }
+        return false
+    }
+    
+    
     
 
 }

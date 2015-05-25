@@ -924,7 +924,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-OZ-hca">
-                                <rect key="frame" x="108" y="313" width="84.5" height="20"/>
+                                <rect key="frame" x="108" y="313" width="85" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -936,7 +936,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bank Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-we-Bas">
-                                <rect key="frame" x="403" y="313" width="94.5" height="20"/>
+                                <rect key="frame" x="403" y="313" width="95" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -954,25 +954,25 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
-                                <rect key="frame" x="400" y="50.5" width="100" height="100"/>
+                                <rect key="frame" x="400" y="51" width="100" height="100"/>
                                 <state key="normal" image="set pin icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-cb-L2p">
-                                <rect key="frame" x="437.5" y="158.5" width="27" height="20"/>
+                                <rect key="frame" x="438" y="159" width="27" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-qX-lJm">
-                                <rect key="frame" x="100" y="50.5" width="100" height="100"/>
+                                <rect key="frame" x="100" y="51" width="100" height="100"/>
                                 <state key="normal" image="set phone icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-iD-Wq0">
-                                <rect key="frame" x="125" y="158.5" width="51" height="20"/>
+                                <rect key="frame" x="125" y="159" width="51" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -984,7 +984,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Support" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-b3-MI2">
-                                <rect key="frame" x="416.5" y="458" width="66.5" height="20"/>
+                                <rect key="frame" x="417" y="458" width="67" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1098,12 +1098,12 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taylor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE6-9f-JIa">
-                                <rect key="frame" x="256" y="371" width="87" height="17.5"/>
+                                <rect key="frame" x="256" y="371" width="87" height="18"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="15"/>
                                 <color key="textColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zk-aF-uFU">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zk-aF-uFU">
                                 <rect key="frame" x="498" y="186" width="56" height="56"/>
                                 <state key="normal" image="status ok">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1112,38 +1112,38 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="changeStatus:" destination="zRY-j3-8Ei" eventType="touchUpInside" id="kfV-ED-lzY"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balance icon" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-5t-PV1">
-                                <rect key="frame" x="482.5" y="351" width="66.5" height="67"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="balance icon" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-5t-PV1">
+                                <rect key="frame" x="483" y="351" width="67" height="67"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tasks icon" translatesAutoresizingMaskIntoConstraints="NO" id="7ZI-qF-sWo">
-                                <rect key="frame" x="51" y="351" width="66.5" height="67"/>
+                                <rect key="frame" x="51" y="351" width="67" height="67"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfU-dO-9a3" customClass="UICountingLabel">
-                                <rect key="frame" x="494" y="426" width="43.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfU-dO-9a3" customClass="UICountingLabel">
+                                <rect key="frame" x="494" y="426" width="44" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-nq-Tbt">
-                                <rect key="frame" x="484" y="454" width="62.5" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-nq-Tbt">
+                                <rect key="frame" x="484" y="454" width="63" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8H-L3-oTb">
-                                <rect key="frame" x="280" y="454" width="37.5" height="19.5"/>
+                                <rect key="frame" x="280" y="454" width="38" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTQ-FY-skW">
-                                <rect key="frame" x="63.5" y="454" width="43" height="19.5"/>
+                                <rect key="frame" x="64" y="454" width="43" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITr-a4-c3s" customClass="UICountingLabel">
-                                <rect key="frame" x="73.5" y="426" width="22" height="20"/>
+                                <rect key="frame" x="74" y="426" width="22" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1154,21 +1154,21 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my portrait" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-bq-Vn5" userLabel="portrait">
-                                <rect key="frame" x="184" y="99" width="231" height="231.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="my portrait" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-bq-Vn5" userLabel="portrait">
+                                <rect key="frame" x="184" y="99" width="231" height="232"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yD0-bq-Vn5" secondAttribute="height" multiplier="1:1" id="Pg0-Zv-LaK"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a beautiful day, people need to buy my album" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3L-ah-rEZ">
-                                <rect key="frame" x="0.0" y="418.5" width="600" height="17"/>
+                                <rect key="frame" x="0.0" y="419" width="600" height="17"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="15"/>
                                 <color key="textColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes icon" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-vH-rzw">
-                                <rect key="frame" x="266.5" y="351" width="67" height="67"/>
+                                <rect key="frame" x="267" y="351" width="67" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Ll-vH-rzw" secondAttribute="height" multiplier="1:1" id="uIl-bb-jXY"/>
                                 </constraints>
@@ -1297,13 +1297,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
                                             <rect key="frame" x="8" y="66" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
                                             <rect key="frame" x="8" y="95" width="584" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1692,7 +1692,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="edc-f6-2OI"/>
-        <segue reference="y0z-cC-yKA"/>
+        <segue reference="Z22-2j-XGJ"/>
         <segue reference="OIk-6K-j7x"/>
     </inferredMetricsTieBreakers>
 </document>
