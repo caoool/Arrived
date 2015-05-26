@@ -158,6 +158,29 @@ func bounceView(myView: UIView) {
         }, completion: nil)
 }
 
+func fadeInView(myView: UIView, t: NSTimeInterval) {
+    UIView.animateWithDuration(t, animations: {
+        myView.alpha = 1.0
+    })
+}
+
+func fadeOutView(myView: UIView, t: NSTimeInterval) {
+    UIView.animateWithDuration(t, animations: {
+        myView.alpha = 0
+    })
+}
+
+/**
+    rounded corner for only certain sides of the frame
+*/
+extension UIView {
+    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.CGPath
+        self.layer.mask = mask
+    }
+}
 
 
 

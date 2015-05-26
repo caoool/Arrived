@@ -8,8 +8,147 @@
 
 import UIKit
 
-class UserBankCardsTVC: UITableViewController {
+class UserBankCardsTVC: UITableViewController, UITableViewDelegate{
 
+    private struct bankCard {
+        var name: String?
+        var number: Int?
+        var exp: String?
+        var cvv: Int?
+    }
+    
+    private var card1 = bankCard(name: "Lu Cao", number: 4111111111111111, exp: "May, 2016", cvv: 123)
+    private var card2 = bankCard(name: "Yetian Mao", number: 5500000000000004, exp: "June, 2017", cvv: 345)
+    private var card3 = bankCard(name: "Mr. WTF", number: 340000000000009, exp: "Jan, 2025", cvv: 567)
+    
+    private var testingCards = [bankCard]()
+    
+    private var checkedIndexPath : NSIndexPath?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // hide seperator below each cell
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        testingCards = [card1, card2, card3]
+        
+//        tableView.contentInset = UIEdgeInsets(top: navigationController!.navigationBar.bounds.height + 35, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        title = "Bank Cards"
+        tableView.reloadData()
+    }
+    
+    // MARK: - Functionalities
+    
+    func checkCardType(sender: SHSPhoneTextField, icon: UIImageView) {
+        let type = detectCreditCardType(sender.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))
+        switch type {
+        case "Visa":
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
+            sender.setFormattedText(sender.text)
+            icon.image = UIImage(named: "ic_card_visa")
+        case "MasterCard":
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
+            sender.setFormattedText(sender.text)
+            icon.image = UIImage(named: "ic_card_master_card")
+        case "American Express":
+            sender.formatter.setDefaultOutputPattern("#### ###### #####")
+            sender.setFormattedText(sender.text)
+            icon.image = UIImage(named: "ic_card_american_express")
+        case "Discover":
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
+            sender.setFormattedText(sender.text)
+            icon.image = UIImage(named: "ic_card_discover")
+        case "JCB":
+            sender.formatter.setDefaultOutputPattern("#### #### #### ####")
+            sender.setFormattedText(sender.text)
+            icon.image = UIImage(named: "ic_credit_card")
+        case "Invalid":
+            sender.formatter.setDefaultOutputPattern("####################")
+            sender.setFormattedText(sender.text)
+            icon.image = UIImage(named: "ic_credit_card")
+        default:
+            return
+        }
+    }
+    
+    // MARK: - TableView Delegates
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return testingCards.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("UserBankCardsTVCell", forIndexPath: indexPath) as! UserBankCardsTVCell
+        
+        var bankCard = testingCards[indexPath.row]
+        cell.bankCardNumber.text = "\(bankCard.number!)"
+        cell.expirationDate.text = bankCard.exp
+        cell.fullName.text = bankCard.name
+        cell.cvv.text = "\(bankCard.cvv!)"
+        
+        cell.selectionStyle = .None
+        
+        checkCardType(cell.bankCardNumber, icon: cell.icon)
+        
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if (self.checkedIndexPath != nil) {
+            if let var cell = tableView.cellForRowAtIndexPath(self.checkedIndexPath!) as? UserBankCardsTVCell {
+                fadeOutView(cell.defaultIndicator, 0.35)
+            }
+            
+        }
+        
+        var cell = tableView.cellForRowAtIndexPath(indexPath) as! UserBankCardsTVCell
+        fadeInView(cell.defaultIndicator, 0.35)
+        
+        self.checkedIndexPath = indexPath
+    }
+    
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            // Delete the row from the data source
+            testingCards.removeAtIndex(indexPath.row)
+            
+            // also need to delete from the server)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    
+    
+    // Override to support rearranging the table view.
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+        
+    }
+    
+    // MARK: - Navigation
+    
+    
+    @IBAction func dismissScene(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    /*
     var bankCards = [[String:AnyObject]]()
     
     override func viewDidLoad() {
@@ -196,7 +335,7 @@ class UserBankCardsTVC: UITableViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-    
+    */
     
     
     

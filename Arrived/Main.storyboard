@@ -917,26 +917,29 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="187-pj-QFR">
-                                <rect key="frame" x="100" y="205" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="187-pj-QFR">
+                                <rect key="frame" x="107.5" y="212.5" width="85" height="85"/>
                                 <state key="normal" image="set addesses icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-OZ-hca">
-                                <rect key="frame" x="108" y="313" width="84.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-OZ-hca">
+                                <rect key="frame" x="108" y="305.5" width="84.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-Hy-7CK">
-                                <rect key="frame" x="400" y="205" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-Hy-7CK">
+                                <rect key="frame" x="407.5" y="212.5" width="85" height="85"/>
                                 <state key="normal" image="set cards icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dDP-cd-2ik" kind="show" id="kMa-gR-C1C"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bank Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-we-Bas">
-                                <rect key="frame" x="403" y="313" width="94.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-we-Bas">
+                                <rect key="frame" x="403" y="305.5" width="94.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -953,50 +956,50 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="unwindToMainViewController:" destination="ugQ-wB-WwK" eventType="touchUpInside" id="Amt-br-v8S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
-                                <rect key="frame" x="400" y="50.5" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
+                                <rect key="frame" x="407.5" y="58" width="85" height="85"/>
                                 <state key="normal" image="set pin icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-cb-L2p">
-                                <rect key="frame" x="437.5" y="158.5" width="27" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-cb-L2p">
+                                <rect key="frame" x="436.5" y="151" width="27" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-qX-lJm">
-                                <rect key="frame" x="100" y="50.5" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-qX-lJm">
+                                <rect key="frame" x="107.5" y="58" width="85" height="85"/>
                                 <state key="normal" image="set phone icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-iD-Wq0">
-                                <rect key="frame" x="125" y="158.5" width="51" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-iD-Wq0">
+                                <rect key="frame" x="125" y="151" width="51" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-Pf-us9">
-                                <rect key="frame" x="400" y="350" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-Pf-us9">
+                                <rect key="frame" x="407.5" y="357.5" width="85" height="85"/>
                                 <state key="normal" image="support icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Support" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-b3-MI2">
-                                <rect key="frame" x="416.5" y="458" width="66.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-b3-MI2">
+                                <rect key="frame" x="416.5" y="450.5" width="66.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-N6-t5E">
-                                <rect key="frame" x="100" y="350" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-N6-t5E">
+                                <rect key="frame" x="107.5" y="357.5" width="85" height="85"/>
                                 <state key="normal" image="logout icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-yA-a6q">
-                                <rect key="frame" x="122" y="458" width="56" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-yA-a6q">
+                                <rect key="frame" x="122" y="450.5" width="56" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1104,7 +1107,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zk-aF-uFU">
-                                <rect key="frame" x="498" y="186" width="56" height="56"/>
+                                <rect key="frame" x="512" y="186" width="56" height="56"/>
                                 <state key="normal" image="status ok">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1119,13 +1122,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <rect key="frame" x="51" y="351" width="66.5" height="67"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfU-dO-9a3" customClass="UICountingLabel">
-                                <rect key="frame" x="494" y="426" width="43.5" height="20"/>
+                                <rect key="frame" x="494.5" y="426" width="43.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-nq-Tbt">
-                                <rect key="frame" x="484" y="454" width="62.5" height="19.5"/>
+                                <rect key="frame" x="484.5" y="454" width="62.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1137,13 +1140,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTQ-FY-skW">
-                                <rect key="frame" x="63.5" y="454" width="43" height="19.5"/>
+                                <rect key="frame" x="63" y="454" width="43" height="19.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITr-a4-c3s" customClass="UICountingLabel">
-                                <rect key="frame" x="73.5" y="426" width="22" height="20"/>
+                                <rect key="frame" x="73" y="426" width="22" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1161,14 +1164,14 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a beautiful day, people need to buy my album" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3L-ah-rEZ">
-                                <rect key="frame" x="0.0" y="418.5" width="600" height="17"/>
+                                <rect key="frame" x="0.0" y="400.5" width="600" height="17"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="15"/>
                                 <color key="textColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes icon" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-vH-rzw">
-                                <rect key="frame" x="266.5" y="351" width="67" height="67"/>
+                                <rect key="frame" x="266" y="351" width="67" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Ll-vH-rzw" secondAttribute="height" multiplier="1:1" id="uIl-bb-jXY"/>
                                 </constraints>
@@ -1203,8 +1206,8 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <constraint firstAttribute="width" secondItem="yD0-bq-Vn5" secondAttribute="width" multiplier="2.6" id="ZVF-6h-7A9"/>
                             <constraint firstAttribute="centerY" secondItem="6Ll-vH-rzw" secondAttribute="centerY" multiplier="0.78" id="a5S-mT-VZd"/>
                             <constraint firstAttribute="centerY" secondItem="HlB-jk-B4F" secondAttribute="centerY" id="aNA-Rw-67M"/>
-                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="top" secondItem="dE6-9f-JIa" secondAttribute="bottom" constant="30" id="cht-B0-Wve"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5zk-aF-uFU" secondAttribute="trailing" constant="30" id="d9q-B3-gAc"/>
+                            <constraint firstItem="A3L-ah-rEZ" firstAttribute="top" secondItem="dE6-9f-JIa" secondAttribute="bottom" constant="12" id="cht-B0-Wve"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5zk-aF-uFU" secondAttribute="trailing" constant="16" id="d9q-B3-gAc"/>
                             <constraint firstItem="6Ll-vH-rzw" firstAttribute="top" secondItem="dE6-9f-JIa" secondAttribute="bottom" constant="30" id="eMy-rr-aFl"/>
                             <constraint firstAttribute="centerY" secondItem="6Ll-vH-rzw" secondAttribute="centerY" multiplier="0.85" id="fbu-PX-mo8"/>
                             <constraint firstAttribute="centerY" secondItem="yD0-bq-Vn5" secondAttribute="centerY" multiplier="2" id="fgV-5T-30L"/>
@@ -1275,60 +1278,113 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <scene sceneID="cdu-GP-DPh">
             <objects>
                 <tableViewController title="BankCards" id="Uud-qF-xxb" customClass="UserBankCardsTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="22" sectionFooterHeight="22" id="FGc-Gb-rFP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="FGc-Gb-rFP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserBankCardsTVCell" rowHeight="135" id="4NG-qZ-O8b" customClass="UserBankCardsTVCell" customModule="Arrived" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserBankCardsTVCell" id="4NG-qZ-O8b" customClass="UserBankCardsTVCell" customModule="Arrived" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4NG-qZ-O8b" id="nYu-nS-bFb">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bankCardNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LI-IH-C4H">
-                                            <rect key="frame" x="8" y="8" width="584" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expirationDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-sM-I9t">
-                                            <rect key="frame" x="8" y="37" width="584" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
-                                            <rect key="frame" x="8" y="66" width="584" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
-                                            <rect key="frame" x="8" y="95" width="584" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        </textField>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIR-Em-L6h">
+                                            <rect key="frame" x="8" y="8" width="584" height="133.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expirationDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-sM-I9t">
+                                                    <rect key="frame" x="39.5" y="57" width="116" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-Kl-sTE">
+                                                    <rect key="frame" x="375" y="23" width="26.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-lQ-Ade">
+                                                    <rect key="frame" x="39.5" y="83" width="69.5" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_visa" translatesAutoresizingMaskIntoConstraints="NO" id="K24-vl-h4g">
+                                                    <rect key="frame" x="424" y="83" width="28" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="K24-vl-h4g" secondAttribute="height" multiplier="50:32" id="AUt-cl-1fB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bankCardNumber" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8o-98-lBo" customClass="SHSPhoneTextField">
+                                                    <rect key="frame" x="217" y="22" width="150" height="20"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yat-os-IY4">
+                                                    <rect key="frame" x="554" y="0.0" width="30" height="133.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default label" translatesAutoresizingMaskIntoConstraints="NO" id="PPO-00-kLJ">
+                                                            <rect key="frame" x="0.0" y="0.5" width="30" height="133.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="PPO-00-kLJ" firstAttribute="leading" secondItem="yat-os-IY4" secondAttribute="leading" id="96W-dU-Qvg"/>
+                                                        <constraint firstItem="PPO-00-kLJ" firstAttribute="top" secondItem="yat-os-IY4" secondAttribute="top" id="QDn-ha-wTp"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Vff-DG-l59"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PPO-00-kLJ" secondAttribute="bottom" id="e14-81-fI0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PPO-00-kLJ" secondAttribute="trailing" id="ybv-CD-d1M"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="JCw-sM-I9t" firstAttribute="leading" secondItem="Dc5-lQ-Ade" secondAttribute="leading" id="0nb-JA-XOS"/>
+                                                <constraint firstAttribute="centerX" secondItem="K24-vl-h4g" secondAttribute="centerX" multiplier="2:3" id="2LS-pL-NOk"/>
+                                                <constraint firstItem="T6q-Kl-sTE" firstAttribute="centerY" secondItem="Q8o-98-lBo" secondAttribute="centerY" id="5Kc-NR-LhW"/>
+                                                <constraint firstItem="Dc5-lQ-Ade" firstAttribute="top" secondItem="JCw-sM-I9t" secondAttribute="bottom" constant="8" symbolic="YES" id="7Ak-i6-YRy"/>
+                                                <constraint firstItem="T6q-Kl-sTE" firstAttribute="leading" secondItem="Q8o-98-lBo" secondAttribute="trailing" constant="8" symbolic="YES" id="Dic-V2-V6t"/>
+                                                <constraint firstItem="K24-vl-h4g" firstAttribute="top" secondItem="Dc5-lQ-Ade" secondAttribute="top" id="Fix-Ej-3Gc"/>
+                                                <constraint firstAttribute="centerX" secondItem="T6q-Kl-sTE" secondAttribute="centerX" multiplier="3:5" id="GCA-CQ-Y2t"/>
+                                                <constraint firstAttribute="centerX" secondItem="JCw-sM-I9t" secondAttribute="centerX" multiplier="3:1" id="L7z-Gl-MNU"/>
+                                                <constraint firstItem="K24-vl-h4g" firstAttribute="top" secondItem="JCw-sM-I9t" secondAttribute="top" id="L8r-g7-cGE"/>
+                                                <constraint firstItem="JCw-sM-I9t" firstAttribute="top" secondItem="Q8o-98-lBo" secondAttribute="bottom" constant="15" id="LrM-P8-LQ6"/>
+                                                <constraint firstAttribute="centerX" secondItem="Q8o-98-lBo" secondAttribute="centerX" id="NcG-Lh-9JI"/>
+                                                <constraint firstAttribute="bottom" secondItem="yat-os-IY4" secondAttribute="bottom" id="VYW-Ff-iLx"/>
+                                                <constraint firstAttribute="centerY" secondItem="T6q-Kl-sTE" secondAttribute="centerY" id="XOf-PN-bWb"/>
+                                                <constraint firstItem="JCw-sM-I9t" firstAttribute="leading" secondItem="pIR-Em-L6h" secondAttribute="leading" constant="8" id="b2h-uq-AfC"/>
+                                                <constraint firstItem="JCw-sM-I9t" firstAttribute="leading" secondItem="pIR-Em-L6h" secondAttribute="leading" constant="8" id="dHR-Q9-oye"/>
+                                                <constraint firstItem="K24-vl-h4g" firstAttribute="bottom" secondItem="Dc5-lQ-Ade" secondAttribute="bottom" id="dUE-Bc-NaI"/>
+                                                <constraint firstItem="yat-os-IY4" firstAttribute="top" secondItem="pIR-Em-L6h" secondAttribute="top" id="iy5-vg-3ZY"/>
+                                                <constraint firstAttribute="trailing" secondItem="yat-os-IY4" secondAttribute="trailing" id="kQM-fP-Y8M"/>
+                                                <constraint firstAttribute="centerY" secondItem="JCw-sM-I9t" secondAttribute="centerY" constant="0.5" id="kRi-B0-pzT"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="b2h-uq-AfC"/>
+                                                    <exclude reference="dHR-Q9-oye"/>
+                                                    <exclude reference="GCA-CQ-Y2t"/>
+                                                    <exclude reference="XOf-PN-bWb"/>
+                                                    <exclude reference="L8r-g7-cGE"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="T6q-Kl-sTE" firstAttribute="leading" secondItem="nYu-nS-bFb" secondAttribute="leadingMargin" id="CSV-9R-1ga"/>
-                                        <constraint firstItem="JCw-sM-I9t" firstAttribute="top" secondItem="1LI-IH-C4H" secondAttribute="bottom" constant="8" id="Co5-rw-wP4"/>
-                                        <constraint firstItem="JCw-sM-I9t" firstAttribute="leading" secondItem="nYu-nS-bFb" secondAttribute="leadingMargin" id="JLN-Y0-Us3"/>
-                                        <constraint firstItem="1LI-IH-C4H" firstAttribute="trailing" secondItem="nYu-nS-bFb" secondAttribute="trailingMargin" id="Nm4-2O-Ye8"/>
-                                        <constraint firstItem="Dc5-lQ-Ade" firstAttribute="leading" secondItem="nYu-nS-bFb" secondAttribute="leadingMargin" id="Piv-zY-kgT"/>
-                                        <constraint firstItem="Dc5-lQ-Ade" firstAttribute="trailing" secondItem="nYu-nS-bFb" secondAttribute="trailingMargin" id="S1l-gm-3dZ"/>
-                                        <constraint firstItem="T6q-Kl-sTE" firstAttribute="trailing" secondItem="nYu-nS-bFb" secondAttribute="trailingMargin" id="Wgv-Ba-AaW"/>
-                                        <constraint firstItem="1LI-IH-C4H" firstAttribute="leading" secondItem="nYu-nS-bFb" secondAttribute="leadingMargin" id="YNC-XD-jyn"/>
-                                        <constraint firstItem="T6q-Kl-sTE" firstAttribute="top" secondItem="Dc5-lQ-Ade" secondAttribute="bottom" constant="8" id="lcR-WG-Bi0"/>
-                                        <constraint firstItem="1LI-IH-C4H" firstAttribute="top" secondItem="nYu-nS-bFb" secondAttribute="topMargin" id="rf5-DQ-aw5"/>
-                                        <constraint firstItem="JCw-sM-I9t" firstAttribute="trailing" secondItem="nYu-nS-bFb" secondAttribute="trailingMargin" id="tUo-rs-6Yd"/>
-                                        <constraint firstItem="Dc5-lQ-Ade" firstAttribute="top" secondItem="JCw-sM-I9t" secondAttribute="bottom" constant="8" id="zHA-oy-p5t"/>
+                                        <constraint firstItem="pIR-Em-L6h" firstAttribute="leading" secondItem="nYu-nS-bFb" secondAttribute="leadingMargin" id="bqR-QD-MgO"/>
+                                        <constraint firstItem="pIR-Em-L6h" firstAttribute="top" secondItem="nYu-nS-bFb" secondAttribute="topMargin" id="cuT-Ke-RmL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pIR-Em-L6h" secondAttribute="trailing" id="epw-jh-t9f"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pIR-Em-L6h" secondAttribute="bottom" id="jYv-kH-4lm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bankCardNumber" destination="1LI-IH-C4H" id="cc6-ag-DNr"/>
+                                    <outlet property="bankCardNumber" destination="Q8o-98-lBo" id="Y7f-Eu-U6P"/>
                                     <outlet property="cvv" destination="T6q-Kl-sTE" id="gJt-fl-oew"/>
+                                    <outlet property="defaultIndicator" destination="yat-os-IY4" id="tQV-p1-1pT"/>
                                     <outlet property="expirationDate" destination="JCw-sM-I9t" id="tVk-vy-4YK"/>
                                     <outlet property="fullName" destination="Dc5-lQ-Ade" id="Z97-6u-pVB"/>
+                                    <outlet property="icon" destination="K24-vl-h4g" id="sAK-6I-IHn"/>
+                                    <outlet property="myView" destination="pIR-Em-L6h" id="vEk-1N-fxE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1338,18 +1394,24 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Bank Cards" id="LxH-Cr-dBz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="soN-ai-6Sa">
+                    <navigationItem key="navigationItem" title="Bank Cards" id="fef-Yi-pUd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="W5f-yt-j5y">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="addBankCard:" destination="Uud-qF-xxb" id="n68-Be-v1z"/>
+                                <action selector="dismissScene:" destination="Uud-qF-xxb" id="U82-Dx-yl5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mXI-Yv-tRv">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="CRa-R5-hte" kind="show" id="pO6-jP-9jL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYe-vx-3B7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4236" y="-622"/>
+            <point key="canvasLocation" x="5055" y="-603"/>
         </scene>
         <!--Order Detail-->
         <scene sceneID="u98-Ew-Os8">
@@ -1666,9 +1728,207 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="2532" y="1827"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AWi-i3-oSS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDP-cd-2ik" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Ft-xg-7x7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uud-qF-xxb" kind="relationship" relationship="rootViewController" id="3Qu-AX-gHz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxz-4p-aLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4243" y="-603"/>
+        </scene>
+        <!--Add Card-->
+        <scene sceneID="uVQ-PN-wxM">
+            <objects>
+                <viewController title="Add Card" id="CRa-R5-hte" customClass="AddBankCardVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hut-In-JSE"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Kg-Rm-Eav"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OZZ-YI-rT1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="bank card number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gB-T3-3mC" customClass="SHSPhoneTextField">
+                                <rect key="frame" x="16" y="189" width="568" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="TPd-Jk-vQ8"/>
+                                </constraints>
+                                <color key="textColor" red="0.04922578918" green="0.26176006390000001" blue="0.1160980144" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="checkCardType:" destination="CRa-R5-hte" eventType="editingDidEnd" id="QGH-Af-R5s"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="full name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0A-mg-2o0">
+                                <rect key="frame" x="16" y="232" width="568" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Pla-6L-QWG"/>
+                                </constraints>
+                                <color key="textColor" red="0.04922578918" green="0.26176006390000001" blue="0.1160980144" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.13725490200000001" green="0.63529411759999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.13725490200000001" green="0.63529411759999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="exp date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHP-iP-qHq">
+                                <rect key="frame" x="16" y="275" width="251" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="UDu-3t-UpV"/>
+                                </constraints>
+                                <color key="textColor" red="0.04922578918" green="0.26176006390000001" blue="0.1160980144" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditing:" destination="CRa-R5-hte" eventType="editingDidBegin" id="fX2-0E-3Sw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cvv" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oVR-N9-FZn">
+                                <rect key="frame" x="333" y="275" width="251" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XL3-lH-tm7"/>
+                                </constraints>
+                                <color key="textColor" red="0.04922578918" green="0.26176006390000001" blue="0.1160980144" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="trimCVV:" destination="CRa-R5-hte" eventType="editingChanged" id="7Ae-za-lPr"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHi-iP-ybg">
+                                <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H9y-NS-FCu"/>
+                                    <constraint firstAttribute="width" constant="50" id="udI-WB-r5e"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in card info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW0-hU-D6U">
+                                <rect key="frame" x="16" y="85" width="568" height="22"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
+                                <color key="textColor" red="0.13220766973519352" green="0.46221915848888884" blue="0.33912413037212297" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_master_card" translatesAutoresizingMaskIntoConstraints="NO" id="4NX-ay-On0">
+                                <rect key="frame" x="275" y="122" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="gtR-Fh-mqg"/>
+                                    <constraint firstAttribute="width" constant="50" id="qqS-Mo-QfS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_american_express" translatesAutoresizingMaskIntoConstraints="NO" id="H9F-ej-jNU">
+                                <rect key="frame" x="333" y="122" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1WP-ZQ-MmD"/>
+                                    <constraint firstAttribute="width" constant="50" id="bZb-iE-XtG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_visa" translatesAutoresizingMaskIntoConstraints="NO" id="tFV-SU-eCN">
+                                <rect key="frame" x="391" y="122" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="PxN-ak-eYU"/>
+                                    <constraint firstAttribute="height" constant="32" id="rSE-Yw-NMn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_credit_card" translatesAutoresizingMaskIntoConstraints="NO" id="X1r-NY-soO">
+                                <rect key="frame" x="159" y="122" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="gLE-gr-TpA"/>
+                                    <constraint firstAttribute="height" constant="32" id="t2h-vA-TnC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card_discover" translatesAutoresizingMaskIntoConstraints="NO" id="rf1-Bh-eV6">
+                                <rect key="frame" x="217" y="122" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="2J3-Zg-yyi"/>
+                                    <constraint firstAttribute="width" constant="50" id="TYx-BS-vQ3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.10980392160000001" green="0.51372549020000002" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4NX-ay-On0" firstAttribute="leading" secondItem="rf1-Bh-eV6" secondAttribute="trailing" constant="8" id="0j7-Fd-t24"/>
+                            <constraint firstAttribute="centerX" secondItem="5gB-T3-3mC" secondAttribute="centerX" id="1YN-he-FtH"/>
+                            <constraint firstAttribute="centerX" secondItem="Z0A-mg-2o0" secondAttribute="centerX" id="2pC-as-aRM"/>
+                            <constraint firstItem="VW0-hU-D6U" firstAttribute="trailing" secondItem="OZZ-YI-rT1" secondAttribute="trailingMargin" id="3lf-wz-EM7"/>
+                            <constraint firstItem="4NX-ay-On0" firstAttribute="centerY" secondItem="H9F-ej-jNU" secondAttribute="centerY" id="54e-t8-o0O"/>
+                            <constraint firstItem="tFV-SU-eCN" firstAttribute="centerY" secondItem="H9F-ej-jNU" secondAttribute="centerY" id="7Iw-ED-t1x"/>
+                            <constraint firstItem="Z0A-mg-2o0" firstAttribute="top" secondItem="5gB-T3-3mC" secondAttribute="bottom" constant="8" id="CFT-hQ-5G2"/>
+                            <constraint firstItem="oVR-N9-FZn" firstAttribute="top" secondItem="bHi-iP-ybg" secondAttribute="top" id="FFG-dX-U5Y"/>
+                            <constraint firstItem="zHP-iP-qHq" firstAttribute="leading" secondItem="OZZ-YI-rT1" secondAttribute="leadingMargin" id="FiN-tp-Hsv"/>
+                            <constraint firstItem="rf1-Bh-eV6" firstAttribute="centerY" secondItem="4NX-ay-On0" secondAttribute="centerY" id="H2g-Mc-1WR"/>
+                            <constraint firstItem="H9F-ej-jNU" firstAttribute="leading" secondItem="4NX-ay-On0" secondAttribute="trailing" constant="8" id="Q3J-7L-rBB"/>
+                            <constraint firstItem="rf1-Bh-eV6" firstAttribute="leading" secondItem="X1r-NY-soO" secondAttribute="trailing" constant="8" id="V3K-qm-lCY"/>
+                            <constraint firstItem="rf1-Bh-eV6" firstAttribute="centerY" secondItem="X1r-NY-soO" secondAttribute="centerY" id="WgS-aj-M2L"/>
+                            <constraint firstItem="bHi-iP-ybg" firstAttribute="leading" secondItem="zHP-iP-qHq" secondAttribute="trailing" constant="8" id="XKr-xA-UX7"/>
+                            <constraint firstAttribute="centerX" secondItem="4NX-ay-On0" secondAttribute="centerX" constant="0.5" id="dIB-6M-zYj"/>
+                            <constraint firstItem="Z0A-mg-2o0" firstAttribute="trailing" secondItem="OZZ-YI-rT1" secondAttribute="trailingMargin" id="eC1-jL-ewX"/>
+                            <constraint firstItem="5gB-T3-3mC" firstAttribute="trailing" secondItem="OZZ-YI-rT1" secondAttribute="trailingMargin" id="exb-5x-Um3"/>
+                            <constraint firstItem="Z0A-mg-2o0" firstAttribute="leading" secondItem="OZZ-YI-rT1" secondAttribute="leadingMargin" id="faq-IF-Aqo"/>
+                            <constraint firstItem="5gB-T3-3mC" firstAttribute="top" secondItem="4NX-ay-On0" secondAttribute="bottom" constant="35" id="giL-zG-dGs"/>
+                            <constraint firstItem="bHi-iP-ybg" firstAttribute="top" secondItem="Z0A-mg-2o0" secondAttribute="bottom" constant="8" id="gtH-v4-NyI"/>
+                            <constraint firstItem="4NX-ay-On0" firstAttribute="top" secondItem="VW0-hU-D6U" secondAttribute="bottom" constant="15" id="gyc-4U-PXk"/>
+                            <constraint firstItem="zHP-iP-qHq" firstAttribute="top" secondItem="bHi-iP-ybg" secondAttribute="top" id="h4Z-o4-xtz"/>
+                            <constraint firstAttribute="centerY" secondItem="bHi-iP-ybg" secondAttribute="centerY" id="lGa-q9-ufP"/>
+                            <constraint firstItem="oVR-N9-FZn" firstAttribute="leading" secondItem="bHi-iP-ybg" secondAttribute="trailing" constant="8" id="lYr-7m-Vu0"/>
+                            <constraint firstItem="VW0-hU-D6U" firstAttribute="leading" secondItem="OZZ-YI-rT1" secondAttribute="leadingMargin" id="sbs-Tb-dDR"/>
+                            <constraint firstItem="5gB-T3-3mC" firstAttribute="leading" secondItem="OZZ-YI-rT1" secondAttribute="leadingMargin" id="srp-Li-sec"/>
+                            <constraint firstItem="tFV-SU-eCN" firstAttribute="leading" secondItem="H9F-ej-jNU" secondAttribute="trailing" constant="8" id="wPG-eD-hxW"/>
+                            <constraint firstItem="oVR-N9-FZn" firstAttribute="trailing" secondItem="OZZ-YI-rT1" secondAttribute="trailingMargin" id="xct-Le-hNV"/>
+                            <constraint firstAttribute="centerX" secondItem="bHi-iP-ybg" secondAttribute="centerX" constant="0.5" id="yB5-q9-2GY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Card" id="Nju-Y1-eYn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Cov-3E-9Kd">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="popView:" destination="CRa-R5-hte" id="T9C-eA-a0w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="americanExpressImage" destination="H9F-ej-jNU" id="SSn-6N-AQR"/>
+                        <outlet property="bankCardNumberField" destination="5gB-T3-3mC" id="SVk-6f-3H3"/>
+                        <outlet property="cardHolderNameField" destination="Z0A-mg-2o0" id="dwR-df-lSL"/>
+                        <outlet property="cvvField" destination="oVR-N9-FZn" id="fO0-b6-rU5"/>
+                        <outlet property="discoverImage" destination="rf1-Bh-eV6" id="W1g-Li-Uqq"/>
+                        <outlet property="expDateField" destination="zHP-iP-qHq" id="Zw5-4f-uTP"/>
+                        <outlet property="jcbImage" destination="X1r-NY-soO" id="Qq6-OD-NRv"/>
+                        <outlet property="label" destination="VW0-hU-D6U" id="NIK-In-rpn"/>
+                        <outlet property="masterCardImage" destination="4NX-ay-On0" id="oqb-nr-DB0"/>
+                        <outlet property="visaImage" destination="tFV-SU-eCN" id="oj7-eb-4FA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gof-zy-WN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5821" y="-603"/>
+        </scene>
     </scenes>
     <resources>
         <image name="balance icon" width="85" height="85"/>
+        <image name="default label" width="30" height="150"/>
         <image name="ic_card_american_express" width="25" height="16"/>
         <image name="ic_card_discover" width="25" height="16"/>
         <image name="ic_card_master_card" width="25" height="16"/>
@@ -1691,7 +1951,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="tasks icon" width="85" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="edc-f6-2OI"/>
+        <segue reference="CkZ-c3-wOb"/>
         <segue reference="y0z-cC-yKA"/>
         <segue reference="OIk-6K-j7x"/>
     </inferredMetricsTieBreakers>

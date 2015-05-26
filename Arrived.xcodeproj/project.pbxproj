@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8901681B1B1431D300180942 /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890168191B1431D300180942 /* SimpleAlert.swift */; };
+		8901681C1B1431D300180942 /* SimpleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8901681A1B1431D300180942 /* SimpleAlert.xib */; };
 		8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF551AE01ECF00C990DC /* AppDelegate.swift */; };
 		8908FF601AE01ECF00C990DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8908FF5E1AE01ECF00C990DC /* LaunchScreen.xib */; };
 		8908FF6C1AE01ECF00C990DC /* ArrivedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908FF6B1AE01ECF00C990DC /* ArrivedTests.swift */; };
@@ -31,6 +33,8 @@
 		890F54D01B01F4120066E835 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CC1B01F4120066E835 /* AudioPlayer.swift */; };
 		890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CD1B01F4120066E835 /* AudioRecorder.swift */; };
 		890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54D21B01F41D0066E835 /* MakeOrderVC.swift */; };
+		892C17451B14344E00D2D37F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C17441B14344E00D2D37F /* AlertController.swift */; };
+		892C17491B143B2800D2D37F /* AddBankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C17481B143B2800D2D37F /* AddBankCardVC.swift */; };
 		89471C471B09F6C600EFE101 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C3D1B09F6C600EFE101 /* HoshiTextField.swift */; };
 		89471C481B09F6C600EFE101 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89471C3E1B09F6C600EFE101 /* Info.plist */; };
 		89471C491B09F6C600EFE101 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C3F1B09F6C600EFE101 /* IsaoTextField.swift */; };
@@ -106,6 +110,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		890168191B1431D300180942 /* SimpleAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAlert.swift; sourceTree = "<group>"; };
+		8901681A1B1431D300180942 /* SimpleAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleAlert.xib; sourceTree = "<group>"; };
 		8908FF501AE01ECF00C990DC /* Arrived.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arrived.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908FF541AE01ECF00C990DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8908FF551AE01ECF00C990DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		890F54CC1B01F4120066E835 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		890F54CD1B01F4120066E835 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		890F54D21B01F41D0066E835 /* MakeOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeOrderVC.swift; sourceTree = "<group>"; };
+		892C17441B14344E00D2D37F /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		892C17481B143B2800D2D37F /* AddBankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBankCardVC.swift; sourceTree = "<group>"; };
 		89471C3D1B09F6C600EFE101 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
 		89471C3E1B09F6C600EFE101 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89471C3F1B09F6C600EFE101 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
@@ -175,7 +183,7 @@
 		8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationsTVCell.swift; sourceTree = "<group>"; };
 		8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBankCardsTVCell.swift; sourceTree = "<group>"; };
 		8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationVC.swift; sourceTree = "<group>"; };
-		8981A4D41AF5B0AD00F3046A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		8981A4D41AF5B0AD00F3046A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Classes/Supports/LocationManager.swift; sourceTree = "<group>"; };
 		898455A11AF6EABD0071A31B /* OrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
 		899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		899DA8CA1AF419C000F0C476 /* thumbs_down-104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumbs_down-104.png"; path = "Assets/UI/Icons/thumbs_down-104.png"; sourceTree = "<group>"; };
@@ -200,7 +208,7 @@
 		89CAA3DE1B10BA7700D7E4C2 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		89CAA3DF1B10BA7700D7E4C2 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		89D7C6B51AE44D0A00FFD592 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		89D7C6B71AE4796500FFD592 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		89D7C6B71AE4796500FFD592 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Classes/Supports/ImageLoader.swift; sourceTree = "<group>"; };
 		89E6FB851B11EA98003A8276 /* UserMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMenuVC.swift; sourceTree = "<group>"; };
 		89E6FB871B12029C003A8276 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		89EEF4FF1B00720B006881FD /* TestReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestReviewService.swift; sourceTree = "<group>"; };
@@ -226,6 +234,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		890168181B1431D300180942 /* SimpleAlert */ = {
+			isa = PBXGroup;
+			children = (
+				890168191B1431D300180942 /* SimpleAlert.swift */,
+				8901681A1B1431D300180942 /* SimpleAlert.xib */,
+				892C17441B14344E00D2D37F /* AlertController.swift */,
+			);
+			name = SimpleAlert;
+			path = Frameworks/SimpleAlert;
+			sourceTree = "<group>";
+		};
 		8908FF471AE01ECF00C990DC = {
 			isa = PBXGroup;
 			children = (
@@ -317,9 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				890D4C761AE4433400BD05DF /* MyPlayground.playground */,
-				89D7C6B71AE4796500FFD592 /* ImageLoader.swift */,
 				890E3FBC1AEC5B9500F22912 /* HelperMethods.swift */,
-				8981A4D41AF5B0AD00F3046A /* LocationManager.swift */,
 				895822131B04E3AB000DA21E /* Arrived-Bridging-Header.h */,
 				89E6FB871B12029C003A8276 /* MenuTransitionManager.swift */,
 			);
@@ -329,26 +346,19 @@
 		890D4C771AE4433400BD05DF /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				890F54D21B01F41D0066E835 /* MakeOrderVC.swift */,
-				890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */,
-				890D4C791AE4433400BD05DF /* LoggedInVC.swift */,
-				890D4C7A1AE4433400BD05DF /* StartVC.swift */,
-				890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */,
-				890D72B61B0741C5006360E7 /* UserAgreementVC.swift */,
-				89D7C6B51AE44D0A00FFD592 /* ViewController.swift */,
 				89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */,
-				899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */,
-				8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */,
+				89F0E9AE1B131CB800038270 /* Resigter & Login */,
+				89F0E9AF1B131D7600038270 /* Profile */,
+				89F0E9B01B131DAB00038270 /* Misc */,
+				890F54D21B01F41D0066E835 /* MakeOrderVC.swift */,
+				89D7C6B51AE44D0A00FFD592 /* ViewController.swift */,
 				8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */,
 				8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */,
-				8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */,
 				8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */,
 				898455A11AF6EABD0071A31B /* OrdersVC.swift */,
 				89EEF5051B008B05006881FD /* OrderDetailVC.swift */,
 				890F54C61B0175200066E835 /* OrdersListTVC.swift */,
 				890F54C81B0175370066E835 /* OrdersListTVCell.swift */,
-				8975DAC21B0E2043009D4991 /* WaveformVC.swift */,
-				89E6FB851B11EA98003A8276 /* UserMenuVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -484,6 +494,8 @@
 		8958224C1B0504CD000DA21E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				890168181B1431D300180942 /* SimpleAlert */,
+				89D7C6B71AE4796500FFD592 /* ImageLoader.swift */,
 				89CAA3DD1B10BA7700D7E4C2 /* UICountingLabel */,
 				89471C501B0C0C1700EFE101 /* RAMAnimatedTabBarController */,
 				89471C3C1B09F6C600EFE101 /* TextFieldEffects */,
@@ -491,6 +503,7 @@
 				8958227A1B050AD7000DA21E /* JSSAlertView.swift */,
 				8958226A1B05061C000DA21E /* GoogleWearAlertView */,
 				8975DAC01B0E187A009D4991 /* SiriWaveformView.swift */,
+				8981A4D41AF5B0AD00F3046A /* LocationManager.swift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -543,6 +556,38 @@
 			);
 			name = UICountingLabel;
 			path = Frameworks/UICountingLabel;
+			sourceTree = "<group>";
+		};
+		89F0E9AE1B131CB800038270 /* Resigter & Login */ = {
+			isa = PBXGroup;
+			children = (
+				890D4C7A1AE4433400BD05DF /* StartVC.swift */,
+				890D4C7C1AE4433400BD05DF /* WelcomeVC.swift */,
+				890D72B61B0741C5006360E7 /* UserAgreementVC.swift */,
+				890D4C781AE4433400BD05DF /* AddPaymentInfoVC.swift */,
+			);
+			name = "Resigter & Login";
+			sourceTree = "<group>";
+		};
+		89F0E9AF1B131D7600038270 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */,
+				89E6FB851B11EA98003A8276 /* UserMenuVC.swift */,
+				8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */,
+				8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */,
+				892C17481B143B2800D2D37F /* AddBankCardVC.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		89F0E9B01B131DAB00038270 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				8975DAC21B0E2043009D4991 /* WaveformVC.swift */,
+				890D4C791AE4433400BD05DF /* LoggedInVC.swift */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,6 +678,7 @@
 			files = (
 				8958224B1B04F0A4000DA21E /* SHSPhoneImage.bundle in Resources */,
 				89CAA3DC1B10A50A00D7E4C2 /* Images.xcassets in Resources */,
+				8901681C1B1431D300180942 /* SimpleAlert.xib in Resources */,
 				899DA8D31AF41AC700F0C476 /* birthday-104.png in Resources */,
 				89C4135B1AF1CD91000C2C95 /* Phone Icon.png in Resources */,
 				89C4136A1AF40402000C2C95 /* Main.storyboard in Resources */,
@@ -672,6 +718,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				890A1C441AEAD02F00E6E6D9 /* ServiceHandler.swift in Sources */,
+				892C17491B143B2800D2D37F /* AddBankCardVC.swift in Sources */,
 				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
 				899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */,
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
@@ -683,6 +730,7 @@
 				890D4C851AE4433400BD05DF /* WelcomeVC.swift in Sources */,
 				890F54C71B0175200066E835 /* OrdersListTVC.swift in Sources */,
 				89471C601B0C0C1700EFE101 /* RAMFumeAnimation.swift in Sources */,
+				892C17451B14344E00D2D37F /* AlertController.swift in Sources */,
 				89E6FB861B11EA98003A8276 /* UserMenuVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
@@ -731,6 +779,7 @@
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,
 				89471C611B0C0C1700EFE101 /* RAMRotationAnimation.swift in Sources */,
 				890D4C831AE4433400BD05DF /* StartVC.swift in Sources */,
+				8901681B1B1431D300180942 /* SimpleAlert.swift in Sources */,
 				890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */,
 				890D72B51B0739E5006360E7 /* SHSPhoneTextField.m in Sources */,
 			);
