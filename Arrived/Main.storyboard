@@ -449,13 +449,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Agreement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkN-Gw-QE8">
-                                <rect key="frame" x="16" y="20" width="568" height="24"/>
+                                <rect key="frame" x="16" y="20" width="568" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="19"/>
                                 <color key="textColor" red="0.10980392156862745" green="0.51372549019607838" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-bV-hrD">
-                                <rect key="frame" x="16" y="-3" width="44" height="72"/>
+                                <rect key="frame" x="16" y="-3.5" width="44" height="72.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="⇠">
                                     <color key="titleColor" red="0.10980392156862745" green="0.51372549019607838" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
@@ -465,13 +465,14 @@
                                     <segue destination="iUj-bJ-AVR" kind="presentation" id="Z22-2j-XGJ"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-3q-C14">
-                                <rect key="frame" x="16" y="52" width="568" height="475"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-3q-C14">
+                                <rect key="frame" x="16" y="51" width="568" height="475.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-HE-cRB">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-HE-cRB">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="1754"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="1754" id="1Dz-Ui-84h"/>
                                             <constraint firstAttribute="height" constant="1754" id="R2z-ls-tJa"/>
                                             <constraint firstAttribute="width" constant="343" id="RVG-3Y-jZl"/>
                                             <constraint firstAttribute="height" constant="1754" id="pgC-gx-ybO"/>
@@ -494,6 +495,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="1Dz-Ui-84h"/>
                                                 <exclude reference="R2z-ls-tJa"/>
                                                 <exclude reference="RVG-3Y-jZl"/>
                                                 <exclude reference="pgC-gx-ybO"/>
@@ -502,33 +504,53 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="0WI-Sy-Wgo"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="centerX" secondItem="LYt-3q-C14" secondAttribute="centerX" id="18S-xR-VtN"/>
                                     <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" constant="225" id="5Fg-Iu-yZ6"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="DLl-8Z-G1N"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="JrZ-mJ-33V"/>
                                     <constraint firstAttribute="bottom" secondItem="USM-HE-cRB" secondAttribute="bottom" constant="-1279" id="K2i-bh-1zI"/>
+                                    <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" id="S5Y-Xh-f7t"/>
                                     <constraint firstAttribute="width" secondItem="USM-HE-cRB" secondAttribute="width" id="Sc4-hn-SSB"/>
                                     <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" id="V1T-x5-Twj"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="XSb-yZ-2CM"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="YFb-FE-WPG"/>
+                                    <constraint firstAttribute="bottom" secondItem="USM-HE-cRB" secondAttribute="bottom" id="ef7-JX-rxO"/>
+                                    <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" id="f5i-IV-F0C"/>
+                                    <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="g6X-Rb-cc3"/>
                                     <constraint firstAttribute="centerX" secondItem="USM-HE-cRB" secondAttribute="centerX" constant="112" id="hPs-NP-XlF"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="kji-Ao-33Q"/>
                                     <constraint firstAttribute="bottom" secondItem="USM-HE-cRB" secondAttribute="bottom" constant="-1279" id="mXA-LL-rrf"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="leading" secondItem="LYt-3q-C14" secondAttribute="leading" id="noQ-hj-9cB"/>
+                                    <constraint firstAttribute="bottom" secondItem="USM-HE-cRB" secondAttribute="bottom" id="oUH-p4-TvQ"/>
                                     <constraint firstAttribute="trailing" secondItem="USM-HE-cRB" secondAttribute="trailing" constant="225" id="rb2-6Y-7Ym"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="top" secondItem="LYt-3q-C14" secondAttribute="top" id="xVG-m2-FmS"/>
                                     <constraint firstItem="USM-HE-cRB" firstAttribute="centerX" secondItem="LYt-3q-C14" secondAttribute="centerX" id="zJ3-96-9ie"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="0WI-Sy-Wgo"/>
+                                        <exclude reference="18S-xR-VtN"/>
                                         <exclude reference="5Fg-Iu-yZ6"/>
                                         <exclude reference="DLl-8Z-G1N"/>
                                         <exclude reference="JrZ-mJ-33V"/>
                                         <exclude reference="K2i-bh-1zI"/>
+                                        <exclude reference="S5Y-Xh-f7t"/>
                                         <exclude reference="Sc4-hn-SSB"/>
+                                        <exclude reference="V1T-x5-Twj"/>
+                                        <exclude reference="XSb-yZ-2CM"/>
                                         <exclude reference="YFb-FE-WPG"/>
+                                        <exclude reference="ef7-JX-rxO"/>
+                                        <exclude reference="f5i-IV-F0C"/>
+                                        <exclude reference="g6X-Rb-cc3"/>
                                         <exclude reference="hPs-NP-XlF"/>
+                                        <exclude reference="kji-Ao-33Q"/>
                                         <exclude reference="mXA-LL-rrf"/>
+                                        <exclude reference="noQ-hj-9cB"/>
+                                        <exclude reference="oUH-p4-TvQ"/>
                                         <exclude reference="rb2-6Y-7Ym"/>
                                         <exclude reference="xVG-m2-FmS"/>
+                                        <exclude reference="zJ3-96-9ie"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -997,6 +1019,9 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <state key="normal" image="logout icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logout:" destination="ugQ-wB-WwK" eventType="touchUpInside" id="daQ-bc-KAh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-yA-a6q">
                                 <rect key="frame" x="122" y="450.5" width="56" height="20"/>
@@ -1073,6 +1098,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <outlet property="pinLabel" destination="lFd-cb-L2p" id="ZWE-3L-gOc"/>
                         <outlet property="supportIcon" destination="kJI-Pf-us9" id="85N-H8-B53"/>
                         <outlet property="supportLabel" destination="Jnz-b3-MI2" id="nji-3W-1Vn"/>
+                        <segue destination="6Pr-FZ-mX9" kind="presentation" identifier="UserMenuLogout" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1ov-sr-QoR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNf-7b-oop" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2124,7 +2150,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="edc-f6-2OI"/>
-        <segue reference="y0z-cC-yKA"/>
+        <segue reference="Z22-2j-XGJ"/>
         <segue reference="OIk-6K-j7x"/>
     </inferredMetricsTieBreakers>
 </document>

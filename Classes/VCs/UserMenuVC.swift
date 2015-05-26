@@ -248,4 +248,24 @@ class UserMenuVC: UIViewController, UITextFieldDelegate {
     @IBAction func unwindToMainViewController(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func logout(sender: UIButton) {
+        
+        performSegueWithIdentifier("UserMenuLogout", sender: self)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
