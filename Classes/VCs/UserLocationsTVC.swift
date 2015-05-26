@@ -148,6 +148,7 @@ class UserLocationsTVC: UITableViewController, MKMapViewDelegate, UITableViewDel
         
     }
     
+    // Customize annotation appearance
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if !(annotation is CustomPointAnnotation) {
             return nil

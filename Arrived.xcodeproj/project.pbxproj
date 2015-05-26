@@ -398,6 +398,26 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		892C174A1B147CC000D2D37F /* Banking */ = {
+			isa = PBXGroup;
+			children = (
+				8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */,
+				8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */,
+				892C17481B143B2800D2D37F /* AddBankCardVC.swift */,
+			);
+			name = Banking;
+			sourceTree = "<group>";
+		};
+		892C174B1B147CD900D2D37F /* Addresses */ = {
+			isa = PBXGroup;
+			children = (
+				8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */,
+				8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */,
+				8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */,
+			);
+			name = Addresses;
+			sourceTree = "<group>";
+		};
 		89471C3C1B09F6C600EFE101 /* TextFieldEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,12 +591,8 @@
 			children = (
 				899DA8C81AF40B5E00F0C476 /* ProfileVC.swift */,
 				89E6FB851B11EA98003A8276 /* UserMenuVC.swift */,
-				8981A4CA1AF55B8800F3046A /* UserBankCardsTVC.swift */,
-				8981A4D01AF56DB700F3046A /* UserBankCardsTVCell.swift */,
-				892C17481B143B2800D2D37F /* AddBankCardVC.swift */,
-				8981A4CC1AF55BA100F3046A /* UserLocationsTVC.swift */,
-				8981A4CE1AF5641500F3046A /* UserLocationsTVCell.swift */,
-				8981A4D21AF58FCE00F3046A /* AddLocationVC.swift */,
+				892C174A1B147CC000D2D37F /* Banking */,
+				892C174B1B147CD900D2D37F /* Addresses */,
 			);
 			name = Profile;
 			sourceTree = "<group>";

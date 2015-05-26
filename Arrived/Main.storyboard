@@ -1613,46 +1613,132 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Manually type in address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQq-0U-R0C">
-                                <rect key="frame" x="16" y="72" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-XH-GiH">
-                                <rect key="frame" x="16" y="110" width="568" height="444"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-eW-eyz">
-                                <rect key="frame" x="16" y="562" width="568" height="30"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-jS-bJj">
+                                <rect key="frame" x="16" y="84" width="568" height="496"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-XH-GiH">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="343"/>
+                                    </mapView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Apt." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORx-FD-JZV">
+                                        <rect key="frame" x="8" y="368" width="50" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="PRL-94-wRe"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5AS-3I-hiv">
+                                        <rect key="frame" x="8" y="396" width="38" height="20"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W38-Te-6FG">
+                                        <rect key="frame" x="8" y="424" width="47" height="20"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="765-Tf-7Zn">
+                                        <rect key="frame" x="488" y="424" width="72" height="20"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post Code" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCE-6F-yN6">
+                                        <rect key="frame" x="477" y="396" width="83" height="20"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8H-2M-ADT">
+                                        <rect key="frame" x="0.0" y="459" width="568" height="37"/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.7725490196" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addAddress:" destination="JaZ-Q6-xDd" eventType="touchUpInside" id="KN4-o5-PRn"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjn-1N-4GM">
+                                        <rect key="frame" x="66" y="368" width="55" height="20"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5AS-3I-hiv" firstAttribute="trailing" secondItem="W38-Te-6FG" secondAttribute="trailing" id="13Z-9I-7xb"/>
+                                    <constraint firstItem="5AS-3I-hiv" firstAttribute="leading" secondItem="cKL-jS-bJj" secondAttribute="leading" constant="8" id="7c2-z7-bBi"/>
+                                    <constraint firstItem="5AS-3I-hiv" firstAttribute="top" secondItem="ORx-FD-JZV" secondAttribute="bottom" constant="8" id="7gx-F7-Nas"/>
+                                    <constraint firstItem="ORx-FD-JZV" firstAttribute="top" secondItem="iKf-XH-GiH" secondAttribute="bottom" constant="20" id="EtJ-1w-WeY"/>
+                                    <constraint firstItem="W38-Te-6FG" firstAttribute="top" secondItem="5AS-3I-hiv" secondAttribute="bottom" constant="8" id="JL2-wa-RVl"/>
+                                    <constraint firstAttribute="trailing" secondItem="iKf-XH-GiH" secondAttribute="trailing" id="LdY-24-hwb"/>
+                                    <constraint firstAttribute="trailing" secondItem="cCE-6F-yN6" secondAttribute="trailing" constant="8" id="M9z-ws-SBH"/>
+                                    <constraint firstAttribute="centerX" secondItem="i8H-2M-ADT" secondAttribute="centerX" id="T75-GN-cmK"/>
+                                    <constraint firstAttribute="width" secondItem="i8H-2M-ADT" secondAttribute="width" id="Uf7-VY-uZz"/>
+                                    <constraint firstAttribute="width" secondItem="765-Tf-7Zn" secondAttribute="width" multiplier="2.5:1" id="VM2-uW-e1z"/>
+                                    <constraint firstItem="765-Tf-7Zn" firstAttribute="top" secondItem="cCE-6F-yN6" secondAttribute="bottom" constant="8" id="YOJ-IP-CIa"/>
+                                    <constraint firstItem="iKf-XH-GiH" firstAttribute="leading" secondItem="cKL-jS-bJj" secondAttribute="leading" id="ZZL-OQ-Hfs"/>
+                                    <constraint firstItem="5AS-3I-hiv" firstAttribute="top" secondItem="zjn-1N-4GM" secondAttribute="bottom" constant="8" id="byf-v5-67n"/>
+                                    <constraint firstItem="W38-Te-6FG" firstAttribute="leading" secondItem="cKL-jS-bJj" secondAttribute="leading" constant="8" id="cMu-Ut-mk3"/>
+                                    <constraint firstItem="ORx-FD-JZV" firstAttribute="top" secondItem="iKf-XH-GiH" secondAttribute="bottom" constant="25" id="epY-qt-2Di"/>
+                                    <constraint firstItem="i8H-2M-ADT" firstAttribute="top" secondItem="765-Tf-7Zn" secondAttribute="bottom" constant="15" id="gGr-b7-KE1"/>
+                                    <constraint firstAttribute="height" secondItem="iKf-XH-GiH" secondAttribute="height" multiplier="5:3" id="hDG-iA-TO8"/>
+                                    <constraint firstAttribute="trailing" secondItem="765-Tf-7Zn" secondAttribute="trailing" constant="8" id="jJH-Wa-7Kt"/>
+                                    <constraint firstItem="ORx-FD-JZV" firstAttribute="leading" secondItem="cKL-jS-bJj" secondAttribute="leading" constant="8" id="jOL-jY-0ad"/>
+                                    <constraint firstItem="i8H-2M-ADT" firstAttribute="top" secondItem="W38-Te-6FG" secondAttribute="bottom" constant="15" id="kTG-HI-N0n"/>
+                                    <constraint firstItem="zjn-1N-4GM" firstAttribute="leading" secondItem="ORx-FD-JZV" secondAttribute="trailing" constant="8" id="nke-8v-hMv"/>
+                                    <constraint firstAttribute="width" secondItem="W38-Te-6FG" secondAttribute="width" multiplier="2.5:1" id="og1-4a-lZD"/>
+                                    <constraint firstItem="iKf-XH-GiH" firstAttribute="top" secondItem="cKL-jS-bJj" secondAttribute="top" id="okq-8s-xfY"/>
+                                    <constraint firstAttribute="trailing" secondItem="5AS-3I-hiv" secondAttribute="trailing" constant="8" id="pvx-9w-Fhf"/>
+                                    <constraint firstAttribute="bottom" secondItem="i8H-2M-ADT" secondAttribute="bottom" id="q3e-D1-SwM"/>
+                                    <constraint firstItem="765-Tf-7Zn" firstAttribute="centerY" secondItem="W38-Te-6FG" secondAttribute="centerY" id="qJG-pH-NN6"/>
+                                    <constraint firstAttribute="width" secondItem="iKf-XH-GiH" secondAttribute="width" id="u4N-wG-NKg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hDG-iA-TO8"/>
+                                        <exclude reference="EtJ-1w-WeY"/>
+                                        <exclude reference="13Z-9I-7xb"/>
+                                        <exclude reference="pvx-9w-Fhf"/>
+                                        <exclude reference="og1-4a-lZD"/>
+                                        <exclude reference="VM2-uW-e1z"/>
+                                        <exclude reference="qJG-pH-NN6"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iKf-XH-GiH" firstAttribute="trailing" secondItem="4GA-wk-6Tl" secondAttribute="trailingMargin" id="0IN-PQ-Ma0"/>
-                            <constraint firstItem="oQq-0U-R0C" firstAttribute="leading" secondItem="4GA-wk-6Tl" secondAttribute="leadingMargin" id="24I-Lm-VoP"/>
-                            <constraint firstItem="z1W-Ub-RQI" firstAttribute="top" secondItem="kKT-eW-eyz" secondAttribute="bottom" constant="8" id="42G-j6-mid"/>
-                            <constraint firstItem="kKT-eW-eyz" firstAttribute="leading" secondItem="4GA-wk-6Tl" secondAttribute="leadingMargin" id="GMV-bo-txg"/>
-                            <constraint firstItem="oQq-0U-R0C" firstAttribute="top" secondItem="WRp-WK-eHD" secondAttribute="bottom" constant="8" id="LHx-1g-vI9"/>
-                            <constraint firstItem="kKT-eW-eyz" firstAttribute="trailing" secondItem="4GA-wk-6Tl" secondAttribute="trailingMargin" id="NOO-Sp-hxV"/>
-                            <constraint firstItem="iKf-XH-GiH" firstAttribute="leading" secondItem="4GA-wk-6Tl" secondAttribute="leadingMargin" id="WZV-zP-hRI"/>
-                            <constraint firstItem="iKf-XH-GiH" firstAttribute="top" secondItem="oQq-0U-R0C" secondAttribute="bottom" constant="8" id="g02-xm-0rP"/>
-                            <constraint firstItem="oQq-0U-R0C" firstAttribute="trailing" secondItem="4GA-wk-6Tl" secondAttribute="trailingMargin" id="ivd-Rr-PQY"/>
-                            <constraint firstItem="kKT-eW-eyz" firstAttribute="top" secondItem="iKf-XH-GiH" secondAttribute="bottom" constant="8" id="lJe-6y-4cb"/>
-                            <constraint firstItem="oQq-0U-R0C" firstAttribute="trailing" secondItem="4GA-wk-6Tl" secondAttribute="trailingMargin" id="pIa-5M-XSQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cKL-jS-bJj" secondAttribute="trailing" id="bVJ-vg-Fzh"/>
+                            <constraint firstItem="z1W-Ub-RQI" firstAttribute="top" secondItem="cKL-jS-bJj" secondAttribute="bottom" constant="20" id="jHN-Gh-AMo"/>
+                            <constraint firstItem="cKL-jS-bJj" firstAttribute="top" secondItem="WRp-WK-eHD" secondAttribute="bottom" constant="20" id="sEB-40-SQ7"/>
+                            <constraint firstItem="cKL-jS-bJj" firstAttribute="leading" secondItem="4GA-wk-6Tl" secondAttribute="leadingMargin" id="zTe-Qj-gLl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ivd-Rr-PQY"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="8cE-vb-zJW">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="bPg-aE-qjd">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showSearchBar:" destination="JaZ-Q6-xDd" id="um7-tQ-MV6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cityLabel" destination="5AS-3I-hiv" id="LHw-9W-AXg"/>
+                        <outlet property="countryLabel" destination="765-Tf-7Zn" id="3N6-ZO-cZt"/>
+                        <outlet property="mapView" destination="iKf-XH-GiH" id="nOP-mY-4d6"/>
+                        <outlet property="myView" destination="cKL-jS-bJj" id="TRg-jt-ED9"/>
+                        <outlet property="postLabel" destination="cCE-6F-yN6" id="Kr6-5V-Yis"/>
+                        <outlet property="stateLabel" destination="W38-Te-6FG" id="Vle-ZD-Sbg"/>
+                        <outlet property="streetLabel" destination="zjn-1N-4GM" id="PZe-D1-tDp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqs-8a-wBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
