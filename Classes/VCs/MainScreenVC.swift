@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import AVFoundation
 import Foundation
 
@@ -56,6 +57,8 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
         }
     }
     
+    private var locationManager: CLLocationManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +69,9 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
         customizeColorOfBarItems()
         addCenterRaisedButton()
         addButtonLongPressGuesture()
+        
+        locationManager = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
     }
     
     func initAudioRecorder() {

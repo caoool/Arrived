@@ -164,8 +164,6 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     
     // MARK: - Functionalities
     
-    // TODO: - Format input text in above fields
-    
     /**
         Detect credit card type and dim or highlight card icons
     */
@@ -275,6 +273,16 @@ class AddPaymentInfoVC: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         updateExpDate(pickerView)
+    }
+    
+    // MARK: - Navigations
+    
+    @IBAction func skitToMainScreen(sender: UIButton) {
+        performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
+    }
+    
+    @IBAction func goToMainScreen(sender: UIButton) {
+        performSegueWithIdentifier("AddPaymentInfoNewUserCreated", sender: self)
     }
     
     /*

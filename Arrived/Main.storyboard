@@ -740,6 +740,9 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToMainScreen:" destination="kgy-9I-gWN" eventType="touchUpInside" id="1ad-cf-URy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTI-za-bCe">
                                 <rect key="frame" x="16" y="493" width="568" height="34"/>
@@ -747,6 +750,9 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <state key="normal" title="Setup Later  ⇢">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="skitToMainScreen:" destination="kgy-9I-gWN" eventType="touchUpInside" id="LTx-U8-vPB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2149,8 +2155,8 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="tasks icon" width="85" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="edc-f6-2OI"/>
-        <segue reference="Z22-2j-XGJ"/>
+        <segue reference="CkZ-c3-wOb"/>
+        <segue reference="y0z-cC-yKA"/>
         <segue reference="OIk-6K-j7x"/>
     </inferredMetricsTieBreakers>
 </document>
