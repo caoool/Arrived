@@ -11,18 +11,25 @@ import MapKit
 
 class UserLocationsTVCell: UITableViewCell {
 
-    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var postLabel: UILabel!
+    
+    @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var defaultIndicator: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        myView.layer.borderWidth = 0.3
+        myView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        myView.layer.cornerRadius = 12
+        
+        defaultIndicator.layer.backgroundColor = UIColorFromHex(0x3ABE68, alpha: 0.65).CGColor
+        defaultIndicator.alpha = 0
     }
 
 }

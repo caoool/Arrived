@@ -922,6 +922,9 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <state key="normal" image="set addesses icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="K4l-zw-fV6" kind="show" id="ZaQ-bT-9c0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Addresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-OZ-hca">
                                 <rect key="frame" x="108" y="305.5" width="84.5" height="20"/>
@@ -1471,43 +1474,104 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oqe-Pt-gx5" id="dBk-2x-59C">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE8-gd-567">
-                                            <rect key="frame" x="8" y="11" width="584" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-Gm-NPv">
-                                            <rect key="frame" x="8" y="40" width="584" height="201"/>
-                                        </mapView>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyx-hU-Q1K">
+                                            <rect key="frame" x="8" y="8" width="584" height="233.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10R-ms-5Hl">
+                                                    <rect key="frame" x="554" y="121" width="30" height="112.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="default label" translatesAutoresizingMaskIntoConstraints="NO" id="6Pf-NB-cgT">
+                                                            <rect key="frame" x="0.0" y="-82" width="30" height="150"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="centerY" secondItem="6Pf-NB-cgT" secondAttribute="centerY" id="8We-Nh-97I"/>
+                                                        <constraint firstAttribute="width" constant="30" id="QfG-JM-7Gl"/>
+                                                        <constraint firstAttribute="centerX" secondItem="6Pf-NB-cgT" secondAttribute="centerX" id="vBp-kJ-08p"/>
+                                                    </constraints>
+                                                </view>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-Gm-NPv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="121"/>
+                                                </mapView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE8-gd-567">
+                                                    <rect key="frame" x="15" y="136" width="493.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSe-mv-UAl">
+                                                    <rect key="frame" x="15" y="164" width="33.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm3-UL-LAr">
+                                                    <rect key="frame" x="441" y="164" width="67.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3n-ei-W3g">
+                                                    <rect key="frame" x="15" y="192" width="42.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ue1-yM-k7i">
+                                                    <rect key="frame" x="473" y="192" width="35.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="10R-ms-5Hl" firstAttribute="top" secondItem="Shm-Gm-NPv" secondAttribute="bottom" id="ASR-7a-IUF"/>
+                                                <constraint firstItem="10R-ms-5Hl" firstAttribute="top" secondItem="kyx-hU-Q1K" secondAttribute="top" id="BGg-8g-1Nd"/>
+                                                <constraint firstAttribute="trailing" secondItem="Shm-Gm-NPv" secondAttribute="trailing" id="Bmw-2o-Gtk"/>
+                                                <constraint firstAttribute="bottom" secondItem="10R-ms-5Hl" secondAttribute="bottom" id="EkI-qj-BER"/>
+                                                <constraint firstItem="P3n-ei-W3g" firstAttribute="top" secondItem="ZSe-mv-UAl" secondAttribute="bottom" constant="8" symbolic="YES" id="Hmi-nl-oq3"/>
+                                                <constraint firstAttribute="centerX" secondItem="Cm3-UL-LAr" secondAttribute="centerX" multiplier="4:6.5" id="Iko-yk-2Ty"/>
+                                                <constraint firstItem="P3n-ei-W3g" firstAttribute="leading" secondItem="ZSe-mv-UAl" secondAttribute="leading" id="LGV-am-3oQ"/>
+                                                <constraint firstItem="IE8-gd-567" firstAttribute="trailing" secondItem="Cm3-UL-LAr" secondAttribute="trailing" id="OsO-Tt-mcv"/>
+                                                <constraint firstItem="IE8-gd-567" firstAttribute="leading" secondItem="kyx-hU-Q1K" secondAttribute="leading" constant="15" id="Pwd-CB-mpu"/>
+                                                <constraint firstAttribute="centerX" secondItem="IE8-gd-567" secondAttribute="centerX" multiplier="4:1" id="SAi-vs-JN1"/>
+                                                <constraint firstItem="Shm-Gm-NPv" firstAttribute="leading" secondItem="kyx-hU-Q1K" secondAttribute="leading" id="Vck-B9-KED"/>
+                                                <constraint firstItem="ZSe-mv-UAl" firstAttribute="centerY" secondItem="Cm3-UL-LAr" secondAttribute="centerY" id="Vhx-vW-hiO"/>
+                                                <constraint firstItem="IE8-gd-567" firstAttribute="leading" secondItem="ZSe-mv-UAl" secondAttribute="leading" id="kYu-jO-cFE"/>
+                                                <constraint firstItem="Shm-Gm-NPv" firstAttribute="top" secondItem="kyx-hU-Q1K" secondAttribute="top" id="ks4-jP-GbE"/>
+                                                <constraint firstItem="IE8-gd-567" firstAttribute="top" secondItem="Shm-Gm-NPv" secondAttribute="bottom" constant="15" id="nLY-Kc-yFq"/>
+                                                <constraint firstItem="Ue1-yM-k7i" firstAttribute="top" secondItem="Cm3-UL-LAr" secondAttribute="bottom" constant="8" symbolic="YES" id="sea-6h-FU6"/>
+                                                <constraint firstItem="Ue1-yM-k7i" firstAttribute="trailing" secondItem="Cm3-UL-LAr" secondAttribute="trailing" id="u4J-O0-h4b"/>
+                                                <constraint firstAttribute="trailing" secondItem="10R-ms-5Hl" secondAttribute="trailing" id="vqg-4d-SaA"/>
+                                                <constraint firstItem="ZSe-mv-UAl" firstAttribute="top" secondItem="IE8-gd-567" secondAttribute="bottom" constant="8" symbolic="YES" id="wVu-Uw-2xf"/>
+                                                <constraint firstAttribute="centerY" secondItem="IE8-gd-567" secondAttribute="centerY" multiplier="4:5" id="yOj-p8-tZQ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="SAi-vs-JN1"/>
+                                                    <exclude reference="BGg-8g-1Nd"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="bottom" secondItem="dBk-2x-59C" secondAttribute="bottomMargin" id="8Xx-er-ChU"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="IE8-gd-567" secondAttribute="bottom" constant="3" id="Fez-eh-bDx"/>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="bottom" secondItem="dBk-2x-59C" secondAttribute="bottomMargin" id="JHE-nk-6OL"/>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="trailing" secondItem="dBk-2x-59C" secondAttribute="trailingMargin" id="JSr-bC-e0N"/>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="trailing" secondItem="dBk-2x-59C" secondAttribute="trailingMargin" id="KBE-qL-y0b"/>
-                                        <constraint firstItem="IE8-gd-567" firstAttribute="leading" secondItem="dBk-2x-59C" secondAttribute="leadingMargin" id="R91-f5-CFM"/>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="leading" secondItem="dBk-2x-59C" secondAttribute="leadingMargin" id="TSB-zt-BH8"/>
-                                        <constraint firstItem="IE8-gd-567" firstAttribute="top" secondItem="dBk-2x-59C" secondAttribute="topMargin" constant="3" id="Tzv-bd-e2W"/>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="top" secondItem="IE8-gd-567" secondAttribute="bottom" constant="8" id="VpC-QV-KT6"/>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="top" secondItem="IE8-gd-567" secondAttribute="bottom" constant="8" id="cZ0-ob-2Y8"/>
-                                        <constraint firstItem="Shm-Gm-NPv" firstAttribute="leading" secondItem="dBk-2x-59C" secondAttribute="leadingMargin" id="oxT-5D-BEL"/>
-                                        <constraint firstItem="IE8-gd-567" firstAttribute="trailing" secondItem="dBk-2x-59C" secondAttribute="trailingMargin" id="wCr-nU-WNO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kyx-hU-Q1K" secondAttribute="trailing" id="2aw-59-wgU"/>
+                                        <constraint firstItem="kyx-hU-Q1K" firstAttribute="leading" secondItem="dBk-2x-59C" secondAttribute="leadingMargin" id="9Cp-Pq-E9b"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kyx-hU-Q1K" secondAttribute="bottom" id="TQW-dl-o83"/>
+                                        <constraint firstItem="kyx-hU-Q1K" firstAttribute="top" secondItem="dBk-2x-59C" secondAttribute="topMargin" id="gBh-uK-0M4"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="Fez-eh-bDx"/>
-                                            <exclude reference="JHE-nk-6OL"/>
-                                            <exclude reference="KBE-qL-y0b"/>
-                                            <exclude reference="TSB-zt-BH8"/>
-                                            <exclude reference="cZ0-ob-2Y8"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="addressLabel" destination="IE8-gd-567" id="uIe-2O-d9w"/>
+                                    <outlet property="cityLabel" destination="ZSe-mv-UAl" id="9Qq-xV-dCe"/>
+                                    <outlet property="countryLabel" destination="Cm3-UL-LAr" id="Gu0-c6-gXg"/>
+                                    <outlet property="defaultIndicator" destination="6Pf-NB-cgT" id="3gO-jd-wZS"/>
                                     <outlet property="map" destination="Shm-Gm-NPv" id="oZC-AL-zvz"/>
+                                    <outlet property="myView" destination="kyx-hU-Q1K" id="EU6-qh-vBs"/>
+                                    <outlet property="postLabel" destination="Ue1-yM-k7i" id="5Dr-FJ-KlS"/>
+                                    <outlet property="stateLabel" destination="P3n-ei-W3g" id="Vlm-hl-snZ"/>
+                                    <outlet property="streetLabel" destination="IE8-gd-567" id="h0K-cO-zdD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1516,11 +1580,18 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <outlet property="delegate" destination="Th5-B6-wjF" id="UsW-wU-dva"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favorite Locations" id="VJD-XB-Dql">
+                    <navigationItem key="navigationItem" title="Locations" id="VJD-XB-Dql">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="qT9-aw-Mv2">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="dismissScene:" destination="Th5-B6-wjF" id="ypC-kP-g2S"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eB2-Y6-uyn">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addNewLocation:" destination="Th5-B6-wjF" id="yki-4v-6sr"/>
-                                <segue destination="JaZ-Q6-xDd" kind="show" identifier="AddLocation" id="PTx-cc-lz8"/>
+                                <segue destination="JaZ-Q6-xDd" kind="show" id="elt-Pc-P5g"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1528,7 +1599,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEE-Qb-CX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4236" y="-1390"/>
+            <point key="canvasLocation" x="5046" y="-1390"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="t26-fm-BfU">
@@ -1555,9 +1626,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="addLocation" destination="JaZ-Q6-xDd" eventType="touchUpInside" id="J5N-zW-MIf"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1582,19 +1650,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="8cE-vb-zJW">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="bPg-aE-qjd">
-                            <connections>
-                                <action selector="showSearchBar:" destination="JaZ-Q6-xDd" id="uDs-UE-fzm"/>
-                            </connections>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="addressField" destination="oQq-0U-R0C" id="HIf-3b-gED"/>
-                        <outlet property="mapView" destination="iKf-XH-GiH" id="3Q4-KU-dim"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqs-8a-wBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5071" y="-1390"/>
+            <point key="canvasLocation" x="5883" y="-1390"/>
         </scene>
         <!--Main Screen-->
         <scene sceneID="UTS-DH-rVA">
@@ -1923,7 +1985,25 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gof-zy-WN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5821" y="-603"/>
+            <point key="canvasLocation" x="5883" y="-603"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TZp-WW-3sL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K4l-zw-fV6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t7b-gW-T5d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Th5-B6-wjF" kind="relationship" relationship="rootViewController" id="WK7-OV-XrM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="da4-IH-wY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4236" y="-1390"/>
         </scene>
     </scenes>
     <resources>

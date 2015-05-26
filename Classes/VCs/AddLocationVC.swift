@@ -12,6 +12,20 @@ import AddressBookUI
 
 class AddLocationVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        navigationController?.navigationBar.topItem!.title = "";
+    }
+    
+    /*
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     
@@ -32,6 +46,10 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        navigationController?.navigationBar.topItem!.title = "";
     }
 
     override func didReceiveMemoryWarning() {
@@ -136,6 +154,6 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
 
         }
     }
-    
+    */
 
 }
