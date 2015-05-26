@@ -15,6 +15,9 @@ class AlertController: SimpleAlert.Controller {
             textField.backgroundColor = UIColorFromHex(0x3D4656, alpha: 0.3)
             textField.layer.borderColor = UIColor.whiteColor().CGColor
             textField.layer.borderWidth = 0.3
+            textField.tintColor = UIColorFromHex(0x3D4656, alpha: 0.9)
+            textField.font = UIFont(name: "American Typewriter", size: 17)
+            textField.textColor = UIColorFromHex(0x3D4656, alpha: 0.9)
             
             configurationHandler?(textField)
         }
@@ -30,7 +33,7 @@ class AlertController: SimpleAlert.Controller {
                 button.setTitleColor(UIColor.grayColor(), forState: .Normal)
             case .Cancel:
                 button.titleLabel?.font = UIFont(name: "American Typewriter", size: 19)
-                button.backgroundColor = UIColorFromHex(0x3D4656, alpha: 0.9)
+                button.backgroundColor = UIColorFromHex(0x54C799, alpha: 0.65)
                 button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             case .Default:
                 button.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
@@ -45,10 +48,13 @@ class AlertController: SimpleAlert.Controller {
         
         configContentView = { [weak self] view in
             if let view = view as? SimpleAlert.ContentView {
+                view.layer.backgroundColor = UIColorFromHex(0xFFFFFF, alpha: 0.95).CGColor
                 view.titleLabel.textColor = UIColorFromHex(0x3D4656, alpha: 0.9)
-                view.titleLabel.font = UIFont(name: "American Typewriter", size: 30)
-                view.messageLabel.textColor = UIColor.lightGrayColor()
-                view.messageLabel.font = UIFont(name: "American Typewriter", size: 16)
+                view.titleLabel.font = UIFont(name: "American Typewriter", size: 26)
+                view.messageLabel.textColor = UIColorFromHex(0x474E5D, alpha: 0.9)
+                view.messageLabel.font = UIFont(name: "American Typewriter", size: 12)
+                view.messageLabel.textAlignment = .Left
+                view.textBackgroundView.layer.backgroundColor = UIColorFromHex(0xFFFFFF, alpha: 0.1).CGColor
                 view.textBackgroundView.layer.cornerRadius = 3.0
                 view.textBackgroundView.clipsToBounds = true
             }

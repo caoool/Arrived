@@ -959,12 +959,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="unwindToMainViewController:" destination="ugQ-wB-WwK" eventType="touchUpInside" id="Amt-br-v8S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
-                                <rect key="frame" x="407.5" y="58" width="85" height="85"/>
-                                <state key="normal" image="set pin icon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-cb-L2p">
                                 <rect key="frame" x="436.5" y="151" width="27" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
@@ -1007,6 +1001,15 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rT-Ap-DAE">
+                                <rect key="frame" x="407" y="58" width="85" height="85"/>
+                                <state key="normal" image="set pin icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePin:" destination="ugQ-wB-WwK" eventType="touchUpInside" id="JZa-yR-u9L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156862745098" green="0.23529411764705882" blue="0.30588235294117649" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -2117,7 +2120,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="tasks icon" width="85" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CkZ-c3-wOb"/>
+        <segue reference="edc-f6-2OI"/>
         <segue reference="y0z-cC-yKA"/>
         <segue reference="OIk-6K-j7x"/>
     </inferredMetricsTieBreakers>
