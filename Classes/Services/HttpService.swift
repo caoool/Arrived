@@ -10,7 +10,7 @@ import Foundation
 
 let errorDomain = "error.domain"
 
-class BaseService{
+class HttpService{
     var stringEncoding: NSNumber
     var cachePolicy: NSURLRequestCachePolicy
     var timeoutInterval: NSTimeInterval

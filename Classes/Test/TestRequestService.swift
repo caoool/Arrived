@@ -9,7 +9,7 @@
 import Foundation
 
 
-class TestRequestService : BaseService {
+class TestRequestService : HttpService {
     
     func addData(data : Dictionary<String, AnyObject>) -> Dictionary<String, AnyObject> {
         var test : Dictionary<String, AnyObject> = ["data": data, "code": "20000", "message": "success"]

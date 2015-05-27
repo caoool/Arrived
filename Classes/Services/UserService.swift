@@ -8,49 +8,24 @@
 
 import Foundation
 
-class UserService : BaseService {
+class UserService : HttpService {
     
-    var url = "yetian.xyz"
+    var port = Port()
     
-    func verify(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/getCode"
-        postRequest(url, jsonObj: data, callback: callback)
-    }
-    
-    func authenticate(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/auth"
-        postRequest(url, jsonObj: data, callback: callback)
-    }
-    
-    func getUserInfo(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/get?" + build(data)!
+    func getOne(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        var url = port.user_getOne + "?" + build(data)!
         getRequest(url, callback: callback)
     }
     
-    func addBankCard(data : Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/register"
-        postRequest(url, jsonObj: data, callback: callback)
+    func update(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        patchRequest(port.user_update, jsonObj: data, callback: callback)
     }
     
-    func updateUserInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/update"
-        patchRequest(url, jsonObj: data, callback: callback)
+    func logout(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
+        patchRequest(port.user_update, jsonObj: data, callback: callback)
     }
     
-    func addLocation(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/addLocation"
-        postRequest(url, jsonObj: data, callback: callback)
-    }
     
-    func getUserBankInfo(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://\(self.url)/api/v1/users/get?" + build(data)!
-        getRequest(url, callback: callback)
-    }
-    
-    func uploadPhoto(data: Dictionary<String, AnyObject>, callback: (Dictionary<String, AnyObject>?, String?) -> Void){
-        var url = "http://arrived.dev/api/v1/users/upload"
-        uploadRequest(url, jsonObj: data, callback: callback)
-    }
     
 }
 

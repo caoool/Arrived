@@ -10,30 +10,12 @@ import Foundation
 
 class User {
     
-    struct location {
-        private var locationId: String
-        private var latitude: String
-        private var longitude: String
-        private var address: String
-    }
-    
-    struct bankCard {
-        private var bankCardId: String
-        private var fullName: String
-        private var bankCardNumber: String
-        private var expirationDate: String
-        private var cvv: String
-    }
-    
     var uid : Int? = nil
     var sid : String? = nil
     var regTime : Int? = nil
     var deviceId : String? = nil
     var token : String? = nil
     var sessionValidTime : Int = 3
-    
-    private var locations = [location]?()
-    private var bankCards = [bankCard]?()
     
     func saveLoginInfo() -> Bool{
         var login : NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -61,6 +43,11 @@ class User {
         }
         return false
     }
+    
+    
+    
+    
+    
     
     
     

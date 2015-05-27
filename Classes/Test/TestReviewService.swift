@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TestReviewService : BaseService {
+class TestReviewService : HttpService {
     
     func addData(data : Dictionary<String, AnyObject>) -> Dictionary<String, AnyObject> {
         var test : Dictionary<String, AnyObject> = ["data": data, "code": "20000", "message": "success"]
