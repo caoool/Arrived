@@ -859,79 +859,33 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mRG-fg-jkv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-o8-IGG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="aA7-bM-oc5" kind="embed" identifier="OrdersMapView" id="GOl-gz-sPx"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hZf-o8-IGG" secondAttribute="centerX" id="6TI-pM-wxm"/>
+                            <constraint firstItem="hZf-o8-IGG" firstAttribute="width" secondItem="KzD-jW-AtV" secondAttribute="width" id="CCl-c5-W9j"/>
+                            <constraint firstAttribute="centerY" secondItem="hZf-o8-IGG" secondAttribute="centerY" id="kj3-eM-a9U"/>
+                            <constraint firstItem="hZf-o8-IGG" firstAttribute="height" secondItem="KzD-jW-AtV" secondAttribute="height" id="u9M-xe-b5w"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Orders" id="dAF-Os-D8y">
-                        <barButtonItem key="leftBarButtonItem" title="Tags" id="eJv-tz-0yQ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Tags" id="eJv-tz-0yQ">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="List" id="71n-6A-2WP">
-                            <connections>
-                                <segue destination="B7Y-Sh-uYY" kind="show" identifier="OrdersToOrdersList" id="zPR-9p-YDz"/>
-                            </connections>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="theMap" destination="mRG-fg-jkv" id="84U-Xx-JYe"/>
-                        <segue destination="vci-wi-OfM" kind="show" identifier="OrdersToOrderDetail" id="OIk-6K-j7x"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAf-kJ-0iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3344" y="883"/>
-        </scene>
-        <!--Orders List-->
-        <scene sceneID="QxK-HM-iPQ">
-            <objects>
-                <tableViewController title="Orders List" id="B7Y-Sh-uYY" customClass="OrdersListTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="37o-ai-VGD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrdersListCell" rowHeight="116" id="l0L-l0-0ZM" customClass="OrdersListTVCell" customModule="Arrived" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l0L-l0-0ZM" id="vAK-0y-msW">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0JU-0L-uDS">
-                                            <rect key="frame" x="8" y="8" width="100" height="100"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-VQ-qzE">
-                                            <rect key="frame" x="116" y="8" width="251" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lB-tl-yQ0">
-                                            <rect key="frame" x="116" y="37" width="251" height="71"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="body" destination="9lB-tl-yQ0" id="nGC-gp-O7q"/>
-                                    <outlet property="portrait" destination="0JU-0L-uDS" id="Zqf-ar-kwS"/>
-                                    <outlet property="title" destination="FLQ-VQ-qzE" id="ltu-7B-Tfh"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="B7Y-Sh-uYY" id="NVR-46-eoi"/>
-                            <outlet property="delegate" destination="B7Y-Sh-uYY" id="bCa-wX-AJn"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <segue destination="vci-wi-OfM" kind="show" identifier="OrdersListToOrderDetail" id="1wV-fl-Pjw"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xqw-t9-x77" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4284" y="415"/>
         </scene>
         <!--User Menu-->
         <scene sceneID="80v-mF-nDh">
@@ -1453,50 +1407,6 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYe-vx-3B7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5055" y="-603"/>
-        </scene>
-        <!--Order Detail-->
-        <scene sceneID="u98-Ew-Os8">
-            <objects>
-                <viewController title="Order Detail" id="vci-wi-OfM" customClass="OrderDetailVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I8B-hs-DUb"/>
-                        <viewControllerLayoutGuide type="bottom" id="Dwc-of-7Vw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sjr-Qs-f71">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whatever content will appear here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajl-7H-20E">
-                                <rect key="frame" x="16" y="72" width="343" height="250"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Is-y4-O9y">
-                                <rect key="frame" x="269" y="504" width="52" height="30"/>
-                                <state key="normal" title="Interest">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="interest:" destination="vci-wi-OfM" eventType="touchUpInside" id="5UO-kl-3Pw"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4Q-YO-gY9">
-                                <rect key="frame" x="69" y="514" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="price" destination="A4Q-YO-gY9" id="dET-ok-bDo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lyu-el-vRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4284" y="1149"/>
         </scene>
         <!--Locations-->
         <scene sceneID="X44-aY-0VR">
@@ -2129,6 +2039,39 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="4236" y="-1390"/>
         </scene>
+        <!--Orders Map View-->
+        <scene sceneID="ONF-Tj-Kro">
+            <objects>
+                <viewController title="Orders Map View" automaticallyAdjustsScrollViewInsets="NO" id="aA7-bM-oc5" customClass="OrdersMapViewVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UN9-JZ-v1q"/>
+                        <viewControllerLayoutGuide type="bottom" id="932-y3-bh3"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="C7l-a8-Knp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-m8-Roz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EAU-m8-Roz" firstAttribute="width" secondItem="C7l-a8-Knp" secondAttribute="width" id="FXU-oZ-TyA"/>
+                            <constraint firstItem="EAU-m8-Roz" firstAttribute="height" secondItem="C7l-a8-Knp" secondAttribute="height" id="JTF-VY-k0k"/>
+                            <constraint firstAttribute="centerY" secondItem="EAU-m8-Roz" secondAttribute="centerY" id="USl-o8-8Yv"/>
+                            <constraint firstAttribute="centerX" secondItem="EAU-m8-Roz" secondAttribute="centerX" id="zTs-VN-JwV"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="mapView" destination="EAU-m8-Roz" id="T2f-RJ-Bpa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYW-i8-OoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4236" y="396"/>
+        </scene>
     </scenes>
     <resources>
         <image name="balance icon" width="85" height="85"/>
@@ -2157,6 +2100,5 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
     <inferredMetricsTieBreakers>
         <segue reference="CkZ-c3-wOb"/>
         <segue reference="y0z-cC-yKA"/>
-        <segue reference="OIk-6K-j7x"/>
     </inferredMetricsTieBreakers>
 </document>

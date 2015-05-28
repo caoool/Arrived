@@ -7,18 +7,45 @@
 //
 
 import UIKit
-import CoreLocation
-import MapKit
 
-class myAnnotation: MKPointAnnotation {
+struct Order {
     
-    var imageURL: String?
-    var detail: [String:AnyObject]?
+    var requestId: Int?
+    var phoneNumber: Int?
+    var nickname: String?
+    var portrait: String?
+    var price: Double?
+    var title: String?
+    var body: String?
+    var effectiveStartDate: String?
+    var effectiveEndDate: String?
+    var tags: String?
+    var latitude: Double?
+    var longitude: Double?
+    var address: String?
 }
 
-class OrdersVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class OrdersVC: UIViewController {
 
-    @IBOutlet weak var theMap: MKMapView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
+    // MARK: - Navigations
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "OrdersMapView" {
+            var cvs = segue.destinationViewController as! OrdersMapViewVC
+            
+        }
+    }
     
 //    let locationManager = CLLocationManager()
 //    

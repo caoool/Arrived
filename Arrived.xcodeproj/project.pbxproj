@@ -92,6 +92,7 @@
 		89CAA3E01B10BA7700D7E4C2 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CAA3DF1B10BA7700D7E4C2 /* UICountingLabel.m */; };
 		89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7C6B51AE44D0A00FFD592 /* ViewController.swift */; };
 		89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7C6B71AE4796500FFD592 /* ImageLoader.swift */; };
+		89D7F4451B17407F00ADA69C /* OrdersMapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F4441B17407F00ADA69C /* OrdersMapViewVC.swift */; };
 		89E6FB861B11EA98003A8276 /* UserMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FB851B11EA98003A8276 /* UserMenuVC.swift */; };
 		89E6FB881B12029C003A8276 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FB871B12029C003A8276 /* MenuTransitionManager.swift */; };
 		89EEF5001B00720B006881FD /* TestReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEF4FF1B00720B006881FD /* TestReviewService.swift */; };
@@ -209,6 +210,7 @@
 		89CAA3DF1B10BA7700D7E4C2 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		89D7C6B51AE44D0A00FFD592 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89D7C6B71AE4796500FFD592 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Classes/Supports/ImageLoader.swift; sourceTree = "<group>"; };
+		89D7F4441B17407F00ADA69C /* OrdersMapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersMapViewVC.swift; sourceTree = "<group>"; };
 		89E6FB851B11EA98003A8276 /* UserMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMenuVC.swift; sourceTree = "<group>"; };
 		89E6FB871B12029C003A8276 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		89EEF4FF1B00720B006881FD /* TestReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestReviewService.swift; sourceTree = "<group>"; };
@@ -348,10 +350,10 @@
 				89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */,
 				89F0E9AE1B131CB800038270 /* Resigter & Login */,
 				89F0E9AF1B131D7600038270 /* Profile */,
+				89D7F4431B173FFE00ADA69C /* Orders */,
 				89F0E9B01B131DAB00038270 /* Misc */,
 				890F54D21B01F41D0066E835 /* MakeOrderVC.swift */,
 				89D7C6B51AE44D0A00FFD592 /* ViewController.swift */,
-				898455A11AF6EABD0071A31B /* OrdersVC.swift */,
 				89EEF5051B008B05006881FD /* OrderDetailVC.swift */,
 				890F54C61B0175200066E835 /* OrdersListTVC.swift */,
 				890F54C81B0175370066E835 /* OrdersListTVCell.swift */,
@@ -575,6 +577,15 @@
 			path = Frameworks/UICountingLabel;
 			sourceTree = "<group>";
 		};
+		89D7F4431B173FFE00ADA69C /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				898455A11AF6EABD0071A31B /* OrdersVC.swift */,
+				89D7F4441B17407F00ADA69C /* OrdersMapViewVC.swift */,
+			);
+			name = Orders;
+			sourceTree = "<group>";
+		};
 		89F0E9AE1B131CB800038270 /* Resigter & Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,6 +793,7 @@
 				89471C5E1B0C0C1700EFE101 /* RAMBounceAnimation.swift in Sources */,
 				890D72B31B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
 				890D72B21B0739E5006360E7 /* SHSPhoneLogic.m in Sources */,
+				89D7F4451B17407F00ADA69C /* OrdersMapViewVC.swift in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
 				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
 				89471C4B1B09F6C600EFE101 /* KaedeTextField.swift in Sources */,
