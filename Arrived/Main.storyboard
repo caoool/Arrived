@@ -2051,21 +2051,113 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-m8-Roz">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-m8-Roz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-dK-DLs">
+                                <rect key="frame" x="30" y="425" width="540" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yzk-jf-Mox">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Yzk-jf-Mox" secondAttribute="height" multiplier="1:1" id="Azr-py-OLC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-Pu-cpU">
+                                        <rect key="frame" x="490" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.7725490196" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="s6j-Pu-cpU" secondAttribute="height" multiplier="1:1" id="mD2-5H-k4Z"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-kc-QxI">
+                                        <rect key="frame" x="57" y="15" width="425" height="20"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0XA-pd-IPG"/>
+                                    <constraint firstItem="s6j-Pu-cpU" firstAttribute="leading" secondItem="8Pl-kc-QxI" secondAttribute="trailing" constant="8" id="1ML-rV-ca2"/>
+                                    <constraint firstAttribute="centerY" secondItem="Yzk-jf-Mox" secondAttribute="centerY" id="3Ff-h0-kxZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="s6j-Pu-cpU" secondAttribute="trailing" id="4ry-im-J4a"/>
+                                    <constraint firstAttribute="height" secondItem="Yzk-jf-Mox" secondAttribute="height" id="GqO-FR-EJO"/>
+                                    <constraint firstAttribute="centerY" secondItem="8Pl-kc-QxI" secondAttribute="centerY" constant="0.5" id="d05-yy-hvB"/>
+                                    <constraint firstItem="Yzk-jf-Mox" firstAttribute="leading" secondItem="oMo-dK-DLs" secondAttribute="leading" id="fid-hB-XdB"/>
+                                    <constraint firstItem="s6j-Pu-cpU" firstAttribute="height" secondItem="oMo-dK-DLs" secondAttribute="height" id="iZh-xo-pgP"/>
+                                    <constraint firstItem="8Pl-kc-QxI" firstAttribute="leading" secondItem="Yzk-jf-Mox" secondAttribute="trailing" constant="7.5" id="wod-zV-d6s"/>
+                                    <constraint firstAttribute="centerY" secondItem="s6j-Pu-cpU" secondAttribute="centerY" id="xU2-hG-6JI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0XA-pd-IPG"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDe-ID-ThR">
+                                <rect key="frame" x="454" y="387" width="116" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interested icon" translatesAutoresizingMaskIntoConstraints="NO" id="OjU-Dv-sYE">
+                                        <rect key="frame" x="8" y="1.5" width="27" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OjU-Dv-sYE" secondAttribute="height" multiplier="1:1" id="AlE-ji-CFQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1V-bC-cxB">
+                                        <rect key="frame" x="43" y="-1" width="53" height="30"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="17"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="Y1V-bC-cxB" secondAttribute="height" id="12O-jr-y3V"/>
+                                    <constraint firstItem="OjU-Dv-sYE" firstAttribute="leading" secondItem="RDe-ID-ThR" secondAttribute="leading" constant="8" id="LWR-WM-mSR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y1V-bC-cxB" secondAttribute="trailing" constant="20" symbolic="YES" id="PQV-l4-q4A"/>
+                                    <constraint firstAttribute="centerY" secondItem="OjU-Dv-sYE" secondAttribute="centerY" id="fIN-X0-sm2"/>
+                                    <constraint firstAttribute="height" constant="30" id="fq4-Gv-Ixf"/>
+                                    <constraint firstItem="OjU-Dv-sYE" firstAttribute="height" secondItem="RDe-ID-ThR" secondAttribute="height" multiplier="9:10" id="mug-IL-7J0"/>
+                                    <constraint firstAttribute="centerY" secondItem="Y1V-bC-cxB" secondAttribute="centerY" constant="0.5" id="qg8-4T-Qid"/>
+                                    <constraint firstItem="Y1V-bC-cxB" firstAttribute="leading" secondItem="OjU-Dv-sYE" secondAttribute="trailing" constant="8" id="v6H-dB-B5F"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oMo-dK-DLs" firstAttribute="width" secondItem="RDe-ID-ThR" secondAttribute="width" multiplier="3.5:1" id="5Rk-dh-keE"/>
+                            <constraint firstAttribute="centerY" secondItem="oMo-dK-DLs" secondAttribute="centerY" multiplier="3:4.5" id="EmV-o7-1wL"/>
                             <constraint firstItem="EAU-m8-Roz" firstAttribute="width" secondItem="C7l-a8-Knp" secondAttribute="width" id="FXU-oZ-TyA"/>
                             <constraint firstItem="EAU-m8-Roz" firstAttribute="height" secondItem="C7l-a8-Knp" secondAttribute="height" id="JTF-VY-k0k"/>
+                            <constraint firstAttribute="centerX" secondItem="oMo-dK-DLs" secondAttribute="centerX" id="KU1-A9-tpS"/>
+                            <constraint firstItem="oMo-dK-DLs" firstAttribute="top" secondItem="RDe-ID-ThR" secondAttribute="bottom" constant="8" symbolic="YES" id="MmB-Ti-xgf"/>
                             <constraint firstAttribute="centerY" secondItem="EAU-m8-Roz" secondAttribute="centerY" id="USl-o8-8Yv"/>
+                            <constraint firstItem="oMo-dK-DLs" firstAttribute="trailing" secondItem="RDe-ID-ThR" secondAttribute="trailing" id="jgx-vJ-MeY"/>
+                            <constraint firstItem="oMo-dK-DLs" firstAttribute="height" secondItem="C7l-a8-Knp" secondAttribute="height" multiplier="1:12" id="pGY-I5-Rd6"/>
+                            <constraint firstItem="oMo-dK-DLs" firstAttribute="width" secondItem="C7l-a8-Knp" secondAttribute="width" multiplier="9:10" id="zSi-16-5cw"/>
                             <constraint firstAttribute="centerX" secondItem="EAU-m8-Roz" secondAttribute="centerX" id="zTs-VN-JwV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Rk-dh-keE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="detailView" destination="oMo-dK-DLs" id="24n-Pu-3zH"/>
+                        <outlet property="interestView" destination="RDe-ID-ThR" id="ZX4-Ix-Nzn"/>
                         <outlet property="mapView" destination="EAU-m8-Roz" id="T2f-RJ-Bpa"/>
+                        <outlet property="portraitImage" destination="Yzk-jf-Mox" id="KwZ-Iq-heC"/>
+                        <outlet property="titleLabel" destination="8Pl-kc-QxI" id="whM-GX-qla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYW-i8-OoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2081,6 +2173,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="ic_card_master_card" width="25" height="16"/>
         <image name="ic_card_visa" width="25" height="16"/>
         <image name="ic_credit_card" width="25" height="16"/>
+        <image name="interested icon" width="50" height="50"/>
         <image name="likes icon" width="85" height="85"/>
         <image name="logout icon" width="85" height="85"/>
         <image name="meeting" width="25" height="25"/>

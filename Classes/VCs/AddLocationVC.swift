@@ -63,6 +63,8 @@ class AddLocationVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
     
     func updateUIWithUserLocation() {
         
+        mapView.delegate = self
+        
         manager = CLLocationManager()
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
