@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>addressId</key>
+		<integer>1</integer>
+		<key>longitude</key>
+		<real>100.1</real>
+		<key>latitude</key>
+		<real>-10.2</real>
+		<key>address</key>
+		<string>Homestead 102, CA</string>
+	</dict>
+</array>
+</plist>

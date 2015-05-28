@@ -98,10 +98,14 @@
 		94AF3FFE1B14C7C20048FD5F /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF3FFD1B14C7C20048FD5F /* RequestService.swift */; };
 		94AF40001B14C7FC0048FD5F /* BankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF3FFF1B14C7FC0048FD5F /* BankService.swift */; };
 		94AF40021B14C9E60048FD5F /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF40011B14C9E60048FD5F /* ReviewService.swift */; };
-		94AF40041B14CA5C0048FD5F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF40031B14CA5C0048FD5F /* Address.swift */; };
 		94AF40061B14CA690048FD5F /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF40051B14CA690048FD5F /* Bank.swift */; };
 		94AF40081B14CA770048FD5F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF40071B14CA770048FD5F /* Review.swift */; };
-		94AF400A1B14CA800048FD5F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF40091B14CA800048FD5F /* Request.swift */; };
+		94AF401E1B1717AB0048FD5F /* address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94AF401B1B1717AB0048FD5F /* address.plist */; };
+		94AF401F1B1717AB0048FD5F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF401C1B1717AB0048FD5F /* Address.swift */; };
+		94AF40201B1717AB0048FD5F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF401D1B1717AB0048FD5F /* Request.swift */; };
+		94AF40221B1717C30048FD5F /* request.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94AF40211B1717C30048FD5F /* request.plist */; };
+		94AF40241B1717EE0048FD5F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF40231B1717EE0048FD5F /* DataManager.swift */; };
+		94AF40261B1718180048FD5F /* profile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94AF40251B1718180048FD5F /* profile.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,10 +224,14 @@
 		94AF3FFD1B14C7C20048FD5F /* RequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		94AF3FFF1B14C7FC0048FD5F /* BankService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankService.swift; sourceTree = "<group>"; };
 		94AF40011B14C9E60048FD5F /* ReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
-		94AF40031B14CA5C0048FD5F /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		94AF40051B14CA690048FD5F /* Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		94AF40071B14CA770048FD5F /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		94AF40091B14CA800048FD5F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		94AF401B1B1717AB0048FD5F /* address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address.plist; sourceTree = "<group>"; };
+		94AF401C1B1717AB0048FD5F /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		94AF401D1B1717AB0048FD5F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		94AF40211B1717C30048FD5F /* request.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = request.plist; sourceTree = "<group>"; };
+		94AF40231B1717EE0048FD5F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		94AF40251B1718180048FD5F /* profile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = profile.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,11 +601,15 @@
 		94AF3FE51B143C6C0048FD5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94AF401B1B1717AB0048FD5F /* address.plist */,
+				94AF40211B1717C30048FD5F /* request.plist */,
+				94AF40251B1718180048FD5F /* profile.plist */,
 				94AF3FE61B143C6C0048FD5F /* User.swift */,
-				94AF40031B14CA5C0048FD5F /* Address.swift */,
+				94AF401C1B1717AB0048FD5F /* Address.swift */,
+				94AF401D1B1717AB0048FD5F /* Request.swift */,
 				94AF40051B14CA690048FD5F /* Bank.swift */,
 				94AF40071B14CA770048FD5F /* Review.swift */,
-				94AF40091B14CA800048FD5F /* Request.swift */,
+				94AF40231B1717EE0048FD5F /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -700,9 +712,12 @@
 			files = (
 				8958224B1B04F0A4000DA21E /* SHSPhoneImage.bundle in Resources */,
 				89CAA3DC1B10A50A00D7E4C2 /* Images.xcassets in Resources */,
+				94AF40261B1718180048FD5F /* profile.plist in Resources */,
 				899DA8D31AF41AC700F0C476 /* birthday-104.png in Resources */,
+				94AF40221B1717C30048FD5F /* request.plist in Resources */,
 				89C4135B1AF1CD91000C2C95 /* Phone Icon.png in Resources */,
 				89C4136A1AF40402000C2C95 /* Main.storyboard in Resources */,
+				94AF401E1B1717AB0048FD5F /* address.plist in Resources */,
 				895822741B05061C000DA21E /* errorIcon@2x.png in Resources */,
 				89C413661AF32029000C2C95 /* user-104.png in Resources */,
 				899DA8CD1AF419C000F0C476 /* thunbs_up-96.png in Resources */,
@@ -741,7 +756,7 @@
 				899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */,
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
 				8975DAC31B0E2043009D4991 /* WaveformVC.swift in Sources */,
-				94AF400A1B14CA800048FD5F /* Request.swift in Sources */,
+				94AF40201B1717AB0048FD5F /* Request.swift in Sources */,
 				89EEF5061B008B05006881FD /* OrderDetailVC.swift in Sources */,
 				94AF3FF01B143CB80048FD5F /* Port.swift in Sources */,
 				89471C4D1B09F6C600EFE101 /* MinoruTextField.swift in Sources */,
@@ -761,9 +776,9 @@
 				890D4C811AE4433400BD05DF /* AddPaymentInfoVC.swift in Sources */,
 				89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */,
 				94AF3FFC1B14C6B10048FD5F /* AddressService.swift in Sources */,
-				94AF40041B14CA5C0048FD5F /* Address.swift in Sources */,
 				89D7C6B61AE44D0A00FFD592 /* ViewController.swift in Sources */,
 				94AF3FFE1B14C7C20048FD5F /* RequestService.swift in Sources */,
+				94AF40241B1717EE0048FD5F /* DataManager.swift in Sources */,
 				8975DAC11B0E187A009D4991 /* SiriWaveformView.swift in Sources */,
 				89471C4A1B09F6C600EFE101 /* JiroTextField.swift in Sources */,
 				94AF3FEB1B143C6C0048FD5F /* User.swift in Sources */,
@@ -774,6 +789,7 @@
 				890D72B71B0741C5006360E7 /* UserAgreementVC.swift in Sources */,
 				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
 				94AF3FED1B143C6C0048FD5F /* TestReviewService.swift in Sources */,
+				94AF401F1B1717AB0048FD5F /* Address.swift in Sources */,
 				8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */,
 				895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */,
 				89E6FB881B12029C003A8276 /* MenuTransitionManager.swift in Sources */,

@@ -10,10 +10,11 @@ import Foundation
 
 class Bank {
     
-    private var bankCardId: String? = nil
+    private var localId : Int? = nil
+    private var bankCardId: Int? = nil
     private var fullName: String? = nil
     private var bankCardNumber: String? = nil
     private var expirationDate: String? = nil
-    private var cvv: String? = nil
+    private var cardType : Int? = nil
     
 }
