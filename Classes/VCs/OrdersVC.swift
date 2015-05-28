@@ -23,10 +23,15 @@ struct Order {
     var latitude: Double?
     var longitude: Double?
     var address: String?
+    var status: String?
 }
 
 class OrdersVC: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
+    
+    private var ordersMapViewVC: OrdersMapViewVC?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,14 +43,40 @@ class OrdersVC: UIViewController {
         super.viewWillAppear(true)
     }
     
+    // MARK: - Tags
+    
+    @IBAction func showTags(sender: UIBarButtonItem) {
+        
+        let item1 = Tag(issSelected: true, isLocked: true, textContent: "Hello1")
+        let item2 = Tag(issSelected: true, isLocked: true, textContent: "Hello2")
+        let item3 = Tag(issSelected: false, isLocked: true, textContent: "Hello3")
+        let item4 = Tag(issSelected: false, isLocked: true, textContent: "Hello4")
+        let item5 = Tag(issSelected: true, isLocked: true, textContent: "Hello5")
+        let tags = [item1, item2, item3, item4, item5]
+        
+        
+        
+        RRTagController.displayTagController(parentController: self, tags: tags, blockFinish: { (selectedTags, unSelectedTags) -> () in
+            // ok
+            for tag in selectedTags {
+                // TODO: save selectedTags
+                self.ordersMapViewVC?.reloadScene()
+                
+            }
+            }) { () -> () in
+                // cancelled
+        }
+    }
+    
     // MARK: - Navigations
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "OrdersMapView" {
-            var cvs = segue.destinationViewController as! OrdersMapViewVC
+            ordersMapViewVC = segue.destinationViewController as? OrdersMapViewVC
             
         }
     }
+    
     
 //    let locationManager = CLLocationManager()
 //    

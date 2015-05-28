@@ -34,6 +34,9 @@
 		890F54D11B01F4120066E835 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54CD1B01F4120066E835 /* AudioRecorder.swift */; };
 		890F54D31B01F41D0066E835 /* MakeOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F54D21B01F41D0066E835 /* MakeOrderVC.swift */; };
 		891B845C1B176EC700BFC3E7 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B845B1B176EC700BFC3E7 /* SwiftNotice.swift */; };
+		891B84631B17B99E00BFC3E7 /* RRAddTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B84601B17B99E00BFC3E7 /* RRAddTagView.swift */; };
+		891B84641B17B99E00BFC3E7 /* RRTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B84611B17B99E00BFC3E7 /* RRTagCollectionViewCell.swift */; };
+		891B84651B17B99E00BFC3E7 /* RRTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B84621B17B99E00BFC3E7 /* RRTagController.swift */; };
 		892C17451B14344E00D2D37F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C17441B14344E00D2D37F /* AlertController.swift */; };
 		892C17491B143B2800D2D37F /* AddBankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C17481B143B2800D2D37F /* AddBankCardVC.swift */; };
 		89471C471B09F6C600EFE101 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89471C3D1B09F6C600EFE101 /* HoshiTextField.swift */; };
@@ -150,6 +153,9 @@
 		890F54CD1B01F4120066E835 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		890F54D21B01F41D0066E835 /* MakeOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeOrderVC.swift; sourceTree = "<group>"; };
 		891B845B1B176EC700BFC3E7 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNotice.swift; path = Frameworks/SwiftNotice.swift; sourceTree = "<group>"; };
+		891B84601B17B99E00BFC3E7 /* RRAddTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRAddTagView.swift; sourceTree = "<group>"; };
+		891B84611B17B99E00BFC3E7 /* RRTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		891B84621B17B99E00BFC3E7 /* RRTagController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRTagController.swift; sourceTree = "<group>"; };
 		892C17441B14344E00D2D37F /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = ../Frameworks/SimpleAlert/AlertController.swift; sourceTree = "<group>"; };
 		892C17481B143B2800D2D37F /* AddBankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBankCardVC.swift; sourceTree = "<group>"; };
 		89471C3D1B09F6C600EFE101 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
@@ -402,6 +408,17 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		891B845F1B17B99E00BFC3E7 /* RRTagController */ = {
+			isa = PBXGroup;
+			children = (
+				891B84601B17B99E00BFC3E7 /* RRAddTagView.swift */,
+				891B84611B17B99E00BFC3E7 /* RRTagCollectionViewCell.swift */,
+				891B84621B17B99E00BFC3E7 /* RRTagController.swift */,
+			);
+			name = RRTagController;
+			path = Frameworks/RRTagController;
+			sourceTree = "<group>";
+		};
 		892C174A1B147CC000D2D37F /* Banking */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +543,7 @@
 				89471C3C1B09F6C600EFE101 /* TextFieldEffects */,
 				890D72A51B0739E5006360E7 /* SHSPhoneComponent */,
 				8958226A1B05061C000DA21E /* GoogleWearAlertView */,
+				891B845F1B17B99E00BFC3E7 /* RRTagController */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -751,6 +769,7 @@
 				892C17491B143B2800D2D37F /* AddBankCardVC.swift in Sources */,
 				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
 				899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */,
+				891B84651B17B99E00BFC3E7 /* RRTagController.swift in Sources */,
 				890E3FBD1AEC5B9500F22912 /* HelperMethods.swift in Sources */,
 				8975DAC31B0E2043009D4991 /* WaveformVC.swift in Sources */,
 				890F54CE1B01F4120066E835 /* AudioContext.swift in Sources */,
@@ -764,6 +783,7 @@
 				89E6FB861B11EA98003A8276 /* UserMenuVC.swift in Sources */,
 				89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */,
 				8981A4CB1AF55B8800F3046A /* UserBankCardsTVC.swift in Sources */,
+				891B84641B17B99E00BFC3E7 /* RRTagCollectionViewCell.swift in Sources */,
 				89471C471B09F6C600EFE101 /* HoshiTextField.swift in Sources */,
 				89471C4F1B09F6C600EFE101 /* YokoTextField.swift in Sources */,
 				8981A4CD1AF55BA100F3046A /* UserLocationsTVC.swift in Sources */,
@@ -789,6 +809,7 @@
 				895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */,
 				89C413511AF16ACF000C2C95 /* TestUserService.swift in Sources */,
 				89E6FB881B12029C003A8276 /* MenuTransitionManager.swift in Sources */,
+				891B84631B17B99E00BFC3E7 /* RRAddTagView.swift in Sources */,
 				890F54C91B0175370066E835 /* OrdersListTVCell.swift in Sources */,
 				89471C5F1B0C0C1700EFE101 /* RAMFrameItemAnimation.swift in Sources */,
 				890D4C7D1AE4433400BD05DF /* BaseService.swift in Sources */,

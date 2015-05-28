@@ -20,9 +20,12 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var interestView: UIView!
+    @IBOutlet weak var progressingView: UIView!
     
     private var testOrders = [Order]()
     private var currentOrderIndex = 0
+    
+    private var annotations = [CustomPointAnnotation]()
     
     // for user location
     var manager: CLLocationManager!
@@ -31,9 +34,9 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let order1 = Order(requestId: 1, phoneNumber: 13304650123, nickname: "Sam", portrait: "http://i.imgur.com/YrbaaFr.png", price: 133, title: "I am Order 1", body: "In SCU ENGINEER 1st Floor bathroom, help", effectiveStartDate: "21/06/2015, 12:23:00", effectiveEndDate: "21/06/2015, 12:33:00", tags: "", latitude: 37.34235200, longitude: -122.0322302, address: "rain st.123")
-        let order2 = Order(requestId: 1, phoneNumber: 13304650123, nickname: "Sam", portrait: "http://i.imgur.com/YrbaaFr.png", price: 133, title: "Who can tell I am order 2", body: "In SCU ENGINEER 1st Floor bathroom, help", effectiveStartDate: "21/06/2015, 12:23:00", effectiveEndDate: "21/06/2015, 12:33:00", tags: "", latitude: 37.37235141, longitude: -122.0342182, address: "rain st.123")
-        let order3 = Order(requestId: 1, phoneNumber: 13304650123, nickname: "Sam", portrait: "http://i.imgur.com/YrbaaFr.png", price: 133, title: "These two fuckers are order 1 and 2", body: "In SCU ENGINEER 1st Floor bathroom, help", effectiveStartDate: "21/06/2015, 12:23:00", effectiveEndDate: "21/06/2015, 12:33:00", tags: "", latitude: 37.31235141, longitude: -122.0112182, address: "rain st.123")
+        let order1 = Order(requestId: 1, phoneNumber: 13304650123, nickname: "Sam", portrait: "http://i.imgur.com/YrbaaFr.png", price: 133, title: "I am Order 1", body: "In SCU ENGINEER 1st Floor bathroom, help", effectiveStartDate: "21/06/2015, 12:23:00", effectiveEndDate: "21/06/2015, 12:33:00", tags: "", latitude: 37.34235200, longitude: -122.0322302, address: "rain st.123", status: "regular")
+        let order2 = Order(requestId: 1, phoneNumber: 13304650123, nickname: "Sam", portrait: "http://i.imgur.com/YrbaaFr.png", price: 133, title: "Who can tell I am order 2", body: "In SCU ENGINEER 1st Floor bathroom, help", effectiveStartDate: "21/06/2015, 12:23:00", effectiveEndDate: "21/06/2015, 12:33:00", tags: "", latitude: 37.37235141, longitude: -122.0342182, address: "rain st.123", status: "interested")
+        let order3 = Order(requestId: 1, phoneNumber: 13304650123, nickname: "Sam", portrait: "http://i.imgur.com/YrbaaFr.png", price: 133, title: "These two fuckers are order 1 and 2", body: "In SCU ENGINEER 1st Floor bathroom, help", effectiveStartDate: "21/06/2015, 12:23:00", effectiveEndDate: "21/06/2015, 12:33:00", tags: "", latitude: 37.31235141, longitude: -122.0112182, address: "rain st.123", status: "in progress")
         testOrders = [order1, order2, order3]
         
         loadScene()
@@ -52,6 +55,16 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
         addSwipeGesturesToDetailView()
     }
     
+    func reloadScene() {
+        mapView.removeAnnotations(mapView.annotations)
+        
+        if testOrders.count > 0 {
+            addAnnotations()
+            setDetailView()
+            goToOrder(currentOrderIndex)
+        }
+    }
+    
     func setDetailView() {
         detailView.layer.borderWidth = 0.3
         detailView.layer.borderColor = UIColor.lightGrayColor().CGColor
@@ -64,6 +77,13 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
         interestView.alpha = 0.9
         
         interestView.alpha = 0
+        
+        progressingView.layer.borderWidth = 0.3
+        progressingView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        progressingView.layer.cornerRadius = 12
+        progressingView.alpha = 0.9
+        
+        progressingView.alpha = 0
         
     }
     
@@ -93,8 +113,19 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
             let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: order.latitude!, longitude: order.longitude!)
             var annotation = CustomPointAnnotation()
             annotation.coordinate = location
-            annotation.imageName = "map pin.png"
+            switch order.status! {
+            case "regular":
+                annotation.imageName = "regular pin"
+            case "interested":
+                annotation.imageName = "interested pin"
+            case "in progress":
+                annotation.imageName = "in progress pin"
+            default:
+                break
+            }
+            
             mapView.addAnnotation(annotation)
+            annotations.append(annotation)
         }
     }
     
@@ -112,8 +143,7 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
         }
         titleLabel.text = testOrders[i].title
         
-        // TODO: - Check status, interest, or in progress
-        interestView.alpha = 0
+        hideAndShowStatusViews(testOrders[i].status!)
     }
     
     func centerMapOnOrder(i: Int) {
@@ -140,8 +170,36 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
         })
     }
     
-    func notifyInterested() {
-        
+    func hideAndShowStatusViews(status: String) {
+        switch status {
+        case "regular":
+            fadeOutView(interestView, 0.2)
+            fadeOutView(progressingView, 0.2)
+        case "interested":
+            UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.progressingView.alpha = 0.0
+                }, completion: {
+                    (finished: Bool) -> Void in
+                    
+                    // Fade in
+                    UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                        self.interestView.alpha = 1.0
+                        }, completion: nil)
+            })
+        case "in progress":
+            UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.interestView.alpha = 0.0
+                }, completion: {
+                    (finished: Bool) -> Void in
+                    
+                    // Fade in
+                    UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                        self.progressingView.alpha = 1.0
+                        }, completion: nil)
+            })
+        default:
+            break
+        }
     }
     
     // MARK: - User Interaction
@@ -175,7 +233,7 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
                 } else {
                     fadeAndChangeDetailViewContent(--currentOrderIndex)
                 }
-                println(currentOrderIndex)
+
             case UISwipeGestureRecognizerDirection.Left:
                 if currentOrderIndex == testOrders.count - 1 {
                     fadeAndChangeDetailViewContent(0)
@@ -183,20 +241,27 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
                 } else {
                     fadeAndChangeDetailViewContent(++currentOrderIndex)
                 }
-                println(currentOrderIndex)
+
             case UISwipeGestureRecognizerDirection.Up:
-                fadeInView(interestView, 0.6)
-                bounceView(interestView)
-            case UISwipeGestureRecognizerDirection.Down:
-                if testOrders.count > 0 {
-                    currentOrderIndex++
-                    if currentOrderIndex == testOrders.count - 1 {
-                        fadeAndChangeDetailViewContent(0)
-                        currentOrderIndex = 0
-                    } else {
-                        fadeAndChangeDetailViewContent(++currentOrderIndex)
-                    }
+                if testOrders[currentOrderIndex].status == "regular" {
+                    fadeInView(interestView, 0.6)
+                    bounceView(interestView)
+                    testOrders[currentOrderIndex].status = "interested"
+                    mapView.removeAnnotation(annotations[currentOrderIndex])
+                    annotations[currentOrderIndex].imageName = "interested pin"
+                    mapView.addAnnotation(annotations[currentOrderIndex])
+                } else if testOrders[currentOrderIndex].status == "interested" {
+                    fadeOutView(interestView, 0.6)
+                    bounceView(interestView)
+                    testOrders[currentOrderIndex].status = "regular"
+                    mapView.removeAnnotation(annotations[currentOrderIndex])
+                    annotations[currentOrderIndex].imageName = "regular pin"
+                    mapView.addAnnotation(annotations[currentOrderIndex])
                 }
+                
+            case UISwipeGestureRecognizerDirection.Down:
+                // TODO: - Something like refresh
+                break
             default:
                 break
             }

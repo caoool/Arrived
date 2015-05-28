@@ -877,11 +877,17 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                     <navigationItem key="navigationItem" title="Orders" id="dAF-Os-D8y">
                         <barButtonItem key="leftBarButtonItem" title="Tags" id="eJv-tz-0yQ">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showTags:" destination="ish-b5-FrF" id="zdj-fH-hLp"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="List" id="71n-6A-2WP">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="hZf-o8-IGG" id="uU1-Fm-dW2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAf-kJ-0iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2106,7 +2112,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <rect key="frame" x="454" y="387" width="116" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interested icon" translatesAutoresizingMaskIntoConstraints="NO" id="OjU-Dv-sYE">
-                                        <rect key="frame" x="8" y="1.5" width="27" height="27"/>
+                                        <rect key="frame" x="8" y="1" width="27" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="OjU-Dv-sYE" secondAttribute="height" multiplier="1:1" id="AlE-ji-CFQ"/>
                                         </constraints>
@@ -2130,9 +2136,38 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <constraint firstItem="Y1V-bC-cxB" firstAttribute="leading" secondItem="OjU-Dv-sYE" secondAttribute="trailing" constant="8" id="v6H-dB-B5F"/>
                                 </constraints>
                             </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dv-Od-aE4">
+                                <rect key="frame" x="430" y="387" width="140" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressing icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-G9-Exe">
+                                        <rect key="frame" x="8" y="1.5" width="27" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Sfv-G9-Exe" secondAttribute="height" multiplier="1:1" id="m7q-QG-ift"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Progressing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVK-OY-DD4">
+                                        <rect key="frame" x="43" y="-1" width="78" height="30"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="17"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="Sfv-G9-Exe" secondAttribute="centerY" id="1om-rg-ejd"/>
+                                    <constraint firstItem="NVK-OY-DD4" firstAttribute="leading" secondItem="Sfv-G9-Exe" secondAttribute="trailing" constant="8" id="9au-nv-qka"/>
+                                    <constraint firstAttribute="centerY" secondItem="NVK-OY-DD4" secondAttribute="centerY" id="9ia-91-X5E"/>
+                                    <constraint firstAttribute="height" secondItem="NVK-OY-DD4" secondAttribute="height" id="BLs-aF-Vvg"/>
+                                    <constraint firstAttribute="height" constant="30" id="HnL-hB-Gln"/>
+                                    <constraint firstAttribute="trailing" secondItem="NVK-OY-DD4" secondAttribute="trailing" constant="20" symbolic="YES" id="bqm-mb-PFh"/>
+                                    <constraint firstItem="Sfv-G9-Exe" firstAttribute="height" secondItem="4Dv-Od-aE4" secondAttribute="height" multiplier="9:10" id="jIT-he-The"/>
+                                    <constraint firstItem="Sfv-G9-Exe" firstAttribute="leading" secondItem="4Dv-Od-aE4" secondAttribute="leading" constant="8" id="x7F-lF-H0n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oMo-dK-DLs" firstAttribute="top" secondItem="4Dv-Od-aE4" secondAttribute="bottom" constant="8" symbolic="YES" id="4Gu-Gn-Mco"/>
                             <constraint firstItem="oMo-dK-DLs" firstAttribute="width" secondItem="RDe-ID-ThR" secondAttribute="width" multiplier="3.5:1" id="5Rk-dh-keE"/>
                             <constraint firstAttribute="centerY" secondItem="oMo-dK-DLs" secondAttribute="centerY" multiplier="3:4.5" id="EmV-o7-1wL"/>
                             <constraint firstItem="EAU-m8-Roz" firstAttribute="width" secondItem="C7l-a8-Knp" secondAttribute="width" id="FXU-oZ-TyA"/>
@@ -2141,6 +2176,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <constraint firstItem="oMo-dK-DLs" firstAttribute="top" secondItem="RDe-ID-ThR" secondAttribute="bottom" constant="8" symbolic="YES" id="MmB-Ti-xgf"/>
                             <constraint firstAttribute="centerY" secondItem="EAU-m8-Roz" secondAttribute="centerY" id="USl-o8-8Yv"/>
                             <constraint firstItem="oMo-dK-DLs" firstAttribute="trailing" secondItem="RDe-ID-ThR" secondAttribute="trailing" id="jgx-vJ-MeY"/>
+                            <constraint firstItem="oMo-dK-DLs" firstAttribute="trailing" secondItem="4Dv-Od-aE4" secondAttribute="trailing" id="lf8-s8-rzy"/>
                             <constraint firstItem="oMo-dK-DLs" firstAttribute="height" secondItem="C7l-a8-Knp" secondAttribute="height" multiplier="1:12" id="pGY-I5-Rd6"/>
                             <constraint firstItem="oMo-dK-DLs" firstAttribute="width" secondItem="C7l-a8-Knp" secondAttribute="width" multiplier="9:10" id="zSi-16-5cw"/>
                             <constraint firstAttribute="centerX" secondItem="EAU-m8-Roz" secondAttribute="centerX" id="zTs-VN-JwV"/>
@@ -2157,12 +2193,13 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <outlet property="interestView" destination="RDe-ID-ThR" id="ZX4-Ix-Nzn"/>
                         <outlet property="mapView" destination="EAU-m8-Roz" id="T2f-RJ-Bpa"/>
                         <outlet property="portraitImage" destination="Yzk-jf-Mox" id="KwZ-Iq-heC"/>
+                        <outlet property="progressingView" destination="4Dv-Od-aE4" id="83h-V1-oKJ"/>
                         <outlet property="titleLabel" destination="8Pl-kc-QxI" id="whM-GX-qla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYW-i8-OoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4236" y="396"/>
+            <point key="canvasLocation" x="4236" y="883"/>
         </scene>
     </scenes>
     <resources>
@@ -2182,6 +2219,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <image name="my portrait" width="1280" height="1024"/>
         <image name="profile" width="25" height="25"/>
         <image name="profile_black" width="24" height="24"/>
+        <image name="progressing icon" width="28" height="28"/>
         <image name="set addesses icon" width="85" height="85"/>
         <image name="set cards icon" width="85" height="85"/>
         <image name="set phone icon" width="85" height="85"/>
