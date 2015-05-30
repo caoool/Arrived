@@ -2090,16 +2090,16 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                             </mapView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-dK-DLs">
-                                <rect key="frame" x="30" y="344" width="540" height="40.5"/>
+                                <rect key="frame" x="30" y="339" width="540" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yzk-jf-Mox">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Yzk-jf-Mox" secondAttribute="height" multiplier="1:1" id="Azr-py-OLC"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-Pu-cpU">
-                                        <rect key="frame" x="499" y="0.0" width="40.5" height="40.5"/>
+                                        <rect key="frame" x="490" y="0.0" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.22352941179999999" green="0.7725490196" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="s6j-Pu-cpU" secondAttribute="height" multiplier="1:1" id="mD2-5H-k4Z"/>
@@ -2109,9 +2109,18 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goToDetailView:" destination="aA7-bM-oc5" eventType="touchUpInside" id="jNE-vv-oBU"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-kc-QxI">
-                                        <rect key="frame" x="47" y="10" width="444" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9L-iw-zT4">
+                                        <rect key="frame" x="458" y="0.0" width="29.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="15"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-kc-QxI">
+                                        <rect key="frame" x="51" y="0.0" width="405" height="50"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                         <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
@@ -2121,14 +2130,19 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="0XA-pd-IPG"/>
-                                    <constraint firstItem="s6j-Pu-cpU" firstAttribute="leading" secondItem="8Pl-kc-QxI" secondAttribute="trailing" constant="8" id="1ML-rV-ca2"/>
+                                    <constraint firstAttribute="centerY" secondItem="8Pl-kc-QxI" secondAttribute="centerY" id="1M5-HT-kMW"/>
                                     <constraint firstAttribute="centerY" secondItem="Yzk-jf-Mox" secondAttribute="centerY" id="3Ff-h0-kxZ"/>
                                     <constraint firstAttribute="trailing" secondItem="s6j-Pu-cpU" secondAttribute="trailing" id="4ry-im-J4a"/>
+                                    <constraint firstAttribute="centerY" secondItem="t9L-iw-zT4" secondAttribute="centerY" id="Dem-lb-1hd"/>
                                     <constraint firstAttribute="height" secondItem="Yzk-jf-Mox" secondAttribute="height" id="GqO-FR-EJO"/>
-                                    <constraint firstAttribute="centerY" secondItem="8Pl-kc-QxI" secondAttribute="centerY" constant="0.5" id="d05-yy-hvB"/>
+                                    <constraint firstItem="8Pl-kc-QxI" firstAttribute="leading" secondItem="Yzk-jf-Mox" secondAttribute="trailing" constant="2" id="TFn-zT-EXm"/>
+                                    <constraint firstItem="t9L-iw-zT4" firstAttribute="height" secondItem="oMo-dK-DLs" secondAttribute="height" id="dLo-eT-9Su"/>
+                                    <constraint firstItem="8Pl-kc-QxI" firstAttribute="height" secondItem="oMo-dK-DLs" secondAttribute="height" id="f7o-gS-tL3"/>
                                     <constraint firstItem="Yzk-jf-Mox" firstAttribute="leading" secondItem="oMo-dK-DLs" secondAttribute="leading" id="fid-hB-XdB"/>
+                                    <constraint firstItem="t9L-iw-zT4" firstAttribute="leading" secondItem="8Pl-kc-QxI" secondAttribute="trailing" constant="2" id="gvs-aV-fnY"/>
                                     <constraint firstItem="s6j-Pu-cpU" firstAttribute="height" secondItem="oMo-dK-DLs" secondAttribute="height" id="iZh-xo-pgP"/>
-                                    <constraint firstItem="8Pl-kc-QxI" firstAttribute="leading" secondItem="Yzk-jf-Mox" secondAttribute="trailing" constant="7.5" id="wod-zV-d6s"/>
+                                    <constraint firstAttribute="height" constant="50" id="irE-Nc-f39"/>
+                                    <constraint firstItem="s6j-Pu-cpU" firstAttribute="leading" secondItem="t9L-iw-zT4" secondAttribute="trailing" constant="2" id="lSw-aX-NKe"/>
                                     <constraint firstAttribute="centerY" secondItem="s6j-Pu-cpU" secondAttribute="centerY" id="xU2-hG-6JI"/>
                                 </constraints>
                                 <variation key="default">
@@ -2138,7 +2152,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </variation>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDe-ID-ThR">
-                                <rect key="frame" x="454" y="306" width="116" height="30"/>
+                                <rect key="frame" x="454" y="301" width="116" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interested icon" translatesAutoresizingMaskIntoConstraints="NO" id="OjU-Dv-sYE">
                                         <rect key="frame" x="8" y="1" width="27" height="27"/>
@@ -2147,7 +2161,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1V-bC-cxB">
-                                        <rect key="frame" x="43" y="-1" width="53" height="30"/>
+                                        <rect key="frame" x="43" y="0.0" width="53" height="30"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="17"/>
                                         <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2161,12 +2175,12 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <constraint firstAttribute="centerY" secondItem="OjU-Dv-sYE" secondAttribute="centerY" id="fIN-X0-sm2"/>
                                     <constraint firstAttribute="height" constant="30" id="fq4-Gv-Ixf"/>
                                     <constraint firstItem="OjU-Dv-sYE" firstAttribute="height" secondItem="RDe-ID-ThR" secondAttribute="height" multiplier="9:10" id="mug-IL-7J0"/>
-                                    <constraint firstAttribute="centerY" secondItem="Y1V-bC-cxB" secondAttribute="centerY" constant="0.5" id="qg8-4T-Qid"/>
+                                    <constraint firstAttribute="centerY" secondItem="Y1V-bC-cxB" secondAttribute="centerY" id="qg8-4T-Qid"/>
                                     <constraint firstItem="Y1V-bC-cxB" firstAttribute="leading" secondItem="OjU-Dv-sYE" secondAttribute="trailing" constant="8" id="v6H-dB-B5F"/>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dv-Od-aE4">
-                                <rect key="frame" x="430" y="306" width="140" height="30"/>
+                                <rect key="frame" x="430" y="301" width="140" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressing icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-G9-Exe">
                                         <rect key="frame" x="8" y="1" width="27" height="27"/>
@@ -2213,6 +2227,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5Rk-dh-keE"/>
+                                <exclude reference="pGY-I5-Rd6"/>
                             </mask>
                         </variation>
                     </view>
@@ -2222,9 +2237,10 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <outlet property="interestView" destination="RDe-ID-ThR" id="ZX4-Ix-Nzn"/>
                         <outlet property="mapView" destination="EAU-m8-Roz" id="T2f-RJ-Bpa"/>
                         <outlet property="portraitImage" destination="Yzk-jf-Mox" id="KwZ-Iq-heC"/>
+                        <outlet property="priceLabel" destination="t9L-iw-zT4" id="9jN-HA-Utj"/>
                         <outlet property="progressingView" destination="4Dv-Od-aE4" id="83h-V1-oKJ"/>
                         <outlet property="titleLabel" destination="8Pl-kc-QxI" id="whM-GX-qla"/>
-                        <segue destination="wyr-bI-k0n" kind="show" id="lGl-DJ-13g"/>
+                        <segue destination="wyr-bI-k0n" kind="show" identifier="OrdersMapViewToOrderDetailView" id="lGl-DJ-13g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYW-i8-OoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2235,23 +2251,24 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <scene sceneID="zlI-rB-GL3">
             <objects>
                 <tableViewController title="Orders List View" id="8fs-UK-ZDR" customClass="OrdersListViewTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="37Q-va-k7q">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="37Q-va-k7q">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrdersListViewTVCell" rowHeight="65" id="LPs-7S-Tm4" customClass="OrdersListViewTVCell" customModule="Arrived" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrdersListViewTVCell" rowHeight="100" id="LPs-7S-Tm4" customClass="OrdersListViewTVCell" customModule="Arrived" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LPs-7S-Tm4" id="GHN-Mb-RgN">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-58-y0T">
-                                            <rect key="frame" x="8" y="8" width="584" height="48.5"/>
+                                            <rect key="frame" x="8" y="8" width="584" height="83.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyp-Yh-CMZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="48.5" height="48.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyp-Yh-CMZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="zyp-Yh-CMZ" secondAttribute="height" multiplier="1:1" id="3JM-Mb-tVz"/>
+                                                        <constraint firstAttribute="width" constant="50" id="AjP-2i-yfF"/>
                                                         <constraint firstAttribute="width" constant="65" id="PHd-ss-JX6"/>
                                                         <constraint firstAttribute="width" constant="60" id="Yit-Wt-91h"/>
                                                         <constraint firstAttribute="width" secondItem="zyp-Yh-CMZ" secondAttribute="height" multiplier="1:1" id="tWE-qe-FpQ"/>
@@ -2259,19 +2276,20 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="3JM-Mb-tVz"/>
+                                                            <exclude reference="AjP-2i-yfF"/>
                                                             <exclude reference="PHd-ss-JX6"/>
                                                             <exclude reference="Yit-Wt-91h"/>
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-OE-eV7">
-                                                    <rect key="frame" x="50" y="0.0" width="512" height="32.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-OE-eV7">
+                                                    <rect key="frame" x="85" y="0.0" width="439" height="67"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                                                     <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sAa-nX-oN1">
-                                                    <rect key="frame" x="564" y="0.0" width="20" height="48"/>
+                                                    <rect key="frame" x="564" y="0.0" width="20" height="83.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="5iO-QG-E3M"/>
                                                         <constraint firstAttribute="width" constant="20" id="HQw-mX-7tg"/>
@@ -2285,30 +2303,41 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv4-z8-jh0">
-                                                    <rect key="frame" x="50" y="34" width="41" height="14"/>
+                                                    <rect key="frame" x="85" y="69" width="41" height="14"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
                                                     <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1f-8g-lEg">
-                                                    <rect key="frame" x="522" y="34" width="40" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1f-8g-lEg">
+                                                    <rect key="frame" x="522" y="69" width="40" height="14"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="12"/>
+                                                    <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpI-xg-8wX">
+                                                    <rect key="frame" x="532" y="50" width="29.5" height="17"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="15"/>
                                                     <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="Gla-OE-eV7" firstAttribute="top" secondItem="UlP-58-y0T" secondAttribute="top" id="2DF-MZ-6IB"/>
                                                 <constraint firstItem="Gla-OE-eV7" firstAttribute="top" secondItem="zyp-Yh-CMZ" secondAttribute="top" id="3CE-tZ-JWJ"/>
                                                 <constraint firstItem="q1f-8g-lEg" firstAttribute="height" secondItem="sAa-nX-oN1" secondAttribute="height" id="76c-K2-PYz"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gla-OE-eV7" secondAttribute="trailing" id="7jC-Pd-1MJ"/>
                                                 <constraint firstItem="zyp-Yh-CMZ" firstAttribute="leading" secondItem="UlP-58-y0T" secondAttribute="leading" id="HXj-df-wYW"/>
+                                                <constraint firstItem="Gla-OE-eV7" firstAttribute="leading" secondItem="zyp-Yh-CMZ" secondAttribute="trailing" constant="2" id="Imc-Jh-Dfs"/>
                                                 <constraint firstAttribute="centerY" secondItem="q1f-8g-lEg" secondAttribute="centerY" id="IxY-ij-fRd"/>
                                                 <constraint firstItem="zyp-Yh-CMZ" firstAttribute="top" secondItem="UlP-58-y0T" secondAttribute="top" id="J8W-vv-L73"/>
+                                                <constraint firstItem="Sv4-z8-jh0" firstAttribute="leading" secondItem="zyp-Yh-CMZ" secondAttribute="trailing" constant="2" id="JGD-xe-TPO"/>
                                                 <constraint firstAttribute="height" secondItem="sAa-nX-oN1" secondAttribute="height" multiplier="3.5:1" id="Jif-W9-xio"/>
                                                 <constraint firstItem="sAa-nX-oN1" firstAttribute="leading" secondItem="q1f-8g-lEg" secondAttribute="trailing" constant="2" id="KrU-Kh-fVY"/>
+                                                <constraint firstItem="Sv4-z8-jh0" firstAttribute="top" secondItem="Gla-OE-eV7" secondAttribute="bottom" constant="2" id="LBd-LL-j9t"/>
                                                 <constraint firstAttribute="height" secondItem="sAa-nX-oN1" secondAttribute="height" id="MYP-PF-hj1"/>
                                                 <constraint firstItem="Sv4-z8-jh0" firstAttribute="leading" secondItem="zyp-Yh-CMZ" secondAttribute="trailing" constant="2" id="Njz-TI-4aU"/>
+                                                <constraint firstItem="sAa-nX-oN1" firstAttribute="leading" secondItem="jpI-xg-8wX" secondAttribute="trailing" constant="2" id="RRg-Kl-AeV"/>
                                                 <constraint firstAttribute="centerY" secondItem="zyp-Yh-CMZ" secondAttribute="centerY" id="Rcm-1d-mEJ"/>
                                                 <constraint firstAttribute="height" secondItem="Gla-OE-eV7" secondAttribute="height" id="SZC-NE-8Ud"/>
                                                 <constraint firstAttribute="width" secondItem="zyp-Yh-CMZ" secondAttribute="height" multiplier="146:15" id="Sky-6Y-Z1d"/>
@@ -2317,28 +2346,40 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                 <constraint firstAttribute="centerY" secondItem="zyp-Yh-CMZ" secondAttribute="centerY" id="XJP-sD-Jsj"/>
                                                 <constraint firstAttribute="centerY" secondItem="sAa-nX-oN1" secondAttribute="centerY" constant="0.25" id="XjV-R1-bWe"/>
                                                 <constraint firstAttribute="bottom" secondItem="q1f-8g-lEg" secondAttribute="bottom" id="ZLv-8l-TKn"/>
+                                                <constraint firstItem="zyp-Yh-CMZ" firstAttribute="top" secondItem="UlP-58-y0T" secondAttribute="top" id="fTw-kN-ZAh"/>
+                                                <constraint firstAttribute="height" secondItem="zyp-Yh-CMZ" secondAttribute="height" id="fi6-RL-tXA"/>
+                                                <constraint firstItem="jpI-xg-8wX" firstAttribute="leading" secondItem="Gla-OE-eV7" secondAttribute="trailing" constant="8" id="gul-nz-75k"/>
                                                 <constraint firstItem="sAa-nX-oN1" firstAttribute="leading" secondItem="Gla-OE-eV7" secondAttribute="trailing" constant="2" id="hOA-s1-wJd"/>
+                                                <constraint firstItem="q1f-8g-lEg" firstAttribute="top" secondItem="jpI-xg-8wX" secondAttribute="bottom" constant="2" id="k2t-Dt-CMe"/>
+                                                <constraint firstItem="Gla-OE-eV7" firstAttribute="top" secondItem="zyp-Yh-CMZ" secondAttribute="top" id="lGm-I8-5ZI"/>
                                                 <constraint firstAttribute="centerY" secondItem="Gla-OE-eV7" secondAttribute="centerY" constant="-0.25" id="mgF-sk-xfl"/>
                                                 <constraint firstAttribute="height" secondItem="sAa-nX-oN1" secondAttribute="height" id="nKn-FR-BNT"/>
                                                 <constraint firstAttribute="height" secondItem="zyp-Yh-CMZ" secondAttribute="height" id="nLO-VW-jiG"/>
-                                                <constraint firstAttribute="bottom" secondItem="Sv4-z8-jh0" secondAttribute="bottom" id="o5h-TT-Moy"/>
                                                 <constraint firstItem="sAa-nX-oN1" firstAttribute="leading" secondItem="q1f-8g-lEg" secondAttribute="trailing" constant="8" id="oQm-5i-jcM"/>
-                                                <constraint firstItem="Gla-OE-eV7" firstAttribute="leading" secondItem="zyp-Yh-CMZ" secondAttribute="trailing" constant="2" id="ojg-Vp-kkx"/>
                                                 <constraint firstItem="Sv4-z8-jh0" firstAttribute="top" secondItem="Gla-OE-eV7" secondAttribute="bottom" constant="2" id="pih-0F-6Qq"/>
                                                 <constraint firstAttribute="height" secondItem="zyp-Yh-CMZ" secondAttribute="height" id="tMA-4G-llg"/>
+                                                <constraint firstAttribute="bottom" secondItem="zyp-Yh-CMZ" secondAttribute="bottom" id="tp1-3E-M60"/>
                                                 <constraint firstItem="q1f-8g-lEg" firstAttribute="top" secondItem="Gla-OE-eV7" secondAttribute="bottom" constant="8" symbolic="YES" id="uHC-0o-qtg"/>
                                                 <constraint firstAttribute="bottom" secondItem="sAa-nX-oN1" secondAttribute="bottom" id="vTe-Ds-Tnu"/>
                                                 <constraint firstAttribute="trailing" secondItem="sAa-nX-oN1" secondAttribute="trailing" id="y9L-4e-XbB"/>
+                                                <constraint firstItem="zyp-Yh-CMZ" firstAttribute="bottom" secondItem="Sv4-z8-jh0" secondAttribute="bottom" id="zCW-BO-1dh"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="J8W-vv-L73"/>
+                                                    <exclude reference="Rcm-1d-mEJ"/>
                                                     <exclude reference="Sky-6Y-Z1d"/>
                                                     <exclude reference="XJP-sD-Jsj"/>
+                                                    <exclude reference="fi6-RL-tXA"/>
+                                                    <exclude reference="nLO-VW-jiG"/>
                                                     <exclude reference="tMA-4G-llg"/>
+                                                    <exclude reference="2DF-MZ-6IB"/>
+                                                    <exclude reference="3CE-tZ-JWJ"/>
                                                     <exclude reference="7jC-Pd-1MJ"/>
                                                     <exclude reference="SZC-NE-8Ud"/>
                                                     <exclude reference="mgF-sk-xfl"/>
+                                                    <exclude reference="Njz-TI-4aU"/>
+                                                    <exclude reference="pih-0F-6Qq"/>
                                                     <exclude reference="76c-K2-PYz"/>
                                                     <exclude reference="IxY-ij-fRd"/>
                                                     <exclude reference="TfG-bT-G8g"/>
@@ -2346,6 +2387,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                     <exclude reference="Jif-W9-xio"/>
                                                     <exclude reference="MYP-PF-hj1"/>
                                                     <exclude reference="VyO-j1-3xc"/>
+                                                    <exclude reference="hOA-s1-wJd"/>
                                                     <exclude reference="oQm-5i-jcM"/>
                                                 </mask>
                                             </variation>
@@ -2361,6 +2403,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <connections>
                                     <outlet property="distanceLabel" destination="q1f-8g-lEg" id="GPL-Dn-eAp"/>
                                     <outlet property="portrait" destination="zyp-Yh-CMZ" id="aiQ-VN-MDG"/>
+                                    <outlet property="priceLabel" destination="jpI-xg-8wX" id="ldl-x6-qbR"/>
                                     <outlet property="reviewLabel" destination="Sv4-z8-jh0" id="K3o-iF-ycz"/>
                                     <outlet property="status" destination="sAa-nX-oN1" id="RiO-GA-vyP"/>
                                     <outlet property="titleLabel" destination="Gla-OE-eV7" id="wp4-X4-A4k"/>
@@ -2374,7 +2417,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="wyr-bI-k0n" kind="show" id="Od6-ua-72C"/>
+                        <segue destination="wyr-bI-k0n" kind="show" identifier="OrdersListViewToOrderDetailView" id="Od6-ua-72C"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0w-qg-aJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2384,7 +2427,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         <!--Order Detail-->
         <scene sceneID="DjF-r2-Pxx">
             <objects>
-                <viewController title="Order Detail" id="wyr-bI-k0n" sceneMemberID="viewController">
+                <viewController title="Order Detail" id="wyr-bI-k0n" customClass="OrderDetailVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uPr-Sl-LUR"/>
                         <viewControllerLayoutGuide type="bottom" id="xxU-PD-q48"/>
@@ -2392,12 +2435,61 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                     <view key="view" contentMode="scaleToFill" id="LBU-9Z-XXQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-bo-Ymf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nickname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDH-9V-Sea">
+                                        <rect key="frame" x="263" y="205" width="74" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my portrait" translatesAutoresizingMaskIntoConstraints="NO" id="L5T-gr-D9a">
+                                        <rect key="frame" x="214.5" y="-4.5" width="171" height="171"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Ewi-UP-bwp"/>
+                                            <constraint firstAttribute="width" secondItem="L5T-gr-D9a" secondAttribute="height" multiplier="1:1" id="bhi-ag-Tkp"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ewi-UP-bwp"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="L5T-gr-D9a" firstAttribute="width" secondItem="rmb-bo-Ymf" secondAttribute="width" multiplier="1:3.5" id="9QF-6W-Pz4"/>
+                                    <constraint firstAttribute="centerX" secondItem="L5T-gr-D9a" secondAttribute="centerX" id="JiQ-tH-1wo"/>
+                                    <constraint firstAttribute="trailing" secondItem="L5T-gr-D9a" secondAttribute="trailing" id="rW5-Tr-DC0"/>
+                                    <constraint firstAttribute="centerY" secondItem="L5T-gr-D9a" secondAttribute="centerY" multiplier="3:1" id="tIF-8G-PUL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rW5-Tr-DC0"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jiq-d9-ZEX">
+                                <rect key="frame" x="277" y="233" width="47" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rmb-bo-Ymf" firstAttribute="height" secondItem="LBU-9Z-XXQ" secondAttribute="height" id="DNq-xB-LgA"/>
+                            <constraint firstItem="rmb-bo-Ymf" firstAttribute="width" secondItem="LBU-9Z-XXQ" secondAttribute="width" id="XmG-iB-ZgO"/>
+                            <constraint firstAttribute="centerX" secondItem="rmb-bo-Ymf" secondAttribute="centerX" id="kfW-gz-oye"/>
+                            <constraint firstAttribute="centerY" secondItem="rmb-bo-Ymf" secondAttribute="centerY" id="uhB-a8-wTu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwZ-4A-rUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5056" y="888"/>
+            <point key="canvasLocation" x="5056" y="887.5"/>
         </scene>
     </scenes>
     <resources>

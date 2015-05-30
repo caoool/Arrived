@@ -18,6 +18,7 @@ class OrdersListViewTVCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var reviewLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     // gestures
     var originalCenter = CGPoint()
@@ -30,10 +31,6 @@ class OrdersListViewTVCell: UITableViewCell {
         // Initialization code
         
         self.backgroundColor = UIColor(red:0.95, green:0.69, blue:0.25, alpha:0)
-        
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = UIColor.lightGrayColor().CGColor
-        view.layer.cornerRadius = 10
         
         reviewLabel.text = "❤️ 33 💔 17"
         
@@ -57,6 +54,15 @@ class OrdersListViewTVCell: UITableViewCell {
         let kUICuesMargin: CGFloat = 10.0, kUICuesWidth: CGFloat = 80.0
         crossLabel.frame = CGRect(x: bounds.size.width + kUICuesMargin, y: 0,
             width: kUICuesWidth, height: bounds.size.height)
+        
+        view.roundCorners(.TopLeft | .BottomLeft, radius: view.layer.bounds.height/2)
+        view.layer.borderColor = UIColor.lightGrayColor().CGColor
+        view.layer.borderWidth = 0
+        view.layer.cornerRadius = 12
+        
+        portrait.layer.borderColor = UIColor.whiteColor().CGColor
+        portrait.layer.borderWidth = 2
+        portrait.layer.cornerRadius = portrait.layer.bounds.height/2
     }
     
     //MARK: - horizontal pan gesture methods

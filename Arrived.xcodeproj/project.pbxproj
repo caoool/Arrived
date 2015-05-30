@@ -100,6 +100,7 @@
 		89E6FB881B12029C003A8276 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FB871B12029C003A8276 /* MenuTransitionManager.swift */; };
 		89EEF5001B00720B006881FD /* TestReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEF4FF1B00720B006881FD /* TestReviewService.swift */; };
 		89EEF5021B007233006881FD /* TestRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EEF5011B007233006881FD /* TestRequestService.swift */; };
+		89F88E321B19D4EC00674561 /* OrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E311B19D4EC00674561 /* OrderDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +221,7 @@
 		89E6FB871B12029C003A8276 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		89EEF4FF1B00720B006881FD /* TestReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestReviewService.swift; sourceTree = "<group>"; };
 		89EEF5011B007233006881FD /* TestRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRequestService.swift; sourceTree = "<group>"; };
+		89F88E311B19D4EC00674561 /* OrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -605,6 +607,7 @@
 				89D7F4441B17407F00ADA69C /* OrdersMapViewVC.swift */,
 				892CC77F1B198C6F00C8EB76 /* OrdersListViewTVC.swift */,
 				892CC7821B198CDF00C8EB76 /* OrdersListViewTVCell.swift */,
+				89F88E311B19D4EC00674561 /* OrderDetailVC.swift */,
 			);
 			name = Orders;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				89D7F4451B17407F00ADA69C /* OrdersMapViewVC.swift in Sources */,
 				8981A4D11AF56DB700F3046A /* UserBankCardsTVCell.swift in Sources */,
 				898455A21AF6EABD0071A31B /* OrdersVC.swift in Sources */,
+				89F88E321B19D4EC00674561 /* OrderDetailVC.swift in Sources */,
 				89471C4B1B09F6C600EFE101 /* KaedeTextField.swift in Sources */,
 				892CC7801B198C6F00C8EB76 /* OrdersListViewTVC.swift in Sources */,
 				89471C691B0C4D6400EFE101 /* CustomizedTabBarItem.swift in Sources */,

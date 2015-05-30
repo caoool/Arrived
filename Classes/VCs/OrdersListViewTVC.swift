@@ -32,7 +32,7 @@ class OrdersListViewTVC: UITableViewController {
         // set top margin of table view
         tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
-        self.tableView.backgroundColor = UIColor(red:0.95, green:0.69, blue:0.25, alpha:0.1)
+        self.tableView.backgroundColor = UIColor(red:0.95, green:0.69, blue:0.25, alpha:0.06)
 
     }
 
@@ -65,6 +65,7 @@ class OrdersListViewTVC: UITableViewController {
             cell.portrait.image = image!
         })
         cell.titleLabel.text = testOrders[indexPath.row].title
+        cell.priceLabel.text = "$ \(testOrders[indexPath.row].price!)"
         
         manager = CLLocationManager()
         manager.desiredAccuracy = kCLLocationAccuracyBest

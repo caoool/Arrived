@@ -18,6 +18,7 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
     // detail view
     @IBOutlet weak var portraitImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var interestView: UIView!
     @IBOutlet weak var progressingView: UIView!
@@ -142,6 +143,8 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
             })
         }
         titleLabel.text = testOrders[i].title
+        priceLabel.text = "$ \(testOrders[i].price!)"
+        priceLabel.layer.backgroundColor = UIColorFromHex(0x000000, alpha: 0.02).CGColor
         
         hideAndShowStatusViews(testOrders[i].status!)
     }
@@ -296,6 +299,17 @@ class OrdersMapViewVC: UIViewController, MKMapViewDelegate {
         return anView
     }
     
+    // MARK: - Navigation
+    @IBAction func goToDetailView(sender: UIButton) {
+        performSegueWithIdentifier("OrdersMapViewToOrderDetailView", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "OrdersMapViewToOrderDetailView" {
+            var svc = segue.destinationViewController as! OrderDetailVC;
+            svc.toPass = testOrders[currentOrderIndex]
+        }
+    }
     
     
 
