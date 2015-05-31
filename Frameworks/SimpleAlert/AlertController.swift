@@ -35,6 +35,10 @@ class AlertController: SimpleAlert.Controller {
                 button.titleLabel?.font = UIFont(name: "American Typewriter", size: 19)
                 button.backgroundColor = UIColorFromHex(0x54C799, alpha: 0.65)
                 button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            case .Destructive:
+                button.titleLabel?.font = UIFont(name: "American Typewriter", size: 19)
+                button.backgroundColor = UIColorFromHex(0x54C799, alpha: 0.65)
+                button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             case .Default:
                 button.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
             default:

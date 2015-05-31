@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6724" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleAlertController">
@@ -55,7 +54,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjQ-Sr-lVk" userLabel="Base View">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="48"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9Y-Wv-Bl0" userLabel="Main View">
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9Y-Wv-Bl0" userLabel="Main View">
                                                     <constraints>
                                                         <constraint firstAttribute="height" id="bZv-FF-68r"/>
                                                     </constraints>
@@ -77,7 +76,7 @@
                                                 <constraint firstItem="xF5-i7-QEX" firstAttribute="top" secondItem="E9Y-Wv-Bl0" secondAttribute="bottom" id="yR4-M2-WDp"/>
                                             </constraints>
                                         </view>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eju-qm-e5H" userLabel="Cancel Button View">
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eju-qm-e5H" userLabel="Cancel Button View">
                                             <constraints>
                                                 <constraint firstAttribute="height" id="OLq-Ho-r54"/>
                                             </constraints>
@@ -138,7 +137,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUM-3e-1NC" userLabel="Text View">
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUM-3e-1NC" userLabel="Text View">
                             <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" id="5g5-Eq-OMM"/>
@@ -176,7 +175,7 @@
                 <outlet property="titleSpaceConstraint" destination="LPO-QY-J4G" id="cyb-eh-2ib"/>
                 <outlet property="verticalSpaceConstraint" destination="2xx-Qa-pRw" id="n3g-gr-DW3"/>
             </connections>
-            <point key="canvasLocation" x="131" y="810"/>
+            <point key="canvasLocation" x="71" y="774"/>
         </view>
     </objects>
 </document>
