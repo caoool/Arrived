@@ -1,9 +1,9 @@
 //
 //  ContentViewController.swift
-//  SheetAlertExample
+//  Arrived
 //
-//  Created by Kyohei Ito on 2015/01/09.
-//  Copyright (c) 2015年 kyohei_ito. All rights reserved.
+//  Created by Lu Cao on 5/31/15.
+//  Copyright (c) 2015 LoopCow. All rights reserved.
 //
 
 import UIKit

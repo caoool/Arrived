@@ -145,24 +145,31 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
         Add raised center button
     */
     func addCenterRaisedButton() {
-        button.frame = CGRectMake(0.0, 0.0, buttonImage!.size.width, buttonImage!.size.height)
+        // raised
+//        button.frame = CGRectMake(0.0, 0.0, buttonImage!.size.width, buttonImage!.size.height)
+        // not raised
+        button.frame = CGRectMake(0.0, 0.0, self.tabBar.frame.size.height, self.tabBar.frame.size.height)
         button.setBackgroundImage(buttonImage, forState: UIControlState.Normal)
         button.setBackgroundImage(buttonImage, forState: UIControlState.Highlighted)
+
+        // not raised
+        button.center = self.tabBar.center
         
-        let heightDifference = buttonImage!.size.height - self.tabBar.frame.size.height
-        if heightDifference < 0 {
-            button.center = self.tabBar.center
-        } else {
-            var center = self.tabBar.center
-            center.y -= heightDifference/2
-            button.center = center;
-            
-            /*
-                raise it so the mid point match tab bar top
-            var center = CGPointMake(self.tabBar.center.x, self.tabBar.center.y-self.tabBar.frame.size.height/2)
-            button.center = center
-            */
-        }
+        // raised
+//        let heightDifference = buttonImage!.size.height - self.tabBar.frame.size.height
+//        if heightDifference < 0 {
+//            button.center = self.tabBar.center
+//        } else {
+//            var center = self.tabBar.center
+//            center.y -= heightDifference/2
+//            button.center = center;
+//            
+//            /*
+//                raise it so the mid point match tab bar top
+//            var center = CGPointMake(self.tabBar.center.x, self.tabBar.center.y-self.tabBar.frame.size.height/2)
+//            button.center = center
+//            */
+//        }
         
         button.addTarget(self, action: "pressed:", forControlEvents: UIControlEvents.TouchDown)
         self.view.addSubview(button)

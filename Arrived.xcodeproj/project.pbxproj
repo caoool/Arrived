@@ -116,6 +116,12 @@
 		89F88E521B1B59DA00674561 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F88E511B1B59DA00674561 /* ContentViewController.xib */; };
 		89F88E541B1B59E600674561 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E531B1B59E600674561 /* ContentViewController.swift */; };
 		89F88E571B1B683F00674561 /* MyOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E561B1B683F00674561 /* MyOrdersVC.swift */; };
+		89F88E5B1B1B778B00674561 /* MyOrdersRequestsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E5A1B1B778B00674561 /* MyOrdersRequestsTVC.swift */; };
+		89F88E5D1B1B77B000674561 /* MyOrdersRequestsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E5C1B1B77B000674561 /* MyOrdersRequestsTVCell.swift */; };
+		89F88E5F1B1B84B200674561 /* MyOrdersRequestViewDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E5E1B1B84B200674561 /* MyOrdersRequestViewDetailVC.swift */; };
+		89F88E611B1B96FB00674561 /* MyOrdersRequestsShowTakerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E601B1B96FB00674561 /* MyOrdersRequestsShowTakerTVC.swift */; };
+		89F88E631B1B971200674561 /* MyOrdersRequestsShowTakerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E621B1B971200674561 /* MyOrdersRequestsShowTakerTVCell.swift */; };
+		89F88E651B1BB3AB00674561 /* ShowProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F88E641B1BB3AB00674561 /* ShowProgressVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +258,12 @@
 		89F88E511B1B59DA00674561 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		89F88E531B1B59E600674561 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		89F88E561B1B683F00674561 /* MyOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersVC.swift; sourceTree = "<group>"; };
+		89F88E5A1B1B778B00674561 /* MyOrdersRequestsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersRequestsTVC.swift; sourceTree = "<group>"; };
+		89F88E5C1B1B77B000674561 /* MyOrdersRequestsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersRequestsTVCell.swift; sourceTree = "<group>"; };
+		89F88E5E1B1B84B200674561 /* MyOrdersRequestViewDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersRequestViewDetailVC.swift; sourceTree = "<group>"; };
+		89F88E601B1B96FB00674561 /* MyOrdersRequestsShowTakerTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersRequestsShowTakerTVC.swift; sourceTree = "<group>"; };
+		89F88E621B1B971200674561 /* MyOrdersRequestsShowTakerTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersRequestsShowTakerTVCell.swift; sourceTree = "<group>"; };
+		89F88E641B1BB3AB00674561 /* ShowProgressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProgressVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -700,7 +712,13 @@
 		89F88E551B1B673300674561 /* My Orders */ = {
 			isa = PBXGroup;
 			children = (
+				89F88E641B1BB3AB00674561 /* ShowProgressVC.swift */,
 				89F88E561B1B683F00674561 /* MyOrdersVC.swift */,
+				89F88E5A1B1B778B00674561 /* MyOrdersRequestsTVC.swift */,
+				89F88E5C1B1B77B000674561 /* MyOrdersRequestsTVCell.swift */,
+				89F88E5E1B1B84B200674561 /* MyOrdersRequestViewDetailVC.swift */,
+				89F88E601B1B96FB00674561 /* MyOrdersRequestsShowTakerTVC.swift */,
+				89F88E621B1B971200674561 /* MyOrdersRequestsShowTakerTVCell.swift */,
 			);
 			name = "My Orders";
 			sourceTree = "<group>";
@@ -847,6 +865,7 @@
 			files = (
 				890A1C441AEAD02F00E6E6D9 /* ServiceHandler.swift in Sources */,
 				892C17491B143B2800D2D37F /* AddBankCardVC.swift in Sources */,
+				89F88E5B1B1B778B00674561 /* MyOrdersRequestsTVC.swift in Sources */,
 				890D4C7F1AE4433400BD05DF /* UserService.swift in Sources */,
 				899DA8C91AF40B5E00F0C476 /* ProfileVC.swift in Sources */,
 				891B84651B17B99E00BFC3E7 /* RRTagController.swift in Sources */,
@@ -887,6 +906,7 @@
 				895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */,
 				89C413511AF16ACF000C2C95 /* TestUserService.swift in Sources */,
 				89E6FB881B12029C003A8276 /* MenuTransitionManager.swift in Sources */,
+				89F88E631B1B971200674561 /* MyOrdersRequestsShowTakerTVCell.swift in Sources */,
 				89F88E541B1B59E600674561 /* ContentViewController.swift in Sources */,
 				891B84631B17B99E00BFC3E7 /* RRAddTagView.swift in Sources */,
 				89471C5F1B0C0C1700EFE101 /* RAMFrameItemAnimation.swift in Sources */,
@@ -894,6 +914,7 @@
 				8958227B1B050AD7000DA21E /* JSSAlertView.swift in Sources */,
 				8981A4D51AF5B0AD00F3046A /* LocationManager.swift in Sources */,
 				89471C5E1B0C0C1700EFE101 /* RAMBounceAnimation.swift in Sources */,
+				89F88E651B1BB3AB00674561 /* ShowProgressVC.swift in Sources */,
 				890D72B31B0739E5006360E7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
 				890D72B21B0739E5006360E7 /* SHSPhoneLogic.m in Sources */,
 				89D7F4451B17407F00ADA69C /* OrdersMapViewVC.swift in Sources */,
@@ -904,10 +925,13 @@
 				892CC7801B198C6F00C8EB76 /* OrdersListViewTVC.swift in Sources */,
 				89471C691B0C4D6400EFE101 /* CustomizedTabBarItem.swift in Sources */,
 				89EEF5021B007233006881FD /* TestRequestService.swift in Sources */,
+				89F88E5D1B1B77B000674561 /* MyOrdersRequestsTVCell.swift in Sources */,
+				89F88E611B1B96FB00674561 /* MyOrdersRequestsShowTakerTVC.swift in Sources */,
 				89471C631B0C0C1700EFE101 /* RAMAnimatedTabBarController.swift in Sources */,
 				892CC7831B198CDF00C8EB76 /* OrdersListViewTVCell.swift in Sources */,
 				89471C621B0C0C1700EFE101 /* RAMTransitionItemAnimation.swift in Sources */,
 				89471C4E1B09F6C600EFE101 /* TextFieldsEffects.swift in Sources */,
+				89F88E5F1B1B84B200674561 /* MyOrdersRequestViewDetailVC.swift in Sources */,
 				890D72B41B0739E5006360E7 /* SHSPhoneNumberFormatter.m in Sources */,
 				89471C641B0C0C1700EFE101 /* RAMItemAnimationProtocol.swift in Sources */,
 				8908FF561AE01ECF00C990DC /* AppDelegate.swift in Sources */,

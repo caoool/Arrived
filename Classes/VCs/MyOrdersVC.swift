@@ -10,9 +10,17 @@ import UIKit
 
 class MyOrdersVC: UIViewController {
 
-    @IBOutlet weak var curretTab: UIButton!
-    @IBOutlet weak var interestsTab: UIButton!
-    @IBOutlet weak var allTab: UIButton!
+    var testOrders = [Order]()
+    var isInitiated = false
+    
+    @IBOutlet weak var bgBlurView: UIImageView!
+    
+    
+    @IBOutlet weak var leftTab: UIButton!
+    @IBOutlet weak var midTab: UIButton!
+    @IBOutlet weak var rightTab: UIButton!
+    
+    @IBOutlet weak var leftView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,59 +31,80 @@ class MyOrdersVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        curretTab.roundCorners(.TopLeft | .BottomLeft, radius: 9)
-        allTab.roundCorners(.TopRight | .BottomRight, radius: 9)
+        if !isInitiated {
+            isInitiated = !isInitiated
+            
+            // add blur background
+            bgBlurView.image = UIImage(named: "my portrait")
+            var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+            var blurView = UIVisualEffectView(effect: blurEffect)
+            blurView.frame = bgBlurView.bounds
+            bgBlurView.addSubview(blurView)
+            
+            // set up tabs
+            leftTab.roundCorners(.TopLeft | .BottomLeft, radius: 9)
+            rightTab.roundCorners(.TopRight | .BottomRight, radius: 9)
+            
+            leftTab.alpha = 0.65
+            midTab.alpha = 0.65
+            rightTab.alpha = 0.65
+        }
         
-        curretTab.alpha = 0.65
-        interestsTab.alpha = 0.65
-        allTab.alpha = 0.65
+        
     }
     
     func initScene() {
         
         // set color of current tab so its defautly enabled
-        curretTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        curretTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
+        leftTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        leftTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
+
     }
 
     @IBAction func tabTapped(sender: UIButton) {
-        println(sender.titleLabel!.text!)
         switch sender.titleLabel!.text! {
-        case "Current":
+        case "Requests":
             UIView.animateWithDuration(0.65, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.curretTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-                self.curretTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
-                self.interestsTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-                self.interestsTab.backgroundColor = UIColor.whiteColor()
-                self.allTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-                self.allTab.backgroundColor = UIColor.whiteColor()
+                self.leftTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                self.leftTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
+                self.midTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+                self.midTab.backgroundColor = UIColor.whiteColor()
+                self.rightTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+                self.rightTab.backgroundColor = UIColor.whiteColor()
+                self.leftView.alpha = 1
                 }, completion: nil)
-        case "Interests":
+        case "Jobs":
             UIView.animateWithDuration(0.65, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.curretTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-                self.curretTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
-                self.interestsTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-                self.interestsTab.backgroundColor = UIColor.whiteColor()
-                self.allTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-                self.allTab.backgroundColor = UIColor.whiteColor()
+                self.midTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                self.midTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
+                self.leftTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+                self.leftTab.backgroundColor = UIColor.whiteColor()
+                self.rightTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+                self.rightTab.backgroundColor = UIColor.whiteColor()
+                self.leftView.alpha = 0
                 }, completion: nil)
         case "All":
             UIView.animateWithDuration(0.65, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                self.curretTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-                self.curretTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
-                self.interestsTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-                self.interestsTab.backgroundColor = UIColor.whiteColor()
-                self.allTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-                self.allTab.backgroundColor = UIColor.whiteColor()
+                self.rightTab.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                self.rightTab.backgroundColor = UIColor(red:0.63, green:0.62, blue:0.89, alpha:1)
+                self.midTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+                self.midTab.backgroundColor = UIColor.whiteColor()
+                self.leftTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+                self.leftTab.backgroundColor = UIColor.whiteColor()
+                self.leftView.alpha = 0
                 }, completion: nil)
         default:
             break
         }
     }
     
-    
-    
-    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "MyOrdersRequestsTable" {
+//            var svc = segue.destinationViewController as! MyOrdersRequestsTVC
+//            svc.toPass = testOrders
+//        }
+    }
     
 }
 
