@@ -1714,7 +1714,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <segue destination="30L-iT-h7x" kind="relationship" relationship="viewControllers" id="5x2-ja-gQM"/>
                         <segue destination="Cgt-yl-7VT" kind="relationship" relationship="viewControllers" id="77W-PG-vIe"/>
                         <segue destination="16e-0y-Ucs" kind="relationship" relationship="viewControllers" id="wmc-Ro-31Y"/>
-                        <segue destination="ZeF-eO-P7h" kind="presentation" identifier="MainToNew" modalPresentationStyle="overFullScreen" id="JpE-mN-6eP"/>
+                        <segue destination="vMv-Ta-ICs" kind="presentation" identifier="MainToNew" modalPresentationStyle="overFullScreen" id="JpE-mN-6eP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yw-4P-NkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1919,7 +1919,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="3344" y="1827"/>
         </scene>
-        <!--New OrderFVC-->
+        <!--New Request-->
         <scene sceneID="kKW-W1-bBR">
             <objects>
                 <tableViewController id="ZeF-eO-P7h" customClass="NewOrderFVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
@@ -1932,10 +1932,17 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                             <outlet property="delegate" destination="ZeF-eO-P7h" id="K5S-v1-Xp9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="New Request" id="zpA-Lh-TEd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZUZ-WW-bR5">
+                            <connections>
+                                <action selector="cancelAction:" destination="ZeF-eO-P7h" id="rOX-P0-hp1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mr-jQ-K8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539" y="2982"/>
+            <point key="canvasLocation" x="3351" y="2982"/>
         </scene>
         <!--My Orders RequestsTVC-->
         <scene sceneID="EHS-KC-9qz">
@@ -1972,7 +1979,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                     <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="55F83D8D-63C7-4B03-8539-960080BB6A57" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-8G-dTE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="194C7B1A-0923-4BBA-AB46-DDA529C64C37" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-8G-dTE">
                                                     <rect key="frame" x="538" y="0.0" width="30" height="48.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="pwW-yb-i1T"/>
@@ -2022,7 +2029,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ho-a5-xQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3344" y="2472.5"/>
+            <point key="canvasLocation" x="4156" y="2472"/>
         </scene>
         <!--Volunteers-->
         <scene sceneID="VPt-d2-OKF">
@@ -2194,7 +2201,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpM-Bn-cLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3344" y="3118.5"/>
+            <point key="canvasLocation" x="4156" y="3118"/>
         </scene>
         <!--Progress-->
         <scene sceneID="fGB-cN-2cf">
@@ -2308,7 +2315,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OyB-DB-SK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4243" y="3118.5"/>
+            <point key="canvasLocation" x="5055" y="3118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AWi-i3-oSS">
@@ -3727,11 +3734,29 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSE-S8-Nli" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4236" y="2472.5"/>
+            <point key="canvasLocation" x="5048" y="2472"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yz3-9t-d4P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vMv-Ta-ICs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Qk-aO-5Z8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZeF-eO-P7h" kind="relationship" relationship="rootViewController" id="iXd-Ip-Zwf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nB5-vc-q3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2539" y="2982"/>
         </scene>
     </scenes>
     <resources>
-        <image name="55F83D8D-63C7-4B03-8539-960080BB6A57" width="30" height="48">
+        <image name="194C7B1A-0923-4BBA-AB46-DDA529C64C37" width="30" height="48">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
