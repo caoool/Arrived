@@ -11,5 +11,6 @@
 
 #import "SHSPhoneLibrary.h"
 #import "UICountingLabel.h"
+#import "LNBRippleEffect.h"
 
 #endif

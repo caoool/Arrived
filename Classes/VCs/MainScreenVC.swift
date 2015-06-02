@@ -45,9 +45,9 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
     private var waveformView = SiriWaveformView()
     private var recordingView = UIView()
     
-    private var centerButtonSelected: Bool? {
+    private var centerButtonSelected: Bool = false {
         didSet {
-            if centerButtonSelected! {
+            if centerButtonSelected {
                 button.setBackgroundImage(buttonSelectedImage, forState: UIControlState.Normal)
                 button.setBackgroundImage(buttonSelectedImage, forState: UIControlState.Highlighted)
             } else {
@@ -199,9 +199,15 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
     // MARK: - Functionalities
     
     func pressed(sender: UIButton!) {
+        
+//        if self.selectedIndex == 1 && centerButtonSelected {
+//            performSegueWithIdentifier("MainToNew", sender: self)
+//        }
+        
         self.selectedIndex = 1
         centerButtonSelected = true
         buttonShouldRotate = false
+        
     }
     
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!) {

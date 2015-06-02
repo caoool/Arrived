@@ -13,14 +13,16 @@ class MyOrdersVC: UIViewController {
     var testOrders = [Order]()
     var isInitiated = false
     
-    @IBOutlet weak var bgBlurView: UIImageView!
+    var myOrdersRequestsTVC: MyOrdersRequestsTVC?
     
+    @IBOutlet weak var bgBlurView: UIImageView!
     
     @IBOutlet weak var leftTab: UIButton!
     @IBOutlet weak var midTab: UIButton!
     @IBOutlet weak var rightTab: UIButton!
     
     @IBOutlet weak var leftView: UIView!
+    @IBOutlet weak var midView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,9 @@ class MyOrdersVC: UIViewController {
             leftTab.alpha = 0.65
             midTab.alpha = 0.65
             rightTab.alpha = 0.65
+            
+            leftView.alpha = 1
+            midView.alpha = 0
         }
         
         
@@ -72,6 +77,8 @@ class MyOrdersVC: UIViewController {
                 self.rightTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
                 self.rightTab.backgroundColor = UIColor.whiteColor()
                 self.leftView.alpha = 1
+                self.myOrdersRequestsTVC?.willAnimateRipple = true
+                self.midView.alpha = 0
                 }, completion: nil)
         case "Jobs":
             UIView.animateWithDuration(0.65, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
@@ -82,6 +89,8 @@ class MyOrdersVC: UIViewController {
                 self.rightTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
                 self.rightTab.backgroundColor = UIColor.whiteColor()
                 self.leftView.alpha = 0
+                self.myOrdersRequestsTVC?.willAnimateRipple = false
+                self.midView.alpha = 1
                 }, completion: nil)
         case "All":
             UIView.animateWithDuration(0.65, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
@@ -92,6 +101,8 @@ class MyOrdersVC: UIViewController {
                 self.leftTab.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
                 self.leftTab.backgroundColor = UIColor.whiteColor()
                 self.leftView.alpha = 0
+                self.myOrdersRequestsTVC?.willAnimateRipple = false
+                self.midView.alpha = 0
                 }, completion: nil)
         default:
             break
@@ -100,10 +111,10 @@ class MyOrdersVC: UIViewController {
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "MyOrdersRequestsTable" {
-//            var svc = segue.destinationViewController as! MyOrdersRequestsTVC
-//            svc.toPass = testOrders
-//        }
+        if segue.identifier == "MyOrdersRequestsTable" {
+            var svc = segue.destinationViewController as! MyOrdersRequestsTVC
+            myOrdersRequestsTVC = svc
+        }
     }
     
 }

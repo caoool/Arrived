@@ -40,6 +40,12 @@ class MyOrdersRequestsTVCell: UITableViewCell {
         takersButton.alpha = 0.65
         
         inProgressIndicator.alpha = 0
+        
+        
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
 }

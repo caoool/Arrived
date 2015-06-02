@@ -10,6 +10,14 @@ import UIKit
 
 class MyOrdersRequestsTVC: UITableViewController {
 
+    var willAnimateRipple = true {
+        didSet {
+            if willAnimateRipple {
+                tableView.reloadData()
+            }
+        }
+    }
+    
     var testOrders = [Order]()
     var selectedOrder = Order()
     
@@ -63,11 +71,38 @@ class MyOrdersRequestsTVC: UITableViewController {
             cell.takersButton.addTarget(self, action: "showProgress", forControlEvents: .TouchUpInside)
         } else {
             cell.takersButton.addTarget(self, action: "showTakers", forControlEvents: .TouchUpInside)
+            ripple(cell)
         }
         
         cell.selectionStyle = .None
         cell.alpha = 0.9
         return cell
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        
+        dispatch_after(
+            dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
+    }
+    
+    func ripple(cell: MyOrdersRequestsTVCell) {
+        
+        var option = Ripple.option()
+        //configure
+        option.borderWidth = CGFloat(1)
+        option.radius = cell.takersButton.layer.frame.height/2 * 1.2
+        option.duration = CFTimeInterval(1.5)
+        option.borderColor = UIColor(red:0.29, green:0.56, blue:0.89, alpha:0.3)
+        option.fillColor = UIColor.clearColor()
+        option.scale = CGFloat(1.1)
+        
+        if willAnimateRipple {
+            Ripple.run(cell.takersButton, locationInView: cell.takersButton.center, option: option) {}
+            delay(1) {
+                self.ripple(cell)
+            }
+            
+        }
     }
     
     func showProgress() {
