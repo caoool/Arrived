@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zRY-j3-8Ei">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q41-JF-OXm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -1714,6 +1714,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <segue destination="30L-iT-h7x" kind="relationship" relationship="viewControllers" id="5x2-ja-gQM"/>
                         <segue destination="Cgt-yl-7VT" kind="relationship" relationship="viewControllers" id="77W-PG-vIe"/>
                         <segue destination="16e-0y-Ucs" kind="relationship" relationship="viewControllers" id="wmc-Ro-31Y"/>
+                        <segue destination="ZeF-eO-P7h" kind="presentation" identifier="MainToNew" modalPresentationStyle="overFullScreen" id="JpE-mN-6eP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yw-4P-NkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1918,12 +1919,30 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             </objects>
             <point key="canvasLocation" x="3344" y="1827"/>
         </scene>
+        <!--New OrderFVC-->
+        <scene sceneID="kKW-W1-bBR">
+            <objects>
+                <tableViewController id="ZeF-eO-P7h" customClass="NewOrderFVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ey4-LH-ink">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ZeF-eO-P7h" id="YwD-cm-GP6"/>
+                            <outlet property="delegate" destination="ZeF-eO-P7h" id="K5S-v1-Xp9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mr-jQ-K8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2539" y="2982"/>
+        </scene>
         <!--My Orders RequestsTVC-->
         <scene sceneID="EHS-KC-9qz">
             <objects>
                 <tableViewController id="m80-E0-IYI" customClass="MyOrdersRequestsTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="9Av-dO-MQi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1953,7 +1972,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                     <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="83636A6C-6352-4822-99FE-B90BD86BBC5C" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-8G-dTE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="55F83D8D-63C7-4B03-8539-960080BB6A57" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-8G-dTE">
                                                     <rect key="frame" x="538" y="0.0" width="30" height="48.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="pwW-yb-i1T"/>
@@ -2010,7 +2029,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             <objects>
                 <tableViewController title="Volunteers" id="Ftz-Eg-gR7" customClass="MyOrdersRequestsShowTakerTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="22" sectionFooterHeight="22" id="La7-kM-9hE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
@@ -2063,7 +2082,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EU-9l-6qs">
                                                     <rect key="frame" x="72.5" y="268" width="30.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-CO-Vqg">
@@ -2075,7 +2094,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dislikes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWj-pB-FBB">
                                                     <rect key="frame" x="413" y="266" width="45" height="14"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail job finished icon" translatesAutoresizingMaskIntoConstraints="NO" id="2Pr-aW-KlE">
@@ -2084,7 +2103,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs Done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDv-wD-Goa">
                                                     <rect key="frame" x="232" y="268" width="59.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nS-g2-tsG">
@@ -2186,17 +2205,17 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="L6h-ty-qCY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2up-YT-fld">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAM-Nw-mwa">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAM-Nw-mwa">
                                 <rect key="frame" x="16" y="28" width="568" height="564"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9j-p6-Tps">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9j-p6-Tps">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="427"/>
                                     </mapView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfa-K5-DVc">
-                                        <rect key="frame" x="82.5" y="435.5" width="114" height="113.5"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfa-K5-DVc">
+                                        <rect key="frame" x="82" y="435.5" width="114" height="113.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="CPT-I1-f6G"/>
                                             <constraint firstAttribute="width" secondItem="sfa-K5-DVc" secondAttribute="height" multiplier="1:1" id="axQ-aX-Ntz"/>
@@ -2211,8 +2230,8 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqV-Mv-RO2">
-                                        <rect key="frame" x="226.5" y="435.5" width="114" height="113.5"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqV-Mv-RO2">
+                                        <rect key="frame" x="226" y="435.5" width="114" height="113.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vqV-Mv-RO2" secondAttribute="height" multiplier="1:1" id="0G0-Wn-UOG"/>
                                             <constraint firstAttribute="width" constant="85" id="Xks-I3-6rN"/>
@@ -2231,8 +2250,8 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                             <action selector="contactTapped:" destination="mM4-d0-Ade" eventType="touchUpInside" id="mQa-Q3-WCt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyx-Nd-dPs">
-                                        <rect key="frame" x="370.5" y="435" width="114" height="113.5"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyx-Nd-dPs">
+                                        <rect key="frame" x="370" y="435" width="114" height="113.5"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                         <state key="normal" title="Arrived">
                                             <color key="titleColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
@@ -2515,14 +2534,14 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="932-y3-bh3"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="C7l-a8-Knp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-m8-Roz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                             </mapView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-dK-DLs">
-                                <rect key="frame" x="30" y="425" width="540" height="50"/>
+                                <rect key="frame" x="30" y="410" width="540" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yzk-jf-Mox">
                                         <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
@@ -2584,7 +2603,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </variation>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDe-ID-ThR">
-                                <rect key="frame" x="454" y="387" width="116" height="30"/>
+                                <rect key="frame" x="454" y="372" width="116" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interested icon" translatesAutoresizingMaskIntoConstraints="NO" id="OjU-Dv-sYE">
                                         <rect key="frame" x="8" y="1" width="27" height="27"/>
@@ -2612,7 +2631,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dv-Od-aE4">
-                                <rect key="frame" x="430" y="387" width="140" height="30"/>
+                                <rect key="frame" x="430" y="372" width="140" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressing icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-G9-Exe">
                                         <rect key="frame" x="8" y="1" width="27" height="27"/>
@@ -2684,7 +2703,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
             <objects>
                 <tableViewController title="Orders List View" id="8fs-UK-ZDR" customClass="OrdersListViewTVC" customModule="Arrived" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="37Q-va-k7q">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -2865,20 +2884,20 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="xxU-PD-q48"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LBU-9Z-XXQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my portrait" translatesAutoresizingMaskIntoConstraints="NO" id="szf-pA-paw">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="44" y="0.0" width="512" height="512"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="szf-pA-paw" secondAttribute="height" multiplier="1:1" id="LM9-po-J7u"/>
                                 </constraints>
                             </imageView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uV1-pH-28z">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uV1-pH-28z">
                                 <rect key="frame" x="243" y="32" width="115" height="115"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srq-zc-veb">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srq-zc-veb">
                                 <rect key="frame" x="152" y="66" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="srq-zc-veb" secondAttribute="height" multiplier="1:1" id="djW-UR-MlH"/>
@@ -2890,7 +2909,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="addressButtonTapped:" destination="wyr-bI-k0n" eventType="touchUpInside" id="WGV-hW-9is"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLj-7F-ykQ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLj-7F-ykQ">
                                 <rect key="frame" x="400" y="66" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mLj-7F-ykQ" secondAttribute="height" multiplier="1:1" id="qy9-HJ-1H7"/>
@@ -2907,7 +2926,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="interestedButtonTapped:" destination="wyr-bI-k0n" eventType="touchUpInside" id="O1v-Zz-aRM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGj-sd-56W" customClass="UICountingLabel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGj-sd-56W" customClass="UICountingLabel">
                                 <rect key="frame" x="250" y="40" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="9kc-3y-Xv2"/>
@@ -2917,7 +2936,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEi-Sb-NFp">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEi-Sb-NFp">
                                 <rect key="frame" x="360" y="81" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="Ctu-Yr-PZD"/>
@@ -2932,7 +2951,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="clearAddedMoney:" destination="wyr-bI-k0n" eventType="touchUpInside" id="lwL-cy-dLj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjP-Jc-30f">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjP-Jc-30f">
                                 <rect key="frame" x="283" y="165" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -2948,7 +2967,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="plusMoney:" destination="wyr-bI-k0n" eventType="touchUpInside" id="dWa-f4-fcU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xT-gk-5uw">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xT-gk-5uw">
                                 <rect key="frame" x="368" y="165" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -2969,7 +2988,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="plusMoney:" destination="wyr-bI-k0n" eventType="touchUpInside" id="1U9-bY-xAE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yi-Fy-S01">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yi-Fy-S01">
                                 <rect key="frame" x="198" y="165" width="35" height="35"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -2990,7 +3009,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="plusMoney:" destination="wyr-bI-k0n" eventType="touchUpInside" id="SwY-A3-Htn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-fS-9Ih">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-fS-9Ih">
                                 <rect key="frame" x="215" y="230" width="171" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
@@ -3003,7 +3022,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="buttonTapped:" destination="wyr-bI-k0n" eventType="touchUpInside" id="Ywr-ZF-UxX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq3-V0-eoB">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq3-V0-eoB">
                                 <rect key="frame" x="44" y="230" width="171.5" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
@@ -3016,7 +3035,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="buttonTapped:" destination="wyr-bI-k0n" eventType="touchUpInside" id="5Yg-fv-0a9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQL-ZX-ue1">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQL-ZX-ue1">
                                 <rect key="frame" x="386" y="230" width="171.5" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
@@ -3029,7 +3048,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="buttonTapped:" destination="wyr-bI-k0n" eventType="touchUpInside" id="YAy-c6-eet"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hc-xz-cfm" userLabel="Detail">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hc-xz-cfm" userLabel="Detail">
                                 <rect key="frame" x="0.0" y="268" width="600" height="332"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Start" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5b-Ac-j2L">
@@ -3059,7 +3078,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBH-gv-kPE">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBH-gv-kPE">
                                         <rect key="frame" x="79" y="92" width="505.5" height="232"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
@@ -3099,7 +3118,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-3k-r5R" userLabel="User">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-3k-r5R" userLabel="User">
                                 <rect key="frame" x="0.0" y="268" width="600" height="332"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sNN-Ng-GUu">
@@ -3143,7 +3162,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-w9-Nkc">
                                         <rect key="frame" x="85" y="283" width="30.5" height="14"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUR-Tc-16N">
@@ -3155,7 +3174,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dislikes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-0o-ekf">
                                         <rect key="frame" x="476" y="281" width="45" height="14"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail job finished icon" translatesAutoresizingMaskIntoConstraints="NO" id="cGq-Wv-7z1">
@@ -3164,7 +3183,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs Done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUC-aN-bH7">
                                         <rect key="frame" x="270" y="283" width="59.5" height="14"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1K-He-kyM">
@@ -3214,10 +3233,10 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-vo-uI1" userLabel="Media">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-vo-uI1" userLabel="Media">
                                 <rect key="frame" x="0.0" y="268" width="600" height="332"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KS3-Xt-Exq">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KS3-Xt-Exq">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="332"/>
                                     </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pl4-Cs-Khn">
@@ -3352,20 +3371,20 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                         <viewControllerLayoutGuide type="bottom" id="uW9-5c-3WU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b2L-H3-3sP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my portrait" translatesAutoresizingMaskIntoConstraints="NO" id="DXu-SI-gBA">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="44" y="0.0" width="512" height="512"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DXu-SI-gBA" secondAttribute="height" multiplier="1:1" id="NAG-Hx-6C4"/>
                                 </constraints>
                             </imageView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyj-LQ-cjz">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qyj-LQ-cjz">
                                 <rect key="frame" x="243" y="32" width="115" height="115"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYi-E1-kjs">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYi-E1-kjs">
                                 <rect key="frame" x="152" y="66" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IYi-E1-kjs" secondAttribute="height" multiplier="1:1" id="CyN-FQ-RYu"/>
@@ -3377,7 +3396,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="addressButtonTapped:" destination="Bai-8i-Bgv" eventType="touchUpInside" id="ux7-8E-ARn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0M-vb-GwP" customClass="UICountingLabel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0M-vb-GwP" customClass="UICountingLabel">
                                 <rect key="frame" x="250" y="40" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="nXi-Bt-Q3p"/>
@@ -3387,7 +3406,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY6-RZ-sNA">
+                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY6-RZ-sNA">
                                 <rect key="frame" x="215" y="177" width="171" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
@@ -3400,7 +3419,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="buttonTapped:" destination="Bai-8i-Bgv" eventType="touchUpInside" id="dPW-Uc-EkN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-zO-js1">
+                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-zO-js1">
                                 <rect key="frame" x="44" y="177" width="171.5" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
@@ -3413,7 +3432,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="buttonTapped:" destination="Bai-8i-Bgv" eventType="touchUpInside" id="6vM-lm-UgH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPj-G0-MSl">
+                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPj-G0-MSl">
                                 <rect key="frame" x="386" y="177" width="171.5" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
@@ -3426,7 +3445,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <action selector="buttonTapped:" destination="Bai-8i-Bgv" eventType="touchUpInside" id="SkW-cM-3Ux"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VH3-Gk-4wC" userLabel="Detail">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VH3-Gk-4wC" userLabel="Detail">
                                 <rect key="frame" x="0.0" y="215" width="600" height="385"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Start" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgQ-sY-UZq">
@@ -3456,7 +3475,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O79-E9-dLG">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O79-E9-dLG">
                                         <rect key="frame" x="79" y="92" width="505.5" height="285"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" red="0.20392156859999999" green="0.23529411759999999" blue="0.30588235289999999" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
@@ -3496,7 +3515,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCq-PP-aVr" userLabel="User">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCq-PP-aVr" userLabel="User">
                                 <rect key="frame" x="0.0" y="215" width="600" height="385"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZhH-n6-Cqq">
@@ -3540,7 +3559,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ6-Me-eZl">
                                         <rect key="frame" x="85" y="283" width="30.5" height="14"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-PZ-Q1y">
@@ -3552,7 +3571,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dislikes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31R-EP-BrM">
                                         <rect key="frame" x="476" y="281" width="45" height="14"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail job finished icon" translatesAutoresizingMaskIntoConstraints="NO" id="VEu-g4-v9K">
@@ -3561,7 +3580,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs Done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYq-jc-0DQ">
                                         <rect key="frame" x="270" y="283" width="59.5" height="14"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gk-cf-h5r">
@@ -3611,10 +3630,10 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWX-lE-eGZ" userLabel="Media">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RWX-lE-eGZ" userLabel="Media">
                                 <rect key="frame" x="0.0" y="215" width="600" height="385"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KbQ-dM-PAt">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KbQ-dM-PAt">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="385"/>
                                     </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6Fh-jM-QkL">
@@ -3712,7 +3731,7 @@ Moderation is conducted through a democratic system known as the Tribunal. In th
         </scene>
     </scenes>
     <resources>
-        <image name="83636A6C-6352-4822-99FE-B90BD86BBC5C" width="30" height="48">
+        <image name="55F83D8D-63C7-4B03-8539-960080BB6A57" width="30" height="48">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

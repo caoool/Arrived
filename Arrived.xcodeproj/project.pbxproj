@@ -92,6 +92,7 @@
 		89C413681AF3252F000C2C95 /* key-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 89C413671AF3252F000C2C95 /* key-100.png */; };
 		89C4136A1AF40402000C2C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C413691AF40402000C2C95 /* Main.storyboard */; };
 		89C4136E1AF4052C000C2C95 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */; };
+		89C738BE1B1D9713007030DA /* NewOrderFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C738BD1B1D9713007030DA /* NewOrderFVC.swift */; };
 		89CAA3DC1B10A50A00D7E4C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CAA3DB1B10A50A00D7E4C2 /* Images.xcassets */; };
 		89CAA3E01B10BA7700D7E4C2 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CAA3DF1B10BA7700D7E4C2 /* UICountingLabel.m */; };
 		89D7C6B81AE4796500FFD592 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7C6B71AE4796500FFD592 /* ImageLoader.swift */; };
@@ -256,6 +257,7 @@
 		89C413671AF3252F000C2C95 /* key-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "key-100.png"; path = "Assets/UI/Icons/key-100.png"; sourceTree = "<group>"; };
 		89C413691AF40402000C2C95 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		89C4136D1AF4052C000C2C95 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		89C738BD1B1D9713007030DA /* NewOrderFVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOrderFVC.swift; sourceTree = "<group>"; };
 		89CAA3DB1B10A50A00D7E4C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89CAA3DE1B10BA7700D7E4C2 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		89CAA3DF1B10BA7700D7E4C2 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 		89D7F4431B173FFE00ADA69C /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				89C738BD1B1D9713007030DA /* NewOrderFVC.swift */,
 				898455A11AF6EABD0071A31B /* OrdersVC.swift */,
 				89D7F4441B17407F00ADA69C /* OrdersMapViewVC.swift */,
 				892CC77F1B198C6F00C8EB76 /* OrdersListViewTVC.swift */,
@@ -1036,6 +1039,7 @@
 				8981A4D31AF58FCE00F3046A /* AddLocationVC.swift in Sources */,
 				89F88E951B1D8C0C00674561 /* FormOptionsSelectorController.swift in Sources */,
 				8981A4CF1AF5641500F3046A /* UserLocationsTVCell.swift in Sources */,
+				89C738BE1B1D9713007030DA /* NewOrderFVC.swift in Sources */,
 				891B845C1B176EC700BFC3E7 /* SwiftNotice.swift in Sources */,
 				895822721B05061C000DA21E /* GoogleWearAlert.swift in Sources */,
 				89C413511AF16ACF000C2C95 /* TestUserService.swift in Sources */,

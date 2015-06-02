@@ -200,9 +200,9 @@ class MainScreenVC: UITabBarController, UITabBarDelegate, AVAudioPlayerDelegate,
     
     func pressed(sender: UIButton!) {
         
-//        if self.selectedIndex == 1 && centerButtonSelected {
-//            performSegueWithIdentifier("MainToNew", sender: self)
-//        }
+        if centerButtonSelected {
+            performSegueWithIdentifier("MainToNew", sender: self)
+        }
         
         self.selectedIndex = 1
         centerButtonSelected = true
